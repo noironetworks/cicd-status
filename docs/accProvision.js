@@ -19,11 +19,11 @@ fetch('release_artifacts/releases.yaml')
             if (releaseStream.acc_provision && releaseStream.acc_provision.length > 0) {
               for (const accProvisionEntry of releaseStream.acc_provision) {
                   const accProvisionRow = document.createElement('tr');
-                  const accProvisionTagCell = document.createElement('td');
+                  const accProvisionVersionCell = document.createElement('td');
                   const accProvisionLinkCell = document.createElement('td');
 
-                  accProvisionTagCell.textContent = accProvisionEntry.tag;
-                  accProvisionRow.appendChild(accProvisionTagCell);
+                  accProvisionVersionCell.textContent = accProvisionEntry.tag;
+                  accProvisionRow.appendChild(accProvisionVersionCell);
 
                   // if commit is available, add a link to the commit
                   if (accProvisionEntry.commit) {
