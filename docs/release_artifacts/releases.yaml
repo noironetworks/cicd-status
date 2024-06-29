@@ -2521,7 +2521,7 @@ releases:
       sbom: release_artifacts/6.0.4.2/z/acc-provision-operator/6.0.4.2-sbom.txt
       severity:
       - C: 0
-        H: 4
+        H: 5
         L: 3
         M: 9
         U: 1
@@ -2567,7 +2567,7 @@ releases:
         H: 3
         L: 1
         M: 2
-        U: 2
+        U: 3
       severity_link: https://quay.io/repository/noiro/aci-containers-host/manifest/sha256:762945a98bb00fb26d7cebce3d219284ac371377fffc43509f165ea6a7f9aa04?tab=vulnerabilities
       severity_type: quay
     - base-image:
@@ -2610,7 +2610,7 @@ releases:
         H: 2
         L: 1
         M: 2
-        U: 5
+        U: 6
       severity_link: https://quay.io/repository/noiro/aci-containers-controller/manifest/sha256:46a812c0c44ffb9fb99b772c2e06b8d18ab13fd7a668a737cd844b143c06ecef?tab=vulnerabilities
       severity_type: quay
     - base-image:
@@ -2696,7 +2696,7 @@ releases:
         H: 6
         L: 1
         M: 2
-        U: 4
+        U: 5
       severity_link: https://quay.io/repository/noiro/aci-containers-operator/manifest/sha256:c252fa1ad04634ed30cf48d64ce48d72e2eebb8cf121d338fc3e886dc1b9a278?tab=vulnerabilities
       severity_type: quay
     - base-image:
@@ -2868,7 +2868,7 @@ releases:
         H: 3
         L: 1
         M: 2
-        U: 2
+        U: 3
       severity_link: https://quay.io/repository/noiro/aci-containers-host-ovscni/manifest/sha256:ccf75c06738da7a2bf46c623d70eb0e06242617953e2fe005d767365cd9d1ee8?tab=vulnerabilities
       severity_type: quay
     - base-image:
@@ -3668,7 +3668,14 @@ releases:
     released: false
   release_tag: 6.1.1.1
 - release_streams:
-  - acc_provision: []
+  - acc_provision:
+    - build-logs: release_artifacts/6.0.4.3/z/acc-provision/6.0.4.3-buildlog.txt
+      build-time: 2024-06-29 08:19:37 PDT
+      commit:
+      - link: https://github.com/noironetworks/acc-provision/commit/ec9fc08441e98d958eb7d5186f1b8bcdbcf499f7
+        sha: ec9fc08441e98d958eb7d5186f1b8bcdbcf499f7
+      link: https://test.pypi.org/project/acc-provision/6.0.4.3.dev9565/#files
+      tag: 6.0.4.3.dev9565
     container_images:
     - base-image:
       - cve: release_artifacts/6.0.4.3/z/opflex/6.0.4.3-cve-base.txt
@@ -4050,7 +4057,7 @@ releases:
         M: 0
         U: 0
       severity_type: grype
-    last_updated: 2024-06-28 11:34:43 PDT
+    last_updated: 2024-06-29 08:19:37 PDT
     release_name: 6.0.4.3.z
   - acc_provision: []
     container_images: []
