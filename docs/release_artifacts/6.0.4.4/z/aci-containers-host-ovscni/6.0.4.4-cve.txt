@@ -4,15 +4,31 @@ k8s.io/kubernetes  v1.29.0    1.29.4    go-module  GHSA-pxhw-596r-rwq5  Low
 
 quay.io/noiro/aci-containers-host-ovscni:6.0.4.4.81c2369.z (redhat 9.4)
 =======================================================================
-Total: 75 (UNKNOWN: 0, LOW: 48, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
+Total: 79 (UNKNOWN: 0, LOW: 48, MEDIUM: 27, HIGH: 4, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬─────────────────────┬───────────────┬─────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │  Installed Version  │ Fixed Version │                            Title                            │
 ├─────────────────────────────┼────────────────┼──────────┼─────────────────────┼─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
 │ curl                        │ CVE-2024-7264  │ LOW      │ affected            │ 7.76.1-31.el9       │               │ curl: libcurl: ASN.1 date parser overread                   │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-7264                   │
-├─────────────────────────────┼────────────────┤          ├─────────────────────┼─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ elfutils-default-yama-scope │ CVE-2024-25260 │          │ will_not_fix        │ 0.191-4.el9         │               │ elfutils: global-buffer-overflow exists in the function     │
+├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ dhcp-client                 │ CVE-2024-1737  │ HIGH     │                     │ 12:4.4.2-19.b1.el9  │               │ bind: bind9: BIND's database will be slow if a very large   │
+│                             │                │          │                     │                     │               │ number...                                                   │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-1737                   │
+│                             ├────────────────┤          │                     │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
+│                             │ CVE-2024-3661  │          │                     │                     │               │ DHCP: DHCP routing options can manipulate interface-based   │
+│                             │                │          │                     │                     │               │ VPN traffic                                                 │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-3661                   │
+├─────────────────────────────┼────────────────┤          │                     │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
+│ dhcp-common                 │ CVE-2024-1737  │          │                     │                     │               │ bind: bind9: BIND's database will be slow if a very large   │
+│                             │                │          │                     │                     │               │ number...                                                   │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-1737                   │
+│                             ├────────────────┤          │                     │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
+│                             │ CVE-2024-3661  │          │                     │                     │               │ DHCP: DHCP routing options can manipulate interface-based   │
+│                             │                │          │                     │                     │               │ VPN traffic                                                 │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-3661                   │
+├─────────────────────────────┼────────────────┼──────────┼─────────────────────┼─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ elfutils-default-yama-scope │ CVE-2024-25260 │ LOW      │ will_not_fix        │ 0.191-4.el9         │               │ elfutils: global-buffer-overflow exists in the function     │
 │                             │                │          │                     │                     │               │ ebl_machine_flag_name in eblmachineflagname.c               │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-25260                  │
 ├─────────────────────────────┤                │          │                     │                     ├───────────────┤                                                             │
