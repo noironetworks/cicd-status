@@ -5070,9 +5070,9 @@ releases:
           L: 0
           M: 0
           U: 0
-        severity_link: https://quay.io/repository/noirolabs/ubi9/manifest/sha256:fc1a4158c7bfced00b8cf5487630450748ce759c6fa2ea02e60cbe4d96da57b0?tab=vulnerabilities
+        severity_link: https://quay.io/repository/noirolabs/ubi9/manifest/sha256:error?tab=vulnerabilities
         severity_type: quay
-        sha: fc1a4158c7bfced00b8cf5487630450748ce759c6fa2ea02e60cbe4d96da57b0
+        sha: error
       build-logs: release_artifacts/6.1.2.1/z/aci-containers-operator/6.1.2.1-buildlog.txt
       build-time: 2024-12-09 12:03:35 PST
       commit:
@@ -5725,35 +5725,39 @@ releases:
       severity_link: https://quay.io/repository/noiro/aci-containers-host-ovscni/manifest/sha256:60b6ab6f6d597046cfaf175d6d1b684b1a5ed492e50f4fea70a616bd001d6632?tab=vulnerabilities
       severity_type: quay
     - base-image:
-      - cve: release_artifacts/6.0.4.4/z/opflex/6.0.4.4-cve-base.txt
+      - base_cve_error: ''
+        cve: release_artifacts/6.0.4.4/z/opflex/6.0.4.4-cve-base.txt
         severity:
         - C: 0
           H: 0
           L: 0
           M: 0
           U: 0
-        sha: dee813b83663d420eb108983a1c94c614ff5d3fcb5159a7bd0324f0edbe7fca1
+        severity_link: https://quay.io/repository/noirolabs/ubi9-minimal/manifest/sha256:4a252662dc4ed295eab659cbf4ff72829994529d0f390579d7c8318d94afc592?tab=vulnerabilities
+        severity_type: quay
+        sha: 4a252662dc4ed295eab659cbf4ff72829994529d0f390579d7c8318d94afc592
       build-logs: release_artifacts/6.0.4.4/z/opflex/6.0.4.4-buildlog.txt
-      build-time: 2024-12-11 10:29:17 PST
+      build-time: 2024-12-11 12:44:55 PST
       commit:
       - link: https://github.com/noironetworks/opflex/commit/826143f7d5873e56a7fa551fba5d70f50764da60
         sha: 826143f7d5873e56a7fa551fba5d70f50764da60
-      cve: release_artifacts/6.0.4.4/z/opflex/6.0.4.4-cve.txt
+      cve: release_artifacts/6.0.4.4/z/opflex/6.0.4.4-quay-cve.txt
+      cve_error: ''
       docker:
-      - link: https://hub.docker.com/layers/noiro/opflex/6.0.4.4.81c2369.z/images/sha256-61a96e133f8a7cbcee03bcc05ef3fab6f9564e00ba05d2aeb119cfc0ae72294e?context=explore
-        sha: 61a96e133f8a7cbcee03bcc05ef3fab6f9564e00ba05d2aeb119cfc0ae72294e
+      - link: https://hub.docker.com/layers/noiro/opflex/6.0.4.4.81c2369.z/images/sha256-92df37aa049ebaed2b6a0f50222ece81534e12d216215b59e7b35d36e3b60f09?context=explore
+        sha: 92df37aa049ebaed2b6a0f50222ece81534e12d216215b59e7b35d36e3b60f09
         tag: 6.0.4.4.81c2369.z
-      - link: https://hub.docker.com/layers/noiro/opflex/6.0.4.4.81c2369.121124.4153/images/sha256-3a2dfa37f4ce8a61de917f42eb03aa5ea8a8aee8f11d2cf688b0b95b582333cb?context=explore
-        sha: 3a2dfa37f4ce8a61de917f42eb03aa5ea8a8aee8f11d2cf688b0b95b582333cb
-        tag: 6.0.4.4.81c2369.121124.4153
+      - link: https://hub.docker.com/layers/noiro/opflex/6.0.4.4.81c2369.121124.4157/images/sha256-92df37aa049ebaed2b6a0f50222ece81534e12d216215b59e7b35d36e3b60f09?context=explore
+        sha: 92df37aa049ebaed2b6a0f50222ece81534e12d216215b59e7b35d36e3b60f09
+        tag: 6.0.4.4.81c2369.121124.4157
       name: opflex
       quay:
       - link: https://quay.io/noiro/opflex:6.0.4.4.81c2369.z
-        sha: 61a96e133f8a7cbcee03bcc05ef3fab6f9564e00ba05d2aeb119cfc0ae72294e
+        sha: 92df37aa049ebaed2b6a0f50222ece81534e12d216215b59e7b35d36e3b60f09
         tag: 6.0.4.4.81c2369.z
-      - link: https://quay.io/noiro/opflex:6.0.4.4.81c2369.121124.4153
-        sha: 3a2dfa37f4ce8a61de917f42eb03aa5ea8a8aee8f11d2cf688b0b95b582333cb
-        tag: 6.0.4.4.81c2369.121124.4153
+      - link: https://quay.io/noiro/opflex:6.0.4.4.81c2369.121124.4157
+        sha: 92df37aa049ebaed2b6a0f50222ece81534e12d216215b59e7b35d36e3b60f09
+        tag: 6.0.4.4.81c2369.121124.4157
       sbom: release_artifacts/6.0.4.4/z/opflex/6.0.4.4-sbom.txt
       severity:
       - C: 0
@@ -5761,8 +5765,9 @@ releases:
         L: 0
         M: 0
         U: 0
-      severity_type: grype
-    last_updated: 2024-12-11 10:29:17 PST
+      severity_link: https://quay.io/repository/noiro/opflex/manifest/sha256:92df37aa049ebaed2b6a0f50222ece81534e12d216215b59e7b35d36e3b60f09?tab=vulnerabilities
+      severity_type: quay
+    last_updated: 2024-12-11 12:44:55 PST
     release_name: 6.0.4.4.z
   - acc_provision: []
     container_images: []
