@@ -1,5 +1,4 @@
-NAME                 INSTALLED  FIXED-IN  TYPE       VULNERABILITY        SEVERITY 
-golang.org/x/crypto  v0.21.0    0.31.0    go-module  GHSA-v778-237x-gjrc  Critical
+No vulnerabilities found
 
 quay.io/noiro/aci-containers-host-ovscni:6.0.4.4.81c2369.z (redhat 9.5)
 =======================================================================
@@ -8,7 +7,8 @@ Total: 67 (UNKNOWN: 0, LOW: 45, MEDIUM: 22, HIGH: 0, CRITICAL: 0)
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬─────────────────────┬───────────────┬─────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │  Installed Version  │ Fixed Version │                            Title                            │
 ├─────────────────────────────┼────────────────┼──────────┼─────────────────────┼─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ bzip2-libs                  │ CVE-2019-12900 │ LOW      │ affected            │ 1.0.8-9.el9         │               │ bzip2: out-of-bounds write in function BZ2_decompress       │
+│ bzip2-libs                  │ CVE-2019-12900 │ LOW      │ affected            │ 1.0.8-9.el9         │               │ bzip2: bzip2: Data integrity error when decompressing (with │
+│                             │                │          │                     │                     │               │ data integrity tests fail)....                              │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2019-12900                  │
 ├─────────────────────────────┼────────────────┤          │                     ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
 │ curl                        │ CVE-2024-7264  │          │                     │ 7.76.1-31.el9       │               │ curl: libcurl: ASN.1 date parser overread                   │
@@ -251,16 +251,3 @@ Total: 67 (UNKNOWN: 0, LOW: 45, MEDIUM: 22, HIGH: 0, CRITICAL: 0)
 │                             │                │          │                     │                     │               │ Fapi_VerifyQuote                                            │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-29040                  │
 └─────────────────────────────┴────────────────┴──────────┴─────────────────────┴─────────────────────┴───────────────┴─────────────────────────────────────────────────────────────┘
-
-usr/local/bin/aci-containers-host-agent (gobinary)
-==================================================
-Total: 1 (UNKNOWN: 0, LOW: 0, MEDIUM: 0, HIGH: 0, CRITICAL: 1)
-
-┌─────────────────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────┬────────────────────────────────────────────────────────┐
-│       Library       │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version │                         Title                          │
-├─────────────────────┼────────────────┼──────────┼────────┼───────────────────┼───────────────┼────────────────────────────────────────────────────────┤
-│ golang.org/x/crypto │ CVE-2024-45337 │ CRITICAL │ fixed  │ v0.21.0           │ 0.31.0        │ golang.org/x/crypto/ssh: Misuse of                     │
-│                     │                │          │        │                   │               │ ServerConfig.PublicKeyCallback may cause authorization │
-│                     │                │          │        │                   │               │ bypass in golang.org/x/crypto                          │
-│                     │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2024-45337             │
-└─────────────────────┴────────────────┴──────────┴────────┴───────────────────┴───────────────┴────────────────────────────────────────────────────────┘
