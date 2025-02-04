@@ -2,12 +2,12 @@ No vulnerabilities found
 
 quay.io/noiro/openvswitch:6.0.4.4.81c2369.z (redhat 9.5)
 ========================================================
-Total: 187 (UNKNOWN: 0, LOW: 159, MEDIUM: 27, HIGH: 1, CRITICAL: 0)
+Total: 189 (UNKNOWN: 0, LOW: 157, MEDIUM: 31, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │  Installed Version  │ Fixed Version │                            Title                             │
 ├─────────────────────────────┼────────────────┼──────────┼─────────────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ bzip2-libs                  │ CVE-2019-12900 │ MEDIUM   │ affected            │ 1.0.8-10.el9        │               │ bzip2: bzip2: Data integrity error when decompressing (with  │
+│ bzip2-libs                  │ CVE-2019-12900 │ MEDIUM   │ affected            │ 1.0.8-10.el9_5      │               │ bzip2: bzip2: Data integrity error when decompressing (with  │
 │                             │                │          │                     │                     │               │ data integrity tests fail)....                               │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2019-12900                   │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
@@ -66,7 +66,7 @@ Total: 187 (UNKNOWN: 0, LOW: 159, MEDIUM: 27, HIGH: 1, CRITICAL: 0)
 │                             │ CVE-2023-32636 │ LOW      │ affected            │                     │               │ glib: Timeout in fuzz_variant_text                           │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2023-32636                   │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ glibc                       │ CVE-2025-0395  │ MEDIUM   │                     │ 2.34-153.el9        │               │ glibc: buffer overflow in the GNU C Library's assert()       │
+│ glibc                       │ CVE-2025-0395  │ MEDIUM   │                     │ 2.34-160.el9        │               │ glibc: buffer overflow in the GNU C Library's assert()       │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-0395                    │
 ├─────────────────────────────┤                │          │                     │                     ├───────────────┤                                                              │
 │ glibc-common                │                │          │                     │                     │               │                                                              │
@@ -81,8 +81,11 @@ Total: 187 (UNKNOWN: 0, LOW: 159, MEDIUM: 27, HIGH: 1, CRITICAL: 0)
 │ gnupg2                      │ CVE-2022-3219  │ LOW      │ will_not_fix        │ 2.3.3-4.el9         │               │ gnupg: denial of service issue (resource consumption) using  │
 │                             │                │          │                     │                     │               │ compressed packets                                           │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-3219                    │
-├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libarchive                  │ CVE-2023-30571 │ MEDIUM   │                     │ 3.5.3-4.el9         │               │ libarchive: Race condition in multi-threaded use of          │
+├─────────────────────────────┼────────────────┼──────────┼─────────────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ krb5-libs                   │ CVE-2025-24528 │ MEDIUM   │ affected            │ 1.21.1-4.el9_5      │               │ krb5: overflow when calculating ulog block size              │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-24528                   │
+├─────────────────────────────┼────────────────┤          ├─────────────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libarchive                  │ CVE-2023-30571 │          │ will_not_fix        │ 3.5.3-4.el9         │               │ libarchive: Race condition in multi-threaded use of          │
 │                             │                │          │                     │                     │               │ archive_write_disk_header() on posix based systems...        │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2023-30571                   │
 ├─────────────────────────────┼────────────────┤          │                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
@@ -107,7 +110,7 @@ Total: 187 (UNKNOWN: 0, LOW: 159, MEDIUM: 27, HIGH: 1, CRITICAL: 0)
 │                             │ CVE-2024-9681  │          │                     │                     │               │ curl: HSTS subdomain overwrites parent cache entry           │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-9681                    │
 ├─────────────────────────────┼────────────────┤          │                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libgcc                      │ CVE-2022-27943 │          │                     │ 11.5.0-2.el9        │               │ binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows   │
+│ libgcc                      │ CVE-2022-27943 │          │                     │ 11.5.0-4.el9        │               │ binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows   │
 │                             │                │          │                     │                     │               │ stack exhaustion in demangle_const                           │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-27943                   │
 ├─────────────────────────────┤                │          │                     │                     ├───────────────┤                                                              │
@@ -170,9 +173,6 @@ Total: 187 (UNKNOWN: 0, LOW: 159, MEDIUM: 27, HIGH: 1, CRITICAL: 0)
 │                             │ CVE-2024-41996 │          │                     │                     │               │ openssl: remote attackers (from the client side) to trigger  │
 │                             │                │          │                     │                     │               │ unnecessarily expensive server-side...                       │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-41996                   │
-│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-4741  │          │                     │                     │               │ openssl: Use After Free with SSL_free_buffers                │
-│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-4741                    │
 │                             ├────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-5535  │          │ affected            │                     │               │ openssl: SSL_select_next_proto buffer overread               │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-5535                    │
@@ -187,9 +187,6 @@ Total: 187 (UNKNOWN: 0, LOW: 159, MEDIUM: 27, HIGH: 1, CRITICAL: 0)
 │                             │ CVE-2024-41996 │          │                     │                     │               │ openssl: remote attackers (from the client side) to trigger  │
 │                             │                │          │                     │                     │               │ unnecessarily expensive server-side...                       │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-41996                   │
-│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-4741  │          │                     │                     │               │ openssl: Use After Free with SSL_free_buffers                │
-│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-4741                    │
 │                             ├────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-5535  │          │ affected            │                     │               │ openssl: SSL_select_next_proto buffer overread               │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-5535                    │
@@ -205,40 +202,52 @@ Total: 187 (UNKNOWN: 0, LOW: 159, MEDIUM: 27, HIGH: 1, CRITICAL: 0)
 │ python-unversioned-command  │ CVE-2021-23336 │ MEDIUM   │ affected            │ 3.9.21-1.el9_5      │               │ python: Web cache poisoning via urllib.parse.parse_qsl and   │
 │                             │                │          │                     │                     │               │ urllib.parse.parse_qs by using a semicolon...                │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2021-23336                   │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-0938  │          │                     │                     │               │ python: cpython: URL parser allowed square brackets in       │
+│                             │                │          │                     │                     │               │ domain names                                                 │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-0938                    │
 │                             ├────────────────┼──────────┼─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-0397  │ LOW      │ under_investigation │                     │               │ cpython: python: Memory race condition in ssl.SSLContext     │
 │                             │                │          │                     │                     │               │ certificate store methods                                    │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-0397                    │
 │                             ├────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-7592  │          │ affected            │                     │               │ cpython: python: Uncontrolled CPU resource consumption when  │
+│                             │ CVE-2024-7592  │          │ will_not_fix        │                     │               │ cpython: python: Uncontrolled CPU resource consumption when  │
 │                             │                │          │                     │                     │               │ in http.cookies module                                       │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-7592                    │
-├─────────────────────────────┼────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ python3                     │ CVE-2021-23336 │ MEDIUM   │                     │                     │               │ python: Web cache poisoning via urllib.parse.parse_qsl and   │
+├─────────────────────────────┼────────────────┼──────────┼─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ python3                     │ CVE-2021-23336 │ MEDIUM   │ affected            │                     │               │ python: Web cache poisoning via urllib.parse.parse_qsl and   │
 │                             │                │          │                     │                     │               │ urllib.parse.parse_qs by using a semicolon...                │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2021-23336                   │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-0938  │          │                     │                     │               │ python: cpython: URL parser allowed square brackets in       │
+│                             │                │          │                     │                     │               │ domain names                                                 │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-0938                    │
 │                             ├────────────────┼──────────┼─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-0397  │ LOW      │ under_investigation │                     │               │ cpython: python: Memory race condition in ssl.SSLContext     │
 │                             │                │          │                     │                     │               │ certificate store methods                                    │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-0397                    │
 │                             ├────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-7592  │          │ affected            │                     │               │ cpython: python: Uncontrolled CPU resource consumption when  │
+│                             │ CVE-2024-7592  │          │ will_not_fix        │                     │               │ cpython: python: Uncontrolled CPU resource consumption when  │
 │                             │                │          │                     │                     │               │ in http.cookies module                                       │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-7592                    │
-├─────────────────────────────┼────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ python3-libs                │ CVE-2021-23336 │ MEDIUM   │                     │                     │               │ python: Web cache poisoning via urllib.parse.parse_qsl and   │
+├─────────────────────────────┼────────────────┼──────────┼─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ python3-libs                │ CVE-2021-23336 │ MEDIUM   │ affected            │                     │               │ python: Web cache poisoning via urllib.parse.parse_qsl and   │
 │                             │                │          │                     │                     │               │ urllib.parse.parse_qs by using a semicolon...                │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2021-23336                   │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-0938  │          │                     │                     │               │ python: cpython: URL parser allowed square brackets in       │
+│                             │                │          │                     │                     │               │ domain names                                                 │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-0938                    │
 │                             ├────────────────┼──────────┼─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-0397  │ LOW      │ under_investigation │                     │               │ cpython: python: Memory race condition in ssl.SSLContext     │
 │                             │                │          │                     │                     │               │ certificate store methods                                    │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-0397                    │
 │                             ├────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-7592  │          │ affected            │                     │               │ cpython: python: Uncontrolled CPU resource consumption when  │
+│                             │ CVE-2024-7592  │          │ will_not_fix        │                     │               │ cpython: python: Uncontrolled CPU resource consumption when  │
 │                             │                │          │                     │                     │               │ in http.cookies module                                       │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-7592                    │
-├─────────────────────────────┼────────────────┤          │                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ python3-pip-wheel           │ CVE-2021-3572  │          │                     │ 21.3.1-1.el9        │               │ python-pip: Incorrect handling of unicode separators in git  │
+├─────────────────────────────┼────────────────┤          ├─────────────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ python3-pip-wheel           │ CVE-2021-3572  │          │ affected            │ 21.3.1-1.el9        │               │ python-pip: Incorrect handling of unicode separators in git  │
 │                             │                │          │                     │                     │               │ references                                                   │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2021-3572                    │
 ├─────────────────────────────┼────────────────┤          │                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
@@ -252,7 +261,7 @@ Total: 187 (UNKNOWN: 0, LOW: 159, MEDIUM: 27, HIGH: 1, CRITICAL: 0)
 │                             │ CVE-2024-0232  │          │ affected            │                     │               │ sqlite: use-after-free bug in jsonParseAddNodeArray          │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-0232                    │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ systemd                     │ CVE-2021-3997  │ MEDIUM   │                     │ 252-50.el9          │               │ systemd: Uncontrolled recursion in systemd-tmpfiles when     │
+│ systemd                     │ CVE-2021-3997  │ MEDIUM   │                     │ 252-51.el9          │               │ systemd: Uncontrolled recursion in systemd-tmpfiles when     │
 │                             │                │          │                     │                     │               │ removing files                                               │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2021-3997                    │
 ├─────────────────────────────┤                │          │                     │                     ├───────────────┤                                                              │
