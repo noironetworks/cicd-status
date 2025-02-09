@@ -10,16 +10,12 @@ urllib3     1.26.5     1.26.19   python  GHSA-34jh-p97f-mpxf  Medium
 
 quay.io/noiro/aci-containers-operator:6.0.4.4.81c2369.z (redhat 9.5)
 ====================================================================
-Total: 209 (UNKNOWN: 0, LOW: 171, MEDIUM: 33, HIGH: 5, CRITICAL: 0)
+Total: 207 (UNKNOWN: 0, LOW: 173, MEDIUM: 33, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬──────────────────┬──────────┬─────────────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │  Vulnerability   │ Severity │       Status        │  Installed Version  │ Fixed Version │                            Title                             │
 ├─────────────────────────────┼──────────────────┼──────────┼─────────────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ bzip2-libs                  │ CVE-2019-12900   │ MEDIUM   │ affected            │ 1.0.8-10.el9_5      │               │ bzip2: bzip2: Data integrity error when decompressing (with  │
-│                             │                  │          │                     │                     │               │ data integrity tests fail)....                               │
-│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2019-12900                   │
-├─────────────────────────────┼──────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ curl                        │ CVE-2024-11053   │ LOW      │                     │ 7.76.1-31.el9       │               │ curl: curl netrc password leak                               │
+│ curl                        │ CVE-2024-11053   │ LOW      │ affected            │ 7.76.1-31.el9       │               │ curl: curl netrc password leak                               │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-11053                   │
 │                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-7264    │          │                     │                     │               │ curl: libcurl: ASN.1 date parser overread                    │
@@ -27,6 +23,10 @@ Total: 209 (UNKNOWN: 0, LOW: 171, MEDIUM: 33, HIGH: 5, CRITICAL: 0)
 │                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-9681    │          │                     │                     │               │ curl: HSTS subdomain overwrites parent cache entry           │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-9681                    │
+│                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-0725    │          │                     │                     │               │ libcurl: Buffer Overflow in libcurl via zlib Integer         │
+│                             │                  │          │                     │                     │               │ Overflow                                                     │
+│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-0725                    │
 ├─────────────────────────────┼──────────────────┤          ├─────────────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ elfutils-default-yama-scope │ CVE-2024-25260   │          │ will_not_fix        │ 0.191-4.el9         │               │ elfutils: global-buffer-overflow exists in the function      │
 │                             │                  │          │                     │                     │               │ ebl_machine_flag_name in eblmachineflagname.c                │
@@ -45,33 +45,15 @@ Total: 209 (UNKNOWN: 0, LOW: 171, MEDIUM: 33, HIGH: 5, CRITICAL: 0)
 │                             ├──────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2017-1000383 │ LOW      │                     │                     │               │ emacs: Ignores umask when creating a swap file               │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2017-1000383                 │
-├─────────────────────────────┼──────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ expat                       │ CVE-2022-22822   │ MEDIUM   │                     │ 2.5.0-3.el9_5.1     │               │ expat: Integer overflow in addBinding in xmlparse.c          │
-│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-22822                   │
-│                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-22823   │          │                     │                     │               │ expat: Integer overflow in build_model in xmlparse.c         │
-│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-22823                   │
-│                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-22824   │          │                     │                     │               │ expat: Integer overflow in defineAttribute in xmlparse.c     │
-│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-22824                   │
-│                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-22825   │          │                     │                     │               │ expat: Integer overflow in lookup in xmlparse.c              │
-│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-22825                   │
-│                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-22826   │          │                     │                     │               │ expat: Integer overflow in nextScaffoldPart in xmlparse.c    │
-│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-22826                   │
-│                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-22827   │          │                     │                     │               │ expat: Integer overflow in storeAtts in xmlparse.c           │
-│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-22827                   │
-│                             ├──────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-45491   │          │ will_not_fix        │                     │               │ libexpat: Integer Overflow or Wraparound                     │
-│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-45491                   │
-├─────────────────────────────┼──────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ gawk                        │ CVE-2023-4156    │ LOW      │                     │ 5.1.0-6.el9         │               │ gawk: heap out of bound read in builtin.c                    │
-│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2023-4156                    │
 ├─────────────────────────────┼──────────────────┼──────────┼─────────────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ gdb-gdbserver               │ CVE-2025-0840    │ MEDIUM   │ affected            │ 14.2-3.el9          │               │ A vulnerability, which was classified as problematic, was    │
-│                             │                  │          │                     │                     │               │ found in GNU ......                                          │
+│ expat                       │ CVE-2024-45491   │ MEDIUM   │ will_not_fix        │ 2.5.0-3.el9_5.1     │               │ libexpat: Integer Overflow or Wraparound                     │
+│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-45491                   │
+├─────────────────────────────┼──────────────────┼──────────┼─────────────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ gawk                        │ CVE-2023-4156    │ LOW      │ affected            │ 5.1.0-6.el9         │               │ gawk: heap out of bound read in builtin.c                    │
+│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2023-4156                    │
+├─────────────────────────────┼──────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ gdb-gdbserver               │ CVE-2025-0840    │ MEDIUM   │                     │ 14.2-3.el9          │               │ binutils: GNU Binutils objdump.c disassemble_bytes           │
+│                             │                  │          │                     │                     │               │ stack-based overflow                                         │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-0840                    │
 │                             ├──────────────────┼──────────┼─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2022-47007   │ LOW      │ will_not_fix        │                     │               │ binutils: memory leak in stab_demangle_v3_arg() in stabs.c   │
@@ -88,7 +70,7 @@ Total: 209 (UNKNOWN: 0, LOW: 171, MEDIUM: 33, HIGH: 5, CRITICAL: 0)
 │                             │                  │          │                     │                     │               │ symbols without version info                                 │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-57360                   │
 ├─────────────────────────────┼──────────────────┼──────────┼─────────────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ git                         │ CVE-2024-52005   │ HIGH     │ will_not_fix        │ 2.43.5-2.el9_5      │               │ git: The sideband payload is passed unfiltered to the        │
+│ git                         │ CVE-2024-52005   │ MEDIUM   │ will_not_fix        │ 2.43.5-2.el9_5      │               │ git: The sideband payload is passed unfiltered to the        │
 │                             │                  │          │                     │                     │               │ terminal in git...                                           │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52005                   │
 │                             ├──────────────────┼──────────┼─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -100,7 +82,7 @@ Total: 209 (UNKNOWN: 0, LOW: 171, MEDIUM: 33, HIGH: 5, CRITICAL: 0)
 │                             │                  │          │                     │                     │               │ credential exfiltration in...                                │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52006                   │
 ├─────────────────────────────┼──────────────────┼──────────┼─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ git-core                    │ CVE-2024-52005   │ HIGH     │ will_not_fix        │                     │               │ git: The sideband payload is passed unfiltered to the        │
+│ git-core                    │ CVE-2024-52005   │ MEDIUM   │ will_not_fix        │                     │               │ git: The sideband payload is passed unfiltered to the        │
 │                             │                  │          │                     │                     │               │ terminal in git...                                           │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52005                   │
 │                             ├──────────────────┼──────────┼─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -112,7 +94,7 @@ Total: 209 (UNKNOWN: 0, LOW: 171, MEDIUM: 33, HIGH: 5, CRITICAL: 0)
 │                             │                  │          │                     │                     │               │ credential exfiltration in...                                │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52006                   │
 ├─────────────────────────────┼──────────────────┼──────────┼─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ git-core-doc                │ CVE-2024-52005   │ HIGH     │ will_not_fix        │                     │               │ git: The sideband payload is passed unfiltered to the        │
+│ git-core-doc                │ CVE-2024-52005   │ MEDIUM   │ will_not_fix        │                     │               │ git: The sideband payload is passed unfiltered to the        │
 │                             │                  │          │                     │                     │               │ terminal in git...                                           │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52005                   │
 │                             ├──────────────────┼──────────┼─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -170,18 +152,34 @@ Total: 209 (UNKNOWN: 0, LOW: 171, MEDIUM: 33, HIGH: 5, CRITICAL: 0)
 │                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-9681    │          │                     │                     │               │ curl: HSTS subdomain overwrites parent cache entry           │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-9681                    │
-├─────────────────────────────┼──────────────────┤          │                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libgcc                      │ CVE-2022-27943   │          │                     │ 11.5.0-2.el9        │               │ binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows   │
+│                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-0725    │          │                     │                     │               │ libcurl: Buffer Overflow in libcurl via zlib Integer         │
+│                             │                  │          │                     │                     │               │ Overflow                                                     │
+│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-0725                    │
+├─────────────────────────────┼──────────────────┼──────────┼─────────────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libgcc                      │ CVE-2020-11023   │ MEDIUM   │ under_investigation │ 11.5.0-2.el9        │               │ jquery: Untrusted code execution via <option> tag in HTML    │
+│                             │                  │          │                     │                     │               │ passed to DOM...                                             │
+│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2020-11023                   │
+│                             ├──────────────────┼──────────┼─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-27943   │ LOW      │ affected            │                     │               │ binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows   │
 │                             │                  │          │                     │                     │               │ stack exhaustion in demangle_const                           │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-27943                   │
-├─────────────────────────────┤                  │          │                     │                     ├───────────────┤                                                              │
-│ libgomp                     │                  │          │                     │                     │               │                                                              │
-│                             │                  │          │                     │                     │               │                                                              │
-│                             │                  │          │                     │                     │               │                                                              │
-├─────────────────────────────┤                  │          │                     │                     ├───────────────┤                                                              │
-│ libstdc++                   │                  │          │                     │                     │               │                                                              │
-│                             │                  │          │                     │                     │               │                                                              │
-│                             │                  │          │                     │                     │               │                                                              │
+├─────────────────────────────┼──────────────────┼──────────┼─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ libgomp                     │ CVE-2020-11023   │ MEDIUM   │ under_investigation │                     │               │ jquery: Untrusted code execution via <option> tag in HTML    │
+│                             │                  │          │                     │                     │               │ passed to DOM...                                             │
+│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2020-11023                   │
+│                             ├──────────────────┼──────────┼─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-27943   │ LOW      │ affected            │                     │               │ binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows   │
+│                             │                  │          │                     │                     │               │ stack exhaustion in demangle_const                           │
+│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-27943                   │
+├─────────────────────────────┼──────────────────┼──────────┼─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ libstdc++                   │ CVE-2020-11023   │ MEDIUM   │ under_investigation │                     │               │ jquery: Untrusted code execution via <option> tag in HTML    │
+│                             │                  │          │                     │                     │               │ passed to DOM...                                             │
+│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2020-11023                   │
+│                             ├──────────────────┼──────────┼─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-27943   │ LOW      │ affected            │                     │               │ binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows   │
+│                             │                  │          │                     │                     │               │ stack exhaustion in demangle_const                           │
+│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-27943                   │
 ├─────────────────────────────┼──────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ libxml2                     │ CVE-2022-49043   │ HIGH     │                     │ 2.9.13-6.el9_4      │               │ libxml: use-after-free in xmlXIncludeAddNode                 │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-49043                   │
@@ -282,7 +280,7 @@ Total: 209 (UNKNOWN: 0, LOW: 171, MEDIUM: 33, HIGH: 5, CRITICAL: 0)
 │                             │                  │          │                     │                     │               │                                                              │
 │                             │                  │          │                     │                     │               │                                                              │
 ├─────────────────────────────┼──────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ perl-Git                    │ CVE-2024-52005   │ HIGH     │                     │ 2.43.5-2.el9_5      │               │ git: The sideband payload is passed unfiltered to the        │
+│ perl-Git                    │ CVE-2024-52005   │ MEDIUM   │                     │ 2.43.5-2.el9_5      │               │ git: The sideband payload is passed unfiltered to the        │
 │                             │                  │          │                     │                     │               │ terminal in git...                                           │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52005                   │
 │                             ├──────────────────┼──────────┼─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -394,11 +392,11 @@ Total: 209 (UNKNOWN: 0, LOW: 171, MEDIUM: 33, HIGH: 5, CRITICAL: 0)
 │                             │ CVE-2021-4136    │          │ affected            │                     │               │ vim: heap-based buffer overflow in eval_lambda() in          │
 │                             │                  │          │                     │                     │               │ src/eval.c                                                   │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2021-4136                    │
-│                             ├──────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2021-4166    │          │ will_not_fix        │                     │               │ vim: out-of-bounds read in do_arg_all() in src/arglist.c     │
-│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2021-4166                    │
 │                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2021-4173    │          │                     │                     │               │ vim: use-after-free with nested :def function                │
+│                             │ CVE-2021-4166    │          │                     │                     │               │ vim: out-of-bounds read in do_arg_all() in src/arglist.c     │
+│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2021-4166                    │
+│                             ├──────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2021-4173    │          │ will_not_fix        │                     │               │ vim: use-after-free with nested :def function                │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2021-4173                    │
 │                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2021-4187    │          │                     │                     │               │ vim: use-after-free vulnerability                            │
@@ -454,21 +452,21 @@ Total: 209 (UNKNOWN: 0, LOW: 171, MEDIUM: 33, HIGH: 5, CRITICAL: 0)
 │                             │ CVE-2022-2182    │          │                     │                     │               │ vim: heap-based buffer overflow through parse_cmd_address()  │
 │                             │                  │          │                     │                     │               │ in function utf_ptr2char                                     │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-2182                    │
-│                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-2183    │          │                     │                     │               │ vim: out-of-bounds read through get_lisp_indent() in         │
+│                             ├──────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-2183    │          │ affected            │                     │               │ vim: out-of-bounds read through get_lisp_indent() in         │
 │                             │                  │          │                     │                     │               │ function get_lisp_indent                                     │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-2183                    │
-│                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-2206    │          │                     │                     │               │ vim: out-of-bound read in function msg_outtrans_attr         │
+│                             ├──────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-2206    │          │ will_not_fix        │                     │               │ vim: out-of-bound read in function msg_outtrans_attr         │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-2206                    │
 │                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2022-2207    │          │                     │                     │               │ vim: heap-based buffer overflow in function ins_bs           │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-2207                    │
-│                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-2208    │          │                     │                     │               │ vim: null pointer dereference in function diff_check         │
+│                             ├──────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-2208    │          │ affected            │                     │               │ vim: null pointer dereference in function diff_check         │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-2208                    │
-│                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-2210    │          │                     │                     │               │ vim: out-of-bound write in function ml_append_int            │
+│                             ├──────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-2210    │          │ will_not_fix        │                     │               │ vim: out-of-bound write in function ml_append_int            │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-2210                    │
 │                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2022-2257    │          │                     │                     │               │ vim: an out-of-bound read in function msg_outtrans_special   │
@@ -514,12 +512,12 @@ Total: 209 (UNKNOWN: 0, LOW: 171, MEDIUM: 33, HIGH: 5, CRITICAL: 0)
 │                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2022-2845    │          │                     │                     │               │ vim: Buffer Under-read                                       │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-2845                    │
-│                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-2849    │          │                     │                     │               │ vim: heap-based buffer overflow in latin_ptr2len() at        │
+│                             ├──────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-2849    │          │ affected            │                     │               │ vim: heap-based buffer overflow in latin_ptr2len() at        │
 │                             │                  │          │                     │                     │               │ src/mbyte.c                                                  │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-2849                    │
-│                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-2862    │          │                     │                     │               │ vim: heap use-after-free in generate_PCALL() at              │
+│                             ├──────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-2862    │          │ will_not_fix        │                     │               │ vim: heap use-after-free in generate_PCALL() at              │
 │                             │                  │          │                     │                     │               │ src/vim9instr.c                                              │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-2862                    │
 │                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -530,11 +528,11 @@ Total: 209 (UNKNOWN: 0, LOW: 171, MEDIUM: 33, HIGH: 5, CRITICAL: 0)
 │                             │ CVE-2022-2889    │          │                     │                     │               │ vim: use-after-free in find_var_also_in_script() in          │
 │                             │                  │          │                     │                     │               │ evalvars.c                                                   │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-2889                    │
-│                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-2923    │          │                     │                     │               │ vim: null pointer dereference in function sug_filltree       │
+│                             ├──────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-2923    │          │ affected            │                     │               │ vim: null pointer dereference in function sug_filltree       │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-2923                    │
-│                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-2946    │          │                     │                     │               │ vim: use after free in function vim_vsnprintf_typval         │
+│                             ├──────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-2946    │          │ will_not_fix        │                     │               │ vim: use after free in function vim_vsnprintf_typval         │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-2946                    │
 │                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2022-2980    │          │                     │                     │               │ vim: null pointer dereference in do_mouse() at src/mouse.c   │
@@ -546,11 +544,11 @@ Total: 209 (UNKNOWN: 0, LOW: 171, MEDIUM: 33, HIGH: 5, CRITICAL: 0)
 │                             │ CVE-2022-3016    │          │                     │                     │               │ vim: use-after-free in get_next_valid_entry() at             │
 │                             │                  │          │                     │                     │               │ src/quickfix.c                                               │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-3016                    │
-│                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-3037    │          │                     │                     │               │ vim: use after free in function qf_buf_add_line( )           │
+│                             ├──────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-3037    │          │ affected            │                     │               │ vim: use after free in function qf_buf_add_line( )           │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-3037                    │
-│                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-3099    │          │                     │                     │               │ vim: Use After Free in do_cmdline() in ex_docmd.c            │
+│                             ├──────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-3099    │          │ will_not_fix        │                     │               │ vim: Use After Free in do_cmdline() in ex_docmd.c            │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-3099                    │
 │                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2022-3134    │          │                     │                     │               │ vim: heap use-after-free in do_tag() at src/tag.c            │
@@ -698,12 +696,12 @@ Total: 209 (UNKNOWN: 0, LOW: 171, MEDIUM: 33, HIGH: 5, CRITICAL: 0)
 │                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2023-5535    │          │                     │                     │               │ vim: use after free                                          │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2023-5535                    │
-│                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-22667   │          │                     │                     │               │ vim: Stack buffer over flow in did_set_langmap function in   │
+│                             ├──────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2024-22667   │          │ affected            │                     │               │ vim: Stack buffer over flow in did_set_langmap function in   │
 │                             │                  │          │                     │                     │               │ map.c                                                        │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-22667                   │
-│                             ├──────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-41957   │          │ affected            │                     │               │ vim: Double-free/use-after-free vulnerability with Vim       │
+│                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2024-41957   │          │                     │                     │               │ vim: Double-free/use-after-free vulnerability with Vim       │
 │                             │                  │          │                     │                     │               │ editor                                                       │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-41957                   │
 │                             ├──────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
