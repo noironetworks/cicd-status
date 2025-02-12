@@ -2,7 +2,7 @@ No vulnerabilities found
 
 quay.io/noiro/aci-containers-host:6.1.2.1.81c2369.z (redhat 9.5)
 ================================================================
-Total: 75 (UNKNOWN: 0, LOW: 47, MEDIUM: 23, HIGH: 5, CRITICAL: 0)
+Total: 80 (UNKNOWN: 0, LOW: 49, MEDIUM: 26, HIGH: 5, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬─────────────────────┬───────────────┬─────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │  Installed Version  │ Fixed Version │                            Title                            │
@@ -15,6 +15,10 @@ Total: 75 (UNKNOWN: 0, LOW: 47, MEDIUM: 23, HIGH: 5, CRITICAL: 0)
 │                             ├────────────────┤          │                     │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-9681  │          │                     │                     │               │ curl: HSTS subdomain overwrites parent cache entry          │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-9681                   │
+│                             ├────────────────┤          │                     │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-0725  │          │                     │                     │               │ libcurl: Buffer Overflow in libcurl via zlib Integer        │
+│                             │                │          │                     │                     │               │ Overflow                                                    │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-0725                   │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
 │ dhcp-client                 │ CVE-2024-11187 │ HIGH     │                     │ 12:4.4.2-19.b1.el9  │               │ bind: bind9: Many records in the additional section cause   │
 │                             │                │          │                     │                     │               │ CPU exhaustion                                              │
@@ -46,17 +50,17 @@ Total: 75 (UNKNOWN: 0, LOW: 47, MEDIUM: 23, HIGH: 5, CRITICAL: 0)
 ├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
 │ expat                       │ CVE-2024-45491 │ MEDIUM   │                     │ 2.5.0-4.el9         │               │ libexpat: Integer Overflow or Wraparound                    │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-45491                  │
-├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ gawk                        │ CVE-2023-4156  │ LOW      │                     │ 5.1.0-6.el9         │               │ gawk: heap out of bound read in builtin.c                   │
+├─────────────────────────────┼────────────────┼──────────┼─────────────────────┼─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ gawk                        │ CVE-2023-4156  │ LOW      │ affected            │ 5.1.0-6.el9         │               │ gawk: heap out of bound read in builtin.c                   │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2023-4156                   │
-├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ glib2                       │ CVE-2024-52533 │ MEDIUM   │                     │ 2.68.4-16.el9       │               │ glib: buffer overflow in set_connect_msg()                  │
+├─────────────────────────────┼────────────────┼──────────┼─────────────────────┼─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ glib2                       │ CVE-2024-52533 │ MEDIUM   │ will_not_fix        │ 2.68.4-16.el9       │               │ glib: buffer overflow in set_connect_msg()                  │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52533                  │
 │                             ├────────────────┼──────────┼─────────────────────┤                     ├───────────────┼─────────────────────────────────────────────────────────────┤
 │                             │ CVE-2023-32636 │ LOW      │ affected            │                     │               │ glib: Timeout in fuzz_variant_text                          │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2023-32636                  │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ glibc                       │ CVE-2025-0395  │ MEDIUM   │                     │ 2.34-160.el9        │               │ glibc: buffer overflow in the GNU C Library's assert()      │
+│ glibc                       │ CVE-2025-0395  │ MEDIUM   │                     │ 2.34-163.el9        │               │ glibc: buffer overflow in the GNU C Library's assert()      │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-0395                   │
 ├─────────────────────────────┤                │          │                     │                     ├───────────────┤                                                             │
 │ glibc-common                │                │          │                     │                     │               │                                                             │
@@ -72,14 +76,14 @@ Total: 75 (UNKNOWN: 0, LOW: 47, MEDIUM: 23, HIGH: 5, CRITICAL: 0)
 │                             │                │          │                     │                     │               │ compressed packets                                          │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-3219                   │
 ├─────────────────────────────┼────────────────┼──────────┼─────────────────────┼─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ krb5-libs                   │ CVE-2025-24528 │ MEDIUM   │ affected            │ 1.21.1-4.el9_5      │               │ krb5: overflow when calculating ulog block size             │
+│ krb5-libs                   │ CVE-2025-24528 │ MEDIUM   │ affected            │ 1.21.1-6.el9        │               │ krb5: overflow when calculating ulog block size             │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-24528                  │
 ├─────────────────────────────┼────────────────┤          ├─────────────────────┼─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
 │ libarchive                  │ CVE-2023-30571 │          │ will_not_fix        │ 3.5.3-4.el9         │               │ libarchive: Race condition in multi-threaded use of         │
 │                             │                │          │                     │                     │               │ archive_write_disk_header() on posix based systems...       │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2023-30571                  │
 ├─────────────────────────────┼────────────────┤          │                     ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ libbpf                      │ CVE-2021-45940 │          │                     │ 2:1.4.0-1.el9       │               │ libbpf: heap-based buffer overflow (4 bytes) in             │
+│ libbpf                      │ CVE-2021-45940 │          │                     │ 2:1.5.0-1.el9       │               │ libbpf: heap-based buffer overflow (4 bytes) in             │
 │                             │                │          │                     │                     │               │ __bpf_object__open                                          │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2021-45940                  │
 │                             ├────────────────┤          │                     │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
@@ -99,18 +103,34 @@ Total: 75 (UNKNOWN: 0, LOW: 47, MEDIUM: 23, HIGH: 5, CRITICAL: 0)
 │                             ├────────────────┤          │                     │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-9681  │          │                     │                     │               │ curl: HSTS subdomain overwrites parent cache entry          │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-9681                   │
-├─────────────────────────────┼────────────────┤          │                     ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ libgcc                      │ CVE-2022-27943 │          │                     │ 11.5.0-4.el9        │               │ binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows  │
+│                             ├────────────────┤          │                     │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-0725  │          │                     │                     │               │ libcurl: Buffer Overflow in libcurl via zlib Integer        │
+│                             │                │          │                     │                     │               │ Overflow                                                    │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-0725                   │
+├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ libgcc                      │ CVE-2020-11023 │ MEDIUM   │                     │ 11.5.0-5.el9_5      │               │ jquery: Untrusted code execution via <option> tag in HTML   │
+│                             │                │          │                     │                     │               │ passed to DOM...                                            │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2020-11023                  │
+│                             ├────────────────┼──────────┤                     │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-27943 │ LOW      │                     │                     │               │ binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows  │
 │                             │                │          │                     │                     │               │ stack exhaustion in demangle_const                          │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-27943                  │
-├─────────────────────────────┤                │          │                     │                     ├───────────────┤                                                             │
-│ libgomp                     │                │          │                     │                     │               │                                                             │
-│                             │                │          │                     │                     │               │                                                             │
-│                             │                │          │                     │                     │               │                                                             │
-├─────────────────────────────┤                │          │                     │                     ├───────────────┤                                                             │
-│ libstdc++                   │                │          │                     │                     │               │                                                             │
-│                             │                │          │                     │                     │               │                                                             │
-│                             │                │          │                     │                     │               │                                                             │
+├─────────────────────────────┼────────────────┼──────────┤                     │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
+│ libgomp                     │ CVE-2020-11023 │ MEDIUM   │                     │                     │               │ jquery: Untrusted code execution via <option> tag in HTML   │
+│                             │                │          │                     │                     │               │ passed to DOM...                                            │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2020-11023                  │
+│                             ├────────────────┼──────────┤                     │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-27943 │ LOW      │                     │                     │               │ binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows  │
+│                             │                │          │                     │                     │               │ stack exhaustion in demangle_const                          │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-27943                  │
+├─────────────────────────────┼────────────────┼──────────┤                     │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
+│ libstdc++                   │ CVE-2020-11023 │ MEDIUM   │                     │                     │               │ jquery: Untrusted code execution via <option> tag in HTML   │
+│                             │                │          │                     │                     │               │ passed to DOM...                                            │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2020-11023                  │
+│                             ├────────────────┼──────────┤                     │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-27943 │ LOW      │                     │                     │               │ binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows  │
+│                             │                │          │                     │                     │               │ stack exhaustion in demangle_const                          │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-27943                  │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
 │ libxml2                     │ CVE-2022-49043 │ HIGH     │                     │ 2.9.13-6.el9_4      │               │ libxml: use-after-free in xmlXIncludeAddNode                │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-49043                  │
@@ -153,7 +173,7 @@ Total: 75 (UNKNOWN: 0, LOW: 47, MEDIUM: 23, HIGH: 5, CRITICAL: 0)
 │                             │                │          │                     │                     │               │ function                                                    │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2023-2953                   │
 ├─────────────────────────────┼────────────────┤          │                     ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ openssl                     │ CVE-2024-13176 │          │                     │ 1:3.2.2-6.el9_5     │               │ openssl: Timing side-channel in ECDSA signature computation │
+│ openssl                     │ CVE-2024-13176 │          │                     │ 1:3.2.2-6.el9_5.1   │               │ openssl: Timing side-channel in ECDSA signature computation │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-13176                  │
 │                             ├────────────────┤          ├─────────────────────┤                     ├───────────────┼─────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-2511  │          │ will_not_fix        │                     │               │ openssl: Unbounded memory growth with session handling in   │
