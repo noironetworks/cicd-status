@@ -5376,48 +5376,43 @@ releases:
         U: 0
       severity_type: grype
     - base-image:
-      - base_cve_error: ''
-        cve: release_artifacts/6.0.4.4/z/aci-containers-host/6.0.4.4-cve-base.txt
+      - cve: release_artifacts/6.0.4.4/z/aci-containers-host/6.0.4.4-cve-base.txt
         severity:
         - C: 0
-          H: 0
-          L: 30
-          M: 11
+          H: 3
+          L: 0
+          M: 5
           U: 0
-        severity_link: https://quay.io/repository/noirolabs/ubi9-minimal/manifest/sha256:55a1c43d74a8aa0eba4c13f7dce4fd8a3bd4eb163c8f1957e140f377ca1d6e2e?tab=vulnerabilities
-        severity_type: quay
-        sha: 55a1c43d74a8aa0eba4c13f7dce4fd8a3bd4eb163c8f1957e140f377ca1d6e2e
+        sha: d342aa80781bf41c4c73485c41d8f1e2dbc40ee491633d9cafe787c361dd44ff
       build-logs: release_artifacts/6.0.4.4/z/aci-containers-host/6.0.4.4-buildlog.txt
-      build-time: 2025-02-14 01:53:53 PST
+      build-time: 2025-02-19 01:54:21 PST
       commit:
       - link: https://github.com/noironetworks/aci-containers/commit/9e41ab453f2b4157e396dc56dd08299a885adb55
         sha: 9e41ab453f2b4157e396dc56dd08299a885adb55
-      cve: release_artifacts/6.0.4.4/z/aci-containers-host/6.0.4.4-quay-cve.txt
-      cve_error: ''
+      cve: release_artifacts/6.0.4.4/z/aci-containers-host/6.0.4.4-cve.txt
       docker:
-      - link: https://hub.docker.com/layers/noiro/aci-containers-host/6.0.4.4.81c2369.z/images/sha256-95143ae273e0ebcee7ce732cb9a137bde84542d972ad0468f5c372f02349f14e?context=explore
-        sha: 95143ae273e0ebcee7ce732cb9a137bde84542d972ad0468f5c372f02349f14e
+      - link: https://hub.docker.com/layers/noiro/aci-containers-host/6.0.4.4.81c2369.z/images/sha256-9d32e28f823adf298b70caa30b0d06b5be3e8b48fe49e596f4e70b40b6724759?context=explore
+        sha: 9d32e28f823adf298b70caa30b0d06b5be3e8b48fe49e596f4e70b40b6724759
         tag: 6.0.4.4.81c2369.z
-      - link: https://hub.docker.com/layers/noiro/aci-containers-host/6.0.4.4.81c2369.021425.10393/images/sha256-95143ae273e0ebcee7ce732cb9a137bde84542d972ad0468f5c372f02349f14e?context=explore
-        sha: 95143ae273e0ebcee7ce732cb9a137bde84542d972ad0468f5c372f02349f14e
-        tag: 6.0.4.4.81c2369.021425.10393
+      - link: https://hub.docker.com/layers/noiro/aci-containers-host/6.0.4.4.81c2369.021925.10396/images/sha256-9d32e28f823adf298b70caa30b0d06b5be3e8b48fe49e596f4e70b40b6724759?context=explore
+        sha: 9d32e28f823adf298b70caa30b0d06b5be3e8b48fe49e596f4e70b40b6724759
+        tag: 6.0.4.4.81c2369.021925.10396
       name: aci-containers-host
       quay:
       - link: https://quay.io/noiro/aci-containers-host:6.0.4.4.81c2369.z
-        sha: 95143ae273e0ebcee7ce732cb9a137bde84542d972ad0468f5c372f02349f14e
+        sha: 9d32e28f823adf298b70caa30b0d06b5be3e8b48fe49e596f4e70b40b6724759
         tag: 6.0.4.4.81c2369.z
-      - link: https://quay.io/noiro/aci-containers-host:6.0.4.4.81c2369.021425.10393
-        sha: 95143ae273e0ebcee7ce732cb9a137bde84542d972ad0468f5c372f02349f14e
-        tag: 6.0.4.4.81c2369.021425.10393
+      - link: https://quay.io/noiro/aci-containers-host:6.0.4.4.81c2369.021925.10396
+        sha: 9d32e28f823adf298b70caa30b0d06b5be3e8b48fe49e596f4e70b40b6724759
+        tag: 6.0.4.4.81c2369.021925.10396
       sbom: release_artifacts/6.0.4.4/z/aci-containers-host/6.0.4.4-sbom.txt
       severity:
       - C: 0
-        H: 4
-        L: 54
-        M: 33
+        H: 0
+        L: 0
+        M: 1
         U: 0
-      severity_link: https://quay.io/repository/noiro/aci-containers-host/manifest/sha256:95143ae273e0ebcee7ce732cb9a137bde84542d972ad0468f5c372f02349f14e?tab=vulnerabilities
-      severity_type: quay
+      severity_type: grype
     - base-image:
       - base_cve_error: ''
         cve: release_artifacts/6.0.4.4/z/aci-containers-controller/6.0.4.4-cve-base.txt
@@ -5762,7 +5757,7 @@ releases:
         U: 0
       severity_link: https://quay.io/repository/noiro/opflex/manifest/sha256:0dcbf759cd493c7a4a19b2123ac9d831d4cb828a7476129ef2b96a0bda672cd6?tab=vulnerabilities
       severity_type: quay
-    last_updated: 2025-02-19 01:24:50 PST
+    last_updated: 2025-02-19 01:54:21 PST
     release_name: 6.0.4.4.z
   - acc_provision:
     - build-logs: release_artifacts/6.0.4.4/r/acc-provision/6.0.4.4-buildlog.txt
