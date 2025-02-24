@@ -2,7 +2,7 @@ No vulnerabilities found
 
 quay.io/noiro/opflex:6.1.2.1.81c2369.z (redhat 9.5)
 ===================================================
-Total: 191 (UNKNOWN: 0, LOW: 160, MEDIUM: 31, HIGH: 0, CRITICAL: 0)
+Total: 201 (UNKNOWN: 0, LOW: 165, MEDIUM: 34, HIGH: 2, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬──────────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │  Fixed Version   │                            Title                             │
@@ -27,12 +27,20 @@ Total: 191 (UNKNOWN: 0, LOW: 160, MEDIUM: 31, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2025-1365  │          │              │                     │                  │ elfutils: GNU elfutils eu-readelf readelf.c process_symtab   │
 │                             │                │          │              │                     │                  │ buffer overflow                                              │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1365                    │
+│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-1372  │          │              │                     │                  │ elfutils: GNU elfutils eu-readelf readelf.c                  │
+│                             │                │          │              │                     │                  │ print_string_section buffer overflow                         │
+│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1372                    │
 │                             ├────────────────┼──────────┼──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-25260 │ LOW      │ will_not_fix │                     │                  │ elfutils: global-buffer-overflow exists in the function      │
 │                             │                │          │              │                     │                  │ ebl_machine_flag_name in eblmachineflagname.c                │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-25260                   │
 │                             ├────────────────┤          ├──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-1376  │          │ affected     │                     │                  │ elfutils: GNU elfutils eu-strip elf_strptr.c elf_strptr      │
+│                             │ CVE-2025-1371  │          │ affected     │                     │                  │ elfutils: GNU elfutils eu-read readelf.c                     │
+│                             │                │          │              │                     │                  │ handle_dynamic_symtab null pointer dereference               │
+│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1371                    │
+│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-1376  │          │              │                     │                  │ elfutils: GNU elfutils eu-strip elf_strptr.c elf_strptr      │
 │                             │                │          │              │                     │                  │ denial of service                                            │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1376                    │
 │                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
@@ -47,12 +55,20 @@ Total: 191 (UNKNOWN: 0, LOW: 160, MEDIUM: 31, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2025-1365  │          │              │                     │                  │ elfutils: GNU elfutils eu-readelf readelf.c process_symtab   │
 │                             │                │          │              │                     │                  │ buffer overflow                                              │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1365                    │
+│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-1372  │          │              │                     │                  │ elfutils: GNU elfutils eu-readelf readelf.c                  │
+│                             │                │          │              │                     │                  │ print_string_section buffer overflow                         │
+│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1372                    │
 │                             ├────────────────┼──────────┼──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-25260 │ LOW      │ will_not_fix │                     │                  │ elfutils: global-buffer-overflow exists in the function      │
 │                             │                │          │              │                     │                  │ ebl_machine_flag_name in eblmachineflagname.c                │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-25260                   │
 │                             ├────────────────┤          ├──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-1376  │          │ affected     │                     │                  │ elfutils: GNU elfutils eu-strip elf_strptr.c elf_strptr      │
+│                             │ CVE-2025-1371  │          │ affected     │                     │                  │ elfutils: GNU elfutils eu-read readelf.c                     │
+│                             │                │          │              │                     │                  │ handle_dynamic_symtab null pointer dereference               │
+│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1371                    │
+│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-1376  │          │              │                     │                  │ elfutils: GNU elfutils eu-strip elf_strptr.c elf_strptr      │
 │                             │                │          │              │                     │                  │ denial of service                                            │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1376                    │
 │                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
@@ -67,12 +83,20 @@ Total: 191 (UNKNOWN: 0, LOW: 160, MEDIUM: 31, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2025-1365  │          │              │                     │                  │ elfutils: GNU elfutils eu-readelf readelf.c process_symtab   │
 │                             │                │          │              │                     │                  │ buffer overflow                                              │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1365                    │
+│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-1372  │          │              │                     │                  │ elfutils: GNU elfutils eu-readelf readelf.c                  │
+│                             │                │          │              │                     │                  │ print_string_section buffer overflow                         │
+│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1372                    │
 │                             ├────────────────┼──────────┼──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-25260 │ LOW      │ will_not_fix │                     │                  │ elfutils: global-buffer-overflow exists in the function      │
 │                             │                │          │              │                     │                  │ ebl_machine_flag_name in eblmachineflagname.c                │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-25260                   │
 │                             ├────────────────┤          ├──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-1376  │          │ affected     │                     │                  │ elfutils: GNU elfutils eu-strip elf_strptr.c elf_strptr      │
+│                             │ CVE-2025-1371  │          │ affected     │                     │                  │ elfutils: GNU elfutils eu-read readelf.c                     │
+│                             │                │          │              │                     │                  │ handle_dynamic_symtab null pointer dereference               │
+│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1371                    │
+│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-1376  │          │              │                     │                  │ elfutils: GNU elfutils eu-strip elf_strptr.c elf_strptr      │
 │                             │                │          │              │                     │                  │ denial of service                                            │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1376                    │
 │                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
@@ -155,12 +179,22 @@ Total: 191 (UNKNOWN: 0, LOW: 160, MEDIUM: 31, HIGH: 0, CRITICAL: 0)
 │                             │                │          │              │                     │                  │ attacks                                                      │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-24806                   │
 ├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
-│ libxml2                     │ CVE-2023-45322 │ LOW      │ will_not_fix │ 2.9.13-6.el9_5.1    │                  │ libxml2: use-after-free in xmlUnlinkNode() in tree.c         │
+│ libxml2                     │ CVE-2024-56171 │ HIGH     │ affected     │ 2.9.13-6.el9_5.1    │                  │ libxml2: Use-After-Free in libxml2                           │
+│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-56171                   │
+│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-24928 │          │              │                     │                  │ libxml2: Stack-based buffer overflow in xmlSnprintfElements  │
+│                             │                │          │              │                     │                  │ of libxml2                                                   │
+│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-24928                   │
+│                             ├────────────────┼──────────┼──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2023-45322 │ LOW      │ will_not_fix │                     │                  │ libxml2: use-after-free in xmlUnlinkNode() in tree.c         │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2023-45322                   │
 │                             ├────────────────┤          ├──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-34459 │          │ affected     │                     │                  │ libxml2: buffer over-read in xmlHTMLPrintFileContext in      │
 │                             │                │          │              │                     │                  │ xmllint.c                                                    │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-34459                   │
+│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-27113 │          │              │                     │                  │ libxml2: NULL Pointer Dereference in libxml2 xmlPatMatch     │
+│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-27113                   │
 ├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
 │ libyaml                     │ CVE-2024-35325 │ MEDIUM   │ will_not_fix │ 0.2.5-7.el9         │                  │ libyaml: double-free in yaml_event_delete in                 │
 │                             │                │          │              │                     │                  │ /src/libyaml/src/api.c                                       │
@@ -664,4 +698,7 @@ Total: 191 (UNKNOWN: 0, LOW: 160, MEDIUM: 31, HIGH: 0, CRITICAL: 0)
 │                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-24014 │          │              │                     │                  │ vim: segmentation fault in win_line() in Vim < 9.1.1043      │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-24014                   │
+│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-26603 │          │              │                     │                  │ vim: heap-use-after-free in function str_to_reg in vim/vim   │
+│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-26603                   │
 └─────────────────────────────┴────────────────┴──────────┴──────────────┴─────────────────────┴──────────────────┴──────────────────────────────────────────────────────────────┘
