@@ -5,29 +5,34 @@
   <link rel="stylesheet" type="text/css" href="release-styles.css">
 </head>
 <body>
+  <!-- Sidebar -->
   <div class="menu-container">
-    <h4>Menu</h4>
+    <h4 id="menu-header">☰ Menu <span id="release-toggle">▼</span></h4> <!-- Updated for JS control -->
     <ul id="release-list">
       <!-- List of tags will be dynamically populated here from menu.js -->
     </ul>
   </div>
 
+  <!-- Main Content -->
   <div class="content">
+    <h2>ACI Containers Releases:</h2>
+    
     <!-- Add the container around the table -->
     <div class="table-container">
       <table id="release-table">
-    <thead>
-      <tr>
-        <th>Tag</th>
-        <th>Last Modified</th>
-      </tr>
-    </thead>
-    <tbody>
-    </tbody>
-  <h2>ACI Containers Releases:</h2>
+        <thead>
+          <tr>
+            <th>Tag</th>
+            <th>Last Modified</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
-  <ul id="release-list"></ul>
-
+  <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.14.1/js-yaml.min.js"></script>
   <script src="listReleases.js"></script>
   <script src="menu.js"></script>
