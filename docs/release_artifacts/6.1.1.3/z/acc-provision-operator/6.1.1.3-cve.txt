@@ -1,18 +1,19 @@
 NAME          INSTALLED  FIXED-IN  TYPE    VULNERABILITY        SEVERITY 
+Jinja2        3.1.5      3.1.6     python  GHSA-cpwx-vrp4-4pq7  Medium    
 cryptography  44.0.0     44.0.1    python  GHSA-79v4-65xg-pq4g  Low       
 idna          2.10       3.7       python  GHSA-jjg7-2v4v-x38h  Medium    
-requests      2.25.1     2.31.0    python  GHSA-j8r2-6x86-q33q  Medium    
 requests      2.25.1     2.32.0    python  GHSA-9wx4-h78v-vm56  Medium    
+requests      2.25.1     2.31.0    python  GHSA-j8r2-6x86-q33q  Medium    
 requests      2.31.0     2.32.0    python  GHSA-9wx4-h78v-vm56  Medium    
-setuptools    53.0.0     65.5.1    python  GHSA-r9hx-vwmv-q579  High      
 setuptools    53.0.0     70.0.0    python  GHSA-cx63-2mw6-8hw5  High      
+setuptools    53.0.0     65.5.1    python  GHSA-r9hx-vwmv-q579  High      
 urllib3       1.26.5     1.26.17   python  GHSA-v845-jxx5-vc9f  High      
-urllib3       1.26.5     1.26.18   python  GHSA-g4mx-q9vg-27p4  Medium    
-urllib3       1.26.5     1.26.19   python  GHSA-34jh-p97f-mpxf  Medium
+urllib3       1.26.5     1.26.19   python  GHSA-34jh-p97f-mpxf  Medium    
+urllib3       1.26.5     1.26.18   python  GHSA-g4mx-q9vg-27p4  Medium
 
 quay.io/noiro/acc-provision-operator:6.1.1.3.81c2369.z (redhat 9.5)
 ===================================================================
-Total: 235 (UNKNOWN: 0, LOW: 195, MEDIUM: 37, HIGH: 3, CRITICAL: 0)
+Total: 234 (UNKNOWN: 0, LOW: 195, MEDIUM: 37, HIGH: 2, CRITICAL: 0)
 
 ┌─────────────────────────────┬──────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │  Vulnerability   │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -473,12 +474,8 @@ Total: 235 (UNKNOWN: 0, LOW: 195, MEDIUM: 37, HIGH: 3, CRITICAL: 0)
 │ tpm2-tss                    │ CVE-2024-29040   │ MEDIUM   │ affected     │ 3.2.3-1.el9         │               │ tpm2-tss: arbitrary quote data may go undetected by          │
 │                             │                  │          │              │                     │               │ Fapi_VerifyQuote                                             │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-29040                   │
-├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ vim-minimal                 │ CVE-2025-27423   │ HIGH     │              │ 2:8.2.2637-21.el9   │               │ Vim is an open source, command line text editor. Vim is      │
-│                             │                  │          │              │                     │               │ distributed...                                               │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-27423                   │
-│                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-43790   │ MEDIUM   │              │                     │               │ vim: Out of bounds read when performing a search command     │
+├─────────────────────────────┼──────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ vim-minimal                 │ CVE-2024-43790   │          │              │ 2:8.2.2637-21.el9   │               │ vim: Out of bounds read when performing a search command     │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-43790                   │
 │                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2021-3927    │ LOW      │              │                     │               │ vim: heap-based buffer overflow in gchar_cursor() in misc1.c │
@@ -838,16 +835,20 @@ Total: 235 (UNKNOWN: 0, LOW: 195, MEDIUM: 37, HIGH: 3, CRITICAL: 0)
 
 Python (python-pkg)
 ===================
-Total: 2 (UNKNOWN: 0, LOW: 1, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
+Total: 3 (UNKNOWN: 0, LOW: 1, MEDIUM: 2, HIGH: 0, CRITICAL: 0)
 
-┌─────────────────────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────┬────────────────────────────────────────────────────────────┐
-│         Library         │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version │                           Title                            │
-├─────────────────────────┼────────────────┼──────────┼────────┼───────────────────┼───────────────┼────────────────────────────────────────────────────────────┤
-│ cryptography (METADATA) │ CVE-2024-12797 │ LOW      │ fixed  │ 44.0.0            │ 44.0.1        │ openssl: RFC7250 handshakes with unauthenticated servers   │
-│                         │                │          │        │                   │               │ don't abort as expected                                    │
-│                         │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2024-12797                 │
-├─────────────────────────┼────────────────┼──────────┤        ├───────────────────┼───────────────┼────────────────────────────────────────────────────────────┤
-│ requests (METADATA)     │ CVE-2024-35195 │ MEDIUM   │        │ 2.31.0            │ 2.32.0        │ requests: subsequent requests to the same host ignore cert │
-│                         │                │          │        │                   │               │ verification                                               │
-│                         │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2024-35195                 │
-└─────────────────────────┴────────────────┴──────────┴────────┴───────────────────┴───────────────┴────────────────────────────────────────────────────────────┘
+┌─────────────────────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
+│         Library         │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version │                            Title                             │
+├─────────────────────────┼────────────────┼──────────┼────────┼───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ Jinja2 (METADATA)       │ CVE-2025-27516 │ MEDIUM   │ fixed  │ 3.1.5             │ 3.1.6         │ Jinja is an extensible templating engine. Prior to 3.1.6, an │
+│                         │                │          │        │                   │               │ oversight ......                                             │
+│                         │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2025-27516                   │
+├─────────────────────────┼────────────────┼──────────┤        ├───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ cryptography (METADATA) │ CVE-2024-12797 │ LOW      │        │ 44.0.0            │ 44.0.1        │ openssl: RFC7250 handshakes with unauthenticated servers     │
+│                         │                │          │        │                   │               │ don't abort as expected                                      │
+│                         │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2024-12797                   │
+├─────────────────────────┼────────────────┼──────────┤        ├───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ requests (METADATA)     │ CVE-2024-35195 │ MEDIUM   │        │ 2.31.0            │ 2.32.0        │ requests: subsequent requests to the same host ignore cert   │
+│                         │                │          │        │                   │               │ verification                                                 │
+│                         │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2024-35195                   │
+└─────────────────────────┴────────────────┴──────────┴────────┴───────────────────┴───────────────┴──────────────────────────────────────────────────────────────┘
