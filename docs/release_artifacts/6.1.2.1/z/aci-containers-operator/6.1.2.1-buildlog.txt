@@ -17730,3 +17730,92 @@ b2731efc4703: Preparing
 4c0b0f646c88: Preparing
 5c02e0b87d36: Waiting
 4c0b0f646c88: Waiting
+b2731efc4703: Layer already exists
+304cf87938f9: Layer already exists
+1f3450cc5f82: Layer already exists
+717a3eb3c715: Layer already exists
+43eaf2065337: Layer already exists
+4c0b0f646c88: Layer already exists
+5c02e0b87d36: Layer already exists
+6.1.2.1.81c2369.z: digest: sha256:e8ebe8bfcde35ed19ddc2bc8324e2eb1799c590dc3ccc17e71070634133365b5 size: 1789
+++docker image inspect '--format={{.Id}}' quay.io/noirolabs/aci-containers-operator:6.1.2.1.81c2369
++IMAGE_SHA=sha256:05c311fd2b93fcc044244c7cbe05085a16bc9649b85a32860b6df0d3687b11bb
++/tmp/cicd/travis/push-to-cicd-status.sh quay.io/noiro aci-containers-operator 6.1.2.1.81c2369 6.1.2.1.81c2369,6.1.2.1.81c2369.030625.10481 sha256:05c311fd2b93fcc044244c7cbe05085a16bc9649b85a32860b6df0d3687b11bb registry.access.redhat.com/ubi9/ubi:latest
+++dirname /tmp/cicd/travis/push-to-cicd-status.sh
++SCRIPTS_DIR=/tmp/cicd/travis
++source /tmp/cicd/travis/globals.sh
+++set -x
+++RELEASE_TAG=6.1.2.1
+++export RELEASE_TAG
++++date +%m%d%y
+++DATE_TAG=030625
+++TRAVIS_TAG_WITH_UPSTREAM_ID=6.1.2.1.81c2369
+++TRAVIS_TAG_WITH_UPSTREAM_ID_DATE_TRAVIS_BUILD_NUMBER=6.1.2.1.81c2369.030625.10481
+++IMAGE_TAG=6.1.2.1.81c2369
+++UPSTREAM_IMAGE_TAG=6.1.2.1.81c2369
+++UPSTREAM_IMAGE_Z_TAG=6.1.2.1.81c2369.z
+++IMAGE_Z_TAG=6.1.2.1.81c2369.z
+++RELEASE_Z_TAG=6.1.2.1.z
+++RC_PREFIX=6.1.2.1rc
+++RC_REGEX='6.1.2.1rc[0-9]+'
+++QUAY_REGISTRY=quay.io/noirolabs
+++QUAY_NOIRO_REGISTRY=quay.io/noiro
+++DOCKER_REGISTRY=docker.io/noiro
+++CICD_STATUS_REPO=https://github.com/noironetworks/cicd-status.git
+++git rev-parse --abbrev-ref HEAD
++current_branch=HEAD
++[[ aci-containers != \a\c\c\-\p\r\o\v\i\s\i\o\n ]]
++IMAGE_BUILD_REGISTRY=quay.io/noiro
++IMAGE=aci-containers-operator
++IMAGE_BUILD_TAG=6.1.2.1.81c2369
++OTHER_IMAGE_TAGS=6.1.2.1.81c2369,6.1.2.1.81c2369.030625.10481
++IMAGE_SHA=sha256:05c311fd2b93fcc044244c7cbe05085a16bc9649b85a32860b6df0d3687b11bb
++BASE_IMAGE=registry.access.redhat.com/ubi9/ubi:latest
++GIT_REPO=https://github.com/noironetworks/cicd-status.git
++GIT_LOCAL_DIR=cicd-status
++GIT_BRANCH=main
++GIT_EMAIL=test@cisco.com
++GIT_TOKEN=[secure]
++GIT_USER=travis-tagger
++git_clone_repo
++cd /tmp/
++git clone https://travis-tagger:[secure]@github.com/noironetworks/cicd-status.git -b main cicd-status
+fatal: destination path 'cicd-status' already exists and is not an empty directory.
++cd /tmp/cicd-status
++git remote set-url origin https://travis-tagger:[secure]@github.com/noironetworks/cicd-status.git
++true
++[[ aci-containers != \a\c\c\-\p\r\o\v\i\s\i\o\n ]]
++add_artifacts
++cd /tmp/cicd-status
++git pull --rebase origin main
+From https://github.com/noironetworks/cicd-status
+ * branch              main       -> FETCH_HEAD
+Already up to date.
++mkdir -p /tmp/cicd-status/docs/release_artifacts/6.1.2.1/z/aci-containers-operator
++curl https://api.travis-ci.com/v3/job/631143826/log.txt
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 1049k  100 1049k    0     0  2044k      0 --:--:-- --:--:-- --:--:-- 2046k
++cp /tmp/sbom.txt /tmp/cicd-status/docs/release_artifacts/6.1.2.1/z/aci-containers-operator/6.1.2.1-sbom.txt
++cp /tmp/cve.txt /tmp/cicd-status/docs/release_artifacts/6.1.2.1/z/aci-containers-operator/6.1.2.1-cve.txt
++cp /tmp/cve-base.txt /tmp/cicd-status/docs/release_artifacts/6.1.2.1/z/aci-containers-operator/6.1.2.1-cve-base.txt
++update_container_release
++docker rmi -f sha256:05c311fd2b93fcc044244c7cbe05085a16bc9649b85a32860b6df0d3687b11bb
+Untagged: noiro/aci-containers-operator:6.1.2.1.81c2369.030625.10481
+Untagged: noiro/aci-containers-operator:6.1.2.1.81c2369.z
+Untagged: noiro/aci-containers-operator@sha256:e8ebe8bfcde35ed19ddc2bc8324e2eb1799c590dc3ccc17e71070634133365b5
+Untagged: quay.io/noiro/aci-containers-operator:6.1.2.1.81c2369.030625.10481
+Untagged: quay.io/noiro/aci-containers-operator:6.1.2.1.81c2369.z
+Untagged: quay.io/noiro/aci-containers-operator@sha256:e8ebe8bfcde35ed19ddc2bc8324e2eb1799c590dc3ccc17e71070634133365b5
+Untagged: quay.io/noirolabs/aci-containers-operator:6.1.2.1.81c2369
+Untagged: quay.io/noirolabs/aci-containers-operator:6.1.2.1.81c2369.030625.10481
+Untagged: quay.io/noirolabs/aci-containers-operator:6.1.2.1.81c2369.z
+Untagged: quay.io/noirolabs/aci-containers-operator@sha256:e8ebe8bfcde35ed19ddc2bc8324e2eb1799c590dc3ccc17e71070634133365b5
+Deleted: sha256:05c311fd2b93fcc044244c7cbe05085a16bc9649b85a32860b6df0d3687b11bb
++python /tmp/cicd/travis/update-release.py quay.io/noiro aci-containers-operator 6.1.2.1.81c2369 6.1.2.1.81c2369,6.1.2.1.81c2369.030625.10481 sha256:05c311fd2b93fcc044244c7cbe05085a16bc9649b85a32860b6df0d3687b11bb 6.1.2.1.81c2369.z 6.1.2.1.81c2369.030625.10481 registry.access.redhat.com/ubi9/ubi:latest
++add_trivy_vulnerabilites
++trivy image quay.io/noiro/aci-containers-operator:6.1.2.1.81c2369.z
+2025-03-06T16:13:46.137Z	[34mINFO[0m	Vulnerability scanning is enabled
+2025-03-06T16:13:46.137Z	[34mINFO[0m	Secret scanning is enabled
+2025-03-06T16:13:46.137Z	[34mINFO[0m	If your scanning is slow, please try '--scanners vuln' to disable secret scanning
+2025-03-06T16:13:46.137Z	[34mINFO[0m	Please see also https://aquasecurity.github.io/trivy/v0.44/docs/scanner/secret/#recommendation for faster secret detection
