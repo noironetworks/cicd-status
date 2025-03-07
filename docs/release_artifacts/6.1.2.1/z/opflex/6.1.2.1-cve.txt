@@ -2,7 +2,7 @@ No vulnerabilities found
 
 quay.io/noiro/opflex:6.1.2.1.81c2369.z (redhat 9.5)
 ===================================================
-Total: 201 (UNKNOWN: 0, LOW: 165, MEDIUM: 34, HIGH: 2, CRITICAL: 0)
+Total: 196 (UNKNOWN: 0, LOW: 168, MEDIUM: 26, HIGH: 2, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬──────────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │  Fixed Version   │                            Title                             │
@@ -19,20 +19,8 @@ Total: 201 (UNKNOWN: 0, LOW: 165, MEDIUM: 34, HIGH: 2, CRITICAL: 0)
 │                             │ CVE-2025-0725  │          │              │                     │                  │ libcurl: Buffer Overflow in libcurl via zlib Integer         │
 │                             │                │          │              │                     │                  │ Overflow                                                     │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-0725                    │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
-│ elfutils-default-yama-scope │ CVE-2025-1352  │ MEDIUM   │              │ 0.192-5.el9         │                  │ elfutils: GNU elfutils eu-readelf libdw_alloc.c              │
-│                             │                │          │              │                     │                  │ __libdw_thread_tail memory corruption                        │
-│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1352                    │
-│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-1365  │          │              │                     │                  │ elfutils: GNU elfutils eu-readelf readelf.c process_symtab   │
-│                             │                │          │              │                     │                  │ buffer overflow                                              │
-│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1365                    │
-│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-1372  │          │              │                     │                  │ elfutils: GNU elfutils eu-readelf readelf.c                  │
-│                             │                │          │              │                     │                  │ print_string_section buffer overflow                         │
-│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1372                    │
-│                             ├────────────────┼──────────┼──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-25260 │ LOW      │ will_not_fix │                     │                  │ elfutils: global-buffer-overflow exists in the function      │
+├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ elfutils-default-yama-scope │ CVE-2024-25260 │          │ will_not_fix │ 0.192-5.el9         │                  │ elfutils: global-buffer-overflow exists in the function      │
 │                             │                │          │              │                     │                  │ ebl_machine_flag_name in eblmachineflagname.c                │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-25260                   │
 │                             ├────────────────┤          ├──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
@@ -47,20 +35,8 @@ Total: 201 (UNKNOWN: 0, LOW: 165, MEDIUM: 34, HIGH: 2, CRITICAL: 0)
 │                             │ CVE-2025-1377  │          │              │                     │                  │ elfutils: GNU elfutils eu-strip strip.c gelf_getsymshndx     │
 │                             │                │          │              │                     │                  │ denial of service                                            │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1377                    │
-├─────────────────────────────┼────────────────┼──────────┤              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│ elfutils-libelf             │ CVE-2025-1352  │ MEDIUM   │              │                     │                  │ elfutils: GNU elfutils eu-readelf libdw_alloc.c              │
-│                             │                │          │              │                     │                  │ __libdw_thread_tail memory corruption                        │
-│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1352                    │
-│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-1365  │          │              │                     │                  │ elfutils: GNU elfutils eu-readelf readelf.c process_symtab   │
-│                             │                │          │              │                     │                  │ buffer overflow                                              │
-│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1365                    │
-│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-1372  │          │              │                     │                  │ elfutils: GNU elfutils eu-readelf readelf.c                  │
-│                             │                │          │              │                     │                  │ print_string_section buffer overflow                         │
-│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1372                    │
-│                             ├────────────────┼──────────┼──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-25260 │ LOW      │ will_not_fix │                     │                  │ elfutils: global-buffer-overflow exists in the function      │
+├─────────────────────────────┼────────────────┤          ├──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│ elfutils-libelf             │ CVE-2024-25260 │          │ will_not_fix │                     │                  │ elfutils: global-buffer-overflow exists in the function      │
 │                             │                │          │              │                     │                  │ ebl_machine_flag_name in eblmachineflagname.c                │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-25260                   │
 │                             ├────────────────┤          ├──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
@@ -75,20 +51,8 @@ Total: 201 (UNKNOWN: 0, LOW: 165, MEDIUM: 34, HIGH: 2, CRITICAL: 0)
 │                             │ CVE-2025-1377  │          │              │                     │                  │ elfutils: GNU elfutils eu-strip strip.c gelf_getsymshndx     │
 │                             │                │          │              │                     │                  │ denial of service                                            │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1377                    │
-├─────────────────────────────┼────────────────┼──────────┤              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│ elfutils-libs               │ CVE-2025-1352  │ MEDIUM   │              │                     │                  │ elfutils: GNU elfutils eu-readelf libdw_alloc.c              │
-│                             │                │          │              │                     │                  │ __libdw_thread_tail memory corruption                        │
-│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1352                    │
-│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-1365  │          │              │                     │                  │ elfutils: GNU elfutils eu-readelf readelf.c process_symtab   │
-│                             │                │          │              │                     │                  │ buffer overflow                                              │
-│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1365                    │
-│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-1372  │          │              │                     │                  │ elfutils: GNU elfutils eu-readelf readelf.c                  │
-│                             │                │          │              │                     │                  │ print_string_section buffer overflow                         │
-│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1372                    │
-│                             ├────────────────┼──────────┼──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-25260 │ LOW      │ will_not_fix │                     │                  │ elfutils: global-buffer-overflow exists in the function      │
+├─────────────────────────────┼────────────────┤          ├──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│ elfutils-libs               │ CVE-2024-25260 │          │ will_not_fix │                     │                  │ elfutils: global-buffer-overflow exists in the function      │
 │                             │                │          │              │                     │                  │ ebl_machine_flag_name in eblmachineflagname.c                │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-25260                   │
 │                             ├────────────────┤          ├──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
@@ -143,10 +107,13 @@ Total: 201 (UNKNOWN: 0, LOW: 165, MEDIUM: 34, HIGH: 2, CRITICAL: 0)
 │                             │                │          │              │                     │                  │ archive_write_disk_header() on posix based systems...        │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2023-30571                   │
 │                             ├────────────────┤          ├──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-57970 │          │ affected     │                     │                  │ libarchive: heap buffer over-read in header_gnu_longlink     │
-│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-57970                   │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
-│ libcurl-minimal             │ CVE-2024-11053 │ LOW      │              │ 7.76.1-31.el9       │                  │ curl: curl netrc password leak                               │
+│                             │ CVE-2025-25724 │          │ affected     │                     │                  │ libarchive: Buffer Overflow vulnerability in libarchive      │
+│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-25724                   │
+│                             ├────────────────┼──────────┤              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-1632  │ LOW      │              │                     │                  │ libarchive: null pointer dereference in bsdunzip.c           │
+│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1632                    │
+├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libcurl-minimal             │ CVE-2024-11053 │          │              │ 7.76.1-31.el9       │                  │ curl: curl netrc password leak                               │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-11053                   │
 │                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-7264  │          │              │                     │                  │ curl: libcurl: ASN.1 date parser overread                    │
@@ -179,7 +146,7 @@ Total: 201 (UNKNOWN: 0, LOW: 165, MEDIUM: 34, HIGH: 2, CRITICAL: 0)
 │                             │                │          │              │                     │                  │ attacks                                                      │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-24806                   │
 ├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
-│ libxml2                     │ CVE-2024-56171 │ HIGH     │ affected     │ 2.9.13-7.el9        │                  │ libxml2: Use-After-Free in libxml2                           │
+│ libxml2                     │ CVE-2024-56171 │ HIGH     │ affected     │ 2.9.13-9.el9        │                  │ libxml2: Use-After-Free in libxml2                           │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-56171                   │
 │                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-24928 │          │              │                     │                  │ libxml2: Stack-based buffer overflow in xmlSnprintfElements  │
@@ -199,11 +166,11 @@ Total: 201 (UNKNOWN: 0, LOW: 165, MEDIUM: 34, HIGH: 2, CRITICAL: 0)
 │ libyaml                     │ CVE-2024-35325 │ MEDIUM   │ will_not_fix │ 0.2.5-7.el9         │                  │ libyaml: double-free in yaml_event_delete in                 │
 │                             │                │          │              │                     │                  │ /src/libyaml/src/api.c                                       │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-35325                   │
-├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
-│ libzstd                     │ CVE-2022-4899  │ LOW      │ affected     │ 1.5.5-1.el9         │                  │ zstd: mysql: buffer overrun in util.c                        │
+├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libzstd                     │ CVE-2022-4899  │          │              │ 1.5.5-1.el9         │                  │ zstd: mysql: buffer overrun in util.c                        │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2022-4899                    │
-├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
-│ ncurses-base                │ CVE-2022-29458 │          │ will_not_fix │ 6.2-10.20210508.el9 │                  │ ncurses: segfaulting OOB read                                │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ ncurses-base                │ CVE-2022-29458 │ LOW      │              │ 6.2-10.20210508.el9 │                  │ ncurses: segfaulting OOB read                                │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2022-29458                   │
 │                             ├────────────────┤          ├──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2023-45918 │          │ affected     │                     │                  │ ncurses: NULL pointer dereference in tgetstr in              │
@@ -278,8 +245,12 @@ Total: 201 (UNKNOWN: 0, LOW: 165, MEDIUM: 34, HIGH: 2, CRITICAL: 0)
 │                             │ CVE-2024-7592  │          │ will_not_fix │                     │                  │ cpython: python: Uncontrolled CPU resource consumption when  │
 │                             │                │          │              │                     │                  │ in http.cookies module                                       │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-7592                    │
-├─────────────────────────────┼────────────────┼──────────┼──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│ python3                     │ CVE-2021-23336 │ MEDIUM   │ affected     │                     │                  │ python: Web cache poisoning via urllib.parse.parse_qsl and   │
+│                             ├────────────────┤          ├──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-1795  │          │ affected     │                     │                  │ python: Mishandling of comma during folding and              │
+│                             │                │          │              │                     │                  │ unicode-encoding of email headers                            │
+│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1795                    │
+├─────────────────────────────┼────────────────┼──────────┤              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│ python3                     │ CVE-2021-23336 │ MEDIUM   │              │                     │                  │ python: Web cache poisoning via urllib.parse.parse_qsl and   │
 │                             │                │          │              │                     │                  │ urllib.parse.parse_qs by using a semicolon...                │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2021-23336                   │
 │                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
@@ -294,8 +265,12 @@ Total: 201 (UNKNOWN: 0, LOW: 165, MEDIUM: 34, HIGH: 2, CRITICAL: 0)
 │                             │ CVE-2024-7592  │          │ will_not_fix │                     │                  │ cpython: python: Uncontrolled CPU resource consumption when  │
 │                             │                │          │              │                     │                  │ in http.cookies module                                       │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-7592                    │
-├─────────────────────────────┼────────────────┼──────────┼──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│ python3-libs                │ CVE-2021-23336 │ MEDIUM   │ affected     │                     │                  │ python: Web cache poisoning via urllib.parse.parse_qsl and   │
+│                             ├────────────────┤          ├──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-1795  │          │ affected     │                     │                  │ python: Mishandling of comma during folding and              │
+│                             │                │          │              │                     │                  │ unicode-encoding of email headers                            │
+│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1795                    │
+├─────────────────────────────┼────────────────┼──────────┤              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│ python3-libs                │ CVE-2021-23336 │ MEDIUM   │              │                     │                  │ python: Web cache poisoning via urllib.parse.parse_qsl and   │
 │                             │                │          │              │                     │                  │ urllib.parse.parse_qs by using a semicolon...                │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2021-23336                   │
 │                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
@@ -310,8 +285,12 @@ Total: 201 (UNKNOWN: 0, LOW: 165, MEDIUM: 34, HIGH: 2, CRITICAL: 0)
 │                             │ CVE-2024-7592  │          │ will_not_fix │                     │                  │ cpython: python: Uncontrolled CPU resource consumption when  │
 │                             │                │          │              │                     │                  │ in http.cookies module                                       │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-7592                    │
-├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
-│ python3-pip-wheel           │ CVE-2021-3572  │          │ affected     │ 21.3.1-1.el9        │                  │ python-pip: Incorrect handling of unicode separators in git  │
+│                             ├────────────────┤          ├──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-1795  │          │ affected     │                     │                  │ python: Mishandling of comma during folding and              │
+│                             │                │          │              │                     │                  │ unicode-encoding of email headers                            │
+│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-1795                    │
+├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ python3-pip-wheel           │ CVE-2021-3572  │          │              │ 21.3.1-1.el9        │                  │ python-pip: Incorrect handling of unicode separators in git  │
 │                             │                │          │              │                     │                  │ references                                                   │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2021-3572                    │
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
