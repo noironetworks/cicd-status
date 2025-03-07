@@ -1,0 +1,57 @@
+releases:
+  - release_streams:
+      - acc_provision:
+          - build-logs: "release_artifacts/example/path/acc-provision/example-buildlog.txt"
+            build-time: "2023-01-01 12:00:00 PST"
+            commit:
+              - link: "https://example.com/commit/abc123"
+                sha: "abc123"
+            link: "https://example.com/project/acc-provision/example/#files"
+            tag: "example.dev1234"
+        container_images:
+          - base-image:
+              - cve: "release_artifacts/example/path/acc-provision-operator/example-cve-base.txt"
+                severity:
+                  - C: 0
+                    H: 1
+                    L: 10
+                    M: 5
+                    U: 0
+                sha: "sha256:examplebaseimage"
+            original-base-image:
+              - cve: "release_artifacts/example/path/acc-provision-operator/example-cve-base.txt"
+                severity:
+                  - C: 0
+                    H: 1
+                    L: 10
+                    M: 5
+                    U: 0
+                sha: "sha256:examplebaseimage"
+                date-and-time: "2023-01-01 12:30:00 PST"
+            update-release-cves-until: "2023-01-01 12:30:00 PST"
+            
+            build-logs: "release_artifacts/example/path/acc-provision-operator/example-buildlog.txt"
+            build-time: "2023-01-01 12:30:00 PST"
+            commit:
+              - link: "https://example.com/commit/def456"
+                sha: "def456"
+            cve: "release_artifacts/example/path/acc-provision-operator/example-cve.txt"
+            docker:
+              - link: "https://example.com/layers/example-image/sha256-example"
+                sha: "sha256:exampledockerimage"
+                tag: "example.tag"
+            name: "acc-provision-operator"
+            quay:
+              - link: "https://example.com/example-image:example.tag"
+                sha: "sha256:examplequayimage"
+                tag: "example.tag"
+            sbom: "release_artifacts/example/path/acc-provision-operator/example-sbom.txt"
+            severity:
+              - C: 0
+                H: 2
+                L: 20
+                M: 10
+                U: 1
+        last_updated: "2023-01-01 12:45:00 PST"
+        release_name: "example.release.name"
+    release_tag: "example.release.tag"
