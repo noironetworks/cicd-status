@@ -1,16 +1,17 @@
-NAME        INSTALLED  FIXED-IN  TYPE    VULNERABILITY        SEVERITY 
-idna        2.10       3.7       python  GHSA-jjg7-2v4v-x38h  Medium    
-requests    2.25.1     2.32.0    python  GHSA-9wx4-h78v-vm56  Medium    
-requests    2.25.1     2.31.0    python  GHSA-j8r2-6x86-q33q  Medium    
-setuptools  53.0.0     70.0.0    python  GHSA-cx63-2mw6-8hw5  High      
-setuptools  53.0.0     65.5.1    python  GHSA-r9hx-vwmv-q579  High      
-urllib3     1.26.5     1.26.17   python  GHSA-v845-jxx5-vc9f  High      
-urllib3     1.26.5     1.26.19   python  GHSA-34jh-p97f-mpxf  Medium    
-urllib3     1.26.5     1.26.18   python  GHSA-g4mx-q9vg-27p4  Medium
+NAME              INSTALLED  FIXED-IN  TYPE       VULNERABILITY        SEVERITY 
+golang.org/x/net  v0.33.0    0.36.0    go-module  GHSA-qxp5-gwg8-xv66  Medium    
+idna              2.10       3.7       python     GHSA-jjg7-2v4v-x38h  Medium    
+requests          2.25.1     2.32.0    python     GHSA-9wx4-h78v-vm56  Medium    
+requests          2.25.1     2.31.0    python     GHSA-j8r2-6x86-q33q  Medium    
+setuptools        53.0.0     70.0.0    python     GHSA-cx63-2mw6-8hw5  High      
+setuptools        53.0.0     65.5.1    python     GHSA-r9hx-vwmv-q579  High      
+urllib3           1.26.5     1.26.17   python     GHSA-v845-jxx5-vc9f  High      
+urllib3           1.26.5     1.26.19   python     GHSA-34jh-p97f-mpxf  Medium    
+urllib3           1.26.5     1.26.18   python     GHSA-g4mx-q9vg-27p4  Medium
 
 quay.io/noiro/aci-containers-webhook:6.1.2.1.81c2369.z (redhat 9.5)
 ===================================================================
-Total: 203 (UNKNOWN: 0, LOW: 175, MEDIUM: 26, HIGH: 2, CRITICAL: 0)
+Total: 202 (UNKNOWN: 0, LOW: 175, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -123,12 +124,12 @@ Total: 203 (UNKNOWN: 0, LOW: 175, MEDIUM: 26, HIGH: 2, CRITICAL: 0)
 ├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
 │ glibc-minimal-langpack      │                │          │              │                     │               │                                                              │
 │                             │                │          │              │                     │               │                                                              │
-├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ gnupg2                      │ CVE-2022-3219  │ LOW      │ will_not_fix │ 2.3.3-4.el9         │               │ gnupg: denial of service issue (resource consumption) using  │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ gnupg2                      │ CVE-2022-3219  │ LOW      │              │ 2.3.3-4.el9         │               │ gnupg: denial of service issue (resource consumption) using  │
 │                             │                │          │              │                     │               │ compressed packets                                           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-3219                    │
-├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ gnutls                      │ CVE-2024-12243 │ MEDIUM   │ affected     │ 3.8.3-4.el9_4       │               │ gnutls: GnuTLS Impacted by Inefficient DER Decoding in       │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ gnutls                      │ CVE-2024-12243 │ MEDIUM   │              │ 3.8.3-4.el9_4       │               │ gnutls: GnuTLS Impacted by Inefficient DER Decoding in       │
 │                             │                │          │              │                     │               │ libtasn1 Leading to Remote...                                │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-12243                   │
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
@@ -185,15 +186,8 @@ Total: 203 (UNKNOWN: 0, LOW: 175, MEDIUM: 26, HIGH: 2, CRITICAL: 0)
 │ libtasn1                    │ CVE-2024-12133 │ MEDIUM   │              │ 4.16.0-8.el9_1      │               │ libtasn1: Inefficient DER Decoding in libtasn1 Leading to    │
 │                             │                │          │              │                     │               │ Potential Remote DoS                                         │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-12133                   │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libxml2                     │ CVE-2024-56171 │ HIGH     │              │ 2.9.13-6.el9_5.1    │               │ libxml2: Use-After-Free in libxml2                           │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-56171                   │
-│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-24928 │          │              │                     │               │ libxml2: Stack-based buffer overflow in xmlSnprintfElements  │
-│                             │                │          │              │                     │               │ of libxml2                                                   │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-24928                   │
-│                             ├────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-45322 │ LOW      │ will_not_fix │                     │               │ libxml2: use-after-free in xmlUnlinkNode() in tree.c         │
+├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libxml2                     │ CVE-2023-45322 │ LOW      │ will_not_fix │ 2.9.13-6.el9_5.2    │               │ libxml2: use-after-free in xmlUnlinkNode() in tree.c         │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-45322                   │
 │                             ├────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-34459 │          │ affected     │                     │               │ libxml2: buffer over-read in xmlHTMLPrintFileContext in      │
@@ -358,6 +352,10 @@ Total: 203 (UNKNOWN: 0, LOW: 175, MEDIUM: 26, HIGH: 2, CRITICAL: 0)
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ vim-minimal                 │ CVE-2024-43790 │          │              │ 2:8.2.2637-21.el9   │               │ vim: Out of bounds read when performing a search command     │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-43790                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-29768 │          │              │                     │               │ vim: Vim vulnerable to potential data loss with zip.vim and  │
+│                             │                │          │              │                     │               │ special crafted...                                           │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-29768                   │
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2021-3927  │ LOW      │              │                     │               │ vim: heap-based buffer overflow in gchar_cursor() in misc1.c │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2021-3927                    │
@@ -713,3 +711,15 @@ Total: 203 (UNKNOWN: 0, LOW: 175, MEDIUM: 26, HIGH: 2, CRITICAL: 0)
 │                             │ CVE-2025-26603 │          │              │                     │               │ vim: heap-use-after-free in function str_to_reg in vim/vim   │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-26603                   │
 └─────────────────────────────┴────────────────┴──────────┴──────────────┴─────────────────────┴───────────────┴──────────────────────────────────────────────────────────────┘
+
+usr/local/bin/aci-containers-webhook (gobinary)
+===============================================
+Total: 1 (UNKNOWN: 0, LOW: 0, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
+
+┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────┬───────────────────────────────────────────────────────────┐
+│     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version │                           Title                           │
+├──────────────────┼────────────────┼──────────┼────────┼───────────────────┼───────────────┼───────────────────────────────────────────────────────────┤
+│ golang.org/x/net │ CVE-2025-22870 │ MEDIUM   │ fixed  │ v0.33.0           │ 0.36.0        │ golang.org/x/net/http/httpproxy: golang.org/x/net/proxy:  │
+│                  │                │          │        │                   │               │ HTTP Proxy bypass using IPv6 Zone IDs in golang.org/x/net │
+│                  │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2025-22870                │
+└──────────────────┴────────────────┴──────────┴────────┴───────────────────┴───────────────┴───────────────────────────────────────────────────────────┘
