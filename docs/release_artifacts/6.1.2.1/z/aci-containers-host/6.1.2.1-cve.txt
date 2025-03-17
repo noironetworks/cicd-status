@@ -1,8 +1,10 @@
-No vulnerabilities found
+NAME               INSTALLED  FIXED-IN  TYPE       VULNERABILITY        SEVERITY 
+golang.org/x/net   v0.33.0    0.36.0    go-module  GHSA-qxp5-gwg8-xv66  Medium    
+k8s.io/kubernetes  v1.30.10             go-module  GHSA-3wgm-2gw2-vh5m  Medium
 
 quay.io/noiro/aci-containers-host:6.1.2.1.81c2369.z (redhat 9.5)
 ================================================================
-Total: 95 (UNKNOWN: 0, LOW: 62, MEDIUM: 27, HIGH: 6, CRITICAL: 0)
+Total: 93 (UNKNOWN: 0, LOW: 62, MEDIUM: 27, HIGH: 4, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬─────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                            │
@@ -107,12 +109,12 @@ Total: 95 (UNKNOWN: 0, LOW: 62, MEDIUM: 27, HIGH: 6, CRITICAL: 0)
 ├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                             │
 │ glibc-minimal-langpack      │                │          │              │                     │               │                                                             │
 │                             │                │          │              │                     │               │                                                             │
-├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ gnupg2                      │ CVE-2022-3219  │ LOW      │ will_not_fix │ 2.3.3-4.el9         │               │ gnupg: denial of service issue (resource consumption) using │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ gnupg2                      │ CVE-2022-3219  │ LOW      │              │ 2.3.3-4.el9         │               │ gnupg: denial of service issue (resource consumption) using │
 │                             │                │          │              │                     │               │ compressed packets                                          │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-3219                   │
-├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ gnutls                      │ CVE-2024-12243 │ MEDIUM   │ affected     │ 3.8.3-6.el9         │               │ gnutls: GnuTLS Impacted by Inefficient DER Decoding in      │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ gnutls                      │ CVE-2024-12243 │ MEDIUM   │              │ 3.8.3-6.el9         │               │ gnutls: GnuTLS Impacted by Inefficient DER Decoding in      │
 │                             │                │          │              │                     │               │ libtasn1 Leading to Remote...                               │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-12243                  │
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
@@ -169,15 +171,8 @@ Total: 95 (UNKNOWN: 0, LOW: 62, MEDIUM: 27, HIGH: 6, CRITICAL: 0)
 │ libtasn1                    │ CVE-2024-12133 │ MEDIUM   │              │ 4.16.0-9.el9        │               │ libtasn1: Inefficient DER Decoding in libtasn1 Leading to   │
 │                             │                │          │              │                     │               │ Potential Remote DoS                                        │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-12133                  │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ libxml2                     │ CVE-2024-56171 │ HIGH     │              │ 2.9.13-9.el9        │               │ libxml2: Use-After-Free in libxml2                          │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-56171                  │
-│                             ├────────────────┤          │              │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-24928 │          │              │                     │               │ libxml2: Stack-based buffer overflow in xmlSnprintfElements │
-│                             │                │          │              │                     │               │ of libxml2                                                  │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-24928                  │
-│                             ├────────────────┼──────────┼──────────────┤                     ├───────────────┼─────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-45322 │ LOW      │ will_not_fix │                     │               │ libxml2: use-after-free in xmlUnlinkNode() in tree.c        │
+├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ libxml2                     │ CVE-2023-45322 │ LOW      │ will_not_fix │ 2.9.13-9.el9        │               │ libxml2: use-after-free in xmlUnlinkNode() in tree.c        │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-45322                  │
 │                             ├────────────────┤          ├──────────────┤                     ├───────────────┼─────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-34459 │          │ affected     │                     │               │ libxml2: buffer over-read in xmlHTMLPrintFileContext in     │
@@ -356,3 +351,43 @@ Total: 95 (UNKNOWN: 0, LOW: 62, MEDIUM: 27, HIGH: 6, CRITICAL: 0)
 │                             │                │          │              │                     │               │ Fapi_VerifyQuote                                            │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-29040                  │
 └─────────────────────────────┴────────────────┴──────────┴──────────────┴─────────────────────┴───────────────┴─────────────────────────────────────────────────────────────┘
+
+usr/local/bin/aci-containers-host-agent (gobinary)
+==================================================
+Total: 2 (UNKNOWN: 0, LOW: 0, MEDIUM: 2, HIGH: 0, CRITICAL: 0)
+
+┌───────────────────┬────────────────┬──────────┬──────────┬───────────────────┬───────────────┬───────────────────────────────────────────────────────────┐
+│      Library      │ Vulnerability  │ Severity │  Status  │ Installed Version │ Fixed Version │                           Title                           │
+├───────────────────┼────────────────┼──────────┼──────────┼───────────────────┼───────────────┼───────────────────────────────────────────────────────────┤
+│ golang.org/x/net  │ CVE-2025-22870 │ MEDIUM   │ fixed    │ v0.33.0           │ 0.36.0        │ golang.org/x/net/http/httpproxy: golang.org/x/net/proxy:  │
+│                   │                │          │          │                   │               │ HTTP Proxy bypass using IPv6 Zone IDs in golang.org/x/net │
+│                   │                │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2025-22870                │
+├───────────────────┼────────────────┤          ├──────────┼───────────────────┼───────────────┼───────────────────────────────────────────────────────────┤
+│ k8s.io/kubernetes │ CVE-2025-1767  │          │ affected │ v1.30.10          │               │ Kubernetes GitRepo Volume Inadvertent Local Repository    │
+│                   │                │          │          │                   │               │ Access                                                    │
+│                   │                │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2025-1767                 │
+└───────────────────┴────────────────┴──────────┴──────────┴───────────────────┴───────────────┴───────────────────────────────────────────────────────────┘
+
+usr/local/bin/netop-cni (gobinary)
+==================================
+Total: 1 (UNKNOWN: 0, LOW: 0, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
+
+┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────┬───────────────────────────────────────────────────────────┐
+│     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version │                           Title                           │
+├──────────────────┼────────────────┼──────────┼────────┼───────────────────┼───────────────┼───────────────────────────────────────────────────────────┤
+│ golang.org/x/net │ CVE-2025-22870 │ MEDIUM   │ fixed  │ v0.33.0           │ 0.36.0        │ golang.org/x/net/http/httpproxy: golang.org/x/net/proxy:  │
+│                  │                │          │        │                   │               │ HTTP Proxy bypass using IPv6 Zone IDs in golang.org/x/net │
+│                  │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2025-22870                │
+└──────────────────┴────────────────┴──────────┴────────┴───────────────────┴───────────────┴───────────────────────────────────────────────────────────┘
+
+usr/local/bin/opflex-agent-cni (gobinary)
+=========================================
+Total: 1 (UNKNOWN: 0, LOW: 0, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
+
+┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────┬───────────────────────────────────────────────────────────┐
+│     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version │                           Title                           │
+├──────────────────┼────────────────┼──────────┼────────┼───────────────────┼───────────────┼───────────────────────────────────────────────────────────┤
+│ golang.org/x/net │ CVE-2025-22870 │ MEDIUM   │ fixed  │ v0.33.0           │ 0.36.0        │ golang.org/x/net/http/httpproxy: golang.org/x/net/proxy:  │
+│                  │                │          │        │                   │               │ HTTP Proxy bypass using IPv6 Zone IDs in golang.org/x/net │
+│                  │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2025-22870                │
+└──────────────────┴────────────────┴──────────┴────────┴───────────────────┴───────────────┴───────────────────────────────────────────────────────────┘
