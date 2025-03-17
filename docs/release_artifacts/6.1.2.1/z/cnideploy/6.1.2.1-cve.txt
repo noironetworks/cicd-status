@@ -11,7 +11,7 @@ urllib3           1.26.5                              1.26.18                   
 
 quay.io/noiro/cnideploy:6.1.2.1.81c2369.z (redhat 9.5)
 ======================================================
-Total: 205 (UNKNOWN: 0, LOW: 175, MEDIUM: 28, HIGH: 2, CRITICAL: 0)
+Total: 204 (UNKNOWN: 0, LOW: 175, MEDIUM: 29, HIGH: 0, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -124,12 +124,12 @@ Total: 205 (UNKNOWN: 0, LOW: 175, MEDIUM: 28, HIGH: 2, CRITICAL: 0)
 ├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
 │ glibc-minimal-langpack      │                │          │              │                     │               │                                                              │
 │                             │                │          │              │                     │               │                                                              │
-├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ gnupg2                      │ CVE-2022-3219  │ LOW      │ will_not_fix │ 2.3.3-4.el9         │               │ gnupg: denial of service issue (resource consumption) using  │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ gnupg2                      │ CVE-2022-3219  │ LOW      │              │ 2.3.3-4.el9         │               │ gnupg: denial of service issue (resource consumption) using  │
 │                             │                │          │              │                     │               │ compressed packets                                           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-3219                    │
-├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ gnutls                      │ CVE-2024-12243 │ MEDIUM   │ affected     │ 3.8.3-4.el9_4       │               │ gnutls: GnuTLS Impacted by Inefficient DER Decoding in       │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ gnutls                      │ CVE-2024-12243 │ MEDIUM   │              │ 3.8.3-4.el9_4       │               │ gnutls: GnuTLS Impacted by Inefficient DER Decoding in       │
 │                             │                │          │              │                     │               │ libtasn1 Leading to Remote...                                │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-12243                   │
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
@@ -186,15 +186,8 @@ Total: 205 (UNKNOWN: 0, LOW: 175, MEDIUM: 28, HIGH: 2, CRITICAL: 0)
 │ libtasn1                    │ CVE-2024-12133 │ MEDIUM   │              │ 4.16.0-8.el9_1      │               │ libtasn1: Inefficient DER Decoding in libtasn1 Leading to    │
 │                             │                │          │              │                     │               │ Potential Remote DoS                                         │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-12133                   │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libxml2                     │ CVE-2024-56171 │ HIGH     │              │ 2.9.13-6.el9_5.1    │               │ libxml2: Use-After-Free in libxml2                           │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-56171                   │
-│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-24928 │          │              │                     │               │ libxml2: Stack-based buffer overflow in xmlSnprintfElements  │
-│                             │                │          │              │                     │               │ of libxml2                                                   │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-24928                   │
-│                             ├────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-45322 │ LOW      │ will_not_fix │                     │               │ libxml2: use-after-free in xmlUnlinkNode() in tree.c         │
+├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libxml2                     │ CVE-2023-45322 │ LOW      │ will_not_fix │ 2.9.13-6.el9_5.2    │               │ libxml2: use-after-free in xmlUnlinkNode() in tree.c         │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-45322                   │
 │                             ├────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-34459 │          │ affected     │                     │               │ libxml2: buffer over-read in xmlHTMLPrintFileContext in      │
@@ -359,6 +352,10 @@ Total: 205 (UNKNOWN: 0, LOW: 175, MEDIUM: 28, HIGH: 2, CRITICAL: 0)
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ vim-minimal                 │ CVE-2024-43790 │          │              │ 2:8.2.2637-21.el9   │               │ vim: Out of bounds read when performing a search command     │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-43790                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-29768 │          │              │                     │               │ vim: Vim vulnerable to potential data loss with zip.vim and  │
+│                             │                │          │              │                     │               │ special crafted...                                           │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-29768                   │
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2021-3927  │ LOW      │              │                     │               │ vim: heap-based buffer overflow in gchar_cursor() in misc1.c │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2021-3927                    │
