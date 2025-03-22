@@ -2,7 +2,7 @@ No vulnerabilities found
 
 quay.io/noiro/opflex:6.1.2.1.81c2369.z (redhat 9.5)
 ===================================================
-Total: 195 (UNKNOWN: 0, LOW: 168, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
+Total: 195 (UNKNOWN: 0, LOW: 169, MEDIUM: 26, HIGH: 0, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬──────────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │  Fixed Version   │                            Title                             │
@@ -95,6 +95,10 @@ Total: 195 (UNKNOWN: 0, LOW: 168, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
 │ gnupg2                      │ CVE-2022-3219  │ LOW      │              │ 2.3.3-4.el9         │                  │ gnupg: denial of service issue (resource consumption) using  │
 │                             │                │          │              │                     │                  │ compressed packets                                           │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2022-3219                    │
+│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-30258 │          │              │                     │                  │ gnupg: verification DoS due to a malicious subkey in the     │
+│                             │                │          │              │                     │                  │ keyring                                                      │
+│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-30258                   │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
 │ gnutls                      │ CVE-2024-12243 │ MEDIUM   │              │ 3.8.3-6.el9         │                  │ gnutls: GnuTLS Impacted by Inefficient DER Decoding in       │
 │                             │                │          │              │                     │                  │ libtasn1 Leading to Remote...                                │
@@ -317,10 +321,7 @@ Total: 195 (UNKNOWN: 0, LOW: 168, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
 │                             │                │          │              │                     │                  │ Fapi_VerifyQuote                                             │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-29040                   │
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
-│ vim-minimal                 │ CVE-2024-43790 │          │              │ 2:8.2.2637-21.el9   │                  │ vim: Out of bounds read when performing a search command     │
-│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-43790                   │
-│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-29768 │          │              │                     │                  │ vim: Vim vulnerable to potential data loss with zip.vim and  │
+│ vim-minimal                 │ CVE-2025-29768 │          │              │ 2:8.2.2637-21.el9   │                  │ vim: Vim vulnerable to potential data loss with zip.vim and  │
 │                             │                │          │              │                     │                  │ special crafted...                                           │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-29768                   │
 │                             ├────────────────┼──────────┤              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
