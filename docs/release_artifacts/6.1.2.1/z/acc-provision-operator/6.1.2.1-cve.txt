@@ -1,6 +1,4 @@
 NAME              INSTALLED  FIXED-IN  TYPE       VULNERABILITY        SEVERITY 
-Jinja2            3.1.5      3.1.6     python     GHSA-cpwx-vrp4-4pq7  Medium    
-cryptography      44.0.0     44.0.1    python     GHSA-79v4-65xg-pq4g  Low       
 golang.org/x/net  v0.33.0    0.36.0    go-module  GHSA-qxp5-gwg8-xv66  Medium    
 idna              2.10       3.7       python     GHSA-jjg7-2v4v-x38h  Medium    
 requests          2.25.1     2.32.0    python     GHSA-9wx4-h78v-vm56  Medium    
@@ -14,7 +12,7 @@ urllib3           1.26.5     1.26.18   python     GHSA-g4mx-q9vg-27p4  Medium
 
 quay.io/noiro/acc-provision-operator:6.1.2.1.81c2369.z (redhat 9.5)
 ===================================================================
-Total: 234 (UNKNOWN: 0, LOW: 195, MEDIUM: 39, HIGH: 0, CRITICAL: 0)
+Total: 233 (UNKNOWN: 0, LOW: 196, MEDIUM: 37, HIGH: 0, CRITICAL: 0)
 
 ┌─────────────────────────────┬──────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │  Vulnerability   │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -118,36 +116,36 @@ Total: 234 (UNKNOWN: 0, LOW: 195, MEDIUM: 39, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2025-1153    │          │              │                     │               │ binutils: GNU Binutils format.c bfd_set_format memory        │
 │                             │                  │          │              │                     │               │ corruption                                                   │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-1153                    │
-├─────────────────────────────┼──────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ git                         │ CVE-2024-52005   │ MEDIUM   │ will_not_fix │ 2.43.5-2.el9_5      │               │ git: The sideband payload is passed unfiltered to the        │
+├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ git                         │ CVE-2024-52005   │ MEDIUM   │              │ 2.43.5-2.el9_5      │               │ git: The sideband payload is passed unfiltered to the        │
 │                             │                  │          │              │                     │               │ terminal in git...                                           │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52005                   │
-│                             ├──────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-50349   │ LOW      │ affected     │                     │               │ git: Git does not sanitize URLs when asking for credentials  │
+│                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2024-50349   │ LOW      │              │                     │               │ git: Git does not sanitize URLs when asking for credentials  │
 │                             │                  │          │              │                     │               │ interactively                                                │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-50349                   │
 │                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-52006   │          │              │                     │               │ git: Newline confusion in credential helpers can lead to     │
 │                             │                  │          │              │                     │               │ credential exfiltration in...                                │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52006                   │
-├─────────────────────────────┼──────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ git-core                    │ CVE-2024-52005   │ MEDIUM   │ will_not_fix │                     │               │ git: The sideband payload is passed unfiltered to the        │
+├─────────────────────────────┼──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ git-core                    │ CVE-2024-52005   │ MEDIUM   │              │                     │               │ git: The sideband payload is passed unfiltered to the        │
 │                             │                  │          │              │                     │               │ terminal in git...                                           │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52005                   │
-│                             ├──────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-50349   │ LOW      │ affected     │                     │               │ git: Git does not sanitize URLs when asking for credentials  │
+│                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2024-50349   │ LOW      │              │                     │               │ git: Git does not sanitize URLs when asking for credentials  │
 │                             │                  │          │              │                     │               │ interactively                                                │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-50349                   │
 │                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-52006   │          │              │                     │               │ git: Newline confusion in credential helpers can lead to     │
 │                             │                  │          │              │                     │               │ credential exfiltration in...                                │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52006                   │
-├─────────────────────────────┼──────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ git-core-doc                │ CVE-2024-52005   │ MEDIUM   │ will_not_fix │                     │               │ git: The sideband payload is passed unfiltered to the        │
+├─────────────────────────────┼──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ git-core-doc                │ CVE-2024-52005   │ MEDIUM   │              │                     │               │ git: The sideband payload is passed unfiltered to the        │
 │                             │                  │          │              │                     │               │ terminal in git...                                           │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52005                   │
-│                             ├──────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-50349   │ LOW      │ affected     │                     │               │ git: Git does not sanitize URLs when asking for credentials  │
+│                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2024-50349   │ LOW      │              │                     │               │ git: Git does not sanitize URLs when asking for credentials  │
 │                             │                  │          │              │                     │               │ interactively                                                │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-50349                   │
 │                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -167,15 +165,16 @@ Total: 234 (UNKNOWN: 0, LOW: 195, MEDIUM: 39, HIGH: 0, CRITICAL: 0)
 │ glibc-common                │                  │          │              │                     │               │                                                              │
 │                             │                  │          │              │                     │               │                                                              │
 ├─────────────────────────────┤                  │          │              │                     ├───────────────┤                                                              │
-│ glibc-langpack-en           │                  │          │              │                     │               │                                                              │
-│                             │                  │          │              │                     │               │                                                              │
-├─────────────────────────────┤                  │          │              │                     ├───────────────┤                                                              │
 │ glibc-minimal-langpack      │                  │          │              │                     │               │                                                              │
 │                             │                  │          │              │                     │               │                                                              │
 ├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ gnupg2                      │ CVE-2022-3219    │ LOW      │              │ 2.3.3-4.el9         │               │ gnupg: denial of service issue (resource consumption) using  │
 │                             │                  │          │              │                     │               │ compressed packets                                           │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-3219                    │
+│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-30258   │          │              │                     │               │ gnupg: verification DoS due to a malicious subkey in the     │
+│                             │                  │          │              │                     │               │ keyring                                                      │
+│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-30258                   │
 ├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ gnutls                      │ CVE-2024-12243   │ MEDIUM   │              │ 3.8.3-4.el9_4       │               │ gnutls: GnuTLS Impacted by Inefficient DER Decoding in       │
 │                             │                  │          │              │                     │               │ libtasn1 Leading to Remote...                                │
@@ -341,12 +340,12 @@ Total: 234 (UNKNOWN: 0, LOW: 195, MEDIUM: 39, HIGH: 0, CRITICAL: 0)
 │ pcre2-syntax                │                  │          │              │                     │               │                                                              │
 │                             │                  │          │              │                     │               │                                                              │
 │                             │                  │          │              │                     │               │                                                              │
-├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ perl-Git                    │ CVE-2024-52005   │ MEDIUM   │              │ 2.43.5-2.el9_5      │               │ git: The sideband payload is passed unfiltered to the        │
+├─────────────────────────────┼──────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ perl-Git                    │ CVE-2024-52005   │ MEDIUM   │ affected     │ 2.43.5-2.el9_5      │               │ git: The sideband payload is passed unfiltered to the        │
 │                             │                  │          │              │                     │               │ terminal in git...                                           │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52005                   │
-│                             ├──────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-50349   │ LOW      │ affected     │                     │               │ git: Git does not sanitize URLs when asking for credentials  │
+│                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2024-50349   │ LOW      │              │                     │               │ git: Git does not sanitize URLs when asking for credentials  │
 │                             │                  │          │              │                     │               │ interactively                                                │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-50349                   │
 │                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -444,7 +443,7 @@ Total: 234 (UNKNOWN: 0, LOW: 195, MEDIUM: 39, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2024-0232    │          │ affected     │                     │               │ sqlite: use-after-free bug in jsonParseAddNodeArray          │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-0232                    │
 ├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ systemd                     │ CVE-2021-3997    │ MEDIUM   │              │ 252-46.el9_5.2      │               │ systemd: Uncontrolled recursion in systemd-tmpfiles when     │
+│ systemd                     │ CVE-2021-3997    │ MEDIUM   │              │ 252-46.el9_5.3      │               │ systemd: Uncontrolled recursion in systemd-tmpfiles when     │
 │                             │                  │          │              │                     │               │ removing files                                               │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2021-3997                    │
 ├─────────────────────────────┤                  │          │              │                     ├───────────────┤                                                              │
@@ -472,10 +471,7 @@ Total: 234 (UNKNOWN: 0, LOW: 195, MEDIUM: 39, HIGH: 0, CRITICAL: 0)
 │                             │                  │          │              │                     │               │ Fapi_VerifyQuote                                             │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-29040                   │
 ├─────────────────────────────┼──────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ vim-minimal                 │ CVE-2024-43790   │          │              │ 2:8.2.2637-21.el9   │               │ vim: Out of bounds read when performing a search command     │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-43790                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-29768   │          │              │                     │               │ vim: Vim vulnerable to potential data loss with zip.vim and  │
+│ vim-minimal                 │ CVE-2025-29768   │          │              │ 2:8.2.2637-21.el9   │               │ vim: Vim vulnerable to potential data loss with zip.vim and  │
 │                             │                  │          │              │                     │               │ special crafted...                                           │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-29768                   │
 │                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -836,23 +832,15 @@ Total: 234 (UNKNOWN: 0, LOW: 195, MEDIUM: 39, HIGH: 0, CRITICAL: 0)
 
 Python (python-pkg)
 ===================
-Total: 3 (UNKNOWN: 0, LOW: 1, MEDIUM: 2, HIGH: 0, CRITICAL: 0)
+Total: 1 (UNKNOWN: 0, LOW: 0, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
 
-┌─────────────────────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
-│         Library         │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version │                            Title                             │
-├─────────────────────────┼────────────────┼──────────┼────────┼───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ Jinja2 (METADATA)       │ CVE-2025-27516 │ MEDIUM   │ fixed  │ 3.1.5             │ 3.1.6         │ jinja2: Jinja sandbox breakout through attr filter selecting │
-│                         │                │          │        │                   │               │ format method                                                │
-│                         │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2025-27516                   │
-├─────────────────────────┼────────────────┼──────────┤        ├───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ cryptography (METADATA) │ CVE-2024-12797 │ LOW      │        │ 44.0.0            │ 44.0.1        │ openssl: RFC7250 handshakes with unauthenticated servers     │
-│                         │                │          │        │                   │               │ don't abort as expected                                      │
-│                         │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2024-12797                   │
-├─────────────────────────┼────────────────┼──────────┤        ├───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ requests (METADATA)     │ CVE-2024-35195 │ MEDIUM   │        │ 2.31.0            │ 2.32.0        │ requests: subsequent requests to the same host ignore cert   │
-│                         │                │          │        │                   │               │ verification                                                 │
-│                         │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2024-35195                   │
-└─────────────────────────┴────────────────┴──────────┴────────┴───────────────────┴───────────────┴──────────────────────────────────────────────────────────────┘
+┌─────────────────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────┬────────────────────────────────────────────────────────────┐
+│       Library       │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version │                           Title                            │
+├─────────────────────┼────────────────┼──────────┼────────┼───────────────────┼───────────────┼────────────────────────────────────────────────────────────┤
+│ requests (METADATA) │ CVE-2024-35195 │ MEDIUM   │ fixed  │ 2.31.0            │ 2.32.0        │ requests: subsequent requests to the same host ignore cert │
+│                     │                │          │        │                   │               │ verification                                               │
+│                     │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2024-35195                 │
+└─────────────────────┴────────────────┴──────────┴────────┴───────────────────┴───────────────┴────────────────────────────────────────────────────────────┘
 
 usr/local/bin/ansible-operator (gobinary)
 =========================================
@@ -861,7 +849,7 @@ Total: 1 (UNKNOWN: 0, LOW: 0, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
 ┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────┬───────────────────────────────────────────────────────────┐
 │     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version │                           Title                           │
 ├──────────────────┼────────────────┼──────────┼────────┼───────────────────┼───────────────┼───────────────────────────────────────────────────────────┤
-│ golang.org/x/net │ CVE-2025-22870 │ MEDIUM   │ fixed  │ v0.33.0           │ 0.36.0        │ golang.org/x/net/http/httpproxy: golang.org/x/net/proxy:  │
+│ golang.org/x/net │ CVE-2025-22870 │ MEDIUM   │ fixed  │ v0.33.0           │ 0.36.0        │ golang.org/x/net/proxy: golang.org/x/net/http/httpproxy:  │
 │                  │                │          │        │                   │               │ HTTP Proxy bypass using IPv6 Zone IDs in golang.org/x/net │
 │                  │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2025-22870                │
 └──────────────────┴────────────────┴──────────┴────────┴───────────────────┴───────────────┴───────────────────────────────────────────────────────────┘
