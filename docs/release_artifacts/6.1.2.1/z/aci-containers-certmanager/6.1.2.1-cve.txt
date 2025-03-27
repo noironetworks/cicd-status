@@ -11,7 +11,7 @@ urllib3           1.26.5     1.26.18   python     GHSA-g4mx-q9vg-27p4  Medium
 
 quay.io/noiro/aci-containers-certmanager:6.1.2.1.81c2369.z (redhat 9.5)
 =======================================================================
-Total: 202 (UNKNOWN: 0, LOW: 175, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
+Total: 202 (UNKNOWN: 0, LOW: 176, MEDIUM: 26, HIGH: 0, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -128,6 +128,10 @@ Total: 202 (UNKNOWN: 0, LOW: 175, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
 │ gnupg2                      │ CVE-2022-3219  │ LOW      │              │ 2.3.3-4.el9         │               │ gnupg: denial of service issue (resource consumption) using  │
 │                             │                │          │              │                     │               │ compressed packets                                           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-3219                    │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-30258 │          │              │                     │               │ gnupg: verification DoS due to a malicious subkey in the     │
+│                             │                │          │              │                     │               │ keyring                                                      │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-30258                   │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ gnutls                      │ CVE-2024-12243 │ MEDIUM   │              │ 3.8.3-4.el9_4       │               │ gnutls: GnuTLS Impacted by Inefficient DER Decoding in       │
 │                             │                │          │              │                     │               │ libtasn1 Leading to Remote...                                │
@@ -322,7 +326,7 @@ Total: 202 (UNKNOWN: 0, LOW: 175, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2024-0232  │          │ affected     │                     │               │ sqlite: use-after-free bug in jsonParseAddNodeArray          │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-0232                    │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ systemd                     │ CVE-2021-3997  │ MEDIUM   │              │ 252-46.el9_5.2      │               │ systemd: Uncontrolled recursion in systemd-tmpfiles when     │
+│ systemd                     │ CVE-2021-3997  │ MEDIUM   │              │ 252-46.el9_5.3      │               │ systemd: Uncontrolled recursion in systemd-tmpfiles when     │
 │                             │                │          │              │                     │               │ removing files                                               │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2021-3997                    │
 ├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
@@ -350,10 +354,7 @@ Total: 202 (UNKNOWN: 0, LOW: 175, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
 │                             │                │          │              │                     │               │ Fapi_VerifyQuote                                             │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-29040                   │
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ vim-minimal                 │ CVE-2024-43790 │          │              │ 2:8.2.2637-21.el9   │               │ vim: Out of bounds read when performing a search command     │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-43790                   │
-│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-29768 │          │              │                     │               │ vim: Vim vulnerable to potential data loss with zip.vim and  │
+│ vim-minimal                 │ CVE-2025-29768 │          │              │ 2:8.2.2637-21.el9   │               │ vim: Vim vulnerable to potential data loss with zip.vim and  │
 │                             │                │          │              │                     │               │ special crafted...                                           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-29768                   │
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -719,7 +720,7 @@ Total: 1 (UNKNOWN: 0, LOW: 0, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
 ┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────┬───────────────────────────────────────────────────────────┐
 │     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version │                           Title                           │
 ├──────────────────┼────────────────┼──────────┼────────┼───────────────────┼───────────────┼───────────────────────────────────────────────────────────┤
-│ golang.org/x/net │ CVE-2025-22870 │ MEDIUM   │ fixed  │ v0.33.0           │ 0.36.0        │ golang.org/x/net/http/httpproxy: golang.org/x/net/proxy:  │
+│ golang.org/x/net │ CVE-2025-22870 │ MEDIUM   │ fixed  │ v0.33.0           │ 0.36.0        │ golang.org/x/net/proxy: golang.org/x/net/http/httpproxy:  │
 │                  │                │          │        │                   │               │ HTTP Proxy bypass using IPv6 Zone IDs in golang.org/x/net │
 │                  │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2025-22870                │
 └──────────────────┴────────────────┴──────────┴────────┴───────────────────┴───────────────┴───────────────────────────────────────────────────────────┘
