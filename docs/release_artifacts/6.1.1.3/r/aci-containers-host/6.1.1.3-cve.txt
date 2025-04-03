@@ -4,7 +4,7 @@ k8s.io/kubernetes  v1.30.10             go-module  GHSA-3wgm-2gw2-vh5m  Medium
 
 quay.io/noiro/aci-containers-host:6.1.1.3.81c2369.z (redhat 9.5)
 ================================================================
-Total: 90 (UNKNOWN: 0, LOW: 63, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
+Total: 90 (UNKNOWN: 0, LOW: 63, MEDIUM: 26, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬─────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                            │
@@ -105,8 +105,12 @@ Total: 90 (UNKNOWN: 0, LOW: 63, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
 │ gnutls                      │ CVE-2024-12243 │ MEDIUM   │              │ 3.8.3-6.el9         │               │ gnutls: GnuTLS Impacted by Inefficient DER Decoding in      │
 │                             │                │          │              │                     │               │ libtasn1 Leading to Remote...                               │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-12243                  │
-├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ krb5-libs                   │ CVE-2025-24528 │          │              │ 1.21.1-6.el9        │               │ krb5: overflow when calculating ulog block size             │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ krb5-libs                   │ CVE-2022-37967 │ HIGH     │              │ 1.21.1-6.el9        │               │ samba: Kerberos constrained delegation ticket forgery       │
+│                             │                │          │              │                     │               │ possible against Samba AD DC                                │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-37967                  │
+│                             ├────────────────┼──────────┤              │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-24528 │ MEDIUM   │              │                     │               │ krb5: overflow when calculating ulog block size             │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-24528                  │
 ├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
 │ libarchive                  │ CVE-2023-30571 │          │ will_not_fix │ 3.5.3-4.el9         │               │ libarchive: Race condition in multi-threaded use of         │
@@ -170,11 +174,7 @@ Total: 90 (UNKNOWN: 0, LOW: 63, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2025-27113 │          │              │                     │               │ libxml2: NULL Pointer Dereference in libxml2 xmlPatMatch    │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-27113                  │
 ├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ libyaml                     │ CVE-2024-35325 │ MEDIUM   │ will_not_fix │ 0.2.5-7.el9         │               │ libyaml: double-free in yaml_event_delete in                │
-│                             │                │          │              │                     │               │ /src/libyaml/src/api.c                                      │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-35325                  │
-├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ libzstd                     │ CVE-2022-4899  │          │              │ 1.5.5-1.el9         │               │ zstd: mysql: buffer overrun in util.c                       │
+│ libzstd                     │ CVE-2022-4899  │ MEDIUM   │ will_not_fix │ 1.5.5-1.el9         │               │ zstd: mysql: buffer overrun in util.c                       │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-4899                   │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
 │ ncurses-base                │ CVE-2022-29458 │ LOW      │              │ 6.2-10.20210508.el9 │               │ ncurses: segfaulting OOB read                               │
