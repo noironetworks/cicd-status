@@ -12,7 +12,7 @@ urllib3           1.26.5     1.26.18   python     GHSA-g4mx-q9vg-27p4  Medium
 
 quay.io/noiro/acc-provision-operator:6.1.2.1.81c2369.z (redhat 9.5)
 ===================================================================
-Total: 231 (UNKNOWN: 0, LOW: 196, MEDIUM: 34, HIGH: 1, CRITICAL: 0)
+Total: 232 (UNKNOWN: 0, LOW: 197, MEDIUM: 34, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬──────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │  Vulnerability   │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -84,7 +84,7 @@ Total: 231 (UNKNOWN: 0, LOW: 196, MEDIUM: 34, HIGH: 1, CRITICAL: 0)
 │                             │ CVE-2017-1000383 │ LOW      │              │                     │               │ emacs: Ignores umask when creating a swap file               │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2017-1000383                 │
 ├─────────────────────────────┼──────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ expat                       │ CVE-2024-45491   │ MEDIUM   │ will_not_fix │ 2.5.0-3.el9_5.1     │               │ libexpat: Integer Overflow or Wraparound                     │
+│ expat                       │ CVE-2024-45491   │ MEDIUM   │ will_not_fix │ 2.5.0-3.el9_5.3     │               │ libexpat: Integer Overflow or Wraparound                     │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-45491                   │
 ├─────────────────────────────┼──────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ gawk                        │ CVE-2023-4156    │ LOW      │ affected     │ 5.1.0-6.el9         │               │ gawk: heap out of bound read in builtin.c                    │
@@ -116,6 +116,10 @@ Total: 231 (UNKNOWN: 0, LOW: 196, MEDIUM: 34, HIGH: 1, CRITICAL: 0)
 │                             │ CVE-2025-1153    │          │              │                     │               │ binutils: GNU Binutils format.c bfd_set_format memory        │
 │                             │                  │          │              │                     │               │ corruption                                                   │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-1153                    │
+│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-3198    │          │              │                     │               │ binutils: GNU Binutils objdump bucomm.c display_info memory  │
+│                             │                  │          │              │                     │               │ leak                                                         │
+│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-3198                    │
 ├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ git                         │ CVE-2024-52005   │ MEDIUM   │              │ 2.43.5-2.el9_5      │               │ git: The sideband payload is passed unfiltered to the        │
 │                             │                  │          │              │                     │               │ terminal in git...                                           │
@@ -180,8 +184,8 @@ Total: 231 (UNKNOWN: 0, LOW: 196, MEDIUM: 34, HIGH: 1, CRITICAL: 0)
 │                             │                  │          │              │                     │               │ libtasn1 Leading to Remote...                                │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-12243                   │
 ├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ krb5-libs                   │ CVE-2022-37967   │ HIGH     │              │ 1.21.1-4.el9_5      │               │ samba: Kerberos constrained delegation ticket forgery        │
-│                             │                  │          │              │                     │               │ possible against Samba AD DC                                 │
+│ krb5-libs                   │ CVE-2022-37967   │ HIGH     │              │ 1.21.1-4.el9_5      │               │ samba: krb5: Kerberos constrained delegation ticket forgery  │
+│                             │                  │          │              │                     │               │ possible against Samba AD DC...                              │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-37967                   │
 │                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-24528   │ MEDIUM   │              │                     │               │ krb5: overflow when calculating ulog block size              │
