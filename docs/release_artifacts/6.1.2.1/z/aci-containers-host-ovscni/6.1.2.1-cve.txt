@@ -4,7 +4,7 @@ k8s.io/kubernetes  v1.30.10             go-module  GHSA-3wgm-2gw2-vh5m  Medium
 
 quay.io/noiro/aci-containers-host-ovscni:6.1.2.1.81c2369.z (redhat 9.5)
 =======================================================================
-Total: 91 (UNKNOWN: 0, LOW: 64, MEDIUM: 26, HIGH: 1, CRITICAL: 0)
+Total: 93 (UNKNOWN: 0, LOW: 64, MEDIUM: 27, HIGH: 2, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬─────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                            │
@@ -126,8 +126,11 @@ Total: 91 (UNKNOWN: 0, LOW: 64, MEDIUM: 26, HIGH: 1, CRITICAL: 0)
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-1632  │ LOW      │              │                     │               │ libarchive: null pointer dereference in bsdunzip.c          │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-1632                   │
-├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ libbpf                      │ CVE-2021-45940 │ MEDIUM   │ will_not_fix │ 2:1.5.0-1.el9       │               │ libbpf: heap-based buffer overflow (4 bytes) in             │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ libbpf                      │ CVE-2025-29481 │ HIGH     │              │ 2:1.5.0-1.el9       │               │ libbpf: Heap Buffer Overflow in libbpf                      │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-29481                  │
+│                             ├────────────────┼──────────┼──────────────┤                     ├───────────────┼─────────────────────────────────────────────────────────────┤
+│                             │ CVE-2021-45940 │ MEDIUM   │ will_not_fix │                     │               │ libbpf: heap-based buffer overflow (4 bytes) in             │
 │                             │                │          │              │                     │               │ __bpf_object__open                                          │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2021-45940                  │
 │                             ├────────────────┤          │              │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
@@ -167,8 +170,11 @@ Total: 91 (UNKNOWN: 0, LOW: 64, MEDIUM: 26, HIGH: 1, CRITICAL: 0)
 │ libtasn1                    │ CVE-2024-12133 │ MEDIUM   │              │ 4.16.0-9.el9        │               │ libtasn1: Inefficient DER Decoding in libtasn1 Leading to   │
 │                             │                │          │              │                     │               │ Potential Remote DoS                                        │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-12133                  │
-├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ libxml2                     │ CVE-2023-45322 │ LOW      │ will_not_fix │ 2.9.13-9.el9        │               │ libxml2: use-after-free in xmlUnlinkNode() in tree.c        │
+├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ libxml2                     │ CVE-2025-32414 │          │              │ 2.9.13-9.el9        │               │ libxml2: Out-of-Bounds Read in libxml2                      │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-32414                  │
+│                             ├────────────────┼──────────┼──────────────┤                     ├───────────────┼─────────────────────────────────────────────────────────────┤
+│                             │ CVE-2023-45322 │ LOW      │ will_not_fix │                     │               │ libxml2: use-after-free in xmlUnlinkNode() in tree.c        │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-45322                  │
 │                             ├────────────────┤          ├──────────────┤                     ├───────────────┼─────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-34459 │          │ affected     │                     │               │ libxml2: buffer over-read in xmlHTMLPrintFileContext in     │
