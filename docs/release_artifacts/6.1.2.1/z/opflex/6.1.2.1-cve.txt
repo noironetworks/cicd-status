@@ -2,7 +2,7 @@ No vulnerabilities found
 
 quay.io/noiro/opflex:6.1.2.1.81c2369.z (redhat 9.5)
 ===================================================
-Total: 195 (UNKNOWN: 0, LOW: 169, MEDIUM: 25, HIGH: 1, CRITICAL: 0)
+Total: 197 (UNKNOWN: 0, LOW: 170, MEDIUM: 26, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬──────────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │  Fixed Version   │                            Title                             │
@@ -79,6 +79,10 @@ Total: 195 (UNKNOWN: 0, LOW: 169, MEDIUM: 25, HIGH: 1, CRITICAL: 0)
 │                             ├────────────────┼──────────┼──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2023-32636 │ LOW      │ affected     │                     │                  │ glib: Timeout in fuzz_variant_text                           │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2023-32636                   │
+│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-3360  │          │              │                     │                  │ glibc: GLib prior to 2.82.5 is vulnerable to integer         │
+│                             │                │          │              │                     │                  │ overflow and...                                              │
+│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-3360                    │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
 │ glibc                       │ CVE-2025-0395  │ MEDIUM   │              │ 2.34-170.el9        │                  │ glibc: buffer overflow in the GNU C Library's assert()       │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-0395                    │
@@ -153,8 +157,11 @@ Total: 195 (UNKNOWN: 0, LOW: 169, MEDIUM: 25, HIGH: 1, CRITICAL: 0)
 │ libuv                       │ CVE-2024-24806 │          │ fixed        │ 1:1.42.0-2.el9      │ 1:1.42.0-2.el9_4 │ libuv: Improper Domain Lookup that potentially leads to SSRF │
 │                             │                │          │              │                     │                  │ attacks                                                      │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-24806                   │
-├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
-│ libxml2                     │ CVE-2023-45322 │ LOW      │ will_not_fix │ 2.9.13-9.el9        │                  │ libxml2: use-after-free in xmlUnlinkNode() in tree.c         │
+├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libxml2                     │ CVE-2025-32414 │          │ affected     │ 2.9.13-9.el9        │                  │ libxml2: Out-of-Bounds Read in libxml2                       │
+│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-32414                   │
+│                             ├────────────────┼──────────┼──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2023-45322 │ LOW      │ will_not_fix │                     │                  │ libxml2: use-after-free in xmlUnlinkNode() in tree.c         │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2023-45322                   │
 │                             ├────────────────┤          ├──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-34459 │          │ affected     │                     │                  │ libxml2: buffer over-read in xmlHTMLPrintFileContext in      │
