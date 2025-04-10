@@ -5066,13 +5066,13 @@ releases:
         cve: release_artifacts/6.1.2.1/z/aci-containers-operator/6.1.2.1-cve-base.txt
         severity:
         - C: 0
-          H: 4
-          L: 173
-          M: 26
+          H: 0
+          L: 0
+          M: 0
           U: 0
-        severity_link: https://quay.io/repository/noirolabs/ubi9/manifest/sha256:851946f50ec93d2022ed3ed462ee454796a15b73f51e0bca9445fe3b68e05df1?tab=vulnerabilities
+        severity_link: https://quay.io/repository/noirolabs/ubi9/manifest/sha256:error?tab=vulnerabilities
         severity_type: quay
-        sha: 851946f50ec93d2022ed3ed462ee454796a15b73f51e0bca9445fe3b68e05df1
+        sha: error
       build-logs: release_artifacts/6.1.2.1/z/aci-containers-operator/6.1.2.1-buildlog.txt
       build-time: 2025-04-09 08:51:40 PDT
       commit:
@@ -8212,7 +8212,45 @@ releases:
         M: 6
         U: 0
       severity_type: grype
-    last_updated: 2025-04-10 02:45:43 PDT
+    - base-image:
+      - cve: release_artifacts/6.1.1.4/z/opflex/6.1.1.4-cve-base.txt
+        severity:
+        - C: 0
+          H: 0
+          L: 0
+          M: 0
+          U: 0
+        sha: error
+      build-logs: release_artifacts/6.1.1.4/z/opflex/6.1.1.4-buildlog.txt
+      build-time: 2025-04-10 09:51:23 PDT
+      commit:
+      - link: https://github.com/noironetworks/opflex/commit/88de20941d46e80b68834e9d6c8033019fd1fbf8
+        sha: 88de20941d46e80b68834e9d6c8033019fd1fbf8
+      cve: release_artifacts/6.1.1.4/z/opflex/6.1.1.4-cve.txt
+      docker:
+      - link: https://hub.docker.com/layers/noiro/opflex/6.1.1.4.81c2369.z/images/sha256-error?context=explore
+        sha: error
+        tag: 6.1.1.4.81c2369.z
+      - link: https://hub.docker.com/layers/noiro/opflex/6.1.1.4.81c2369.041025.4495/images/sha256-error?context=explore
+        sha: error
+        tag: 6.1.1.4.81c2369.041025.4495
+      name: opflex
+      quay:
+      - link: https://quay.io/noiro/opflex:6.1.1.4.81c2369.z
+        sha: error
+        tag: 6.1.1.4.81c2369.z
+      - link: https://quay.io/noiro/opflex:6.1.1.4.81c2369.041025.4495
+        sha: error
+        tag: 6.1.1.4.81c2369.041025.4495
+      sbom: release_artifacts/6.1.1.4/z/opflex/6.1.1.4-sbom.txt
+      severity:
+      - C: 0
+        H: 0
+        L: 0
+        M: 0
+        U: 0
+      severity_type: grype
+    last_updated: 2025-04-10 09:51:23 PDT
     release_name: 6.1.1.4.z
   - acc_provision: []
     container_images: []
