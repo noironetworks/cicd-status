@@ -2,7 +2,7 @@ No vulnerabilities found
 
 quay.io/noiro/opflex:6.0.4.4.81c2369.z (redhat 9.3)
 ===================================================
-Total: 221 (UNKNOWN: 0, LOW: 183, MEDIUM: 36, HIGH: 2, CRITICAL: 0)
+Total: 221 (UNKNOWN: 0, LOW: 183, MEDIUM: 37, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────────────┬───────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │      Installed Version      │         Fixed Version         │                            Title                             │
@@ -157,7 +157,7 @@ Total: 221 (UNKNOWN: 0, LOW: 183, MEDIUM: 36, HIGH: 2, CRITICAL: 0)
 │                             │                │          │              │                             │                               │ overflow and...                                              │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-3360                    │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ glibc                       │ CVE-2025-0395  │ MEDIUM   │              │ 2.34-180.el9                │                               │ glibc: buffer overflow in the GNU C Library's assert()       │
+│ glibc                       │ CVE-2025-0395  │ MEDIUM   │              │ 2.34-184.el9                │                               │ glibc: buffer overflow in the GNU C Library's assert()       │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-0395                    │
 ├─────────────────────────────┤                │          │              │                             ├───────────────────────────────┤                                                              │
 │ glibc-common                │                │          │              │                             │                               │                                                              │
@@ -180,13 +180,13 @@ Total: 221 (UNKNOWN: 0, LOW: 183, MEDIUM: 36, HIGH: 2, CRITICAL: 0)
 │ gnutls                      │ CVE-2024-12243 │ MEDIUM   │              │ 3.8.3-6.el9                 │                               │ gnutls: GnuTLS Impacted by Inefficient DER Decoding in       │
 │                             │                │          │              │                             │                               │ libtasn1 Leading to Remote...                                │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2024-12243                   │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ krb5-libs                   │ CVE-2022-37967 │ HIGH     │              │ 1.21.1-6.el9                │                               │ samba: krb5: Kerberos constrained delegation ticket forgery  │
-│                             │                │          │              │                             │                               │ possible against Samba AD DC...                              │
-│                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2022-37967                   │
-│                             ├────────────────┼──────────┤              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-24528 │ MEDIUM   │              │                             │                               │ krb5: overflow when calculating ulog block size              │
+├─────────────────────────────┼────────────────┤          │              ├─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ krb5-libs                   │ CVE-2025-24528 │          │              │ 1.21.1-6.el9                │                               │ krb5: overflow when calculating ulog block size              │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-24528                   │
+│                             ├────────────────┤          │              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-3576  │          │              │                             │                               │ A vulnerability in the MIT Kerberos implementation allows    │
+│                             │                │          │              │                             │                               │ GSSAPI-prote ...                                             │
+│                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-3576                    │
 ├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │ libarchive                  │ CVE-2023-30571 │          │ will_not_fix │ 3.5.3-4.el9                 │                               │ libarchive: Race condition in multi-threaded use of          │
 │                             │                │          │              │                             │                               │ archive_write_disk_header() on posix based systems...        │
@@ -389,7 +389,7 @@ Total: 221 (UNKNOWN: 0, LOW: 183, MEDIUM: 36, HIGH: 2, CRITICAL: 0)
 │                             │ CVE-2024-0232  │          │ affected     │                             │                               │ sqlite: use-after-free bug in jsonParseAddNodeArray          │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2024-0232                    │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ systemd                     │ CVE-2021-3997  │ MEDIUM   │              │ 252-51.el9                  │                               │ systemd: Uncontrolled recursion in systemd-tmpfiles when     │
+│ systemd                     │ CVE-2021-3997  │ MEDIUM   │              │ 252-52.el9                  │                               │ systemd: Uncontrolled recursion in systemd-tmpfiles when     │
 │                             │                │          │              │                             │                               │ removing files                                               │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2021-3997                    │
 ├─────────────────────────────┤                │          │              │                             ├───────────────────────────────┤                                                              │
