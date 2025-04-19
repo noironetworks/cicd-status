@@ -2,7 +2,7 @@ No vulnerabilities found
 
 quay.io/noiro/opflex:6.1.2.1.81c2369.z (redhat 9.5)
 ===================================================
-Total: 197 (UNKNOWN: 0, LOW: 170, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
+Total: 196 (UNKNOWN: 0, LOW: 169, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬──────────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │  Fixed Version   │                            Title                             │
@@ -170,6 +170,10 @@ Total: 197 (UNKNOWN: 0, LOW: 170, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
 │                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-27113 │          │              │                     │                  │ libxml2: NULL Pointer Dereference in libxml2 xmlPatMatch     │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-27113                   │
+│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-32415 │          │              │                     │                  │ In libxml2 before 2.13.8 and 2.14.x before 2.14.2,           │
+│                             │                │          │              │                     │                  │ xmlSchemaIDCFillNod ...                                      │
+│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-32415                   │
 ├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
 │ libzstd                     │ CVE-2022-4899  │ MEDIUM   │ will_not_fix │ 1.5.5-1.el9         │                  │ zstd: mysql: buffer overrun in util.c                        │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2022-4899                    │
@@ -197,11 +201,8 @@ Total: 197 (UNKNOWN: 0, LOW: 170, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
 │ openldap                    │ CVE-2023-2953  │          │ affected     │ 2.6.8-4.el9         │                  │ openldap: null pointer dereference in ber_memalloc_x         │
 │                             │                │          │              │                     │                  │ function                                                     │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2023-2953                    │
-├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
-│ openssl                     │ CVE-2024-13176 │          │              │ 1:3.2.2-6.el9_5.1   │                  │ openssl: Timing side-channel in ECDSA signature computation  │
-│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-13176                   │
-│                             ├────────────────┤          ├──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-2511  │          │ will_not_fix │                     │                  │ openssl: Unbounded memory growth with session handling in    │
+├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ openssl                     │ CVE-2024-2511  │          │ will_not_fix │ 1:3.2.2-6.el9_5.1   │                  │ openssl: Unbounded memory growth with session handling in    │
 │                             │                │          │              │                     │                  │ TLSv1.3                                                      │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-2511                    │
 │                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
@@ -211,11 +212,8 @@ Total: 197 (UNKNOWN: 0, LOW: 170, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
 │                             ├────────────────┤          ├──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-5535  │          │ affected     │                     │                  │ openssl: SSL_select_next_proto buffer overread               │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-5535                    │
-├─────────────────────────────┼────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│ openssl-libs                │ CVE-2024-13176 │          │              │                     │                  │ openssl: Timing side-channel in ECDSA signature computation  │
-│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-13176                   │
-│                             ├────────────────┤          ├──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-2511  │          │ will_not_fix │                     │                  │ openssl: Unbounded memory growth with session handling in    │
+├─────────────────────────────┼────────────────┤          ├──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│ openssl-libs                │ CVE-2024-2511  │          │ will_not_fix │                     │                  │ openssl: Unbounded memory growth with session handling in    │
 │                             │                │          │              │                     │                  │ TLSv1.3                                                      │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-2511                    │
 │                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
@@ -464,12 +462,12 @@ Total: 197 (UNKNOWN: 0, LOW: 170, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
 │                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2022-2817  │          │              │                     │                  │ vim: heap use-after-free in string_quote() at src/strings.c  │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2022-2817                    │
-│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-2819  │          │              │                     │                  │ vim: heap buffer overflow in compile_lock_unlock() at        │
+│                             ├────────────────┤          ├──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-2819  │          │ affected     │                     │                  │ vim: heap buffer overflow in compile_lock_unlock() at        │
 │                             │                │          │              │                     │                  │ src/vim9cmds.c                                               │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2022-2819                    │
-│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-2845  │          │              │                     │                  │ vim: Buffer Under-read                                       │
+│                             ├────────────────┤          ├──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-2845  │          │ will_not_fix │                     │                  │ vim: Buffer Under-read                                       │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2022-2845                    │
 │                             ├────────────────┤          ├──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2022-2849  │          │ affected     │                     │                  │ vim: heap-based buffer overflow in latin_ptr2len() at        │
