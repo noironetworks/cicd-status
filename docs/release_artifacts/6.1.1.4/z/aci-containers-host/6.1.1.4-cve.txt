@@ -1,10 +1,12 @@
-NAME               INSTALLED  FIXED-IN  TYPE       VULNERABILITY        SEVERITY 
-golang.org/x/net   v0.33.0    0.36.0    go-module  GHSA-qxp5-gwg8-xv66  Medium    
-k8s.io/kubernetes  v1.30.10             go-module  GHSA-3wgm-2gw2-vh5m  Medium
+NAME                 INSTALLED  FIXED-IN  TYPE       VULNERABILITY        SEVERITY 
+golang.org/x/crypto  v0.31.0    0.35.0    go-module  GHSA-hcg3-q754-cr77  High      
+golang.org/x/net     v0.33.0    0.36.0    go-module  GHSA-qxp5-gwg8-xv66  Medium    
+golang.org/x/net     v0.33.0    0.38.0    go-module  GHSA-vvgc-356p-c3xw  Medium    
+k8s.io/kubernetes    v1.30.10             go-module  GHSA-3wgm-2gw2-vh5m  Medium
 
 quay.io/noiro/aci-containers-host:6.1.1.4.81c2369.z (redhat 9.5)
 ================================================================
-Total: 93 (UNKNOWN: 0, LOW: 64, MEDIUM: 27, HIGH: 2, CRITICAL: 0)
+Total: 88 (UNKNOWN: 0, LOW: 63, MEDIUM: 25, HIGH: 0, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬─────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                            │
@@ -85,20 +87,8 @@ Total: 93 (UNKNOWN: 0, LOW: 64, MEDIUM: 27, HIGH: 2, CRITICAL: 0)
 │                             │ CVE-2025-3360  │          │              │                     │               │ glibc: GLib prior to 2.82.5 is vulnerable to integer        │
 │                             │                │          │              │                     │               │ overflow and...                                             │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-3360                   │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ glibc                       │ CVE-2025-0395  │ MEDIUM   │              │ 2.34-180.el9        │               │ glibc: buffer overflow in the GNU C Library's assert()      │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-0395                   │
-├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                             │
-│ glibc-common                │                │          │              │                     │               │                                                             │
-│                             │                │          │              │                     │               │                                                             │
-├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                             │
-│ glibc-langpack-en           │                │          │              │                     │               │                                                             │
-│                             │                │          │              │                     │               │                                                             │
-├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                             │
-│ glibc-minimal-langpack      │                │          │              │                     │               │                                                             │
-│                             │                │          │              │                     │               │                                                             │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ gnupg2                      │ CVE-2022-3219  │ LOW      │              │ 2.3.3-4.el9         │               │ gnupg: denial of service issue (resource consumption) using │
+├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ gnupg2                      │ CVE-2022-3219  │          │              │ 2.3.3-4.el9         │               │ gnupg: denial of service issue (resource consumption) using │
 │                             │                │          │              │                     │               │ compressed packets                                          │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-3219                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
@@ -109,13 +99,13 @@ Total: 93 (UNKNOWN: 0, LOW: 64, MEDIUM: 27, HIGH: 2, CRITICAL: 0)
 │ gnutls                      │ CVE-2024-12243 │ MEDIUM   │              │ 3.8.3-6.el9         │               │ gnutls: GnuTLS Impacted by Inefficient DER Decoding in      │
 │                             │                │          │              │                     │               │ libtasn1 Leading to Remote...                               │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-12243                  │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ krb5-libs                   │ CVE-2022-37967 │ HIGH     │              │ 1.21.1-6.el9        │               │ samba: krb5: Kerberos constrained delegation ticket forgery │
-│                             │                │          │              │                     │               │ possible against Samba AD DC...                             │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-37967                  │
-│                             ├────────────────┼──────────┤              │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-24528 │ MEDIUM   │              │                     │               │ krb5: overflow when calculating ulog block size             │
+├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ krb5-libs                   │ CVE-2025-24528 │          │              │ 1.21.1-6.el9        │               │ krb5: overflow when calculating ulog block size             │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-24528                  │
+│                             ├────────────────┤          │              │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-3576  │          │              │                     │               │ krb5: Kerberos RC4-HMAC-MD5 Checksum Vulnerability Enabling │
+│                             │                │          │              │                     │               │ Message Spoofing via MD5 Collisions                         │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-3576                   │
 ├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
 │ libarchive                  │ CVE-2023-30571 │          │ will_not_fix │ 3.5.3-4.el9         │               │ libarchive: Race condition in multi-threaded use of         │
 │                             │                │          │              │                     │               │ archive_write_disk_header() on posix based systems...       │
@@ -126,19 +116,19 @@ Total: 93 (UNKNOWN: 0, LOW: 64, MEDIUM: 27, HIGH: 2, CRITICAL: 0)
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-1632  │ LOW      │              │                     │               │ libarchive: null pointer dereference in bsdunzip.c          │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-1632                   │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ libbpf                      │ CVE-2025-29481 │ HIGH     │              │ 2:1.5.0-1.el9       │               │ libbpf: Heap Buffer Overflow in libbpf                      │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-29481                  │
-│                             ├────────────────┼──────────┼──────────────┤                     ├───────────────┼─────────────────────────────────────────────────────────────┤
-│                             │ CVE-2021-45940 │ MEDIUM   │ will_not_fix │                     │               │ libbpf: heap-based buffer overflow (4 bytes) in             │
+├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ libbpf                      │ CVE-2021-45940 │ MEDIUM   │ will_not_fix │ 2:1.5.0-1.el9       │               │ libbpf: heap-based buffer overflow (4 bytes) in             │
 │                             │                │          │              │                     │               │ __bpf_object__open                                          │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2021-45940                  │
 │                             ├────────────────┤          │              │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
 │                             │ CVE-2021-45941 │          │              │                     │               │ libbpf: heap-based buffer overflow (8 bytes) in             │
 │                             │                │          │              │                     │               │ __bpf_object__open                                          │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2021-45941                  │
-│                             ├────────────────┼──────────┤              │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-3606  │ LOW      │              │                     │               │ kernel: libbpf: NULL pointer dereference in                 │
+│                             ├────────────────┤          ├──────────────┤                     ├───────────────┼─────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-29481 │          │ affected     │                     │               │ libbpf: Heap Buffer Overflow in libbpf                      │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-29481                  │
+│                             ├────────────────┼──────────┼──────────────┤                     ├───────────────┼─────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-3606  │ LOW      │ will_not_fix │                     │               │ kernel: libbpf: NULL pointer dereference in                 │
 │                             │                │          │              │                     │               │ find_prog_by_sec_insn                                       │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-3606                   │
 ├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
@@ -183,6 +173,9 @@ Total: 93 (UNKNOWN: 0, LOW: 64, MEDIUM: 27, HIGH: 2, CRITICAL: 0)
 │                             ├────────────────┤          │              │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-27113 │          │              │                     │               │ libxml2: NULL Pointer Dereference in libxml2 xmlPatMatch    │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-27113                  │
+│                             ├────────────────┤          │              │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-32415 │          │              │                     │               │ libxml2: Out-of-bounds Read in xmlSchemaIDCFillNodeTables   │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-32415                  │
 ├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
 │ libzstd                     │ CVE-2022-4899  │ MEDIUM   │ will_not_fix │ 1.5.5-1.el9         │               │ zstd: mysql: buffer overrun in util.c                       │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-4899                   │
@@ -210,11 +203,8 @@ Total: 93 (UNKNOWN: 0, LOW: 64, MEDIUM: 27, HIGH: 2, CRITICAL: 0)
 │ openldap                    │ CVE-2023-2953  │          │ affected     │ 2.6.8-4.el9         │               │ openldap: null pointer dereference in ber_memalloc_x        │
 │                             │                │          │              │                     │               │ function                                                    │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-2953                   │
-├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ openssl                     │ CVE-2024-13176 │          │              │ 1:3.2.2-6.el9_5.1   │               │ openssl: Timing side-channel in ECDSA signature computation │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-13176                  │
-│                             ├────────────────┤          ├──────────────┤                     ├───────────────┼─────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-2511  │          │ will_not_fix │                     │               │ openssl: Unbounded memory growth with session handling in   │
+├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ openssl                     │ CVE-2024-2511  │          │ will_not_fix │ 1:3.2.2-6.el9_5.1   │               │ openssl: Unbounded memory growth with session handling in   │
 │                             │                │          │              │                     │               │ TLSv1.3                                                     │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-2511                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
@@ -224,11 +214,8 @@ Total: 93 (UNKNOWN: 0, LOW: 64, MEDIUM: 27, HIGH: 2, CRITICAL: 0)
 │                             ├────────────────┤          ├──────────────┤                     ├───────────────┼─────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-5535  │          │ affected     │                     │               │ openssl: SSL_select_next_proto buffer overread              │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-5535                   │
-├─────────────────────────────┼────────────────┤          │              │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
-│ openssl-libs                │ CVE-2024-13176 │          │              │                     │               │ openssl: Timing side-channel in ECDSA signature computation │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-13176                  │
-│                             ├────────────────┤          ├──────────────┤                     ├───────────────┼─────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-2511  │          │ will_not_fix │                     │               │ openssl: Unbounded memory growth with session handling in   │
+├─────────────────────────────┼────────────────┤          ├──────────────┤                     ├───────────────┼─────────────────────────────────────────────────────────────┤
+│ openssl-libs                │ CVE-2024-2511  │          │ will_not_fix │                     │               │ openssl: Unbounded memory growth with session handling in   │
 │                             │                │          │              │                     │               │ TLSv1.3                                                     │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-2511                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼─────────────────────────────────────────────────────────────┤
@@ -321,7 +308,7 @@ Total: 93 (UNKNOWN: 0, LOW: 64, MEDIUM: 27, HIGH: 2, CRITICAL: 0)
 │                             │ CVE-2024-0232  │          │ affected     │                     │               │ sqlite: use-after-free bug in jsonParseAddNodeArray         │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-0232                   │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ systemd                     │ CVE-2021-3997  │ MEDIUM   │              │ 252-51.el9          │               │ systemd: Uncontrolled recursion in systemd-tmpfiles when    │
+│ systemd                     │ CVE-2021-3997  │ MEDIUM   │              │ 252-53.el9          │               │ systemd: Uncontrolled recursion in systemd-tmpfiles when    │
 │                             │                │          │              │                     │               │ removing files                                              │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2021-3997                   │
 ├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                             │
@@ -352,22 +339,30 @@ Total: 93 (UNKNOWN: 0, LOW: 64, MEDIUM: 27, HIGH: 2, CRITICAL: 0)
 
 usr/local/bin/aci-containers-host-agent (gobinary)
 ==================================================
-Total: 2 (UNKNOWN: 0, LOW: 0, MEDIUM: 2, HIGH: 0, CRITICAL: 0)
+Total: 4 (UNKNOWN: 0, LOW: 0, MEDIUM: 3, HIGH: 1, CRITICAL: 0)
 
-┌───────────────────┬────────────────┬──────────┬──────────┬───────────────────┬───────────────┬─────────────────────────────────────────────────────────────┐
-│      Library      │ Vulnerability  │ Severity │  Status  │ Installed Version │ Fixed Version │                            Title                            │
-├───────────────────┼────────────────┼──────────┼──────────┼───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ golang.org/x/net  │ CVE-2025-22870 │ MEDIUM   │ fixed    │ v0.33.0           │ 0.36.0        │ golang.org/x/net/proxy: golang.org/x/net/http/httpproxy:    │
-│                   │                │          │          │                   │               │ HTTP Proxy bypass using IPv6 Zone IDs in golang.org/x/net   │
-│                   │                │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2025-22870                  │
-├───────────────────┼────────────────┤          ├──────────┼───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ k8s.io/kubernetes │ CVE-2025-1767  │          │ affected │ v1.30.10          │               │ kubelet: GitRepo Volume Inadvertent Local Repository Access │
-│                   │                │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2025-1767                   │
-└───────────────────┴────────────────┴──────────┴──────────┴───────────────────┴───────────────┴─────────────────────────────────────────────────────────────┘
+┌─────────────────────┬────────────────┬──────────┬──────────┬───────────────────┬───────────────┬─────────────────────────────────────────────────────────────┐
+│       Library       │ Vulnerability  │ Severity │  Status  │ Installed Version │ Fixed Version │                            Title                            │
+├─────────────────────┼────────────────┼──────────┼──────────┼───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ golang.org/x/crypto │ CVE-2025-22869 │ HIGH     │ fixed    │ v0.31.0           │ 0.35.0        │ golang.org/x/crypto/ssh: Denial of Service in the Key       │
+│                     │                │          │          │                   │               │ Exchange of golang.org/x/crypto/ssh                         │
+│                     │                │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2025-22869                  │
+├─────────────────────┼────────────────┼──────────┤          ├───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ golang.org/x/net    │ CVE-2025-22870 │ MEDIUM   │          │ v0.33.0           │ 0.36.0        │ golang.org/x/net/proxy: golang.org/x/net/http/httpproxy:    │
+│                     │                │          │          │                   │               │ HTTP Proxy bypass using IPv6 Zone IDs in golang.org/x/net   │
+│                     │                │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2025-22870                  │
+│                     ├────────────────┤          │          │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│                     │ CVE-2025-22872 │          │          │                   │ 0.38.0        │ golang.org/x/net/html: Incorrect Neutralization of Input    │
+│                     │                │          │          │                   │               │ During Web Page Generation in x/net in...                   │
+│                     │                │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2025-22872                  │
+├─────────────────────┼────────────────┤          ├──────────┼───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ k8s.io/kubernetes   │ CVE-2025-1767  │          │ affected │ v1.30.10          │               │ kubelet: GitRepo Volume Inadvertent Local Repository Access │
+│                     │                │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2025-1767                   │
+└─────────────────────┴────────────────┴──────────┴──────────┴───────────────────┴───────────────┴─────────────────────────────────────────────────────────────┘
 
 usr/local/bin/netop-cni (gobinary)
 ==================================
-Total: 1 (UNKNOWN: 0, LOW: 0, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
+Total: 2 (UNKNOWN: 0, LOW: 0, MEDIUM: 2, HIGH: 0, CRITICAL: 0)
 
 ┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────┬───────────────────────────────────────────────────────────┐
 │     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version │                           Title                           │
@@ -375,11 +370,15 @@ Total: 1 (UNKNOWN: 0, LOW: 0, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
 │ golang.org/x/net │ CVE-2025-22870 │ MEDIUM   │ fixed  │ v0.33.0           │ 0.36.0        │ golang.org/x/net/proxy: golang.org/x/net/http/httpproxy:  │
 │                  │                │          │        │                   │               │ HTTP Proxy bypass using IPv6 Zone IDs in golang.org/x/net │
 │                  │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2025-22870                │
+│                  ├────────────────┤          │        │                   ├───────────────┼───────────────────────────────────────────────────────────┤
+│                  │ CVE-2025-22872 │          │        │                   │ 0.38.0        │ golang.org/x/net/html: Incorrect Neutralization of Input  │
+│                  │                │          │        │                   │               │ During Web Page Generation in x/net in...                 │
+│                  │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2025-22872                │
 └──────────────────┴────────────────┴──────────┴────────┴───────────────────┴───────────────┴───────────────────────────────────────────────────────────┘
 
 usr/local/bin/opflex-agent-cni (gobinary)
 =========================================
-Total: 1 (UNKNOWN: 0, LOW: 0, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
+Total: 2 (UNKNOWN: 0, LOW: 0, MEDIUM: 2, HIGH: 0, CRITICAL: 0)
 
 ┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────┬───────────────────────────────────────────────────────────┐
 │     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version │                           Title                           │
@@ -387,4 +386,8 @@ Total: 1 (UNKNOWN: 0, LOW: 0, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
 │ golang.org/x/net │ CVE-2025-22870 │ MEDIUM   │ fixed  │ v0.33.0           │ 0.36.0        │ golang.org/x/net/proxy: golang.org/x/net/http/httpproxy:  │
 │                  │                │          │        │                   │               │ HTTP Proxy bypass using IPv6 Zone IDs in golang.org/x/net │
 │                  │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2025-22870                │
+│                  ├────────────────┤          │        │                   ├───────────────┼───────────────────────────────────────────────────────────┤
+│                  │ CVE-2025-22872 │          │        │                   │ 0.38.0        │ golang.org/x/net/html: Incorrect Neutralization of Input  │
+│                  │                │          │        │                   │               │ During Web Page Generation in x/net in...                 │
+│                  │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2025-22872                │
 └──────────────────┴────────────────┴──────────┴────────┴───────────────────┴───────────────┴───────────────────────────────────────────────────────────┘
