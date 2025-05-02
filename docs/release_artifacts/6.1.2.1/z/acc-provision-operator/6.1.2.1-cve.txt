@@ -13,7 +13,7 @@ urllib3           1.26.5     1.26.18   python     GHSA-g4mx-q9vg-27p4  Medium
 
 quay.io/noiro/acc-provision-operator:6.1.2.1.81c2369.z (redhat 9.5)
 ===================================================================
-Total: 238 (UNKNOWN: 0, LOW: 197, MEDIUM: 41, HIGH: 0, CRITICAL: 0)
+Total: 235 (UNKNOWN: 0, LOW: 197, MEDIUM: 38, HIGH: 0, CRITICAL: 0)
 
 ┌─────────────────────────────┬──────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │  Vulnerability   │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -167,17 +167,8 @@ Total: 238 (UNKNOWN: 0, LOW: 197, MEDIUM: 41, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2025-3360    │          │              │                     │               │ glibc: GLib prior to 2.82.5 is vulnerable to integer         │
 │                             │                  │          │              │                     │               │ overflow and...                                              │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-3360                    │
-├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ glibc                       │ CVE-2025-0395    │ MEDIUM   │              │ 2.34-125.el9_5.3    │               │ glibc: buffer overflow in the GNU C Library's assert()       │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-0395                    │
-├─────────────────────────────┤                  │          │              │                     ├───────────────┤                                                              │
-│ glibc-common                │                  │          │              │                     │               │                                                              │
-│                             │                  │          │              │                     │               │                                                              │
-├─────────────────────────────┤                  │          │              │                     ├───────────────┤                                                              │
-│ glibc-minimal-langpack      │                  │          │              │                     │               │                                                              │
-│                             │                  │          │              │                     │               │                                                              │
-├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ gnupg2                      │ CVE-2022-3219    │ LOW      │              │ 2.3.3-4.el9         │               │ gnupg: denial of service issue (resource consumption) using  │
+├─────────────────────────────┼──────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ gnupg2                      │ CVE-2022-3219    │          │              │ 2.3.3-4.el9         │               │ gnupg: denial of service issue (resource consumption) using  │
 │                             │                  │          │              │                     │               │ compressed packets                                           │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-3219                    │
 │                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -302,11 +293,11 @@ Total: 238 (UNKNOWN: 0, LOW: 197, MEDIUM: 41, HIGH: 0, CRITICAL: 0)
 │ openldap                    │ CVE-2023-2953    │          │ affected     │ 2.6.6-3.el9         │               │ openldap: null pointer dereference in ber_memalloc_x         │
 │                             │                  │          │              │                     │               │ function                                                     │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-2953                    │
-├─────────────────────────────┼──────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ openssh                     │ CVE-2023-51767   │ MEDIUM   │ will_not_fix │ 8.7p1-43.el9        │               │ openssh: authentication bypass via row hammer attack         │
+├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ openssh                     │ CVE-2023-51767   │ MEDIUM   │              │ 8.7p1-43.el9        │               │ openssh: authentication bypass via row hammer attack         │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-51767                   │
-│                             ├──────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-26465   │          │ affected     │                     │               │ openssh: Machine-in-the-middle attack if VerifyHostKeyDNS is │
+│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-26465   │          │              │                     │               │ openssh: Machine-in-the-middle attack if VerifyHostKeyDNS is │
 │                             │                  │          │              │                     │               │ enabled                                                      │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-26465                   │
 │                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -315,11 +306,11 @@ Total: 238 (UNKNOWN: 0, LOW: 197, MEDIUM: 41, HIGH: 0, CRITICAL: 0)
 │                             ├──────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2016-20012   │ LOW      │ will_not_fix │                     │               │ openssh: Public key information leak                         │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2016-20012                   │
-├─────────────────────────────┼──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ openssh-clients             │ CVE-2023-51767   │ MEDIUM   │              │                     │               │ openssh: authentication bypass via row hammer attack         │
+├─────────────────────────────┼──────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ openssh-clients             │ CVE-2023-51767   │ MEDIUM   │ affected     │                     │               │ openssh: authentication bypass via row hammer attack         │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-51767                   │
-│                             ├──────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-26465   │          │ affected     │                     │               │ openssh: Machine-in-the-middle attack if VerifyHostKeyDNS is │
+│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-26465   │          │              │                     │               │ openssh: Machine-in-the-middle attack if VerifyHostKeyDNS is │
 │                             │                  │          │              │                     │               │ enabled                                                      │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-26465                   │
 │                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
