@@ -2,7 +2,7 @@ No vulnerabilities found
 
 quay.io/noiro/opflex:6.0.4.4.81c2369.z (redhat 9.3)
 ===================================================
-Total: 215 (UNKNOWN: 0, LOW: 181, MEDIUM: 33, HIGH: 1, CRITICAL: 0)
+Total: 216 (UNKNOWN: 0, LOW: 181, MEDIUM: 34, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────────────┬───────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │      Installed Version      │         Fixed Version         │                            Title                             │
@@ -90,7 +90,7 @@ Total: 215 (UNKNOWN: 0, LOW: 181, MEDIUM: 33, HIGH: 1, CRITICAL: 0)
 │                             │                │          │              │                             │                               │ Overflow                                                     │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-0725                    │
 ├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ elfutils-default-yama-scope │ CVE-2024-25260 │          │ will_not_fix │ 0.192-5.el9                 │                               │ elfutils: global-buffer-overflow exists in the function      │
+│ elfutils-default-yama-scope │ CVE-2024-25260 │          │ will_not_fix │ 0.193-1.el9                 │                               │ elfutils: global-buffer-overflow exists in the function      │
 │                             │                │          │              │                             │                               │ ebl_machine_flag_name in eblmachineflagname.c                │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2024-25260                   │
 │                             ├────────────────┤          ├──────────────┤                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
@@ -146,8 +146,12 @@ Total: 215 (UNKNOWN: 0, LOW: 181, MEDIUM: 33, HIGH: 1, CRITICAL: 0)
 ├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │ glib2                       │ CVE-2024-52533 │ MEDIUM   │ will_not_fix │ 2.68.4-16.el9               │                               │ glib: buffer overflow in set_connect_msg()                   │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2024-52533                   │
-│                             ├────────────────┼──────────┼──────────────┤                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-32636 │ LOW      │ affected     │                             │                               │ glib: Timeout in fuzz_variant_text                           │
+│                             ├────────────────┤          ├──────────────┤                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-4373  │          │ affected     │                             │                               │ glib: Buffer Underflow on GLib through glib/gstring.c via    │
+│                             │                │          │              │                             │                               │ function g_string_insert_unichar                             │
+│                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-4373                    │
+│                             ├────────────────┼──────────┤              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2023-32636 │ LOW      │              │                             │                               │ glib: Timeout in fuzz_variant_text                           │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2023-32636                   │
 │                             ├────────────────┤          │              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-3360  │          │              │                             │                               │ glibc: GLib prior to 2.82.5 is vulnerable to integer         │
