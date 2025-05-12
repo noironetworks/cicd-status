@@ -13,7 +13,7 @@ urllib3           1.26.5     1.26.18   python     GHSA-g4mx-q9vg-27p4  Medium
 
 quay.io/noiro/acc-provision-operator:6.0.4.4.81c2369.z (redhat 9.5)
 ===================================================================
-Total: 236 (UNKNOWN: 0, LOW: 197, MEDIUM: 39, HIGH: 0, CRITICAL: 0)
+Total: 235 (UNKNOWN: 0, LOW: 197, MEDIUM: 38, HIGH: 0, CRITICAL: 0)
 
 ┌─────────────────────────────┬──────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │  Vulnerability   │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -79,7 +79,7 @@ Total: 236 (UNKNOWN: 0, LOW: 197, MEDIUM: 39, HIGH: 0, CRITICAL: 0)
 │                             │                  │          │              │                     │               │ denial of service                                            │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-1377                    │
 ├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ emacs-filesystem            │ CVE-2024-53920   │ MEDIUM   │              │ 1:27.2-11.el9_5.1   │               │ emacs: arbitrary code execution via Lisp macro expansion     │
+│ emacs-filesystem            │ CVE-2024-53920   │ MEDIUM   │              │ 1:27.2-11.el9_5.2   │               │ emacs: arbitrary code execution via Lisp macro expansion     │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-53920                   │
 │                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2017-1000383 │ LOW      │              │                     │               │ emacs: Ignores umask when creating a swap file               │
@@ -208,11 +208,8 @@ Total: 236 (UNKNOWN: 0, LOW: 197, MEDIUM: 39, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2021-45941   │          │              │                     │               │ libbpf: heap-based buffer overflow (8 bytes) in              │
 │                             │                  │          │              │                     │               │ __bpf_object__open                                           │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2021-45941                   │
-│                             ├──────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-29481   │          │ affected     │                     │               │ libbpf: Heap Buffer Overflow in libbpf                       │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-29481                   │
-│                             ├──────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-3606    │ LOW      │ will_not_fix │                     │               │ kernel: libbpf: NULL pointer dereference in                  │
+│                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-3606    │ LOW      │              │                     │               │ kernel: libbpf: NULL pointer dereference in                  │
 │                             │                  │          │              │                     │               │ find_prog_by_sec_insn                                        │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-3606                    │
 ├─────────────────────────────┼──────────────────┤          ├──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
@@ -297,11 +294,11 @@ Total: 236 (UNKNOWN: 0, LOW: 197, MEDIUM: 39, HIGH: 0, CRITICAL: 0)
 │ openldap                    │ CVE-2023-2953    │          │ affected     │ 2.6.6-3.el9         │               │ openldap: null pointer dereference in ber_memalloc_x         │
 │                             │                  │          │              │                     │               │ function                                                     │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-2953                    │
-├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ openssh                     │ CVE-2023-51767   │ MEDIUM   │              │ 8.7p1-43.el9        │               │ openssh: authentication bypass via row hammer attack         │
+├─────────────────────────────┼──────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ openssh                     │ CVE-2023-51767   │ MEDIUM   │ will_not_fix │ 8.7p1-43.el9        │               │ openssh: authentication bypass via row hammer attack         │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-51767                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-26465   │          │              │                     │               │ openssh: Machine-in-the-middle attack if VerifyHostKeyDNS is │
+│                             ├──────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-26465   │          │ affected     │                     │               │ openssh: Machine-in-the-middle attack if VerifyHostKeyDNS is │
 │                             │                  │          │              │                     │               │ enabled                                                      │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-26465                   │
 │                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -310,11 +307,11 @@ Total: 236 (UNKNOWN: 0, LOW: 197, MEDIUM: 39, HIGH: 0, CRITICAL: 0)
 │                             ├──────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2016-20012   │ LOW      │ will_not_fix │                     │               │ openssh: Public key information leak                         │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2016-20012                   │
-├─────────────────────────────┼──────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ openssh-clients             │ CVE-2023-51767   │ MEDIUM   │ affected     │                     │               │ openssh: authentication bypass via row hammer attack         │
+├─────────────────────────────┼──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ openssh-clients             │ CVE-2023-51767   │ MEDIUM   │              │                     │               │ openssh: authentication bypass via row hammer attack         │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-51767                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-26465   │          │              │                     │               │ openssh: Machine-in-the-middle attack if VerifyHostKeyDNS is │
+│                             ├──────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-26465   │          │ affected     │                     │               │ openssh: Machine-in-the-middle attack if VerifyHostKeyDNS is │
 │                             │                  │          │              │                     │               │ enabled                                                      │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-26465                   │
 │                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
