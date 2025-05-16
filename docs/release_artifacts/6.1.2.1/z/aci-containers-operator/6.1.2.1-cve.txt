@@ -1,14 +1,12 @@
-NAME               INSTALLED  FIXED-IN  TYPE       VULNERABILITY        SEVERITY  EPSS%  RISK  
-requests           2.25.1     2.31.0    python     GHSA-j8r2-6x86-q33q  Medium    88.66    2.6  
-urllib3            1.26.5     1.26.17   python     GHSA-v845-jxx5-vc9f  High      67.39    0.4  
-setuptools         53.0.0     65.5.1    python     GHSA-r9hx-vwmv-q579  High      54.13    0.2  
-setuptools         53.0.0     70.0.0    python     GHSA-cx63-2mw6-8hw5  High      45.54    0.2  
-idna               2.10       3.7       python     GHSA-jjg7-2v4v-x38h  Medium    16.07  < 0.1  
-urllib3            1.26.5     1.26.18   python     GHSA-g4mx-q9vg-27p4  Medium    17.64  < 0.1  
-k8s.io/kubernetes  v1.32.3              go-module  GHSA-3wgm-2gw2-vh5m  Medium     7.40  < 0.1  
-urllib3            1.26.5     1.26.19   python     GHSA-34jh-p97f-mpxf  Medium     8.20  < 0.1  
-requests           2.25.1     2.32.0    python     GHSA-9wx4-h78v-vm56  Medium     2.86  < 0.1  
-golang.org/x/net   v0.36.0    0.38.0    go-module  GHSA-vvgc-356p-c3xw  Medium     2.22  < 0.1
+NAME        INSTALLED  FIXED-IN  TYPE    VULNERABILITY        SEVERITY  EPSS%  RISK  
+requests    2.25.1     2.31.0    python  GHSA-j8r2-6x86-q33q  Medium    88.80    2.6  
+urllib3     1.26.5     1.26.17   python  GHSA-v845-jxx5-vc9f  High      67.39    0.4  
+setuptools  53.0.0     65.5.1    python  GHSA-r9hx-vwmv-q579  High      51.08    0.2  
+setuptools  53.0.0     70.0.0    python  GHSA-cx63-2mw6-8hw5  High      45.55    0.2  
+urllib3     1.26.5     1.26.18   python  GHSA-g4mx-q9vg-27p4  Medium    18.11  < 0.1  
+idna        2.10       3.7       python  GHSA-jjg7-2v4v-x38h  Medium    10.88  < 0.1  
+urllib3     1.26.5     1.26.19   python  GHSA-34jh-p97f-mpxf  Medium     8.18  < 0.1  
+requests    2.25.1     2.32.0    python  GHSA-9wx4-h78v-vm56  Medium     2.86  < 0.1
 
 quay.io/noiro/aci-containers-operator:6.1.2.1.81c2369.z (redhat 9.6)
 ====================================================================
@@ -681,18 +679,3 @@ Total: 192 (UNKNOWN: 0, LOW: 174, MEDIUM: 18, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2025-26603 │          │              │                     │               │ vim: heap-use-after-free in function str_to_reg in vim/vim   │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-26603                   │
 └─────────────────────────────┴────────────────┴──────────┴──────────────┴─────────────────────┴───────────────┴──────────────────────────────────────────────────────────────┘
-
-usr/local/bin/aci-containers-operator (gobinary)
-================================================
-Total: 2 (UNKNOWN: 0, LOW: 0, MEDIUM: 2, HIGH: 0, CRITICAL: 0)
-
-┌───────────────────┬────────────────┬──────────┬──────────┬───────────────────┬───────────────┬─────────────────────────────────────────────────────────────┐
-│      Library      │ Vulnerability  │ Severity │  Status  │ Installed Version │ Fixed Version │                            Title                            │
-├───────────────────┼────────────────┼──────────┼──────────┼───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ golang.org/x/net  │ CVE-2025-22872 │ MEDIUM   │ fixed    │ v0.36.0           │ 0.38.0        │ golang.org/x/net/html: Incorrect Neutralization of Input    │
-│                   │                │          │          │                   │               │ During Web Page Generation in x/net in...                   │
-│                   │                │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2025-22872                  │
-├───────────────────┼────────────────┤          ├──────────┼───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ k8s.io/kubernetes │ CVE-2025-1767  │          │ affected │ v1.32.3           │               │ kubelet: GitRepo Volume Inadvertent Local Repository Access │
-│                   │                │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2025-1767                   │
-└───────────────────┴────────────────┴──────────┴──────────┴───────────────────┴───────────────┴─────────────────────────────────────────────────────────────┘
