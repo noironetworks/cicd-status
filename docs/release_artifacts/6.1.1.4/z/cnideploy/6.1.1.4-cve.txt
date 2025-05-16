@@ -1,17 +1,17 @@
 NAME              INSTALLED                           FIXED-IN                           TYPE       VULNERABILITY        SEVERITY  EPSS%  RISK  
-requests          2.25.1                              2.31.0                             python     GHSA-j8r2-6x86-q33q  Medium    88.66    2.6  
+requests          2.25.1                              2.31.0                             python     GHSA-j8r2-6x86-q33q  Medium    88.80    2.6  
 urllib3           1.26.5                              1.26.17                            python     GHSA-v845-jxx5-vc9f  High      67.39    0.4  
-setuptools        53.0.0                              65.5.1                             python     GHSA-r9hx-vwmv-q579  High      54.13    0.2  
-setuptools        53.0.0                              70.0.0                             python     GHSA-cx63-2mw6-8hw5  High      45.54    0.2  
-golang.org/x/sys  v0.0.0-20201117170446-d9b008d0a637  0.0.0-20220412211240-33da011f77ad  go-module  GHSA-p782-xgp4-8hr8  Medium    34.26  < 0.1  
-idna              2.10                                3.7                                python     GHSA-jjg7-2v4v-x38h  Medium    16.07  < 0.1  
-urllib3           1.26.5                              1.26.18                            python     GHSA-g4mx-q9vg-27p4  Medium    17.64  < 0.1  
-urllib3           1.26.5                              1.26.19                            python     GHSA-34jh-p97f-mpxf  Medium     8.20  < 0.1  
+setuptools        53.0.0                              65.5.1                             python     GHSA-r9hx-vwmv-q579  High      51.08    0.2  
+setuptools        53.0.0                              70.0.0                             python     GHSA-cx63-2mw6-8hw5  High      45.55    0.2  
+golang.org/x/sys  v0.0.0-20201117170446-d9b008d0a637  0.0.0-20220412211240-33da011f77ad  go-module  GHSA-p782-xgp4-8hr8  Medium    37.12  < 0.1  
+urllib3           1.26.5                              1.26.18                            python     GHSA-g4mx-q9vg-27p4  Medium    18.11  < 0.1  
+idna              2.10                                3.7                                python     GHSA-jjg7-2v4v-x38h  Medium    10.88  < 0.1  
+urllib3           1.26.5                              1.26.19                            python     GHSA-34jh-p97f-mpxf  Medium     8.18  < 0.1  
 requests          2.25.1                              2.32.0                             python     GHSA-9wx4-h78v-vm56  Medium     2.86  < 0.1
 
 quay.io/noiro/cnideploy:6.1.1.4.81c2369.z (redhat 9.6)
 ======================================================
-Total: 194 (UNKNOWN: 0, LOW: 174, MEDIUM: 20, HIGH: 0, CRITICAL: 0)
+Total: 195 (UNKNOWN: 0, LOW: 174, MEDIUM: 20, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -686,6 +686,9 @@ Total: 194 (UNKNOWN: 0, LOW: 174, MEDIUM: 20, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2024-10524 │          │              │                     │               │ wget: GNU Wget is vulnerable to an SSRF attack when          │
 │                             │                │          │              │                     │               │ accessing partially-user-controlled...                       │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-10524                   │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ zlib                        │ CVE-2025-4638  │ HIGH     │              │ 1.2.11-40.el9       │               │ pcl: zlib: Improper Pointer Arithmetic in pcl                │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4638                    │
 └─────────────────────────────┴────────────────┴──────────┴──────────────┴─────────────────────┴───────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/bandwidth (gobinary)
