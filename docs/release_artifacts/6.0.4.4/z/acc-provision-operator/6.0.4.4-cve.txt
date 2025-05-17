@@ -1,19 +1,19 @@
-NAME              INSTALLED  FIXED-IN  TYPE       VULNERABILITY        SEVERITY 
-golang.org/x/net  v0.33.0    0.36.0    go-module  GHSA-qxp5-gwg8-xv66  Medium    
-golang.org/x/net  v0.33.0    0.38.0    go-module  GHSA-vvgc-356p-c3xw  Medium    
-idna              2.10       3.7       python     GHSA-jjg7-2v4v-x38h  Medium    
-requests          2.25.1     2.32.0    python     GHSA-9wx4-h78v-vm56  Medium    
-requests          2.25.1     2.31.0    python     GHSA-j8r2-6x86-q33q  Medium    
-requests          2.31.0     2.32.0    python     GHSA-9wx4-h78v-vm56  Medium    
-setuptools        53.0.0     70.0.0    python     GHSA-cx63-2mw6-8hw5  High      
-setuptools        53.0.0     65.5.1    python     GHSA-r9hx-vwmv-q579  High      
-urllib3           1.26.5     1.26.17   python     GHSA-v845-jxx5-vc9f  High      
-urllib3           1.26.5     1.26.19   python     GHSA-34jh-p97f-mpxf  Medium    
-urllib3           1.26.5     1.26.18   python     GHSA-g4mx-q9vg-27p4  Medium
+NAME              INSTALLED  FIXED-IN  TYPE       VULNERABILITY        SEVERITY  EPSS%  RISK  
+requests          2.25.1     2.31.0    python     GHSA-j8r2-6x86-q33q  Medium    88.81    2.6  
+urllib3           1.26.5     1.26.17   python     GHSA-v845-jxx5-vc9f  High      67.43    0.4  
+setuptools        53.0.0     65.5.1    python     GHSA-r9hx-vwmv-q579  High      51.12    0.2  
+setuptools        53.0.0     70.0.0    python     GHSA-cx63-2mw6-8hw5  High      45.60    0.2  
+urllib3           1.26.5     1.26.18   python     GHSA-g4mx-q9vg-27p4  Medium    18.16  < 0.1  
+idna              2.10       3.7       python     GHSA-jjg7-2v4v-x38h  Medium    10.95  < 0.1  
+urllib3           1.26.5     1.26.19   python     GHSA-34jh-p97f-mpxf  Medium     8.25  < 0.1  
+golang.org/x/net  v0.33.0    0.38.0    go-module  GHSA-vvgc-356p-c3xw  Medium     4.05  < 0.1  
+requests          2.25.1     2.32.0    python     GHSA-9wx4-h78v-vm56  Medium     2.87  < 0.1  
+requests          2.31.0     2.32.0    python     GHSA-9wx4-h78v-vm56  Medium     2.87  < 0.1  
+golang.org/x/net  v0.33.0    0.36.0    go-module  GHSA-qxp5-gwg8-xv66  Medium     0.85  < 0.1
 
-quay.io/noiro/acc-provision-operator:6.0.4.4.81c2369.z (redhat 9.5)
+quay.io/noiro/acc-provision-operator:6.0.4.4.81c2369.z (redhat 9.6)
 ===================================================================
-Total: 235 (UNKNOWN: 0, LOW: 197, MEDIUM: 38, HIGH: 0, CRITICAL: 0)
+Total: 217 (UNKNOWN: 0, LOW: 194, MEDIUM: 22, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬──────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │  Vulnerability   │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -31,7 +31,7 @@ Total: 235 (UNKNOWN: 0, LOW: 197, MEDIUM: 38, HIGH: 0, CRITICAL: 0)
 │                             │                  │          │              │                     │               │ Overflow                                                     │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-0725                    │
 ├─────────────────────────────┼──────────────────┤          ├──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ elfutils-default-yama-scope │ CVE-2024-25260   │          │ will_not_fix │ 0.191-4.el9         │               │ elfutils: global-buffer-overflow exists in the function      │
+│ elfutils-default-yama-scope │ CVE-2024-25260   │          │ will_not_fix │ 0.192-5.el9         │               │ elfutils: global-buffer-overflow exists in the function      │
 │                             │                  │          │              │                     │               │ ebl_machine_flag_name in eblmachineflagname.c                │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-25260                   │
 │                             ├──────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -78,20 +78,14 @@ Total: 235 (UNKNOWN: 0, LOW: 197, MEDIUM: 38, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2025-1377    │          │              │                     │               │ elfutils: GNU elfutils eu-strip strip.c gelf_getsymshndx     │
 │                             │                  │          │              │                     │               │ denial of service                                            │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-1377                    │
-├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ emacs-filesystem            │ CVE-2024-53920   │ MEDIUM   │              │ 1:27.2-11.el9_5.2   │               │ emacs: arbitrary code execution via Lisp macro expansion     │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-53920                   │
-│                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2017-1000383 │ LOW      │              │                     │               │ emacs: Ignores umask when creating a swap file               │
+├─────────────────────────────┼──────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ emacs-filesystem            │ CVE-2017-1000383 │          │              │ 1:27.2-13.el9_6     │               │ emacs: Ignores umask when creating a swap file               │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2017-1000383                 │
-├─────────────────────────────┼──────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ expat                       │ CVE-2024-45491   │ MEDIUM   │ will_not_fix │ 2.5.0-3.el9_5.3     │               │ libexpat: Integer Overflow or Wraparound                     │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-45491                   │
-├─────────────────────────────┼──────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ gawk                        │ CVE-2023-4156    │ LOW      │ affected     │ 5.1.0-6.el9         │               │ gawk: heap out of bound read in builtin.c                    │
+├─────────────────────────────┼──────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ gawk                        │ CVE-2023-4156    │          │              │ 5.1.0-6.el9         │               │ gawk: heap out of bound read in builtin.c                    │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-4156                    │
 ├─────────────────────────────┼──────────────────┤          ├──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ gdb-gdbserver               │ CVE-2022-47007   │          │ will_not_fix │ 14.2-3.el9          │               │ binutils: memory leak in stab_demangle_v3_arg() in stabs.c   │
+│ gdb-gdbserver               │ CVE-2022-47007   │          │ will_not_fix │ 14.2-4.el9          │               │ binutils: memory leak in stab_demangle_v3_arg() in stabs.c   │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-47007                   │
 │                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2022-47010   │          │              │                     │               │ binutils: memory leak in pr_function_type() in prdbg.c       │
@@ -121,36 +115,24 @@ Total: 235 (UNKNOWN: 0, LOW: 197, MEDIUM: 38, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2025-3198    │          │              │                     │               │ binutils: GNU Binutils objdump bucomm.c display_info memory  │
 │                             │                  │          │              │                     │               │ leak                                                         │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-3198                    │
-├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ git                         │ CVE-2024-52005   │ MEDIUM   │              │ 2.43.5-2.el9_5      │               │ git: The sideband payload is passed unfiltered to the        │
-│                             │                  │          │              │                     │               │ terminal in git...                                           │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52005                   │
-│                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-50349   │ LOW      │              │                     │               │ git: Git does not sanitize URLs when asking for credentials  │
+├─────────────────────────────┼──────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ git                         │ CVE-2024-50349   │          │              │ 2.47.1-2.el9_6      │               │ git: Git does not sanitize URLs when asking for credentials  │
 │                             │                  │          │              │                     │               │ interactively                                                │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-50349                   │
 │                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-52006   │          │              │                     │               │ git: Newline confusion in credential helpers can lead to     │
 │                             │                  │          │              │                     │               │ credential exfiltration in...                                │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52006                   │
-├─────────────────────────────┼──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ git-core                    │ CVE-2024-52005   │ MEDIUM   │              │                     │               │ git: The sideband payload is passed unfiltered to the        │
-│                             │                  │          │              │                     │               │ terminal in git...                                           │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52005                   │
-│                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-50349   │ LOW      │              │                     │               │ git: Git does not sanitize URLs when asking for credentials  │
+├─────────────────────────────┼──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ git-core                    │ CVE-2024-50349   │          │              │                     │               │ git: Git does not sanitize URLs when asking for credentials  │
 │                             │                  │          │              │                     │               │ interactively                                                │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-50349                   │
 │                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-52006   │          │              │                     │               │ git: Newline confusion in credential helpers can lead to     │
 │                             │                  │          │              │                     │               │ credential exfiltration in...                                │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52006                   │
-├─────────────────────────────┼──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ git-core-doc                │ CVE-2024-52005   │ MEDIUM   │              │                     │               │ git: The sideband payload is passed unfiltered to the        │
-│                             │                  │          │              │                     │               │ terminal in git...                                           │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52005                   │
-│                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-50349   │ LOW      │              │                     │               │ git: Git does not sanitize URLs when asking for credentials  │
+├─────────────────────────────┼──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ git-core-doc                │ CVE-2024-50349   │          │              │                     │               │ git: Git does not sanitize URLs when asking for credentials  │
 │                             │                  │          │              │                     │               │ interactively                                                │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-50349                   │
 │                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -158,7 +140,7 @@ Total: 235 (UNKNOWN: 0, LOW: 197, MEDIUM: 38, HIGH: 0, CRITICAL: 0)
 │                             │                  │          │              │                     │               │ credential exfiltration in...                                │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52006                   │
 ├─────────────────────────────┼──────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ glib2                       │ CVE-2024-52533   │ MEDIUM   │ will_not_fix │ 2.68.4-14.el9_4.1   │               │ glib: buffer overflow in set_connect_msg()                   │
+│ glib2                       │ CVE-2024-52533   │ MEDIUM   │ will_not_fix │ 2.68.4-16.el9       │               │ glib: buffer overflow in set_connect_msg()                   │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52533                   │
 │                             ├──────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-4373    │          │ affected     │                     │               │ glib: Buffer Underflow on GLib through glib/gstring.c via    │
@@ -180,14 +162,7 @@ Total: 235 (UNKNOWN: 0, LOW: 197, MEDIUM: 38, HIGH: 0, CRITICAL: 0)
 │                             │                  │          │              │                     │               │ keyring                                                      │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-30258                   │
 ├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ gnutls                      │ CVE-2024-12243   │ MEDIUM   │              │ 3.8.3-4.el9_4       │               │ gnutls: GnuTLS Impacted by Inefficient DER Decoding in       │
-│                             │                  │          │              │                     │               │ libtasn1 Leading to Remote...                                │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-12243                   │
-├─────────────────────────────┼──────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ krb5-libs                   │ CVE-2025-24528   │          │              │ 1.21.1-4.el9_5      │               │ krb5: overflow when calculating ulog block size              │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-24528                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-3576    │          │              │                     │               │ krb5: Kerberos RC4-HMAC-MD5 Checksum Vulnerability Enabling  │
+│ krb5-libs                   │ CVE-2025-3576    │ MEDIUM   │              │ 1.21.1-6.el9        │               │ krb5: Kerberos RC4-HMAC-MD5 Checksum Vulnerability Enabling  │
 │                             │                  │          │              │                     │               │ Message Spoofing via MD5 Collisions                          │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-3576                    │
 ├─────────────────────────────┼──────────────────┤          ├──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
@@ -201,7 +176,7 @@ Total: 235 (UNKNOWN: 0, LOW: 197, MEDIUM: 38, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2025-1632    │ LOW      │              │                     │               │ libarchive: null pointer dereference in bsdunzip.c           │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-1632                    │
 ├─────────────────────────────┼──────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libbpf                      │ CVE-2021-45940   │ MEDIUM   │ will_not_fix │ 2:1.4.0-1.el9       │               │ libbpf: heap-based buffer overflow (4 bytes) in              │
+│ libbpf                      │ CVE-2021-45940   │ MEDIUM   │ will_not_fix │ 2:1.5.0-1.el9       │               │ libbpf: heap-based buffer overflow (4 bytes) in              │
 │                             │                  │          │              │                     │               │ __bpf_object__open                                           │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2021-45940                   │
 │                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -238,11 +213,7 @@ Total: 235 (UNKNOWN: 0, LOW: 197, MEDIUM: 38, HIGH: 0, CRITICAL: 0)
 │                             │                  │          │              │                     │               │                                                              │
 │                             │                  │          │              │                     │               │                                                              │
 ├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libtasn1                    │ CVE-2024-12133   │ MEDIUM   │              │ 4.16.0-8.el9_1      │               │ libtasn1: Inefficient DER Decoding in libtasn1 Leading to    │
-│                             │                  │          │              │                     │               │ Potential Remote DoS                                         │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-12133                   │
-├─────────────────────────────┼──────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libxml2                     │ CVE-2025-32414   │          │              │ 2.9.13-6.el9_5.2    │               │ libxml2: Out-of-Bounds Read in libxml2                       │
+│ libxml2                     │ CVE-2025-32414   │ MEDIUM   │              │ 2.9.13-9.el9_6      │               │ libxml2: Out-of-Bounds Read in libxml2                       │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-32414                   │
 │                             ├──────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2023-45322   │ LOW      │ will_not_fix │                     │               │ libxml2: use-after-free in xmlUnlinkNode() in tree.c         │
@@ -258,7 +229,7 @@ Total: 235 (UNKNOWN: 0, LOW: 197, MEDIUM: 38, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2025-32415   │          │              │                     │               │ libxml2: Out-of-bounds Read in xmlSchemaIDCFillNodeTables    │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-32415                   │
 ├─────────────────────────────┼──────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libzstd                     │ CVE-2022-4899    │ MEDIUM   │ will_not_fix │ 1.5.1-2.el9         │               │ zstd: mysql: buffer overrun in util.c                        │
+│ libzstd                     │ CVE-2022-4899    │ MEDIUM   │ will_not_fix │ 1.5.5-1.el9         │               │ zstd: mysql: buffer overrun in util.c                        │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-4899                    │
 ├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ ncurses                     │ CVE-2022-29458   │ LOW      │              │ 6.2-10.20210508.el9 │               │ ncurses: segfaulting OOB read                                │
@@ -291,18 +262,14 @@ Total: 235 (UNKNOWN: 0, LOW: 197, MEDIUM: 38, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2023-50495   │          │ will_not_fix │                     │               │ ncurses: segmentation fault via _nc_wrap_entry()             │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-50495                   │
 ├─────────────────────────────┼──────────────────┤          ├──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ openldap                    │ CVE-2023-2953    │          │ affected     │ 2.6.6-3.el9         │               │ openldap: null pointer dereference in ber_memalloc_x         │
+│ openldap                    │ CVE-2023-2953    │          │ affected     │ 2.6.8-4.el9         │               │ openldap: null pointer dereference in ber_memalloc_x         │
 │                             │                  │          │              │                     │               │ function                                                     │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-2953                    │
 ├─────────────────────────────┼──────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ openssh                     │ CVE-2023-51767   │ MEDIUM   │ will_not_fix │ 8.7p1-43.el9        │               │ openssh: authentication bypass via row hammer attack         │
+│ openssh                     │ CVE-2023-51767   │ MEDIUM   │ will_not_fix │ 8.7p1-45.el9        │               │ openssh: authentication bypass via row hammer attack         │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-51767                   │
 │                             ├──────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-26465   │          │ affected     │                     │               │ openssh: Machine-in-the-middle attack if VerifyHostKeyDNS is │
-│                             │                  │          │              │                     │               │ enabled                                                      │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-26465                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-32728   │          │              │                     │               │ openssh: OpenSSH SSHD Agent Forwarding and X11 Forwarding    │
+│                             │ CVE-2025-32728   │          │ affected     │                     │               │ openssh: OpenSSH SSHD Agent Forwarding and X11 Forwarding    │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-32728                   │
 │                             ├──────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2016-20012   │ LOW      │ will_not_fix │                     │               │ openssh: Public key information leak                         │
@@ -311,11 +278,7 @@ Total: 235 (UNKNOWN: 0, LOW: 197, MEDIUM: 38, HIGH: 0, CRITICAL: 0)
 │ openssh-clients             │ CVE-2023-51767   │ MEDIUM   │              │                     │               │ openssh: authentication bypass via row hammer attack         │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-51767                   │
 │                             ├──────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-26465   │          │ affected     │                     │               │ openssh: Machine-in-the-middle attack if VerifyHostKeyDNS is │
-│                             │                  │          │              │                     │               │ enabled                                                      │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-26465                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-32728   │          │              │                     │               │ openssh: OpenSSH SSHD Agent Forwarding and X11 Forwarding    │
+│                             │ CVE-2025-32728   │          │ affected     │                     │               │ openssh: OpenSSH SSHD Agent Forwarding and X11 Forwarding    │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-32728                   │
 │                             ├──────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2016-20012   │ LOW      │ will_not_fix │                     │               │ openssh: Public key information leak                         │
@@ -328,34 +291,24 @@ Total: 235 (UNKNOWN: 0, LOW: 197, MEDIUM: 38, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2024-41996   │          │              │                     │               │ openssl: remote attackers (from the client side) to trigger  │
 │                             │                  │          │              │                     │               │ unnecessarily expensive server-side...                       │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-41996                   │
-│                             ├──────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-5535    │          │ affected     │                     │               │ openssl: SSL_select_next_proto buffer overread               │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-5535                    │
-├─────────────────────────────┼──────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ openssl-libs                │ CVE-2024-2511    │          │ will_not_fix │                     │               │ openssl: Unbounded memory growth with session handling in    │
+├─────────────────────────────┼──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ openssl-libs                │ CVE-2024-2511    │          │              │                     │               │ openssl: Unbounded memory growth with session handling in    │
 │                             │                  │          │              │                     │               │ TLSv1.3                                                      │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-2511                    │
 │                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-41996   │          │              │                     │               │ openssl: remote attackers (from the client side) to trigger  │
 │                             │                  │          │              │                     │               │ unnecessarily expensive server-side...                       │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-41996                   │
-│                             ├──────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-5535    │          │ affected     │                     │               │ openssl: SSL_select_next_proto buffer overread               │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-5535                    │
-├─────────────────────────────┼──────────────────┤          ├──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ pcre2                       │ CVE-2022-41409   │          │ will_not_fix │ 10.40-6.el9         │               │ pcre2: negative repeat value in a pcre2test subject line     │
+├─────────────────────────────┼──────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ pcre2                       │ CVE-2022-41409   │          │              │ 10.40-6.el9         │               │ pcre2: negative repeat value in a pcre2test subject line     │
 │                             │                  │          │              │                     │               │ leads to inifinite...                                        │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-41409                   │
 ├─────────────────────────────┤                  │          │              │                     ├───────────────┤                                                              │
 │ pcre2-syntax                │                  │          │              │                     │               │                                                              │
 │                             │                  │          │              │                     │               │                                                              │
 │                             │                  │          │              │                     │               │                                                              │
-├─────────────────────────────┼──────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ perl-Git                    │ CVE-2024-52005   │ MEDIUM   │ affected     │ 2.43.5-2.el9_5      │               │ git: The sideband payload is passed unfiltered to the        │
-│                             │                  │          │              │                     │               │ terminal in git...                                           │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52005                   │
-│                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-50349   │ LOW      │              │                     │               │ git: Git does not sanitize URLs when asking for credentials  │
+├─────────────────────────────┼──────────────────┤          ├──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ perl-Git                    │ CVE-2024-50349   │          │ affected     │ 2.47.1-2.el9_6      │               │ git: Git does not sanitize URLs when asking for credentials  │
 │                             │                  │          │              │                     │               │ interactively                                                │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-50349                   │
 │                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -363,13 +316,9 @@ Total: 235 (UNKNOWN: 0, LOW: 197, MEDIUM: 38, HIGH: 0, CRITICAL: 0)
 │                             │                  │          │              │                     │               │ credential exfiltration in...                                │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52006                   │
 ├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ python3                     │ CVE-2021-23336   │ MEDIUM   │              │ 3.9.21-1.el9_5      │               │ python: Web cache poisoning via urllib.parse.parse_qsl and   │
+│ python3                     │ CVE-2021-23336   │ MEDIUM   │              │ 3.9.21-2.el9        │               │ python: Web cache poisoning via urllib.parse.parse_qsl and   │
 │                             │                  │          │              │                     │               │ urllib.parse.parse_qs by using a semicolon...                │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2021-23336                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-0938    │          │              │                     │               │ python: cpython: URL parser allowed square brackets in       │
-│                             │                  │          │              │                     │               │ domain names                                                 │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-0938                    │
 │                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-0397    │ LOW      │              │                     │               │ cpython: python: Memory race condition in ssl.SSLContext     │
 │                             │                  │          │              │                     │               │ certificate store methods                                    │
@@ -386,10 +335,6 @@ Total: 235 (UNKNOWN: 0, LOW: 197, MEDIUM: 38, HIGH: 0, CRITICAL: 0)
 │ python3-libs                │ CVE-2021-23336   │ MEDIUM   │              │                     │               │ python: Web cache poisoning via urllib.parse.parse_qsl and   │
 │                             │                  │          │              │                     │               │ urllib.parse.parse_qs by using a semicolon...                │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2021-23336                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-0938    │          │              │                     │               │ python: cpython: URL parser allowed square brackets in       │
-│                             │                  │          │              │                     │               │ domain names                                                 │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-0938                    │
 │                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-0397    │ LOW      │              │                     │               │ cpython: python: Memory race condition in ssl.SSLContext     │
 │                             │                  │          │              │                     │               │ certificate store methods                                    │
@@ -406,16 +351,8 @@ Total: 235 (UNKNOWN: 0, LOW: 197, MEDIUM: 38, HIGH: 0, CRITICAL: 0)
 │ python3-pip-wheel           │ CVE-2021-3572    │          │              │ 21.3.1-1.el9        │               │ python-pip: Incorrect handling of unicode separators in git  │
 │                             │                  │          │              │                     │               │ references                                                   │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2021-3572                    │
-├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ python3-requests            │ CVE-2024-35195   │ MEDIUM   │              │ 2.25.1-8.el9        │               │ requests: subsequent requests to the same host ignore cert   │
-│                             │                  │          │              │                     │               │ verification                                                 │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-35195                   │
 ├─────────────────────────────┼──────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ python3.12                  │ CVE-2025-0938    │          │              │ 3.12.5-2.el9_5.3    │               │ python: cpython: URL parser allowed square brackets in       │
-│                             │                  │          │              │                     │               │ domain names                                                 │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-0938                    │
-│                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-0397    │ LOW      │              │                     │               │ cpython: python: Memory race condition in ssl.SSLContext     │
+│ python3.12                  │ CVE-2024-0397    │          │              │ 3.12.9-1.el9        │               │ cpython: python: Memory race condition in ssl.SSLContext     │
 │                             │                  │          │              │                     │               │ certificate store methods                                    │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-0397                    │
 │                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -426,12 +363,8 @@ Total: 235 (UNKNOWN: 0, LOW: 197, MEDIUM: 38, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2025-1795    │          │              │                     │               │ python: Mishandling of comma during folding and              │
 │                             │                  │          │              │                     │               │ unicode-encoding of email headers                            │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-1795                    │
-├─────────────────────────────┼──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ python3.12-libs             │ CVE-2025-0938    │ MEDIUM   │              │                     │               │ python: cpython: URL parser allowed square brackets in       │
-│                             │                  │          │              │                     │               │ domain names                                                 │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-0938                    │
-│                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-0397    │ LOW      │              │                     │               │ cpython: python: Memory race condition in ssl.SSLContext     │
+├─────────────────────────────┼──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ python3.12-libs             │ CVE-2024-0397    │          │              │                     │               │ cpython: python: Memory race condition in ssl.SSLContext     │
 │                             │                  │          │              │                     │               │ certificate store methods                                    │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-0397                    │
 │                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -443,7 +376,7 @@ Total: 235 (UNKNOWN: 0, LOW: 197, MEDIUM: 38, HIGH: 0, CRITICAL: 0)
 │                             │                  │          │              │                     │               │ unicode-encoding of email headers                            │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-1795                    │
 ├─────────────────────────────┼──────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ shadow-utils                │ CVE-2024-56433   │          │              │ 2:4.9-10.el9_5      │               │ shadow-utils: Default subordinate ID configuration in        │
+│ shadow-utils                │ CVE-2024-56433   │          │              │ 2:4.9-12.el9        │               │ shadow-utils: Default subordinate ID configuration in        │
 │                             │                  │          │              │                     │               │ /etc/login.defs could lead to compromise                     │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-56433                   │
 ├─────────────────────────────┼──────────────────┤          ├──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
@@ -453,7 +386,7 @@ Total: 235 (UNKNOWN: 0, LOW: 197, MEDIUM: 38, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2024-0232    │          │ affected     │                     │               │ sqlite: use-after-free bug in jsonParseAddNodeArray          │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-0232                    │
 ├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ systemd                     │ CVE-2021-3997    │ MEDIUM   │              │ 252-46.el9_5.3      │               │ systemd: Uncontrolled recursion in systemd-tmpfiles when     │
+│ systemd                     │ CVE-2021-3997    │ MEDIUM   │              │ 252-51.el9          │               │ systemd: Uncontrolled recursion in systemd-tmpfiles when     │
 │                             │                  │          │              │                     │               │ removing files                                               │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2021-3997                    │
 ├─────────────────────────────┤                  │          │              │                     ├───────────────┤                                                              │
@@ -481,7 +414,7 @@ Total: 235 (UNKNOWN: 0, LOW: 197, MEDIUM: 38, HIGH: 0, CRITICAL: 0)
 │                             │                  │          │              │                     │               │ Fapi_VerifyQuote                                             │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-29040                   │
 ├─────────────────────────────┼──────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ vim-minimal                 │ CVE-2025-29768   │          │              │ 2:8.2.2637-21.el9   │               │ vim: Vim vulnerable to potential data loss with zip.vim and  │
+│ vim-minimal                 │ CVE-2025-29768   │          │              │ 2:8.2.2637-22.el9_6 │               │ vim: Vim vulnerable to potential data loss with zip.vim and  │
 │                             │                  │          │              │                     │               │ special crafted...                                           │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-29768                   │
 │                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -761,11 +694,8 @@ Total: 235 (UNKNOWN: 0, LOW: 197, MEDIUM: 38, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2023-4751    │          │              │                     │               │ vim: heap-buffer-overflow in function utfc_ptr2len in        │
 │                             │                  │          │              │                     │               │ vim/vim                                                      │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-4751                    │
-│                             ├──────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-4752    │          │ affected     │                     │               │ vim: use-after-free in function ins_compl_get_exp in vim/vim │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-4752                    │
-│                             ├──────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-4781    │          │ will_not_fix │                     │               │ vim: heap-buffer-overflow in function vim_regsub_both in     │
+│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2023-4781    │          │              │                     │               │ vim: heap-buffer-overflow in function vim_regsub_both in     │
 │                             │                  │          │              │                     │               │ vim/vim                                                      │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-4781                    │
 │                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -838,6 +768,9 @@ Total: 235 (UNKNOWN: 0, LOW: 197, MEDIUM: 38, HIGH: 0, CRITICAL: 0)
 │                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-26603   │          │              │                     │               │ vim: heap-use-after-free in function str_to_reg in vim/vim   │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-26603                   │
+├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ zlib                        │ CVE-2025-4638    │ HIGH     │              │ 1.2.11-40.el9       │               │ pcl: zlib: Improper Pointer Arithmetic in pcl                │
+│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4638                    │
 └─────────────────────────────┴──────────────────┴──────────┴──────────────┴─────────────────────┴───────────────┴──────────────────────────────────────────────────────────────┘
 
 Python (python-pkg)
