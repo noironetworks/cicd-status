@@ -1,16 +1,12 @@
-NAME                 INSTALLED  FIXED-IN  TYPE       VULNERABILITY        SEVERITY  EPSS%  RISK  
-requests             2.25.1     2.31.0    python     GHSA-j8r2-6x86-q33q  Medium    88.80    2.6  
-urllib3              1.26.5     1.26.17   python     GHSA-v845-jxx5-vc9f  High      67.39    0.4  
-setuptools           53.0.0     65.5.1    python     GHSA-r9hx-vwmv-q579  High      51.08    0.2  
-setuptools           53.0.0     70.0.0    python     GHSA-cx63-2mw6-8hw5  High      45.55    0.2  
-golang.org/x/crypto  v0.31.0    0.35.0    go-module  GHSA-hcg3-q754-cr77  High      16.03  < 0.1  
-urllib3              1.26.5     1.26.18   python     GHSA-g4mx-q9vg-27p4  Medium    18.11  < 0.1  
-idna                 2.10       3.7       python     GHSA-jjg7-2v4v-x38h  Medium    10.88  < 0.1  
-k8s.io/kubernetes    v1.30.10             go-module  GHSA-3wgm-2gw2-vh5m  Medium     7.40  < 0.1  
-urllib3              1.26.5     1.26.19   python     GHSA-34jh-p97f-mpxf  Medium     8.18  < 0.1  
-golang.org/x/net     v0.33.0    0.38.0    go-module  GHSA-vvgc-356p-c3xw  Medium     4.00  < 0.1  
-requests             2.25.1     2.32.0    python     GHSA-9wx4-h78v-vm56  Medium     2.86  < 0.1  
-golang.org/x/net     v0.33.0    0.36.0    go-module  GHSA-qxp5-gwg8-xv66  Medium     0.85  < 0.1
+NAME        INSTALLED  FIXED-IN  TYPE    VULNERABILITY        SEVERITY  EPSS%  RISK  
+requests    2.25.1     2.31.0    python  GHSA-j8r2-6x86-q33q  Medium    88.83    2.6  
+urllib3     1.26.5     1.26.17   python  GHSA-v845-jxx5-vc9f  High      67.42    0.4  
+setuptools  53.0.0     65.5.1    python  GHSA-r9hx-vwmv-q579  High      54.88    0.2  
+setuptools  53.0.0     70.0.0    python  GHSA-cx63-2mw6-8hw5  High      45.61    0.2  
+urllib3     1.26.5     1.26.18   python  GHSA-g4mx-q9vg-27p4  Medium    18.08  < 0.1  
+idna        2.10       3.7       python  GHSA-jjg7-2v4v-x38h  Medium    10.91  < 0.1  
+urllib3     1.26.5     1.26.19   python  GHSA-34jh-p97f-mpxf  Medium     8.21  < 0.1  
+requests    2.25.1     2.32.0    python  GHSA-9wx4-h78v-vm56  Medium     2.86  < 0.1
 
 quay.io/noiro/aci-containers-operator:6.1.1.4.81c2369.z (redhat 9.6)
 ====================================================================
@@ -686,26 +682,3 @@ Total: 193 (UNKNOWN: 0, LOW: 174, MEDIUM: 18, HIGH: 1, CRITICAL: 0)
 │ zlib                        │ CVE-2025-4638  │ HIGH     │              │ 1.2.11-40.el9       │               │ pcl: zlib: Improper Pointer Arithmetic in pcl                │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4638                    │
 └─────────────────────────────┴────────────────┴──────────┴──────────────┴─────────────────────┴───────────────┴──────────────────────────────────────────────────────────────┘
-
-usr/local/bin/aci-containers-operator (gobinary)
-================================================
-Total: 4 (UNKNOWN: 0, LOW: 0, MEDIUM: 3, HIGH: 1, CRITICAL: 0)
-
-┌─────────────────────┬────────────────┬──────────┬──────────┬───────────────────┬───────────────┬─────────────────────────────────────────────────────────────┐
-│       Library       │ Vulnerability  │ Severity │  Status  │ Installed Version │ Fixed Version │                            Title                            │
-├─────────────────────┼────────────────┼──────────┼──────────┼───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ golang.org/x/crypto │ CVE-2025-22869 │ HIGH     │ fixed    │ v0.31.0           │ 0.35.0        │ golang.org/x/crypto/ssh: Denial of Service in the Key       │
-│                     │                │          │          │                   │               │ Exchange of golang.org/x/crypto/ssh                         │
-│                     │                │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2025-22869                  │
-├─────────────────────┼────────────────┼──────────┤          ├───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ golang.org/x/net    │ CVE-2025-22870 │ MEDIUM   │          │ v0.33.0           │ 0.36.0        │ golang.org/x/net/proxy: golang.org/x/net/http/httpproxy:    │
-│                     │                │          │          │                   │               │ HTTP Proxy bypass using IPv6 Zone IDs in golang.org/x/net   │
-│                     │                │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2025-22870                  │
-│                     ├────────────────┤          │          │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
-│                     │ CVE-2025-22872 │          │          │                   │ 0.38.0        │ golang.org/x/net/html: Incorrect Neutralization of Input    │
-│                     │                │          │          │                   │               │ During Web Page Generation in x/net in...                   │
-│                     │                │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2025-22872                  │
-├─────────────────────┼────────────────┤          ├──────────┼───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ k8s.io/kubernetes   │ CVE-2025-1767  │          │ affected │ v1.30.10          │               │ kubelet: GitRepo Volume Inadvertent Local Repository Access │
-│                     │                │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2025-1767                   │
-└─────────────────────┴────────────────┴──────────┴──────────┴───────────────────┴───────────────┴─────────────────────────────────────────────────────────────┘
