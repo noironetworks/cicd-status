@@ -1,12 +1,8 @@
-NAME                 INSTALLED  FIXED-IN  TYPE       VULNERABILITY        SEVERITY  EPSS%  RISK  
-golang.org/x/crypto  v0.31.0    0.35.0    go-module  GHSA-hcg3-q754-cr77  High      16.03  < 0.1  
-k8s.io/kubernetes    v1.30.10             go-module  GHSA-3wgm-2gw2-vh5m  Medium     7.40  < 0.1  
-golang.org/x/net     v0.33.0    0.38.0    go-module  GHSA-vvgc-356p-c3xw  Medium     4.00  < 0.1  
-golang.org/x/net     v0.33.0    0.36.0    go-module  GHSA-qxp5-gwg8-xv66  Medium     0.85  < 0.1
+No vulnerabilities found
 
 quay.io/noiro/aci-containers-host:6.1.1.4.81c2369.z (redhat 9.6)
 ================================================================
-Total: 81 (UNKNOWN: 0, LOW: 61, MEDIUM: 19, HIGH: 1, CRITICAL: 0)
+Total: 79 (UNKNOWN: 0, LOW: 59, MEDIUM: 19, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -195,21 +191,13 @@ Total: 81 (UNKNOWN: 0, LOW: 61, MEDIUM: 19, HIGH: 1, CRITICAL: 0)
 │                             │                │          │              │                     │               │ function                                                     │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-2953                    │
 ├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ openssl                     │ CVE-2024-2511  │          │ will_not_fix │ 1:3.2.2-6.el9_5.1   │               │ openssl: Unbounded memory growth with session handling in    │
-│                             │                │          │              │                     │               │ TLSv1.3                                                      │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-2511                    │
-│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-41996 │          │              │                     │               │ openssl: remote attackers (from the client side) to trigger  │
+│ openssl                     │ CVE-2024-41996 │          │ will_not_fix │ 1:3.2.2-6.el9_5.1   │               │ openssl: remote attackers (from the client side) to trigger  │
 │                             │                │          │              │                     │               │ unnecessarily expensive server-side...                       │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-41996                   │
-├─────────────────────────────┼────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ openssl-libs                │ CVE-2024-2511  │          │              │                     │               │ openssl: Unbounded memory growth with session handling in    │
-│                             │                │          │              │                     │               │ TLSv1.3                                                      │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-2511                    │
-│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-41996 │          │              │                     │               │ openssl: remote attackers (from the client side) to trigger  │
-│                             │                │          │              │                     │               │ unnecessarily expensive server-side...                       │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-41996                   │
+├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
+│ openssl-libs                │                │          │              │                     │               │                                                              │
+│                             │                │          │              │                     │               │                                                              │
+│                             │                │          │              │                     │               │                                                              │
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ pcre2                       │ CVE-2022-41409 │          │              │ 10.40-6.el9         │               │ pcre2: negative repeat value in a pcre2test subject line     │
 │                             │                │          │              │                     │               │ leads to inifinite...                                        │
@@ -312,58 +300,3 @@ Total: 81 (UNKNOWN: 0, LOW: 61, MEDIUM: 19, HIGH: 1, CRITICAL: 0)
 │ zlib                        │ CVE-2025-4638  │ HIGH     │              │ 1.2.11-41.el9       │               │ pcl: zlib: Improper Pointer Arithmetic in pcl                │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4638                    │
 └─────────────────────────────┴────────────────┴──────────┴──────────────┴─────────────────────┴───────────────┴──────────────────────────────────────────────────────────────┘
-
-usr/local/bin/aci-containers-host-agent (gobinary)
-==================================================
-Total: 4 (UNKNOWN: 0, LOW: 0, MEDIUM: 3, HIGH: 1, CRITICAL: 0)
-
-┌─────────────────────┬────────────────┬──────────┬──────────┬───────────────────┬───────────────┬─────────────────────────────────────────────────────────────┐
-│       Library       │ Vulnerability  │ Severity │  Status  │ Installed Version │ Fixed Version │                            Title                            │
-├─────────────────────┼────────────────┼──────────┼──────────┼───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ golang.org/x/crypto │ CVE-2025-22869 │ HIGH     │ fixed    │ v0.31.0           │ 0.35.0        │ golang.org/x/crypto/ssh: Denial of Service in the Key       │
-│                     │                │          │          │                   │               │ Exchange of golang.org/x/crypto/ssh                         │
-│                     │                │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2025-22869                  │
-├─────────────────────┼────────────────┼──────────┤          ├───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ golang.org/x/net    │ CVE-2025-22870 │ MEDIUM   │          │ v0.33.0           │ 0.36.0        │ golang.org/x/net/proxy: golang.org/x/net/http/httpproxy:    │
-│                     │                │          │          │                   │               │ HTTP Proxy bypass using IPv6 Zone IDs in golang.org/x/net   │
-│                     │                │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2025-22870                  │
-│                     ├────────────────┤          │          │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
-│                     │ CVE-2025-22872 │          │          │                   │ 0.38.0        │ golang.org/x/net/html: Incorrect Neutralization of Input    │
-│                     │                │          │          │                   │               │ During Web Page Generation in x/net in...                   │
-│                     │                │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2025-22872                  │
-├─────────────────────┼────────────────┤          ├──────────┼───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ k8s.io/kubernetes   │ CVE-2025-1767  │          │ affected │ v1.30.10          │               │ kubelet: GitRepo Volume Inadvertent Local Repository Access │
-│                     │                │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2025-1767                   │
-└─────────────────────┴────────────────┴──────────┴──────────┴───────────────────┴───────────────┴─────────────────────────────────────────────────────────────┘
-
-usr/local/bin/netop-cni (gobinary)
-==================================
-Total: 2 (UNKNOWN: 0, LOW: 0, MEDIUM: 2, HIGH: 0, CRITICAL: 0)
-
-┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────┬───────────────────────────────────────────────────────────┐
-│     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version │                           Title                           │
-├──────────────────┼────────────────┼──────────┼────────┼───────────────────┼───────────────┼───────────────────────────────────────────────────────────┤
-│ golang.org/x/net │ CVE-2025-22870 │ MEDIUM   │ fixed  │ v0.33.0           │ 0.36.0        │ golang.org/x/net/proxy: golang.org/x/net/http/httpproxy:  │
-│                  │                │          │        │                   │               │ HTTP Proxy bypass using IPv6 Zone IDs in golang.org/x/net │
-│                  │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2025-22870                │
-│                  ├────────────────┤          │        │                   ├───────────────┼───────────────────────────────────────────────────────────┤
-│                  │ CVE-2025-22872 │          │        │                   │ 0.38.0        │ golang.org/x/net/html: Incorrect Neutralization of Input  │
-│                  │                │          │        │                   │               │ During Web Page Generation in x/net in...                 │
-│                  │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2025-22872                │
-└──────────────────┴────────────────┴──────────┴────────┴───────────────────┴───────────────┴───────────────────────────────────────────────────────────┘
-
-usr/local/bin/opflex-agent-cni (gobinary)
-=========================================
-Total: 2 (UNKNOWN: 0, LOW: 0, MEDIUM: 2, HIGH: 0, CRITICAL: 0)
-
-┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────┬───────────────────────────────────────────────────────────┐
-│     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version │                           Title                           │
-├──────────────────┼────────────────┼──────────┼────────┼───────────────────┼───────────────┼───────────────────────────────────────────────────────────┤
-│ golang.org/x/net │ CVE-2025-22870 │ MEDIUM   │ fixed  │ v0.33.0           │ 0.36.0        │ golang.org/x/net/proxy: golang.org/x/net/http/httpproxy:  │
-│                  │                │          │        │                   │               │ HTTP Proxy bypass using IPv6 Zone IDs in golang.org/x/net │
-│                  │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2025-22870                │
-│                  ├────────────────┤          │        │                   ├───────────────┼───────────────────────────────────────────────────────────┤
-│                  │ CVE-2025-22872 │          │        │                   │ 0.38.0        │ golang.org/x/net/html: Incorrect Neutralization of Input  │
-│                  │                │          │        │                   │               │ During Web Page Generation in x/net in...                 │
-│                  │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2025-22872                │
-└──────────────────┴────────────────┴──────────┴────────┴───────────────────┴───────────────┴───────────────────────────────────────────────────────────┘
