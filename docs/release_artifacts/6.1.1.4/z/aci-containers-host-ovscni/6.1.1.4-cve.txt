@@ -2,7 +2,7 @@ No vulnerabilities found
 
 quay.io/noiro/aci-containers-host-ovscni:6.1.1.4.81c2369.z (redhat 9.6)
 =======================================================================
-Total: 79 (UNKNOWN: 0, LOW: 59, MEDIUM: 19, HIGH: 1, CRITICAL: 0)
+Total: 83 (UNKNOWN: 0, LOW: 59, MEDIUM: 19, HIGH: 5, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -84,8 +84,24 @@ Total: 79 (UNKNOWN: 0, LOW: 59, MEDIUM: 19, HIGH: 1, CRITICAL: 0)
 │                             │ CVE-2025-3360  │          │              │                     │               │ glibc: GLib prior to 2.82.5 is vulnerable to integer         │
 │                             │                │          │              │                     │               │ overflow and...                                              │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-3360                    │
-├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ gnupg2                      │ CVE-2022-3219  │          │              │ 2.3.3-4.el9         │               │ gnupg: denial of service issue (resource consumption) using  │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ glibc                       │ CVE-2025-4802  │ HIGH     │              │ 2.34-192.el9        │               │ glibc: static setuid binary dlopen may incorrectly search    │
+│                             │                │          │              │                     │               │ LD_LIBRARY_PATH                                              │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4802                    │
+├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
+│ glibc-common                │                │          │              │                     │               │                                                              │
+│                             │                │          │              │                     │               │                                                              │
+│                             │                │          │              │                     │               │                                                              │
+├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
+│ glibc-langpack-en           │                │          │              │                     │               │                                                              │
+│                             │                │          │              │                     │               │                                                              │
+│                             │                │          │              │                     │               │                                                              │
+├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
+│ glibc-minimal-langpack      │                │          │              │                     │               │                                                              │
+│                             │                │          │              │                     │               │                                                              │
+│                             │                │          │              │                     │               │                                                              │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ gnupg2                      │ CVE-2022-3219  │ LOW      │              │ 2.3.3-4.el9         │               │ gnupg: denial of service issue (resource consumption) using  │
 │                             │                │          │              │                     │               │ compressed packets                                           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-3219                    │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
