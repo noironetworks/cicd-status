@@ -1,12 +1,12 @@
 NAME                 INSTALLED  FIXED-IN  TYPE       VULNERABILITY        SEVERITY  EPSS%  RISK  
-golang.org/x/crypto  v0.31.0    0.35.0    go-module  GHSA-hcg3-q754-cr77  High      16.05  < 0.1  
-k8s.io/kubernetes    v1.30.10             go-module  GHSA-3wgm-2gw2-vh5m  Medium     9.35  < 0.1  
-golang.org/x/net     v0.33.0    0.38.0    go-module  GHSA-vvgc-356p-c3xw  Medium     5.02  < 0.1  
-golang.org/x/net     v0.33.0    0.36.0    go-module  GHSA-qxp5-gwg8-xv66  Medium     1.17  < 0.1
+golang.org/x/crypto  v0.31.0    0.35.0    go-module  GHSA-hcg3-q754-cr77  High      15.95  < 0.1  
+k8s.io/kubernetes    v1.30.10             go-module  GHSA-3wgm-2gw2-vh5m  Medium     9.28  < 0.1  
+golang.org/x/net     v0.33.0    0.38.0    go-module  GHSA-vvgc-356p-c3xw  Medium     5.05  < 0.1  
+golang.org/x/net     v0.33.0    0.36.0    go-module  GHSA-qxp5-gwg8-xv66  Medium     1.19  < 0.1
 
 quay.io/noiro/aci-containers-host:6.1.2.1.81c2369.z (redhat 9.5)
 ================================================================
-Total: 86 (UNKNOWN: 0, LOW: 59, MEDIUM: 25, HIGH: 2, CRITICAL: 0)
+Total: 85 (UNKNOWN: 0, LOW: 59, MEDIUM: 25, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │  Installed Version  │ Fixed Version │                            Title                             │
@@ -327,9 +327,6 @@ Total: 86 (UNKNOWN: 0, LOW: 59, MEDIUM: 25, HIGH: 2, CRITICAL: 0)
 │ tpm2-tss                    │ CVE-2024-29040 │ MEDIUM   │ affected            │ 3.2.3-1.el9         │               │ tpm2-tss: arbitrary quote data may go undetected by          │
 │                             │                │          │                     │                     │               │ Fapi_VerifyQuote                                             │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-29040                   │
-├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ zlib                        │ CVE-2025-4638  │ HIGH     │                     │ 1.2.11-41.el9       │               │ pcl: zlib: Improper Pointer Arithmetic in pcl                │
-│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4638                    │
 └─────────────────────────────┴────────────────┴──────────┴─────────────────────┴─────────────────────┴───────────────┴──────────────────────────────────────────────────────────────┘
 
 usr/local/bin/aci-containers-host-agent (gobinary)
