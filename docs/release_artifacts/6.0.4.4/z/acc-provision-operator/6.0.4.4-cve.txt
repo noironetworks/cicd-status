@@ -1,18 +1,18 @@
 NAME        INSTALLED  FIXED-IN  TYPE    VULNERABILITY        SEVERITY  EPSS%  RISK  
-requests    2.25.1     2.31.0    python  GHSA-j8r2-6x86-q33q  Medium    88.84    2.6  
-urllib3     1.26.5     1.26.17   python  GHSA-v845-jxx5-vc9f  High      67.44    0.4  
-idna        2.10       3.7       python  GHSA-jjg7-2v4v-x38h  Medium    62.51    0.3  
+requests    2.25.1     2.31.0    python  GHSA-j8r2-6x86-q33q  Medium    88.85    2.6  
+urllib3     1.26.5     1.26.17   python  GHSA-v845-jxx5-vc9f  High      66.92    0.4  
+setuptools  53.0.0     78.1.1    python  GHSA-5rjg-fvgr-3xxf  High      61.45    0.3  
+idna        2.10       3.7       python  GHSA-jjg7-2v4v-x38h  Medium    62.53    0.3  
 setuptools  53.0.0     65.5.1    python  GHSA-r9hx-vwmv-q579  High      54.91    0.2  
-setuptools  53.0.0     78.1.1    python  GHSA-5rjg-fvgr-3xxf  High      54.83    0.2  
-setuptools  53.0.0     70.0.0    python  GHSA-cx63-2mw6-8hw5  High      45.63    0.2  
-urllib3     1.26.5     1.26.18   python  GHSA-g4mx-q9vg-27p4  Medium    18.11  < 0.1  
-urllib3     1.26.5     1.26.19   python  GHSA-34jh-p97f-mpxf  Medium     8.19  < 0.1  
+setuptools  53.0.0     70.0.0    python  GHSA-cx63-2mw6-8hw5  High      45.62    0.2  
+urllib3     1.26.5     1.26.18   python  GHSA-g4mx-q9vg-27p4  Medium    18.02  < 0.1  
+urllib3     1.26.5     1.26.19   python  GHSA-34jh-p97f-mpxf  Medium     8.11  < 0.1  
 requests    2.25.1     2.32.0    python  GHSA-9wx4-h78v-vm56  Medium     2.85  < 0.1  
 requests    2.31.0     2.32.0    python  GHSA-9wx4-h78v-vm56  Medium     2.85  < 0.1
 
 quay.io/noiro/acc-provision-operator:6.0.4.4.81c2369.z (redhat 9.6)
 ===================================================================
-Total: 219 (UNKNOWN: 0, LOW: 192, MEDIUM: 22, HIGH: 5, CRITICAL: 0)
+Total: 218 (UNKNOWN: 0, LOW: 192, MEDIUM: 26, HIGH: 0, CRITICAL: 0)
 
 ┌─────────────────────────────┬──────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │  Vulnerability   │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -153,7 +153,7 @@ Total: 219 (UNKNOWN: 0, LOW: 192, MEDIUM: 22, HIGH: 5, CRITICAL: 0)
 │                             │                  │          │              │                     │               │ overflow and...                                              │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-3360                    │
 ├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ glibc                       │ CVE-2025-4802    │ HIGH     │              │ 2.34-168.el9_6.14   │               │ glibc: static setuid binary dlopen may incorrectly search    │
+│ glibc                       │ CVE-2025-4802    │ MEDIUM   │              │ 2.34-168.el9_6.14   │               │ glibc: static setuid binary dlopen may incorrectly search    │
 │                             │                  │          │              │                     │               │ LD_LIBRARY_PATH                                              │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4802                    │
 ├─────────────────────────────┤                  │          │              │                     ├───────────────┤                                                              │
@@ -775,9 +775,6 @@ Total: 219 (UNKNOWN: 0, LOW: 192, MEDIUM: 22, HIGH: 5, CRITICAL: 0)
 │                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-26603   │          │              │                     │               │ vim: heap-use-after-free in function str_to_reg in vim/vim   │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-26603                   │
-├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ zlib                        │ CVE-2025-4638    │ HIGH     │              │ 1.2.11-40.el9       │               │ pcl: zlib: Improper Pointer Arithmetic in pcl                │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4638                    │
 └─────────────────────────────┴──────────────────┴──────────┴──────────────┴─────────────────────┴───────────────┴──────────────────────────────────────────────────────────────┘
 
 Python (python-pkg)
