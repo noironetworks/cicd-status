@@ -2,7 +2,7 @@ No vulnerabilities found
 
 quay.io/noiro/opflex:6.0.4.4.81c2369.z (redhat 9.3)
 ===================================================
-Total: 215 (UNKNOWN: 0, LOW: 175, MEDIUM: 39, HIGH: 1, CRITICAL: 0)
+Total: 211 (UNKNOWN: 0, LOW: 175, MEDIUM: 35, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬─────────────────────────────┬───────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │      Installed Version      │         Fixed Version         │                            Title                             │
@@ -364,34 +364,18 @@ Total: 215 (UNKNOWN: 0, LOW: 175, MEDIUM: 39, HIGH: 1, CRITICAL: 0)
 │ systemd                     │ CVE-2021-3997  │ MEDIUM   │                     │ 252-53.el9                  │                               │ systemd: Uncontrolled recursion in systemd-tmpfiles when     │
 │                             │                │          │                     │                             │                               │ removing files                                               │
 │                             │                │          │                     │                             │                               │ https://avd.aquasec.com/nvd/cve-2021-3997                    │
-│                             ├────────────────┤          │                     │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-4598  │          │                     │                             │                               │ systemd-coredump: race condition that allows a local         │
-│                             │                │          │                     │                             │                               │ attacker to crash a SUID...                                  │
-│                             │                │          │                     │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-4598                    │
-├─────────────────────────────┼────────────────┤          │                     │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ systemd-libs                │ CVE-2021-3997  │          │                     │                             │                               │ systemd: Uncontrolled recursion in systemd-tmpfiles when     │
-│                             │                │          │                     │                             │                               │ removing files                                               │
-│                             │                │          │                     │                             │                               │ https://avd.aquasec.com/nvd/cve-2021-3997                    │
-│                             ├────────────────┤          │                     │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-4598  │          │                     │                             │                               │ systemd-coredump: race condition that allows a local         │
-│                             │                │          │                     │                             │                               │ attacker to crash a SUID...                                  │
-│                             │                │          │                     │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-4598                    │
-├─────────────────────────────┼────────────────┤          │                     │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ systemd-pam                 │ CVE-2021-3997  │          │                     │                             │                               │ systemd: Uncontrolled recursion in systemd-tmpfiles when     │
-│                             │                │          │                     │                             │                               │ removing files                                               │
-│                             │                │          │                     │                             │                               │ https://avd.aquasec.com/nvd/cve-2021-3997                    │
-│                             ├────────────────┤          │                     │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-4598  │          │                     │                             │                               │ systemd-coredump: race condition that allows a local         │
-│                             │                │          │                     │                             │                               │ attacker to crash a SUID...                                  │
-│                             │                │          │                     │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-4598                    │
-├─────────────────────────────┼────────────────┤          │                     │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ systemd-rpm-macros          │ CVE-2021-3997  │          │                     │                             │                               │ systemd: Uncontrolled recursion in systemd-tmpfiles when     │
-│                             │                │          │                     │                             │                               │ removing files                                               │
-│                             │                │          │                     │                             │                               │ https://avd.aquasec.com/nvd/cve-2021-3997                    │
-│                             ├────────────────┤          │                     │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-4598  │          │                     │                             │                               │ systemd-coredump: race condition that allows a local         │
-│                             │                │          │                     │                             │                               │ attacker to crash a SUID...                                  │
-│                             │                │          │                     │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-4598                    │
+├─────────────────────────────┤                │          │                     │                             ├───────────────────────────────┤                                                              │
+│ systemd-libs                │                │          │                     │                             │                               │                                                              │
+│                             │                │          │                     │                             │                               │                                                              │
+│                             │                │          │                     │                             │                               │                                                              │
+├─────────────────────────────┤                │          │                     │                             ├───────────────────────────────┤                                                              │
+│ systemd-pam                 │                │          │                     │                             │                               │                                                              │
+│                             │                │          │                     │                             │                               │                                                              │
+│                             │                │          │                     │                             │                               │                                                              │
+├─────────────────────────────┤                │          │                     │                             ├───────────────────────────────┤                                                              │
+│ systemd-rpm-macros          │                │          │                     │                             │                               │                                                              │
+│                             │                │          │                     │                             │                               │                                                              │
+│                             │                │          │                     │                             │                               │                                                              │
 ├─────────────────────────────┼────────────────┤          │                     ├─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │ tpm2-tss                    │ CVE-2024-29040 │          │                     │ 3.2.3-1.el9                 │                               │ tpm2-tss: arbitrary quote data may go undetected by          │
 │                             │                │          │                     │                             │                               │ Fapi_VerifyQuote                                             │
