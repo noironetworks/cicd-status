@@ -12,7 +12,7 @@ requests          2.25.1                              2.32.0                    
 
 quay.io/noiro/cnideploy:6.1.2.1.81c2369.z (redhat 9.6)
 ======================================================
-Total: 199 (UNKNOWN: 0, LOW: 171, MEDIUM: 28, HIGH: 0, CRITICAL: 0)
+Total: 202 (UNKNOWN: 0, LOW: 171, MEDIUM: 28, HIGH: 3, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │  Installed Version  │ Fixed Version │                            Title                             │
@@ -141,17 +141,26 @@ Total: 199 (UNKNOWN: 0, LOW: 171, MEDIUM: 28, HIGH: 0, CRITICAL: 0)
 │                             │                │          │                     │                     │               │ overflow and...                                              │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-3360                    │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ glibc                       │ CVE-2025-4802  │ MEDIUM   │                     │ 2.34-168.el9_6.14   │               │ glibc: static setuid binary dlopen may incorrectly search    │
+│ glibc                       │ CVE-2025-5702  │ HIGH     │                     │ 2.34-168.el9_6.14   │               │ glibc: Vector register overwrite bug in glibc                │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-5702                    │
+│                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-4802  │ MEDIUM   │                     │                     │               │ glibc: static setuid binary dlopen may incorrectly search    │
 │                             │                │          │                     │                     │               │ LD_LIBRARY_PATH                                              │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4802                    │
-├─────────────────────────────┤                │          │                     │                     ├───────────────┤                                                              │
-│ glibc-common                │                │          │                     │                     │               │                                                              │
-│                             │                │          │                     │                     │               │                                                              │
-│                             │                │          │                     │                     │               │                                                              │
-├─────────────────────────────┤                │          │                     │                     ├───────────────┤                                                              │
-│ glibc-minimal-langpack      │                │          │                     │                     │               │                                                              │
-│                             │                │          │                     │                     │               │                                                              │
-│                             │                │          │                     │                     │               │                                                              │
+├─────────────────────────────┼────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ glibc-common                │ CVE-2025-5702  │ HIGH     │                     │                     │               │ glibc: Vector register overwrite bug in glibc                │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-5702                    │
+│                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-4802  │ MEDIUM   │                     │                     │               │ glibc: static setuid binary dlopen may incorrectly search    │
+│                             │                │          │                     │                     │               │ LD_LIBRARY_PATH                                              │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4802                    │
+├─────────────────────────────┼────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ glibc-minimal-langpack      │ CVE-2025-5702  │ HIGH     │                     │                     │               │ glibc: Vector register overwrite bug in glibc                │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-5702                    │
+│                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-4802  │ MEDIUM   │                     │                     │               │ glibc: static setuid binary dlopen may incorrectly search    │
+│                             │                │          │                     │                     │               │ LD_LIBRARY_PATH                                              │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4802                    │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ gnupg2                      │ CVE-2022-3219  │ LOW      │                     │ 2.3.3-4.el9         │               │ gnupg: denial of service issue (resource consumption) using  │
 │                             │                │          │                     │                     │               │ compressed packets                                           │
