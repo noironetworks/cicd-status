@@ -1,18 +1,18 @@
 NAME        INSTALLED  FIXED-IN  TYPE    VULNERABILITY        SEVERITY  EPSS%  RISK  
-requests    2.25.1     2.31.0    python  GHSA-j8r2-6x86-q33q  Medium    88.86    2.6  
-urllib3     1.26.5     1.26.17   python  GHSA-v845-jxx5-vc9f  High      66.95    0.4  
-setuptools  53.0.0     78.1.1    python  GHSA-5rjg-fvgr-3xxf  High      61.94    0.3  
-idna        2.10       3.7       python  GHSA-jjg7-2v4v-x38h  Medium    63.00    0.3  
-setuptools  53.0.0     65.5.1    python  GHSA-r9hx-vwmv-q579  High      54.19    0.2  
-setuptools  53.0.0     70.0.0    python  GHSA-cx63-2mw6-8hw5  High      45.56    0.2  
+requests    2.25.1     2.31.0    python  GHSA-j8r2-6x86-q33q  Medium    88.85    2.6  
+urllib3     1.26.5     1.26.17   python  GHSA-v845-jxx5-vc9f  High      66.94    0.4  
+setuptools  53.0.0     78.1.1    python  GHSA-5rjg-fvgr-3xxf  High      61.93    0.3  
+idna        2.10       3.7       python  GHSA-jjg7-2v4v-x38h  Medium    62.99    0.3  
+setuptools  53.0.0     65.5.1    python  GHSA-r9hx-vwmv-q579  High      54.17    0.2  
+setuptools  53.0.0     70.0.0    python  GHSA-cx63-2mw6-8hw5  High      45.55    0.2  
 urllib3     1.26.5     1.26.18   python  GHSA-g4mx-q9vg-27p4  Medium    19.63  < 0.1  
-urllib3     1.26.5     1.26.19   python  GHSA-34jh-p97f-mpxf  Medium     8.03  < 0.1  
-requests    2.25.1     2.32.0    python  GHSA-9wx4-h78v-vm56  Medium     2.82  < 0.1  
-requests    2.31.0     2.32.0    python  GHSA-9wx4-h78v-vm56  Medium     2.82  < 0.1
+urllib3     1.26.5     1.26.19   python  GHSA-34jh-p97f-mpxf  Medium     8.02  < 0.1  
+requests    2.25.1     2.32.0    python  GHSA-9wx4-h78v-vm56  Medium     2.80  < 0.1  
+requests    2.31.0     2.32.0    python  GHSA-9wx4-h78v-vm56  Medium     2.80  < 0.1
 
 quay.io/noiro/acc-provision-operator:6.0.4.4.81c2369.z (redhat 9.6)
 ===================================================================
-Total: 249 (UNKNOWN: 0, LOW: 191, MEDIUM: 58, HIGH: 0, CRITICAL: 0)
+Total: 253 (UNKNOWN: 0, LOW: 191, MEDIUM: 58, HIGH: 4, CRITICAL: 0)
 
 ┌─────────────────────────────┬──────────────────┬──────────┬─────────────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │  Vulnerability   │ Severity │       Status        │  Installed Version  │ Fixed Version │                            Title                             │
@@ -168,21 +168,33 @@ Total: 249 (UNKNOWN: 0, LOW: 191, MEDIUM: 58, HIGH: 0, CRITICAL: 0)
 │                             │                  │          │                     │                     │               │ overflow and...                                              │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-3360                    │
 ├─────────────────────────────┼──────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ glibc                       │ CVE-2025-4802    │ MEDIUM   │                     │ 2.34-168.el9_6.14   │               │ glibc: static setuid binary dlopen may incorrectly search    │
+│ glibc                       │ CVE-2025-5702    │ HIGH     │                     │ 2.34-168.el9_6.14   │               │ glibc: Vector register overwrite bug in glibc                │
+│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-5702                    │
+│                             ├──────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-4802    │ MEDIUM   │                     │                     │               │ glibc: static setuid binary dlopen may incorrectly search    │
 │                             │                  │          │                     │                     │               │ LD_LIBRARY_PATH                                              │
 │                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4802                    │
-├─────────────────────────────┤                  │          │                     │                     ├───────────────┤                                                              │
-│ glibc-common                │                  │          │                     │                     │               │                                                              │
-│                             │                  │          │                     │                     │               │                                                              │
-│                             │                  │          │                     │                     │               │                                                              │
-├─────────────────────────────┤                  │          │                     │                     ├───────────────┤                                                              │
-│ glibc-langpack-en           │                  │          │                     │                     │               │                                                              │
-│                             │                  │          │                     │                     │               │                                                              │
-│                             │                  │          │                     │                     │               │                                                              │
-├─────────────────────────────┤                  │          │                     │                     ├───────────────┤                                                              │
-│ glibc-minimal-langpack      │                  │          │                     │                     │               │                                                              │
-│                             │                  │          │                     │                     │               │                                                              │
-│                             │                  │          │                     │                     │               │                                                              │
+├─────────────────────────────┼──────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ glibc-common                │ CVE-2025-5702    │ HIGH     │                     │                     │               │ glibc: Vector register overwrite bug in glibc                │
+│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-5702                    │
+│                             ├──────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-4802    │ MEDIUM   │                     │                     │               │ glibc: static setuid binary dlopen may incorrectly search    │
+│                             │                  │          │                     │                     │               │ LD_LIBRARY_PATH                                              │
+│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4802                    │
+├─────────────────────────────┼──────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ glibc-langpack-en           │ CVE-2025-5702    │ HIGH     │                     │                     │               │ glibc: Vector register overwrite bug in glibc                │
+│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-5702                    │
+│                             ├──────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-4802    │ MEDIUM   │                     │                     │               │ glibc: static setuid binary dlopen may incorrectly search    │
+│                             │                  │          │                     │                     │               │ LD_LIBRARY_PATH                                              │
+│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4802                    │
+├─────────────────────────────┼──────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ glibc-minimal-langpack      │ CVE-2025-5702    │ HIGH     │                     │                     │               │ glibc: Vector register overwrite bug in glibc                │
+│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-5702                    │
+│                             ├──────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-4802    │ MEDIUM   │                     │                     │               │ glibc: static setuid binary dlopen may incorrectly search    │
+│                             │                  │          │                     │                     │               │ LD_LIBRARY_PATH                                              │
+│                             │                  │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4802                    │
 ├─────────────────────────────┼──────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ gnupg2                      │ CVE-2022-3219    │ LOW      │                     │ 2.3.3-4.el9         │               │ gnupg: denial of service issue (resource consumption) using  │
 │                             │                  │          │                     │                     │               │ compressed packets                                           │
