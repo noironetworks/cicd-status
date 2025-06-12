@@ -6476,3 +6476,86 @@ Cloning into 'cicd-status'...
 +add_artifacts
 +cd /tmp/cicd-status
 +git pull --rebase origin main
+From https://github.com/noironetworks/cicd-status
+ * branch                main       -> FETCH_HEAD
+Already up to date.
++mkdir -p /tmp/cicd-status/docs/release_artifacts/6.0.4.4/z/opflex
++curl https://api.travis-ci.com/v3/job/633445183/log.txt
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  462k  100  462k    0     0  1070k      0 --:--:-- --:--:-- --:--:-- 1070k
++cp /tmp/sbom.txt /tmp/cicd-status/docs/release_artifacts/6.0.4.4/z/opflex/6.0.4.4-sbom.txt
++cp /tmp/cve.txt /tmp/cicd-status/docs/release_artifacts/6.0.4.4/z/opflex/6.0.4.4-cve.txt
++cp /tmp/cve-base.txt /tmp/cicd-status/docs/release_artifacts/6.0.4.4/z/opflex/6.0.4.4-cve-base.txt
++update_container_release
++docker rmi -f sha256:7efe38d2b11070f84b4f8229a7fb03fbc95aab59e7f0051d5c686aa311d7f378
+Untagged: noiro/opflex:6.0.4.4.81c2369.061225.4693
+Untagged: noiro/opflex:6.0.4.4.81c2369.z
+Untagged: noiro/opflex@sha256:f5b3c35f1d870d564fd694720bb16985a0688a68405a16a45d0a9e94edc214fe
+Untagged: quay.io/noiro/opflex:6.0.4.4.81c2369.061225.4693
+Untagged: quay.io/noiro/opflex:6.0.4.4.81c2369.z
+Untagged: quay.io/noiro/opflex@sha256:f5b3c35f1d870d564fd694720bb16985a0688a68405a16a45d0a9e94edc214fe
+Untagged: quay.io/noirolabs/opflex:6.0.4.4.81c2369
+Untagged: quay.io/noirolabs/opflex:6.0.4.4.81c2369.061225.4693
+Untagged: quay.io/noirolabs/opflex:6.0.4.4.81c2369.z
+Untagged: quay.io/noirolabs/opflex@sha256:f5b3c35f1d870d564fd694720bb16985a0688a68405a16a45d0a9e94edc214fe
+Deleted: sha256:7efe38d2b11070f84b4f8229a7fb03fbc95aab59e7f0051d5c686aa311d7f378
+Deleted: sha256:76a0ce5de165d96bb0cce3cecc567c6d0d7daece337de2616d34f872c8511ccf
+Deleted: sha256:5584ce2b5c81a0b57834463cc9c9548949edbdf8a273d7ea450043ce0d48c070
+Deleted: sha256:afe6d2742e9bfb79be9b9fc169c8e3401abb127804dbe5e79a9caf59792993b2
+Deleted: sha256:0929d84b1907ccd9ba9841d7a99ec05f2ad0f04b6a67a968a42e186294164c94
+Deleted: sha256:0bd2f1c5716bf7fef1df5987db1b9b4199b75f5599d9a4ffc13908672aa74545
+Deleted: sha256:c096987ab3aaddef6f7faa6dd3a932c0c9d07469800d059f5f91974d083571a9
+Deleted: sha256:6f0b3d3e0725849fb6190d2b21816ce2f117c89050dd039f1f36c9a4b6072def
+Deleted: sha256:df9615a4114ccd2fbc1be3bf792485a69001c491ca6a0d32cde017d56c9c5923
+Deleted: sha256:c429b6d803f8634551a11fee1fbcf5ab563f36dcc11c06f0e8cb4443f516b0e2
+Deleted: sha256:37d03d1673e2330fceeffd072d50196629ed5ec6fbec4bbd076f4b1c5a5ad3a3
+Deleted: sha256:2ba045ffb5c4c9c0a96de60e18ba849aac54df431e7e0371a90b88d9b7753ff2
+Deleted: sha256:1ba3a11aeef4856e1850e8566b7023bb1487e17d08df90427010ae55465c7542
+Deleted: sha256:e502e9b49d709c667adad0e6c830ffd0d2cbf6a49d85e4b9ee926e5e52d8fe0b
+Deleted: sha256:1870c695dd85eddf49d96ceea1ec19f0c9573e73fee0963708e9b573b2780989
++python /tmp/cicd/travis/update-release.py quay.io/noiro opflex 6.0.4.4.81c2369 6.0.4.4.81c2369,6.0.4.4.81c2369.061225.4693 sha256:7efe38d2b11070f84b4f8229a7fb03fbc95aab59e7f0051d5c686aa311d7f378 6.0.4.4.81c2369.z 6.0.4.4.81c2369.061225.4693 registry.access.redhat.com/ubi9/ubi-minimal:9.3
++add_trivy_vulnerabilites
++trivy image quay.io/noiro/opflex:6.0.4.4.81c2369.z
+2025-06-12T08:59:38.638Z	[34mINFO[0m	Need to update DB
+2025-06-12T08:59:38.638Z	[34mINFO[0m	DB Repository: ghcr.io/aquasecurity/trivy-db
+2025-06-12T08:59:38.638Z	[34mINFO[0m	Downloading DB...
+26.52 MiB / 65.09 MiB [---------------->________________________] 40.75% ? p/s ?65.09 MiB / 65.09 MiB [--------------------------------------->] 100.00% ? p/s ?65.09 MiB / 65.09 MiB [--------------------------------------->] 100.00% ? p/s ?65.09 MiB / 65.09 MiB [-------------------------->] 100.00% 64.27 MiB p/s ETA 0s65.09 MiB / 65.09 MiB [-------------------------->] 100.00% 64.27 MiB p/s ETA 0s65.09 MiB / 65.09 MiB [-------------------------->] 100.00% 64.27 MiB p/s ETA 0s65.09 MiB / 65.09 MiB [-------------------------->] 100.00% 60.12 MiB p/s ETA 0s65.09 MiB / 65.09 MiB [-------------------------->] 100.00% 60.12 MiB p/s ETA 0s65.09 MiB / 65.09 MiB [-------------------------->] 100.00% 60.12 MiB p/s ETA 0s65.09 MiB / 65.09 MiB [-------------------------->] 100.00% 56.24 MiB p/s ETA 0s65.09 MiB / 65.09 MiB [-------------------------->] 100.00% 56.24 MiB p/s ETA 0s65.09 MiB / 65.09 MiB [-------------------------->] 100.00% 56.24 MiB p/s ETA 0s65.09 MiB / 65.09 MiB [-------------------------->] 100.00% 52.61 MiB p/s ETA 0s65.09 MiB / 65.09 MiB [-----------------------------] 100.00% 27.01 MiB p/s 2.6s2025-06-12T08:59:42.165Z	[34mINFO[0m	Vulnerability scanning is enabled
+2025-06-12T08:59:42.165Z	[34mINFO[0m	Secret scanning is enabled
+2025-06-12T08:59:42.165Z	[34mINFO[0m	If your scanning is slow, please try '--scanners vuln' to disable secret scanning
+2025-06-12T08:59:42.165Z	[34mINFO[0m	Please see also https://aquasecurity.github.io/trivy/v0.44/docs/scanner/secret/#recommendation for faster secret detection
++git_add_commit_push
++cd /tmp/cicd-status
++git config --local user.email test@cisco.com
++git config --local user.name travis-tagger
++git stash
+Saved working directory and index state WIP on main: dbf983167 6.1.2.1.z-acc-provision-operator-1008-2025-06-12_08:53:10
++git pull --rebase origin main
+From https://github.com/noironetworks/cicd-status
+ * branch                main       -> FETCH_HEAD
+Already up to date.
++git stash pop
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   docs/release_artifacts/6.0.4.4/z/opflex/6.0.4.4-buildlog.txt
+	modified:   docs/release_artifacts/6.0.4.4/z/opflex/6.0.4.4-cve-base.txt
+	modified:   docs/release_artifacts/6.0.4.4/z/opflex/6.0.4.4-cve.txt
+	modified:   docs/release_artifacts/releases.yaml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (b1f6d61c8f64fa614623b208cb3221901dbead5f)
++git add .
++[[ opflex != \a\c\c\-\p\r\o\v\i\s\i\o\n ]]
+++docker image inspect --format '{{index (split (index .RepoDigests 0) "@sha256:") 1}}' docker.io/noiro/opflex:6.0.4.4.81c2369.z
++DOCKER_REPO_DIGEST_SHA=f5b3c35f1d870d564fd694720bb16985a0688a68405a16a45d0a9e94edc214fe
+++docker image inspect --format '{{index (split (index .RepoDigests 1) "@sha256:") 1}}' quay.io/noiro/opflex:6.0.4.4.81c2369.z
++QUAY_REPO_DIGEST_SHA=f5b3c35f1d870d564fd694720bb16985a0688a68405a16a45d0a9e94edc214fe
+++date +%F_%H:%M:%S
++git commit -a -m 6.0.4.4.z-opflex-4693-2025-06-12_09:00:06 -m 'Commit: 6b18b1fda433178fef07c29c3c8953fae39f66e8' -m 'Tags: 6.0.4.4.81c2369.z, 6.0.4.4.81c2369.061225.4693' -m 'ImageId: sha256:7efe38d2b11070f84b4f8229a7fb03fbc95aab59e7f0051d5c686aa311d7f378' -m 'DockerSha: f5b3c35f1d870d564fd694720bb16985a0688a68405a16a45d0a9e94edc214fe' -m 'QuaySha: f5b3c35f1d870d564fd694720bb16985a0688a68405a16a45d0a9e94edc214fe'
+[main b9b676dc6] 6.0.4.4.z-opflex-4693-2025-06-12_09:00:06
+ 4 files changed, 4198 insertions(+), 4167 deletions(-)
++git push origin main
