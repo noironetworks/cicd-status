@@ -2,7 +2,7 @@ No vulnerabilities found
 
 quay.io/noiro/opflex:6.0.4.4.81c2369.z (redhat 9.3)
 ===================================================
-Total: 215 (UNKNOWN: 0, LOW: 180, MEDIUM: 30, HIGH: 5, CRITICAL: 0)
+Total: 219 (UNKNOWN: 0, LOW: 179, MEDIUM: 32, HIGH: 8, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────────────┬───────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │      Installed Version      │         Fixed Version         │                            Title                             │
@@ -89,10 +89,6 @@ Total: 215 (UNKNOWN: 0, LOW: 180, MEDIUM: 30, HIGH: 5, CRITICAL: 0)
 │                             ├────────────────┤          │              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-9681  │          │              │                             │                               │ curl: HSTS subdomain overwrites parent cache entry           │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2024-9681                    │
-│                             ├────────────────┤          │              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-0725  │          │              │                             │                               │ libcurl: Buffer Overflow in libcurl via zlib Integer         │
-│                             │                │          │              │                             │                               │ Overflow                                                     │
-│                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-0725                    │
 ├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │ elfutils-default-yama-scope │ CVE-2024-25260 │          │ will_not_fix │ 0.193-1.el9                 │                               │ elfutils: global-buffer-overflow exists in the function      │
 │                             │                │          │              │                             │                               │ ebl_machine_flag_name in eblmachineflagname.c                │
@@ -222,10 +218,6 @@ Total: 215 (UNKNOWN: 0, LOW: 180, MEDIUM: 30, HIGH: 5, CRITICAL: 0)
 │                             ├────────────────┤          │              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-9681  │          │              │                             │                               │ curl: HSTS subdomain overwrites parent cache entry           │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2024-9681                    │
-│                             ├────────────────┤          │              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-0725  │          │              │                             │                               │ libcurl: Buffer Overflow in libcurl via zlib Integer         │
-│                             │                │          │              │                             │                               │ Overflow                                                     │
-│                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-0725                    │
 ├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │ libgcc                      │ CVE-2020-11023 │ MEDIUM   │ fixed        │ 11.5.0-5.el9                │ 11.5.0-5.el9_5                │ jquery: Untrusted code execution via <option> tag in HTML    │
 │                             │                │          │              │                             │                               │ passed to DOM...                                             │
@@ -250,9 +242,24 @@ Total: 215 (UNKNOWN: 0, LOW: 180, MEDIUM: 30, HIGH: 5, CRITICAL: 0)
 │ libuv                       │ CVE-2024-24806 │ MEDIUM   │ fixed        │ 1:1.42.0-2.el9              │ 1:1.42.0-2.el9_4              │ libuv: Improper Domain Lookup that potentially leads to SSRF │
 │                             │                │          │              │                             │                               │ attacks                                                      │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2024-24806                   │
-├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ libxml2                     │ CVE-2025-32414 │          │ affected     │ 2.9.13-9.el9                │                               │ libxml2: Out-of-Bounds Read in libxml2                       │
+├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libxml2                     │ CVE-2025-49794 │ HIGH     │ affected     │ 2.9.13-9.el9                │                               │ libxml: Heap use after free (UAF) leads to Denial of service │
+│                             │                │          │              │                             │                               │ (DoS)...                                                     │
+│                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-49794                   │
+│                             ├────────────────┤          │              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-49795 │          │              │                             │                               │ libxml: Null pointer dereference leads to Denial of service  │
+│                             │                │          │              │                             │                               │ (DoS)                                                        │
+│                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-49795                   │
+│                             ├────────────────┤          │              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-49796 │          │              │                             │                               │ libxml: Type confusion leads to Denial of service (DoS)      │
+│                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-49796                   │
+│                             ├────────────────┼──────────┤              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-32414 │ MEDIUM   │              │                             │                               │ libxml2: Out-of-Bounds Read in libxml2                       │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-32414                   │
+│                             ├────────────────┤          │              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-6021  │          │              │                             │                               │ libxml2: Integer Overflow in xmlBuildQName() Leads to Stack  │
+│                             │                │          │              │                             │                               │ Buffer Overflow in libxml2...                                │
+│                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-6021                    │
 │                             ├────────────────┼──────────┼──────────────┤                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2023-45322 │ LOW      │ will_not_fix │                             │                               │ libxml2: use-after-free in xmlUnlinkNode() in tree.c         │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2023-45322                   │
@@ -266,6 +273,10 @@ Total: 215 (UNKNOWN: 0, LOW: 180, MEDIUM: 30, HIGH: 5, CRITICAL: 0)
 │                             ├────────────────┤          │              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-32415 │          │              │                             │                               │ libxml2: Out-of-bounds Read in xmlSchemaIDCFillNodeTables    │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-32415                   │
+│                             ├────────────────┤          │              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-6170  │          │              │                             │                               │ libxml2: Stack Buffer Overflow in xmllint Interactive Shell  │
+│                             │                │          │              │                             │                               │ Command Handling                                             │
+│                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-6170                    │
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │ ncurses-base                │ CVE-2022-29458 │          │              │ 6.2-10.20210508.el9         │                               │ ncurses: segfaulting OOB read                                │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2022-29458                   │
@@ -366,7 +377,11 @@ Total: 215 (UNKNOWN: 0, LOW: 180, MEDIUM: 30, HIGH: 5, CRITICAL: 0)
 │                             │                │          │              │                             │                               │ references                                                   │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2021-3572                    │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ shadow-utils                │ CVE-2024-56433 │ MEDIUM   │              │ 2:4.9-12.el9                │                               │ shadow-utils: Default subordinate ID configuration in        │
+│ python3-setuptools-wheel    │ CVE-2025-47273 │ MEDIUM   │              │ 53.0.0-14.el9               │                               │ setuptools: Path Traversal Vulnerability in setuptools       │
+│                             │                │          │              │                             │                               │ PackageIndex                                                 │
+│                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-47273                   │
+├─────────────────────────────┼────────────────┤          │              ├─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ shadow-utils                │ CVE-2024-56433 │          │              │ 2:4.9-12.el9                │                               │ shadow-utils: Default subordinate ID configuration in        │
 │                             │                │          │              │                             │                               │ /etc/login.defs could lead to compromise                     │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2024-56433                   │
 ├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
