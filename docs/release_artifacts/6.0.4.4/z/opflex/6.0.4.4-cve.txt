@@ -2,7 +2,7 @@ No vulnerabilities found
 
 quay.io/noiro/opflex:6.0.4.4.81c2369.z (redhat 9.3)
 ===================================================
-Total: 219 (UNKNOWN: 0, LOW: 179, MEDIUM: 32, HIGH: 8, CRITICAL: 0)
+Total: 222 (UNKNOWN: 0, LOW: 179, MEDIUM: 38, HIGH: 5, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────────────┬───────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │      Installed Version      │         Fixed Version         │                            Title                             │
@@ -154,20 +154,8 @@ Total: 219 (UNKNOWN: 0, LOW: 179, MEDIUM: 32, HIGH: 8, CRITICAL: 0)
 │                             │ CVE-2025-3360  │          │              │                             │                               │ glibc: GLib prior to 2.82.5 is vulnerable to integer         │
 │                             │                │          │              │                             │                               │ overflow and...                                              │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-3360                    │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ glibc                       │ CVE-2025-5702  │ HIGH     │              │ 2.34-188.el9                │                               │ glibc: Vector register overwrite bug in glibc                │
-│                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-5702                    │
-├─────────────────────────────┤                │          │              │                             ├───────────────────────────────┤                                                              │
-│ glibc-common                │                │          │              │                             │                               │                                                              │
-│                             │                │          │              │                             │                               │                                                              │
-├─────────────────────────────┤                │          │              │                             ├───────────────────────────────┤                                                              │
-│ glibc-langpack-en           │                │          │              │                             │                               │                                                              │
-│                             │                │          │              │                             │                               │                                                              │
-├─────────────────────────────┤                │          │              │                             ├───────────────────────────────┤                                                              │
-│ glibc-minimal-langpack      │                │          │              │                             │                               │                                                              │
-│                             │                │          │              │                             │                               │                                                              │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ gnupg2                      │ CVE-2022-3219  │ LOW      │              │ 2.3.3-4.el9                 │                               │ gnupg: denial of service issue (resource consumption) using  │
+├─────────────────────────────┼────────────────┤          │              ├─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ gnupg2                      │ CVE-2022-3219  │          │              │ 2.3.3-4.el9                 │                               │ gnupg: denial of service issue (resource consumption) using  │
 │                             │                │          │              │                             │                               │ compressed packets                                           │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2022-3219                    │
 │                             ├────────────────┤          │              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
@@ -297,11 +285,8 @@ Total: 219 (UNKNOWN: 0, LOW: 179, MEDIUM: 32, HIGH: 8, CRITICAL: 0)
 │                             ├────────────────┤          ├──────────────┤                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2023-50495 │          │ will_not_fix │                             │                               │ ncurses: segmentation fault via _nc_wrap_entry()             │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2023-50495                   │
-├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ net-tools                   │ CVE-2025-46836 │ MEDIUM   │ affected     │ 2.0-0.64.20160912git.el9    │                               │ net-tools: net-tools Stack Buffer Overflow                   │
-│                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-46836                   │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ openldap                    │ CVE-2023-2953  │ LOW      │              │ 2.6.8-4.el9                 │                               │ openldap: null pointer dereference in ber_memalloc_x         │
+├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ openldap                    │ CVE-2023-2953  │          │ affected     │ 2.6.8-4.el9                 │                               │ openldap: null pointer dereference in ber_memalloc_x         │
 │                             │                │          │              │                             │                               │ function                                                     │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2023-2953                    │
 ├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
@@ -312,8 +297,12 @@ Total: 219 (UNKNOWN: 0, LOW: 179, MEDIUM: 32, HIGH: 8, CRITICAL: 0)
 │ openssl-libs                │                │          │              │                             │                               │                                                              │
 │                             │                │          │              │                             │                               │                                                              │
 │                             │                │          │              │                             │                               │                                                              │
-├─────────────────────────────┼────────────────┤          │              ├─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ pcre2                       │ CVE-2022-41409 │          │              │ 10.40-6.el9                 │                               │ pcre2: negative repeat value in a pcre2test subject line     │
+├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ pam                         │ CVE-2025-6020  │ HIGH     │ affected     │ 1.5.1-23.el9                │                               │ A flaw was found in linux-pam. The module pam_namespace may  │
+│                             │                │          │              │                             │                               │ use access...                                                │
+│                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-6020                    │
+├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ pcre2                       │ CVE-2022-41409 │ LOW      │ will_not_fix │ 10.40-6.el9                 │                               │ pcre2: negative repeat value in a pcre2test subject line     │
 │                             │                │          │              │                             │                               │ leads to inifinite...                                        │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2022-41409                   │
 ├─────────────────────────────┤                │          │              │                             ├───────────────────────────────┤                                                              │
@@ -324,6 +313,10 @@ Total: 219 (UNKNOWN: 0, LOW: 179, MEDIUM: 32, HIGH: 8, CRITICAL: 0)
 │ python-unversioned-command  │ CVE-2021-23336 │ MEDIUM   │ affected     │ 3.9.21-2.el9                │                               │ python: Web cache poisoning via urllib.parse.parse_qsl and   │
 │                             │                │          │              │                             │                               │ urllib.parse.parse_qs by using a semicolon...                │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2021-23336                   │
+│                             ├────────────────┤          │              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-6069  │          │              │                             │                               │ The html.parser.HTMLParser class had worse-case quadratic    │
+│                             │                │          │              │                             │                               │ complexity w ...                                             │
+│                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-6069                    │
 │                             ├────────────────┼──────────┤              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-0397  │ LOW      │              │                             │                               │ cpython: python: Memory race condition in ssl.SSLContext     │
 │                             │                │          │              │                             │                               │ certificate store methods                                    │
@@ -340,6 +333,10 @@ Total: 219 (UNKNOWN: 0, LOW: 179, MEDIUM: 32, HIGH: 8, CRITICAL: 0)
 │ python3                     │ CVE-2021-23336 │ MEDIUM   │              │                             │                               │ python: Web cache poisoning via urllib.parse.parse_qsl and   │
 │                             │                │          │              │                             │                               │ urllib.parse.parse_qs by using a semicolon...                │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2021-23336                   │
+│                             ├────────────────┤          │              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-6069  │          │              │                             │                               │ The html.parser.HTMLParser class had worse-case quadratic    │
+│                             │                │          │              │                             │                               │ complexity w ...                                             │
+│                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-6069                    │
 │                             ├────────────────┼──────────┤              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-0397  │ LOW      │              │                             │                               │ cpython: python: Memory race condition in ssl.SSLContext     │
 │                             │                │          │              │                             │                               │ certificate store methods                                    │
@@ -356,6 +353,10 @@ Total: 219 (UNKNOWN: 0, LOW: 179, MEDIUM: 32, HIGH: 8, CRITICAL: 0)
 │ python3-libs                │ CVE-2021-23336 │ MEDIUM   │              │                             │                               │ python: Web cache poisoning via urllib.parse.parse_qsl and   │
 │                             │                │          │              │                             │                               │ urllib.parse.parse_qs by using a semicolon...                │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2021-23336                   │
+│                             ├────────────────┤          │              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-6069  │          │              │                             │                               │ The html.parser.HTMLParser class had worse-case quadratic    │
+│                             │                │          │              │                             │                               │ complexity w ...                                             │
+│                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-6069                    │
 │                             ├────────────────┼──────────┤              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-0397  │ LOW      │              │                             │                               │ cpython: python: Memory race condition in ssl.SSLContext     │
 │                             │                │          │              │                             │                               │ certificate store methods                                    │
@@ -394,18 +395,34 @@ Total: 219 (UNKNOWN: 0, LOW: 179, MEDIUM: 32, HIGH: 8, CRITICAL: 0)
 │ systemd                     │ CVE-2021-3997  │ MEDIUM   │              │ 252-53.el9                  │                               │ systemd: Uncontrolled recursion in systemd-tmpfiles when     │
 │                             │                │          │              │                             │                               │ removing files                                               │
 │                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2021-3997                    │
-├─────────────────────────────┤                │          │              │                             ├───────────────────────────────┤                                                              │
-│ systemd-libs                │                │          │              │                             │                               │                                                              │
-│                             │                │          │              │                             │                               │                                                              │
-│                             │                │          │              │                             │                               │                                                              │
-├─────────────────────────────┤                │          │              │                             ├───────────────────────────────┤                                                              │
-│ systemd-pam                 │                │          │              │                             │                               │                                                              │
-│                             │                │          │              │                             │                               │                                                              │
-│                             │                │          │              │                             │                               │                                                              │
-├─────────────────────────────┤                │          │              │                             ├───────────────────────────────┤                                                              │
-│ systemd-rpm-macros          │                │          │              │                             │                               │                                                              │
-│                             │                │          │              │                             │                               │                                                              │
-│                             │                │          │              │                             │                               │                                                              │
+│                             ├────────────────┤          │              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-4598  │          │              │                             │                               │ systemd-coredump: race condition that allows a local         │
+│                             │                │          │              │                             │                               │ attacker to crash a SUID...                                  │
+│                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-4598                    │
+├─────────────────────────────┼────────────────┤          │              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ systemd-libs                │ CVE-2021-3997  │          │              │                             │                               │ systemd: Uncontrolled recursion in systemd-tmpfiles when     │
+│                             │                │          │              │                             │                               │ removing files                                               │
+│                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2021-3997                    │
+│                             ├────────────────┤          │              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-4598  │          │              │                             │                               │ systemd-coredump: race condition that allows a local         │
+│                             │                │          │              │                             │                               │ attacker to crash a SUID...                                  │
+│                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-4598                    │
+├─────────────────────────────┼────────────────┤          │              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ systemd-pam                 │ CVE-2021-3997  │          │              │                             │                               │ systemd: Uncontrolled recursion in systemd-tmpfiles when     │
+│                             │                │          │              │                             │                               │ removing files                                               │
+│                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2021-3997                    │
+│                             ├────────────────┤          │              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-4598  │          │              │                             │                               │ systemd-coredump: race condition that allows a local         │
+│                             │                │          │              │                             │                               │ attacker to crash a SUID...                                  │
+│                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-4598                    │
+├─────────────────────────────┼────────────────┤          │              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ systemd-rpm-macros          │ CVE-2021-3997  │          │              │                             │                               │ systemd: Uncontrolled recursion in systemd-tmpfiles when     │
+│                             │                │          │              │                             │                               │ removing files                                               │
+│                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2021-3997                    │
+│                             ├────────────────┤          │              │                             ├───────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-4598  │          │              │                             │                               │ systemd-coredump: race condition that allows a local         │
+│                             │                │          │              │                             │                               │ attacker to crash a SUID...                                  │
+│                             │                │          │              │                             │                               │ https://avd.aquasec.com/nvd/cve-2025-4598                    │
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────────────┼───────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │ tpm2-tss                    │ CVE-2024-29040 │          │              │ 3.2.3-1.el9                 │                               │ tpm2-tss: arbitrary quote data may go undetected by          │
 │                             │                │          │              │                             │                               │ Fapi_VerifyQuote                                             │
