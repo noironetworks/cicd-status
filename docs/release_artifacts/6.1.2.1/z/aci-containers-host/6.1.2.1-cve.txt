@@ -1,12 +1,12 @@
 NAME                 INSTALLED  FIXED-IN  TYPE       VULNERABILITY        SEVERITY  EPSS%  RISK  
-golang.org/x/crypto  v0.31.0    0.35.0    go-module  GHSA-hcg3-q754-cr77  High      18.26  < 0.1  
-k8s.io/kubernetes    v1.30.10             go-module  GHSA-3wgm-2gw2-vh5m  Medium     9.24  < 0.1  
-golang.org/x/net     v0.33.0    0.38.0    go-module  GHSA-vvgc-356p-c3xw  Medium     5.83  < 0.1  
+golang.org/x/crypto  v0.31.0    0.35.0    go-module  GHSA-hcg3-q754-cr77  High      18.25  < 0.1  
+k8s.io/kubernetes    v1.30.10             go-module  GHSA-3wgm-2gw2-vh5m  Medium     9.19  < 0.1  
+golang.org/x/net     v0.33.0    0.38.0    go-module  GHSA-vvgc-356p-c3xw  Medium     5.82  < 0.1  
 golang.org/x/net     v0.33.0    0.36.0    go-module  GHSA-qxp5-gwg8-xv66  Medium     1.20  < 0.1
 
 quay.io/noiro/aci-containers-host:6.1.2.1.81c2369.z (redhat 9.5)
 ================================================================
-Total: 99 (UNKNOWN: 0, LOW: 62, MEDIUM: 33, HIGH: 4, CRITICAL: 0)
+Total: 103 (UNKNOWN: 0, LOW: 62, MEDIUM: 37, HIGH: 4, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -92,8 +92,20 @@ Total: 99 (UNKNOWN: 0, LOW: 62, MEDIUM: 33, HIGH: 4, CRITICAL: 0)
 │                             │ CVE-2025-3360  │          │              │                     │               │ glibc: GLib prior to 2.82.5 is vulnerable to integer         │
 │                             │                │          │              │                     │               │ overflow and...                                              │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-3360                    │
-├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ gnupg2                      │ CVE-2022-3219  │          │              │ 2.3.3-4.el9         │               │ gnupg: denial of service issue (resource consumption) using  │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ glibc                       │ CVE-2025-5702  │ MEDIUM   │              │ 2.34-170.el9        │               │ glibc: Vector register overwrite bug in glibc                │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-5702                    │
+├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
+│ glibc-common                │                │          │              │                     │               │                                                              │
+│                             │                │          │              │                     │               │                                                              │
+├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
+│ glibc-langpack-en           │                │          │              │                     │               │                                                              │
+│                             │                │          │              │                     │               │                                                              │
+├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
+│ glibc-minimal-langpack      │                │          │              │                     │               │                                                              │
+│                             │                │          │              │                     │               │                                                              │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ gnupg2                      │ CVE-2022-3219  │ LOW      │              │ 2.3.3-4.el9         │               │ gnupg: denial of service issue (resource consumption) using  │
 │                             │                │          │              │                     │               │ compressed packets                                           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-3219                    │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
