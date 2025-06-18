@@ -3,16 +3,16 @@ requests    2.25.1     2.31.0    python  GHSA-j8r2-6x86-q33q  Medium    90.31   
 urllib3     1.26.5     1.26.17   python  GHSA-v845-jxx5-vc9f  High      67.54    0.4  
 idna        2.10       3.7       python  GHSA-jjg7-2v4v-x38h  Medium    63.63    0.3  
 setuptools  53.0.0     65.5.1    python  GHSA-r9hx-vwmv-q579  High      54.23    0.2  
-setuptools  53.0.0     70.0.0    python  GHSA-cx63-2mw6-8hw5  High      45.57    0.2  
-setuptools  53.0.0     78.1.1    python  GHSA-5rjg-fvgr-3xxf  High      29.43  < 0.1  
-requests    2.25.1     2.32.4    python  GHSA-9hjg-9r4m-mvj7  Medium    19.62  < 0.1  
-urllib3     1.26.5     1.26.18   python  GHSA-g4mx-q9vg-27p4  Medium    19.64  < 0.1  
-urllib3     1.26.5     1.26.19   python  GHSA-34jh-p97f-mpxf  Medium     7.94  < 0.1  
-requests    2.25.1     2.32.0    python  GHSA-9wx4-h78v-vm56  Medium     2.71  < 0.1
+setuptools  53.0.0     70.0.0    python  GHSA-cx63-2mw6-8hw5  High      45.54    0.2  
+setuptools  53.0.0     78.1.1    python  GHSA-5rjg-fvgr-3xxf  High      29.39  < 0.1  
+requests    2.25.1     2.32.4    python  GHSA-9hjg-9r4m-mvj7  Medium    19.61  < 0.1  
+urllib3     1.26.5     1.26.18   python  GHSA-g4mx-q9vg-27p4  Medium    19.62  < 0.1  
+urllib3     1.26.5     1.26.19   python  GHSA-34jh-p97f-mpxf  Medium     7.91  < 0.1  
+requests    2.25.1     2.32.0    python  GHSA-9wx4-h78v-vm56  Medium     2.70  < 0.1
 
 quay.io/noiro/aci-containers-webhook:6.1.2.1.81c2369.z (redhat 9.6)
 ===================================================================
-Total: 210 (UNKNOWN: 0, LOW: 175, MEDIUM: 31, HIGH: 4, CRITICAL: 0)
+Total: 213 (UNKNOWN: 0, LOW: 175, MEDIUM: 34, HIGH: 4, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -133,8 +133,17 @@ Total: 210 (UNKNOWN: 0, LOW: 175, MEDIUM: 31, HIGH: 4, CRITICAL: 0)
 │                             │ CVE-2025-3360  │          │              │                     │               │ glibc: GLib prior to 2.82.5 is vulnerable to integer         │
 │                             │                │          │              │                     │               │ overflow and...                                              │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-3360                    │
-├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ gnupg2                      │ CVE-2022-3219  │          │              │ 2.3.3-4.el9         │               │ gnupg: denial of service issue (resource consumption) using  │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ glibc                       │ CVE-2025-5702  │ MEDIUM   │              │ 2.34-168.el9_6.19   │               │ glibc: Vector register overwrite bug in glibc                │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-5702                    │
+├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
+│ glibc-common                │                │          │              │                     │               │                                                              │
+│                             │                │          │              │                     │               │                                                              │
+├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
+│ glibc-minimal-langpack      │                │          │              │                     │               │                                                              │
+│                             │                │          │              │                     │               │                                                              │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ gnupg2                      │ CVE-2022-3219  │ LOW      │              │ 2.3.3-4.el9         │               │ gnupg: denial of service issue (resource consumption) using  │
 │                             │                │          │              │                     │               │ compressed packets                                           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-3219                    │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
