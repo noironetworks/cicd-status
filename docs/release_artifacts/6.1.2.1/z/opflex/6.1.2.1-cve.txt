@@ -2,7 +2,7 @@ No vulnerabilities found
 
 quay.io/noiro/opflex:6.1.2.1.81c2369.z (redhat 9.5)
 ===================================================
-Total: 201 (UNKNOWN: 0, LOW: 168, MEDIUM: 29, HIGH: 4, CRITICAL: 0)
+Total: 205 (UNKNOWN: 0, LOW: 168, MEDIUM: 33, HIGH: 4, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬─────────────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │    Fixed Version    │                            Title                             │
@@ -88,8 +88,20 @@ Total: 201 (UNKNOWN: 0, LOW: 168, MEDIUM: 29, HIGH: 4, CRITICAL: 0)
 │                             │ CVE-2025-3360  │          │              │                     │                     │ glibc: GLib prior to 2.82.5 is vulnerable to integer         │
 │                             │                │          │              │                     │                     │ overflow and...                                              │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-3360                    │
-├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼─────────────────────┼──────────────────────────────────────────────────────────────┤
-│ gnupg2                      │ CVE-2022-3219  │          │              │ 2.3.3-4.el9         │                     │ gnupg: denial of service issue (resource consumption) using  │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼─────────────────────┼──────────────────────────────────────────────────────────────┤
+│ glibc                       │ CVE-2025-5702  │ MEDIUM   │              │ 2.34-170.el9        │                     │ glibc: Vector register overwrite bug in glibc                │
+│                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-5702                    │
+├─────────────────────────────┤                │          │              │                     ├─────────────────────┤                                                              │
+│ glibc-common                │                │          │              │                     │                     │                                                              │
+│                             │                │          │              │                     │                     │                                                              │
+├─────────────────────────────┤                │          │              │                     ├─────────────────────┤                                                              │
+│ glibc-langpack-en           │                │          │              │                     │                     │                                                              │
+│                             │                │          │              │                     │                     │                                                              │
+├─────────────────────────────┤                │          │              │                     ├─────────────────────┤                                                              │
+│ glibc-minimal-langpack      │                │          │              │                     │                     │                                                              │
+│                             │                │          │              │                     │                     │                                                              │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼─────────────────────┼──────────────────────────────────────────────────────────────┤
+│ gnupg2                      │ CVE-2022-3219  │ LOW      │              │ 2.3.3-4.el9         │                     │ gnupg: denial of service issue (resource consumption) using  │
 │                             │                │          │              │                     │                     │ compressed packets                                           │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2022-3219                    │
 │                             ├────────────────┤          │              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
@@ -224,8 +236,7 @@ Total: 201 (UNKNOWN: 0, LOW: 168, MEDIUM: 29, HIGH: 4, CRITICAL: 0)
 │                             │                │          │              │                     │                     │                                                              │
 │                             │                │          │              │                     │                     │                                                              │
 ├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼─────────────────────┼──────────────────────────────────────────────────────────────┤
-│ pam                         │ CVE-2025-6020  │ HIGH     │ affected     │ 1.5.1-23.el9        │                     │ A flaw was found in linux-pam. The module pam_namespace may  │
-│                             │                │          │              │                     │                     │ use access...                                                │
+│ pam                         │ CVE-2025-6020  │ HIGH     │ affected     │ 1.5.1-23.el9        │                     │ linux-pam: Linux-pam directory Traversal                     │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-6020                    │
 ├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼─────────────────────┼──────────────────────────────────────────────────────────────┤
 │ pcre2                       │ CVE-2022-41409 │ LOW      │ will_not_fix │ 10.40-6.el9         │                     │ pcre2: negative repeat value in a pcre2test subject line     │
@@ -240,8 +251,7 @@ Total: 201 (UNKNOWN: 0, LOW: 168, MEDIUM: 29, HIGH: 4, CRITICAL: 0)
 │                             │                │          │              │                     │                     │ urllib.parse.parse_qs by using a semicolon...                │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2021-23336                   │
 │                             ├────────────────┤          │              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-6069  │          │              │                     │                     │ The html.parser.HTMLParser class had worse-case quadratic    │
-│                             │                │          │              │                     │                     │ complexity w ...                                             │
+│                             │ CVE-2025-6069  │          │              │                     │                     │ cpython: Python HTMLParser quadratic complexity              │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-6069                    │
 │                             ├────────────────┼──────────┤              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-0397  │ LOW      │              │                     │                     │ cpython: python: Memory race condition in ssl.SSLContext     │
@@ -260,8 +270,7 @@ Total: 201 (UNKNOWN: 0, LOW: 168, MEDIUM: 29, HIGH: 4, CRITICAL: 0)
 │                             │                │          │              │                     │                     │ urllib.parse.parse_qs by using a semicolon...                │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2021-23336                   │
 │                             ├────────────────┤          │              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-6069  │          │              │                     │                     │ The html.parser.HTMLParser class had worse-case quadratic    │
-│                             │                │          │              │                     │                     │ complexity w ...                                             │
+│                             │ CVE-2025-6069  │          │              │                     │                     │ cpython: Python HTMLParser quadratic complexity              │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-6069                    │
 │                             ├────────────────┼──────────┤              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-0397  │ LOW      │              │                     │                     │ cpython: python: Memory race condition in ssl.SSLContext     │
@@ -280,8 +289,7 @@ Total: 201 (UNKNOWN: 0, LOW: 168, MEDIUM: 29, HIGH: 4, CRITICAL: 0)
 │                             │                │          │              │                     │                     │ urllib.parse.parse_qs by using a semicolon...                │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2021-23336                   │
 │                             ├────────────────┤          │              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-6069  │          │              │                     │                     │ The html.parser.HTMLParser class had worse-case quadratic    │
-│                             │                │          │              │                     │                     │ complexity w ...                                             │
+│                             │ CVE-2025-6069  │          │              │                     │                     │ cpython: Python HTMLParser quadratic complexity              │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-6069                    │
 │                             ├────────────────┼──────────┤              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-0397  │ LOW      │              │                     │                     │ cpython: python: Memory race condition in ssl.SSLContext     │
