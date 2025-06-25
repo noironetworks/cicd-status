@@ -5272,20 +5272,24 @@ releases:
       severity_link: https://quay.io/repository/noiro/aci-containers-host-ovscni/manifest/sha256:897fb97397aced9ca361af3ad3dc4945a533e74812e6b08e040ba6a902e14a49?tab=vulnerabilities
       severity_type: quay
     - base-image:
-      - cve: release_artifacts/6.1.2.1/z/opflex/6.1.2.1-cve-base.txt
+      - base_cve_error: ''
+        cve: release_artifacts/6.1.2.1/z/opflex/6.1.2.1-cve-base.txt
         severity:
         - C: 0
-          H: 0
-          L: 0
-          M: 0
+          H: 13
+          L: 56
+          M: 50
           U: 0
-        sha: e12131db2e2b6572613589a94b7f615d4ac89d94f859dad05908aeb478fb090f
+        severity_link: https://quay.io/repository/noirolabs/ubi9-minimal/manifest/sha256:b59e3773fec0663dde7a3194eea1f014d38795dd6ff80503752df76fd69993b4?tab=vulnerabilities
+        severity_type: quay
+        sha: b59e3773fec0663dde7a3194eea1f014d38795dd6ff80503752df76fd69993b4
       build-logs: release_artifacts/6.1.2.1/z/opflex/6.1.2.1-buildlog.txt
       build-time: 2025-06-24 17:59:05 PDT
       commit:
       - link: https://github.com/noironetworks/opflex/commit/5206e255e1a2a5c5c4bc0482a4f7900d8aaa1653
         sha: 5206e255e1a2a5c5c4bc0482a4f7900d8aaa1653
-      cve: release_artifacts/6.1.2.1/z/opflex/6.1.2.1-cve.txt
+      cve: release_artifacts/6.1.2.1/z/opflex/6.1.2.1-quay-cve.txt
+      cve_error: ''
       docker:
       - link: https://hub.docker.com/layers/noiro/opflex/6.1.2.1.81c2369.z/images/sha256-71afca76a1b7b8ca4a8dd0c2e71c66489e29d3e3784a4952ea2d410a2b813e0c?context=explore
         sha: 71afca76a1b7b8ca4a8dd0c2e71c66489e29d3e3784a4952ea2d410a2b813e0c
@@ -5304,11 +5308,12 @@ releases:
       sbom: release_artifacts/6.1.2.1/z/opflex/6.1.2.1-sbom.txt
       severity:
       - C: 0
-        H: 0
-        L: 0
-        M: 0
+        H: 13
+        L: 166
+        M: 45
         U: 0
-      severity_type: grype
+      severity_link: https://quay.io/repository/noiro/opflex/manifest/sha256:71afca76a1b7b8ca4a8dd0c2e71c66489e29d3e3784a4952ea2d410a2b813e0c?tab=vulnerabilities
+      severity_type: quay
     last_updated: 2025-06-24 17:59:05 PDT
     release_name: 6.1.2.1.z
   - acc_provision: []
@@ -8255,7 +8260,7 @@ releases:
         severity_type: quay
         sha: b59e3773fec0663dde7a3194eea1f014d38795dd6ff80503752df76fd69993b4
       build-logs: release_artifacts/6.1.1.4/z/opflex/6.1.1.4-buildlog.txt
-      build-time: 2025-06-23 19:12:06 PDT
+      build-time: 2025-06-24 18:07:38 PDT
       commit:
       - link: https://github.com/noironetworks/opflex/commit/389f76dcac4203df429f8d0ccce258e133e3b504
         sha: 389f76dcac4203df429f8d0ccce258e133e3b504
@@ -8265,17 +8270,17 @@ releases:
       - link: https://hub.docker.com/layers/noiro/opflex/6.1.1.4.81c2369.z/images/sha256-71efa028aca9f0300c50f656dc6c729e80cfc853fa44fa10e9d5aac501ddea46?context=explore
         sha: 71efa028aca9f0300c50f656dc6c729e80cfc853fa44fa10e9d5aac501ddea46
         tag: 6.1.1.4.81c2369.z
-      - link: https://hub.docker.com/layers/noiro/opflex/6.1.1.4.81c2369.062425.4734/images/sha256-71efa028aca9f0300c50f656dc6c729e80cfc853fa44fa10e9d5aac501ddea46?context=explore
-        sha: 71efa028aca9f0300c50f656dc6c729e80cfc853fa44fa10e9d5aac501ddea46
-        tag: 6.1.1.4.81c2369.062425.4734
+      - link: https://hub.docker.com/layers/noiro/opflex/6.1.1.4.81c2369.062525.4738/images/sha256-error?context=explore
+        sha: error
+        tag: 6.1.1.4.81c2369.062525.4738
       name: opflex
       quay:
       - link: https://quay.io/noiro/opflex:6.1.1.4.81c2369.z
         sha: 71efa028aca9f0300c50f656dc6c729e80cfc853fa44fa10e9d5aac501ddea46
         tag: 6.1.1.4.81c2369.z
-      - link: https://quay.io/noiro/opflex:6.1.1.4.81c2369.062425.4734
+      - link: https://quay.io/noiro/opflex:6.1.1.4.81c2369.062525.4738
         sha: 71efa028aca9f0300c50f656dc6c729e80cfc853fa44fa10e9d5aac501ddea46
-        tag: 6.1.1.4.81c2369.062425.4734
+        tag: 6.1.1.4.81c2369.062525.4738
       sbom: release_artifacts/6.1.1.4/z/opflex/6.1.1.4-sbom.txt
       severity:
       - C: 0
@@ -8328,7 +8333,7 @@ releases:
         U: 3
       severity_link: https://quay.io/repository/noiro/aci-containers-host-ovscni/manifest/sha256:df030ecc30c313310bce09f4af6bbabe0e0593e70893051d1c8e1eb7c15ce713?tab=vulnerabilities
       severity_type: quay
-    last_updated: 2025-06-23 19:12:06 PDT
+    last_updated: 2025-06-24 18:07:38 PDT
     release_name: 6.1.1.4.z
   - acc_provision: []
     container_images: []
