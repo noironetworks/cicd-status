@@ -1,18 +1,21 @@
-NAME        INSTALLED  FIXED-IN  TYPE    VULNERABILITY        SEVERITY  EPSS%  RISK  
-requests    2.25.1     2.31.0    python  GHSA-j8r2-6x86-q33q  Medium    90.31    3.4  
-urllib3     1.26.5     1.26.17   python  GHSA-v845-jxx5-vc9f  High      67.54    0.4  
-idna        2.10       3.7       python  GHSA-jjg7-2v4v-x38h  Medium    63.63    0.3  
-setuptools  53.0.0     65.5.1    python  GHSA-r9hx-vwmv-q579  High      54.23    0.2  
-setuptools  53.0.0     70.0.0    python  GHSA-cx63-2mw6-8hw5  High      45.54    0.2  
-setuptools  53.0.0     78.1.1    python  GHSA-5rjg-fvgr-3xxf  High      29.39  < 0.1  
-requests    2.25.1     2.32.4    python  GHSA-9hjg-9r4m-mvj7  Medium    19.61  < 0.1  
-urllib3     1.26.5     1.26.18   python  GHSA-g4mx-q9vg-27p4  Medium    19.62  < 0.1  
-urllib3     1.26.5     1.26.19   python  GHSA-34jh-p97f-mpxf  Medium     7.91  < 0.1  
-requests    2.25.1     2.32.0    python  GHSA-9wx4-h78v-vm56  Medium     2.70  < 0.1
+NAME               INSTALLED  FIXED-IN  TYPE       VULNERABILITY        SEVERITY  EPSS%  RISK  
+requests           2.25.1     2.31.0    python     GHSA-j8r2-6x86-q33q  Medium    90.45    3.5  
+urllib3            1.26.5     1.26.17   python     GHSA-v845-jxx5-vc9f  High      67.54    0.4  
+setuptools         53.0.0     65.5.1    python     GHSA-r9hx-vwmv-q579  High      54.16    0.2  
+idna               2.10       3.7       python     GHSA-jjg7-2v4v-x38h  Medium    57.02    0.2  
+setuptools         53.0.0     70.0.0    python     GHSA-cx63-2mw6-8hw5  High      45.45    0.2  
+setuptools         53.0.0     78.1.1    python     GHSA-5rjg-fvgr-3xxf  High      31.85  < 0.1  
+requests           2.25.1     2.32.4    python     GHSA-9hjg-9r4m-mvj7  Medium    19.61  < 0.1  
+urllib3            1.26.5     1.26.18   python     GHSA-g4mx-q9vg-27p4  Medium    19.63  < 0.1  
+urllib3            1.26.5     1.26.19   python     GHSA-34jh-p97f-mpxf  Medium     7.96  < 0.1  
+requests           2.25.1     2.32.0    python     GHSA-9wx4-h78v-vm56  Medium     2.69  < 0.1  
+urllib3            1.26.5     2.5.0     python     GHSA-pq67-6m6q-mj2v  Medium     0.75  < 0.1  
+urllib3            1.26.5     2.5.0     python     GHSA-48p4-8xcf-vxj5  Medium     0.56  < 0.1  
+k8s.io/kubernetes  v1.32.5    1.32.6    go-module  GHSA-hj2p-8wj8-pfq4  Low        1.05  < 0.1
 
 quay.io/noiro/aci-containers-operator:6.1.1.4.81c2369.z (redhat 9.6)
 ====================================================================
-Total: 213 (UNKNOWN: 0, LOW: 175, MEDIUM: 34, HIGH: 4, CRITICAL: 0)
+Total: 225 (UNKNOWN: 0, LOW: 175, MEDIUM: 40, HIGH: 10, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -30,7 +33,7 @@ Total: 213 (UNKNOWN: 0, LOW: 175, MEDIUM: 34, HIGH: 4, CRITICAL: 0)
 │                             │ CVE-2024-9681  │          │              │                     │               │ curl: HSTS subdomain overwrites parent cache entry           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-9681                    │
 ├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ elfutils-default-yama-scope │ CVE-2024-25260 │          │ will_not_fix │ 0.192-5.el9         │               │ elfutils: global-buffer-overflow exists in the function      │
+│ elfutils-default-yama-scope │ CVE-2024-25260 │          │ will_not_fix │ 0.192-6.el9_6       │               │ elfutils: global-buffer-overflow exists in the function      │
 │                             │                │          │              │                     │               │ ebl_machine_flag_name in eblmachineflagname.c                │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-25260                   │
 │                             ├────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -81,7 +84,7 @@ Total: 213 (UNKNOWN: 0, LOW: 175, MEDIUM: 34, HIGH: 4, CRITICAL: 0)
 │ gawk                        │ CVE-2023-4156  │          │              │ 5.1.0-6.el9         │               │ gawk: heap out of bound read in builtin.c                    │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-4156                    │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ gdb-gdbserver               │ CVE-2025-5244  │ MEDIUM   │              │ 14.2-4.el9          │               │ binutils: GNU Binutils ld elflink.c elf_gc_sweep memory      │
+│ gdb-gdbserver               │ CVE-2025-5244  │ MEDIUM   │              │ 14.2-4.1.el9_6      │               │ binutils: GNU Binutils ld elflink.c elf_gc_sweep memory      │
 │                             │                │          │              │                     │               │ corruption                                                   │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-5244                    │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -151,11 +154,11 @@ Total: 213 (UNKNOWN: 0, LOW: 175, MEDIUM: 34, HIGH: 4, CRITICAL: 0)
 │                             │                │          │              │                     │               │ keyring                                                      │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-30258                   │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ krb5-libs                   │ CVE-2025-3576  │ MEDIUM   │              │ 1.21.1-6.el9        │               │ krb5: Kerberos RC4-HMAC-MD5 Checksum Vulnerability Enabling  │
+│ krb5-libs                   │ CVE-2025-3576  │ MEDIUM   │              │ 1.21.1-8.el9_6      │               │ krb5: Kerberos RC4-HMAC-MD5 Checksum Vulnerability Enabling  │
 │                             │                │          │              │                     │               │ Message Spoofing via MD5 Collisions                          │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-3576                    │
 ├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libarchive                  │ CVE-2023-30571 │          │ will_not_fix │ 3.5.3-4.el9         │               │ libarchive: Race condition in multi-threaded use of          │
+│ libarchive                  │ CVE-2023-30571 │          │ will_not_fix │ 3.5.3-5.el9_6       │               │ libarchive: Race condition in multi-threaded use of          │
 │                             │                │          │              │                     │               │ archive_write_disk_header() on posix based systems...        │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-30571                   │
 │                             ├────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -286,8 +289,7 @@ Total: 213 (UNKNOWN: 0, LOW: 175, MEDIUM: 34, HIGH: 4, CRITICAL: 0)
 │                             │                │          │              │                     │               │                                                              │
 │                             │                │          │              │                     │               │                                                              │
 ├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ pam                         │ CVE-2025-6020  │ HIGH     │ affected     │ 1.5.1-23.el9        │               │ A flaw was found in linux-pam. The module pam_namespace may  │
-│                             │                │          │              │                     │               │ use access...                                                │
+│ pam                         │ CVE-2025-6020  │ HIGH     │ affected     │ 1.5.1-25.el9_6      │               │ linux-pam: Linux-pam directory Traversal                     │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-6020                    │
 ├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ pcre2                       │ CVE-2022-41409 │ LOW      │ will_not_fix │ 10.40-6.el9         │               │ pcre2: negative repeat value in a pcre2test subject line     │
@@ -298,12 +300,30 @@ Total: 213 (UNKNOWN: 0, LOW: 175, MEDIUM: 34, HIGH: 4, CRITICAL: 0)
 │                             │                │          │              │                     │               │                                                              │
 │                             │                │          │              │                     │               │                                                              │
 ├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ python3                     │ CVE-2021-23336 │ MEDIUM   │ affected     │ 3.9.21-2.el9        │               │ python: Web cache poisoning via urllib.parse.parse_qsl and   │
+│ python3                     │ CVE-2024-12718 │ HIGH     │ affected     │ 3.9.21-2.el9        │               │ cpython: Bypass extraction filter to modify file metadata    │
+│                             │                │          │              │                     │               │ outside extraction directory                                 │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-12718                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-4138  │          │              │                     │               │ cpython: python: Bypassing extraction filter to create       │
+│                             │                │          │              │                     │               │ symlinks to arbitrary targets outside...                     │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4138                    │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-4517  │          │              │                     │               │ python: cpython: Arbitrary writes via tarfile realpath       │
+│                             │                │          │              │                     │               │ overflow                                                     │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4517                    │
+│                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2021-23336 │ MEDIUM   │              │                     │               │ python: Web cache poisoning via urllib.parse.parse_qsl and   │
 │                             │                │          │              │                     │               │ urllib.parse.parse_qs by using a semicolon...                │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2021-23336                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-6069  │          │              │                     │               │ The html.parser.HTMLParser class had worse-case quadratic    │
-│                             │                │          │              │                     │               │ complexity w ...                                             │
+│                             │ CVE-2025-4330  │          │              │                     │               │ cpython: Extraction filter bypass for linking outside        │
+│                             │                │          │              │                     │               │ extraction directory                                         │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4330                    │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-4435  │          │              │                     │               │ cpython: Tarfile extracts filtered members when errorlevel=0 │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4435                    │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-6069  │          │              │                     │               │ cpython: Python HTMLParser quadratic complexity              │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-6069                    │
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-0397  │ LOW      │              │                     │               │ cpython: python: Memory race condition in ssl.SSLContext     │
@@ -318,12 +338,30 @@ Total: 213 (UNKNOWN: 0, LOW: 175, MEDIUM: 34, HIGH: 4, CRITICAL: 0)
 │                             │                │          │              │                     │               │ unicode-encoding of email headers                            │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-1795                    │
 ├─────────────────────────────┼────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ python3-libs                │ CVE-2021-23336 │ MEDIUM   │              │                     │               │ python: Web cache poisoning via urllib.parse.parse_qsl and   │
+│ python3-libs                │ CVE-2024-12718 │ HIGH     │              │                     │               │ cpython: Bypass extraction filter to modify file metadata    │
+│                             │                │          │              │                     │               │ outside extraction directory                                 │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-12718                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-4138  │          │              │                     │               │ cpython: python: Bypassing extraction filter to create       │
+│                             │                │          │              │                     │               │ symlinks to arbitrary targets outside...                     │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4138                    │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-4517  │          │              │                     │               │ python: cpython: Arbitrary writes via tarfile realpath       │
+│                             │                │          │              │                     │               │ overflow                                                     │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4517                    │
+│                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2021-23336 │ MEDIUM   │              │                     │               │ python: Web cache poisoning via urllib.parse.parse_qsl and   │
 │                             │                │          │              │                     │               │ urllib.parse.parse_qs by using a semicolon...                │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2021-23336                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-6069  │          │              │                     │               │ The html.parser.HTMLParser class had worse-case quadratic    │
-│                             │                │          │              │                     │               │ complexity w ...                                             │
+│                             │ CVE-2025-4330  │          │              │                     │               │ cpython: Extraction filter bypass for linking outside        │
+│                             │                │          │              │                     │               │ extraction directory                                         │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4330                    │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-4435  │          │              │                     │               │ cpython: Tarfile extracts filtered members when errorlevel=0 │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4435                    │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-6069  │          │              │                     │               │ cpython: Python HTMLParser quadratic complexity              │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-6069                    │
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-0397  │ LOW      │              │                     │               │ cpython: python: Memory race condition in ssl.SSLContext     │
@@ -341,6 +379,14 @@ Total: 213 (UNKNOWN: 0, LOW: 175, MEDIUM: 34, HIGH: 4, CRITICAL: 0)
 │ python3-pip-wheel           │ CVE-2024-47081 │ MEDIUM   │              │ 21.3.1-1.el9        │               │ requests: Requests vulnerable to .netrc credentials leak via │
 │                             │                │          │              │                     │               │ malicious URLs                                               │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-47081                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-50181 │          │              │                     │               │ urllib3: urllib3 redirects are not disabled when retries are │
+│                             │                │          │              │                     │               │ disabled on PoolManager...                                   │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-50181                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-50182 │          │              │                     │               │ urllib3: urllib3 does not control redirects in browsers and  │
+│                             │                │          │              │                     │               │ Node.js                                                      │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-50182                   │
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2021-3572  │ LOW      │              │                     │               │ python-pip: Incorrect handling of unicode separators in git  │
 │                             │                │          │              │                     │               │ references                                                   │
@@ -364,7 +410,7 @@ Total: 213 (UNKNOWN: 0, LOW: 175, MEDIUM: 34, HIGH: 4, CRITICAL: 0)
 │                             │ CVE-2024-0232  │          │ affected     │                     │               │ sqlite: use-after-free bug in jsonParseAddNodeArray          │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-0232                    │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ systemd                     │ CVE-2021-3997  │ MEDIUM   │              │ 252-51.el9          │               │ systemd: Uncontrolled recursion in systemd-tmpfiles when     │
+│ systemd                     │ CVE-2021-3997  │ MEDIUM   │              │ 252-51.el9_6.1      │               │ systemd: Uncontrolled recursion in systemd-tmpfiles when     │
 │                             │                │          │              │                     │               │ removing files                                               │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2021-3997                    │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -763,3 +809,15 @@ Total: 213 (UNKNOWN: 0, LOW: 175, MEDIUM: 34, HIGH: 4, CRITICAL: 0)
 │                             │ CVE-2025-26603 │          │              │                     │               │ vim: heap-use-after-free in function str_to_reg in vim/vim   │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-26603                   │
 └─────────────────────────────┴────────────────┴──────────┴──────────────┴─────────────────────┴───────────────┴──────────────────────────────────────────────────────────────┘
+
+usr/local/bin/aci-containers-operator (gobinary)
+================================================
+Total: 1 (UNKNOWN: 0, LOW: 1, MEDIUM: 0, HIGH: 0, CRITICAL: 0)
+
+┌───────────────────┬───────────────┬──────────┬────────┬───────────────────┬────────────────┬──────────────────────────────────────────────────────────────┐
+│      Library      │ Vulnerability │ Severity │ Status │ Installed Version │ Fixed Version  │                            Title                             │
+├───────────────────┼───────────────┼──────────┼────────┼───────────────────┼────────────────┼──────────────────────────────────────────────────────────────┤
+│ k8s.io/kubernetes │ CVE-2025-4563 │ LOW      │ fixed  │ v1.32.5           │ 1.32.6, 1.33.2 │ kube-apiserver: NodeRestriction Admission Controller Dynamic │
+│                   │               │          │        │                   │                │ Resource Allocation Bypass                                   │
+│                   │               │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2025-4563                    │
+└───────────────────┴───────────────┴──────────┴────────┴───────────────────┴────────────────┴──────────────────────────────────────────────────────────────┘
