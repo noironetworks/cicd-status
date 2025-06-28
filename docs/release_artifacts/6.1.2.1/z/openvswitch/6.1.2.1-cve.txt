@@ -2,7 +2,7 @@ No vulnerabilities found
 
 quay.io/noiro/openvswitch:6.1.2.1.81c2369.z (redhat 9.5)
 ========================================================
-Total: 231 (UNKNOWN: 0, LOW: 175, MEDIUM: 43, HIGH: 13, CRITICAL: 0)
+Total: 230 (UNKNOWN: 0, LOW: 173, MEDIUM: 44, HIGH: 13, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬─────────────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │    Fixed Version    │                            Title                             │
@@ -124,8 +124,8 @@ Total: 231 (UNKNOWN: 0, LOW: 175, MEDIUM: 43, HIGH: 13, CRITICAL: 0)
 │                             │ CVE-2025-30258 │          │              │                     │                     │ gnupg: verification DoS due to a malicious subkey in the     │
 │                             │                │          │              │                     │                     │ keyring                                                      │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-30258                   │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼─────────────────────┼──────────────────────────────────────────────────────────────┤
-│ krb5-libs                   │ CVE-2025-3576  │ MEDIUM   │              │ 1.21.1-6.el9        │                     │ krb5: Kerberos RC4-HMAC-MD5 Checksum Vulnerability Enabling  │
+├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼─────────────────────┼──────────────────────────────────────────────────────────────┤
+│ krb5-libs                   │ CVE-2025-3576  │ MEDIUM   │ fixed        │ 1.21.1-6.el9        │ 1.21.1-8.el9_6      │ krb5: Kerberos RC4-HMAC-MD5 Checksum Vulnerability Enabling  │
 │                             │                │          │              │                     │                     │ Message Spoofing via MD5 Collisions                          │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-3576                    │
 ├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼─────────────────────┼──────────────────────────────────────────────────────────────┤
@@ -133,10 +133,10 @@ Total: 231 (UNKNOWN: 0, LOW: 175, MEDIUM: 43, HIGH: 13, CRITICAL: 0)
 │                             │                │          │              │                     │                     │ archive_write_disk_header() on posix based systems...        │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2023-30571                   │
 │                             ├────────────────┤          ├──────────────┤                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-25724 │          │ affected     │                     │                     │ libarchive: Buffer Overflow vulnerability in libarchive      │
+│                             │ CVE-2025-25724 │          │ fixed        │                     │ 3.5.3-5.el9_6       │ libarchive: Buffer Overflow vulnerability in libarchive      │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-25724                   │
-│                             ├────────────────┼──────────┤              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-1632  │ LOW      │              │                     │                     │ libarchive: null pointer dereference in bsdunzip.c           │
+│                             ├────────────────┼──────────┼──────────────┤                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-1632  │ LOW      │ affected     │                     │                     │ libarchive: null pointer dereference in bsdunzip.c           │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-1632                    │
 │                             ├────────────────┤          │              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-5914  │          │              │                     │                     │ libarchive: Double free at                                   │
@@ -207,6 +207,9 @@ Total: 231 (UNKNOWN: 0, LOW: 175, MEDIUM: 43, HIGH: 13, CRITICAL: 0)
 │                             │ CVE-2025-32414 │ MEDIUM   │              │                     │                     │ libxml2: Out-of-Bounds Read in libxml2                       │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-32414                   │
 │                             ├────────────────┤          │              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-32415 │          │              │                     │                     │ libxml2: Out-of-bounds Read in xmlSchemaIDCFillNodeTables    │
+│                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-32415                   │
+│                             ├────────────────┤          │              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-6021  │          │              │                     │                     │ libxml2: Integer Overflow in xmlBuildQName() Leads to Stack  │
 │                             │                │          │              │                     │                     │ Buffer Overflow in libxml2...                                │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-6021                    │
@@ -220,9 +223,6 @@ Total: 231 (UNKNOWN: 0, LOW: 175, MEDIUM: 43, HIGH: 13, CRITICAL: 0)
 │                             ├────────────────┤          │              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-27113 │          │              │                     │                     │ libxml2: NULL Pointer Dereference in libxml2 xmlPatMatch     │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-27113                   │
-│                             ├────────────────┤          │              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-32415 │          │              │                     │                     │ libxml2: Out-of-bounds Read in xmlSchemaIDCFillNodeTables    │
-│                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-32415                   │
 │                             ├────────────────┤          │              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-6170  │          │              │                     │                     │ libxml2: Stack Buffer Overflow in xmllint Interactive Shell  │
 │                             │                │          │              │                     │                     │ Command Handling                                             │
@@ -260,7 +260,7 @@ Total: 231 (UNKNOWN: 0, LOW: 175, MEDIUM: 43, HIGH: 13, CRITICAL: 0)
 │                             │                │          │              │                     │                     │                                                              │
 │                             │                │          │              │                     │                     │                                                              │
 ├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼─────────────────────┼──────────────────────────────────────────────────────────────┤
-│ pam                         │ CVE-2025-6020  │ HIGH     │ affected     │ 1.5.1-23.el9        │                     │ linux-pam: Linux-pam directory Traversal                     │
+│ pam                         │ CVE-2025-6020  │ HIGH     │ fixed        │ 1.5.1-23.el9        │ 1.5.1-25.el9_6      │ linux-pam: Linux-pam directory Traversal                     │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-6020                    │
 ├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼─────────────────────┼──────────────────────────────────────────────────────────────┤
 │ pcre2                       │ CVE-2022-41409 │ LOW      │ will_not_fix │ 10.40-6.el9         │                     │ pcre2: negative repeat value in a pcre2test subject line     │
@@ -279,7 +279,8 @@ Total: 231 (UNKNOWN: 0, LOW: 175, MEDIUM: 43, HIGH: 13, CRITICAL: 0)
 │                             │                │          │              │                     │                     │ symlinks to arbitrary targets outside...                     │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-4138                    │
 │                             ├────────────────┤          │              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-4517  │          │              │                     │                     │ python: Arbitrary writes via tarfile realpath overflow       │
+│                             │ CVE-2025-4517  │          │              │                     │                     │ python: cpython: Arbitrary writes via tarfile realpath       │
+│                             │                │          │              │                     │                     │ overflow                                                     │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-4517                    │
 │                             ├────────────────┼──────────┤              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2021-23336 │ MEDIUM   │              │                     │                     │ python: Web cache poisoning via urllib.parse.parse_qsl and   │
@@ -316,7 +317,8 @@ Total: 231 (UNKNOWN: 0, LOW: 175, MEDIUM: 43, HIGH: 13, CRITICAL: 0)
 │                             │                │          │              │                     │                     │ symlinks to arbitrary targets outside...                     │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-4138                    │
 │                             ├────────────────┤          │              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-4517  │          │              │                     │                     │ python: Arbitrary writes via tarfile realpath overflow       │
+│                             │ CVE-2025-4517  │          │              │                     │                     │ python: cpython: Arbitrary writes via tarfile realpath       │
+│                             │                │          │              │                     │                     │ overflow                                                     │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-4517                    │
 │                             ├────────────────┼──────────┤              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2021-23336 │ MEDIUM   │              │                     │                     │ python: Web cache poisoning via urllib.parse.parse_qsl and   │
@@ -353,7 +355,8 @@ Total: 231 (UNKNOWN: 0, LOW: 175, MEDIUM: 43, HIGH: 13, CRITICAL: 0)
 │                             │                │          │              │                     │                     │ symlinks to arbitrary targets outside...                     │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-4138                    │
 │                             ├────────────────┤          │              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-4517  │          │              │                     │                     │ python: Arbitrary writes via tarfile realpath overflow       │
+│                             │ CVE-2025-4517  │          │              │                     │                     │ python: cpython: Arbitrary writes via tarfile realpath       │
+│                             │                │          │              │                     │                     │ overflow                                                     │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-4517                    │
 │                             ├────────────────┼──────────┤              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2021-23336 │ MEDIUM   │              │                     │                     │ python: Web cache poisoning via urllib.parse.parse_qsl and   │
@@ -386,12 +389,12 @@ Total: 231 (UNKNOWN: 0, LOW: 175, MEDIUM: 43, HIGH: 13, CRITICAL: 0)
 │                             │                │          │              │                     │                     │ malicious URLs                                               │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2024-47081                   │
 │                             ├────────────────┤          │              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-50181 │          │              │                     │                     │ urllib3 is a user-friendly HTTP client library for Python.   │
-│                             │                │          │              │                     │                     │ Prior to 2....                                               │
+│                             │ CVE-2025-50181 │          │              │                     │                     │ urllib3: urllib3 redirects are not disabled when retries are │
+│                             │                │          │              │                     │                     │ disabled on PoolManager...                                   │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-50181                   │
 │                             ├────────────────┤          │              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-50182 │          │              │                     │                     │ urllib3 is a user-friendly HTTP client library for Python.   │
-│                             │                │          │              │                     │                     │ Prior to 2....                                               │
+│                             │ CVE-2025-50182 │          │              │                     │                     │ urllib3: urllib3 does not control redirects in browsers and  │
+│                             │                │          │              │                     │                     │ Node.js                                                      │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-50182                   │
 │                             ├────────────────┼──────────┤              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2021-3572  │ LOW      │              │                     │                     │ python-pip: Incorrect handling of unicode separators in git  │
@@ -405,11 +408,8 @@ Total: 231 (UNKNOWN: 0, LOW: 175, MEDIUM: 43, HIGH: 13, CRITICAL: 0)
 │ shadow-utils                │ CVE-2024-56433 │          │              │ 2:4.9-12.el9        │                     │ shadow-utils: Default subordinate ID configuration in        │
 │                             │                │          │              │                     │                     │ /etc/login.defs could lead to compromise                     │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2024-56433                   │
-├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼─────────────────────┼──────────────────────────────────────────────────────────────┤
-│ sqlite-libs                 │ CVE-2023-36191 │ LOW      │ will_not_fix │ 3.34.1-7.el9_3      │                     │ sqlite: CLI fault on missing -nonce                          │
-│                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2023-36191                   │
-│                             ├────────────────┤          ├──────────────┤                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-0232  │          │ affected     │                     │                     │ sqlite: use-after-free bug in jsonParseAddNodeArray          │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼─────────────────────┼──────────────────────────────────────────────────────────────┤
+│ sqlite-libs                 │ CVE-2024-0232  │ LOW      │              │ 3.34.1-7.el9_3      │                     │ sqlite: use-after-free bug in jsonParseAddNodeArray          │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2024-0232                    │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼─────────────────────┼──────────────────────────────────────────────────────────────┤
 │ systemd                     │ CVE-2021-3997  │ MEDIUM   │              │ 252-51.el9          │                     │ systemd: Uncontrolled recursion in systemd-tmpfiles when     │
