@@ -1,12 +1,12 @@
 NAME                 INSTALLED  FIXED IN  TYPE       VULNERABILITY        SEVERITY  EPSS %  RISK   
-golang.org/x/crypto  v0.31.0    0.35.0    go-module  GHSA-hcg3-q754-cr77  High      34.37   0.1    
-k8s.io/kubernetes    v1.30.10             go-module  GHSA-3wgm-2gw2-vh5m  Medium    9.20    < 0.1  
-golang.org/x/net     v0.33.0    0.38.0    go-module  GHSA-vvgc-356p-c3xw  Medium    7.98    < 0.1  
-golang.org/x/net     v0.33.0    0.36.0    go-module  GHSA-qxp5-gwg8-xv66  Medium    1.31    < 0.1
+golang.org/x/crypto  v0.31.0    0.35.0    go-module  GHSA-hcg3-q754-cr77  High      34.19   0.1    
+k8s.io/kubernetes    v1.30.10             go-module  GHSA-3wgm-2gw2-vh5m  Medium    9.08    < 0.1  
+golang.org/x/net     v0.33.0    0.38.0    go-module  GHSA-vvgc-356p-c3xw  Medium    7.83    < 0.1  
+golang.org/x/net     v0.33.0    0.36.0    go-module  GHSA-qxp5-gwg8-xv66  Medium    1.24    < 0.1
 
 quay.io/noiro/aci-containers-host-ovscni:6.1.2.1.81c2369.z (redhat 9.5)
 =======================================================================
-Total: 108 (UNKNOWN: 0, LOW: 58, MEDIUM: 37, HIGH: 13, CRITICAL: 0)
+Total: 110 (UNKNOWN: 0, LOW: 58, MEDIUM: 40, HIGH: 12, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬─────────────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │    Fixed Version    │                            Title                             │
@@ -184,10 +184,6 @@ Total: 108 (UNKNOWN: 0, LOW: 58, MEDIUM: 37, HIGH: 13, CRITICAL: 0)
 │                             │                │          │              │                     │                     │ (DoS)...                                                     │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-49794                   │
 │                             ├────────────────┤          │              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-49795 │          │              │                     │                     │ libxml: Null pointer dereference leads to Denial of service  │
-│                             │                │          │              │                     │                     │ (DoS)                                                        │
-│                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-49795                   │
-│                             ├────────────────┤          │              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-49796 │          │              │                     │                     │ libxml: Type confusion leads to Denial of service (DoS)      │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-49796                   │
 │                             ├────────────────┼──────────┤              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
@@ -273,7 +269,10 @@ Total: 108 (UNKNOWN: 0, LOW: 58, MEDIUM: 37, HIGH: 13, CRITICAL: 0)
 │                             │ CVE-2025-4435  │          │              │                     │                     │ cpython: Tarfile extracts filtered members when errorlevel=0 │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-4435                    │
 │                             ├────────────────┤          ├──────────────┤                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-6069  │          │ affected     │                     │                     │ cpython: Python HTMLParser quadratic complexity              │
+│                             │ CVE-2025-4516  │          │ affected     │                     │                     │ cpython: python: CPython DecodeError Handling Vulnerability  │
+│                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-4516                    │
+│                             ├────────────────┤          │              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-6069  │          │              │                     │                     │ cpython: Python HTMLParser quadratic complexity              │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-6069                    │
 │                             ├────────────────┼──────────┤              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-0397  │ LOW      │              │                     │                     │ cpython: python: Memory race condition in ssl.SSLContext     │
@@ -311,7 +310,10 @@ Total: 108 (UNKNOWN: 0, LOW: 58, MEDIUM: 37, HIGH: 13, CRITICAL: 0)
 │                             │ CVE-2025-4435  │          │              │                     │                     │ cpython: Tarfile extracts filtered members when errorlevel=0 │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-4435                    │
 │                             ├────────────────┤          ├──────────────┤                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-6069  │          │ affected     │                     │                     │ cpython: Python HTMLParser quadratic complexity              │
+│                             │ CVE-2025-4516  │          │ affected     │                     │                     │ cpython: python: CPython DecodeError Handling Vulnerability  │
+│                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-4516                    │
+│                             ├────────────────┤          │              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-6069  │          │              │                     │                     │ cpython: Python HTMLParser quadratic complexity              │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-6069                    │
 │                             ├────────────────┼──────────┤              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-0397  │ LOW      │              │                     │                     │ cpython: python: Memory race condition in ssl.SSLContext     │
@@ -349,7 +351,10 @@ Total: 108 (UNKNOWN: 0, LOW: 58, MEDIUM: 37, HIGH: 13, CRITICAL: 0)
 │                             │ CVE-2025-4435  │          │              │                     │                     │ cpython: Tarfile extracts filtered members when errorlevel=0 │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-4435                    │
 │                             ├────────────────┤          ├──────────────┤                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-6069  │          │ affected     │                     │                     │ cpython: Python HTMLParser quadratic complexity              │
+│                             │ CVE-2025-4516  │          │ affected     │                     │                     │ cpython: python: CPython DecodeError Handling Vulnerability  │
+│                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-4516                    │
+│                             ├────────────────┤          │              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-6069  │          │              │                     │                     │ cpython: Python HTMLParser quadratic complexity              │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-6069                    │
 │                             ├────────────────┼──────────┤              │                     ├─────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-0397  │ LOW      │              │                     │                     │ cpython: python: Memory race condition in ssl.SSLContext     │
@@ -375,12 +380,12 @@ Total: 108 (UNKNOWN: 0, LOW: 58, MEDIUM: 37, HIGH: 13, CRITICAL: 0)
 │                             │ CVE-2021-3572  │ LOW      │              │                     │                     │ python-pip: Incorrect handling of unicode separators in git  │
 │                             │                │          │              │                     │                     │ references                                                   │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2021-3572                    │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼─────────────────────┼──────────────────────────────────────────────────────────────┤
-│ python3-setuptools-wheel    │ CVE-2025-47273 │ MEDIUM   │              │ 53.0.0-13.el9       │                     │ setuptools: Path Traversal Vulnerability in setuptools       │
+├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼─────────────────────┼──────────────────────────────────────────────────────────────┤
+│ python3-setuptools-wheel    │ CVE-2025-47273 │ MEDIUM   │ fixed        │ 53.0.0-13.el9       │ 53.0.0-13.el9_6.1   │ setuptools: Path Traversal Vulnerability in setuptools       │
 │                             │                │          │              │                     │                     │ PackageIndex                                                 │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2025-47273                   │
-├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼─────────────────────┼──────────────────────────────────────────────────────────────┤
-│ shadow-utils                │ CVE-2024-56433 │          │              │ 2:4.9-12.el9        │                     │ shadow-utils: Default subordinate ID configuration in        │
+├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼─────────────────────┼──────────────────────────────────────────────────────────────┤
+│ shadow-utils                │ CVE-2024-56433 │          │ affected     │ 2:4.9-12.el9        │                     │ shadow-utils: Default subordinate ID configuration in        │
 │                             │                │          │              │                     │                     │ /etc/login.defs could lead to compromise                     │
 │                             │                │          │              │                     │                     │ https://avd.aquasec.com/nvd/cve-2024-56433                   │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼─────────────────────┼──────────────────────────────────────────────────────────────┤
