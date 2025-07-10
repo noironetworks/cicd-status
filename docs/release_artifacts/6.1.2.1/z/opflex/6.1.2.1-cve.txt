@@ -2,7 +2,7 @@ No vulnerabilities found
 
 quay.io/noiro/opflex:6.1.2.1.81c2369.z (redhat 9.6)
 ===================================================
-Total: 189 (UNKNOWN: 0, LOW: 163, MEDIUM: 24, HIGH: 2, CRITICAL: 0)
+Total: 186 (UNKNOWN: 0, LOW: 163, MEDIUM: 23, HIGH: 0, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬──────────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │  Fixed Version   │                            Title                             │
@@ -145,23 +145,12 @@ Total: 189 (UNKNOWN: 0, LOW: 163, MEDIUM: 24, HIGH: 2, CRITICAL: 0)
 │ libuv                       │ CVE-2024-24806 │ MEDIUM   │ fixed        │ 1:1.42.0-2.el9      │ 1:1.42.0-2.el9_4 │ libuv: Improper Domain Lookup that potentially leads to SSRF │
 │                             │                │          │              │                     │                  │ attacks                                                      │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-24806                   │
-├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
-│ libxml2                     │ CVE-2025-49794 │ HIGH     │ affected     │ 2.9.13-10.el9_6     │                  │ libxml: Heap use after free (UAF) leads to Denial of service │
-│                             │                │          │              │                     │                  │ (DoS)...                                                     │
-│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-49794                   │
-│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-49796 │          │              │                     │                  │ libxml: Type confusion leads to Denial of service (DoS)      │
-│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-49796                   │
-│                             ├────────────────┼──────────┤              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-32414 │ MEDIUM   │              │                     │                  │ libxml2: Out-of-Bounds Read in libxml2                       │
+├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libxml2                     │ CVE-2025-32414 │          │ affected     │ 2.9.13-10.el9_6     │                  │ libxml2: Out-of-Bounds Read in libxml2                       │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-32414                   │
 │                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-32415 │          │              │                     │                  │ libxml2: Out-of-bounds Read in xmlSchemaIDCFillNodeTables    │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-32415                   │
-│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-6021  │          │              │                     │                  │ libxml2: Integer Overflow in xmlBuildQName() Leads to Stack  │
-│                             │                │          │              │                     │                  │ Buffer Overflow in libxml2...                                │
-│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-6021                    │
 │                             ├────────────────┼──────────┼──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2023-45322 │ LOW      │ will_not_fix │                     │                  │ libxml2: use-after-free in xmlUnlinkNode() in tree.c         │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2023-45322                   │
