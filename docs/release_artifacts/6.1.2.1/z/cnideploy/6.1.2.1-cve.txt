@@ -1,20 +1,20 @@
 NAME              INSTALLED                           FIXED IN                           TYPE       VULNERABILITY        SEVERITY  EPSS %  RISK   
-requests          2.25.1                              2.31.0                             python     GHSA-j8r2-6x86-q33q  Medium    90.47   3.5    
-urllib3           1.26.5                              1.26.17                            python     GHSA-v845-jxx5-vc9f  High      67.09   0.4    
-idna              2.10                                3.7                                python     GHSA-jjg7-2v4v-x38h  Medium    63.12   0.3    
-setuptools        53.0.0                              65.5.1                             python     GHSA-r9hx-vwmv-q579  High      54.27   0.2    
-setuptools        53.0.0                              70.0.0                             python     GHSA-cx63-2mw6-8hw5  High      45.49   0.2    
-setuptools        53.0.0                              78.1.1                             python     GHSA-5rjg-fvgr-3xxf  High      31.82   < 0.1  
-golang.org/x/sys  v0.0.0-20201117170446-d9b008d0a637  0.0.0-20220412211240-33da011f77ad  go-module  GHSA-p782-xgp4-8hr8  Medium    36.31   < 0.1  
-requests          2.25.1                              2.32.4                             python     GHSA-9hjg-9r4m-mvj7  Medium    19.57   < 0.1  
-urllib3           1.26.5                              1.26.18                            python     GHSA-g4mx-q9vg-27p4  Medium    19.58   < 0.1  
-requests          2.25.1                              2.32.0                             python     GHSA-9wx4-h78v-vm56  Medium    13.15   < 0.1  
-urllib3           1.26.5                              1.26.19                            python     GHSA-34jh-p97f-mpxf  Medium    7.88    < 0.1  
-urllib3           1.26.5                              2.5.0                              python     GHSA-pq67-6m6q-mj2v  Medium    1.02    < 0.1
+requests          2.25.1                              2.31.0                             python     GHSA-j8r2-6x86-q33q  Medium    90.36   3.4    
+urllib3           1.26.5                              1.26.17                            python     GHSA-v845-jxx5-vc9f  High      67.12   0.4    
+idna              2.10                                3.7                                python     GHSA-jjg7-2v4v-x38h  Medium    63.17   0.3    
+setuptools        53.0.0                              65.5.1                             python     GHSA-r9hx-vwmv-q579  High      54.32   0.2    
+setuptools        53.0.0                              70.0.0                             python     GHSA-cx63-2mw6-8hw5  High      45.53   0.2    
+golang.org/x/sys  v0.0.0-20201117170446-d9b008d0a637  0.0.0-20220412211240-33da011f77ad  go-module  GHSA-p782-xgp4-8hr8  Medium    39.42   < 0.1  
+setuptools        53.0.0                              78.1.1                             python     GHSA-5rjg-fvgr-3xxf  High      28.62   < 0.1  
+requests          2.25.1                              2.32.4                             python     GHSA-9hjg-9r4m-mvj7  Medium    21.31   < 0.1  
+urllib3           1.26.5                              1.26.18                            python     GHSA-g4mx-q9vg-27p4  Medium    19.68   < 0.1  
+requests          2.25.1                              2.32.0                             python     GHSA-9wx4-h78v-vm56  Medium    13.22   < 0.1  
+urllib3           1.26.5                              1.26.19                            python     GHSA-34jh-p97f-mpxf  Medium    7.94    < 0.1  
+urllib3           1.26.5                              2.5.0                              python     GHSA-pq67-6m6q-mj2v  Medium    1.00    < 0.1
 
 quay.io/noiro/cnideploy:6.1.2.1.81c2369.z (redhat 9.6)
 ======================================================
-Total: 201 (UNKNOWN: 0, LOW: 171, MEDIUM: 28, HIGH: 2, CRITICAL: 0)
+Total: 202 (UNKNOWN: 0, LOW: 171, MEDIUM: 31, HIGH: 0, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -117,11 +117,11 @@ Total: 201 (UNKNOWN: 0, LOW: 171, MEDIUM: 28, HIGH: 2, CRITICAL: 0)
 │                             │ CVE-2025-3198  │          │              │                     │               │ binutils: GNU Binutils objdump bucomm.c display_info memory  │
 │                             │                │          │              │                     │               │ leak                                                         │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-3198                    │
-├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ glib2                       │ CVE-2024-52533 │ MEDIUM   │ will_not_fix │ 2.68.4-16.el9       │               │ glib: buffer overflow in set_connect_msg()                   │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ glib2                       │ CVE-2024-52533 │ MEDIUM   │              │ 2.68.4-16.el9       │               │ glib: buffer overflow in set_connect_msg()                   │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52533                   │
-│                             ├────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-4373  │          │ affected     │                     │               │ glib: Buffer Underflow on GLib through glib/gstring.c via    │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-4373  │          │              │                     │               │ glib: Buffer Underflow on GLib through glib/gstring.c via    │
 │                             │                │          │              │                     │               │ function g_string_insert_unichar                             │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4373                    │
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -139,8 +139,21 @@ Total: 201 (UNKNOWN: 0, LOW: 171, MEDIUM: 28, HIGH: 2, CRITICAL: 0)
 │                             │ CVE-2025-30258 │          │              │                     │               │ gnupg: verification DoS due to a malicious subkey in the     │
 │                             │                │          │              │                     │               │ keyring                                                      │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-30258                   │
-├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libarchive                  │ CVE-2023-30571 │ MEDIUM   │ will_not_fix │ 3.5.3-5.el9_6       │               │ libarchive: Race condition in multi-threaded use of          │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ gnutls                      │ CVE-2025-32988 │ MEDIUM   │              │ 3.8.3-6.el9         │               │ gnutls: Vulnerability in GnuTLS otherName SAN export         │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-32988                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-32989 │          │              │                     │               │ gnutls: Vulnerability in GnuTLS SCT extension parsing        │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-32989                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-32990 │          │              │                     │               │ gnutls: Vulnerability in GnuTLS certtool template parsing    │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-32990                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-6395  │          │              │                     │               │ gnutls: NULL pointer dereference in                          │
+│                             │                │          │              │                     │               │ _gnutls_figure_common_ciphersuite()                          │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-6395                    │
+├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libarchive                  │ CVE-2023-30571 │          │ will_not_fix │ 3.5.3-5.el9_6       │               │ libarchive: Race condition in multi-threaded use of          │
 │                             │                │          │              │                     │               │ archive_write_disk_header() on posix based systems...        │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-30571                   │
 │                             ├────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -201,22 +214,11 @@ Total: 201 (UNKNOWN: 0, LOW: 171, MEDIUM: 28, HIGH: 2, CRITICAL: 0)
 │                             │                │          │              │                     │               │                                                              │
 │                             │                │          │              │                     │               │                                                              │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libxml2                     │ CVE-2025-49794 │ HIGH     │              │ 2.9.13-10.el9_6     │               │ libxml: Heap use after free (UAF) leads to Denial of service │
-│                             │                │          │              │                     │               │ (DoS)...                                                     │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-49794                   │
-│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-49796 │          │              │                     │               │ libxml: Type confusion leads to Denial of service (DoS)      │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-49796                   │
-│                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-32414 │ MEDIUM   │              │                     │               │ libxml2: Out-of-Bounds Read in libxml2                       │
+│ libxml2                     │ CVE-2025-32414 │ MEDIUM   │              │ 2.9.13-10.el9_6     │               │ libxml2: Out-of-Bounds Read in libxml2                       │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-32414                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-32415 │          │              │                     │               │ libxml2: Out-of-bounds Read in xmlSchemaIDCFillNodeTables    │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-32415                   │
-│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-6021  │          │              │                     │               │ libxml2: Integer Overflow in xmlBuildQName() Leads to Stack  │
-│                             │                │          │              │                     │               │ Buffer Overflow in libxml2...                                │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-6021                    │
 │                             ├────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2023-45322 │ LOW      │ will_not_fix │                     │               │ libxml2: use-after-free in xmlUnlinkNode() in tree.c         │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-45322                   │
