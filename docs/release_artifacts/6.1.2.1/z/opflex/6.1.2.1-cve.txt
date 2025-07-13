@@ -2,7 +2,7 @@ No vulnerabilities found
 
 quay.io/noiro/opflex:6.1.2.1.81c2369.z (redhat 9.6)
 ===================================================
-Total: 186 (UNKNOWN: 0, LOW: 163, MEDIUM: 23, HIGH: 0, CRITICAL: 0)
+Total: 190 (UNKNOWN: 0, LOW: 163, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬──────────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │  Fixed Version   │                            Title                             │
@@ -70,11 +70,11 @@ Total: 186 (UNKNOWN: 0, LOW: 163, MEDIUM: 23, HIGH: 0, CRITICAL: 0)
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
 │ gawk                        │ CVE-2023-4156  │          │              │ 5.1.0-6.el9         │                  │ gawk: heap out of bound read in builtin.c                    │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2023-4156                    │
-├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
-│ glib2                       │ CVE-2024-52533 │ MEDIUM   │ will_not_fix │ 2.68.4-16.el9       │                  │ glib: buffer overflow in set_connect_msg()                   │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ glib2                       │ CVE-2024-52533 │ MEDIUM   │              │ 2.68.4-16.el9       │                  │ glib: buffer overflow in set_connect_msg()                   │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-52533                   │
-│                             ├────────────────┤          ├──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-4373  │          │ affected     │                     │                  │ glib: Buffer Underflow on GLib through glib/gstring.c via    │
+│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-4373  │          │              │                     │                  │ glib: Buffer Underflow on GLib through glib/gstring.c via    │
 │                             │                │          │              │                     │                  │ function g_string_insert_unichar                             │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-4373                    │
 │                             ├────────────────┼──────────┤              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
@@ -92,8 +92,21 @@ Total: 186 (UNKNOWN: 0, LOW: 163, MEDIUM: 23, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2025-30258 │          │              │                     │                  │ gnupg: verification DoS due to a malicious subkey in the     │
 │                             │                │          │              │                     │                  │ keyring                                                      │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-30258                   │
-├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
-│ libarchive                  │ CVE-2023-30571 │ MEDIUM   │ will_not_fix │ 3.5.3-5.el9_6       │                  │ libarchive: Race condition in multi-threaded use of          │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ gnutls                      │ CVE-2025-32988 │ MEDIUM   │              │ 3.8.3-6.el9         │                  │ gnutls: Vulnerability in GnuTLS otherName SAN export         │
+│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-32988                   │
+│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-32989 │          │              │                     │                  │ gnutls: Vulnerability in GnuTLS SCT extension parsing        │
+│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-32989                   │
+│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-32990 │          │              │                     │                  │ gnutls: Vulnerability in GnuTLS certtool template parsing    │
+│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-32990                   │
+│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-6395  │          │              │                     │                  │ gnutls: NULL pointer dereference in                          │
+│                             │                │          │              │                     │                  │ _gnutls_figure_common_ciphersuite()                          │
+│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-6395                    │
+├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libarchive                  │ CVE-2023-30571 │          │ will_not_fix │ 3.5.3-5.el9_6       │                  │ libarchive: Race condition in multi-threaded use of          │
 │                             │                │          │              │                     │                  │ archive_write_disk_header() on posix based systems...        │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2023-30571                   │
 │                             ├────────────────┼──────────┼──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
