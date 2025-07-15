@@ -2,7 +2,7 @@ No vulnerabilities found
 
 quay.io/noiro/openvswitch:6.1.2.1.81c2369.z (redhat 9.6)
 ========================================================
-Total: 198 (UNKNOWN: 0, LOW: 170, MEDIUM: 26, HIGH: 2, CRITICAL: 0)
+Total: 200 (UNKNOWN: 0, LOW: 170, MEDIUM: 30, HIGH: 0, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -86,11 +86,11 @@ Total: 198 (UNKNOWN: 0, LOW: 170, MEDIUM: 26, HIGH: 2, CRITICAL: 0)
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ gawk                        │ CVE-2023-4156  │          │              │ 5.1.0-6.el9         │               │ gawk: heap out of bound read in builtin.c                    │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-4156                    │
-├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ glib2                       │ CVE-2024-52533 │ MEDIUM   │ will_not_fix │ 2.68.4-16.el9       │               │ glib: buffer overflow in set_connect_msg()                   │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ glib2                       │ CVE-2024-52533 │ MEDIUM   │              │ 2.68.4-16.el9       │               │ glib: buffer overflow in set_connect_msg()                   │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52533                   │
-│                             ├────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-4373  │          │ affected     │                     │               │ glib: Buffer Underflow on GLib through glib/gstring.c via    │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-4373  │          │              │                     │               │ glib: Buffer Underflow on GLib through glib/gstring.c via    │
 │                             │                │          │              │                     │               │ function g_string_insert_unichar                             │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4373                    │
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -108,8 +108,21 @@ Total: 198 (UNKNOWN: 0, LOW: 170, MEDIUM: 26, HIGH: 2, CRITICAL: 0)
 │                             │ CVE-2025-30258 │          │              │                     │               │ gnupg: verification DoS due to a malicious subkey in the     │
 │                             │                │          │              │                     │               │ keyring                                                      │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-30258                   │
-├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libarchive                  │ CVE-2023-30571 │ MEDIUM   │ will_not_fix │ 3.5.3-5.el9_6       │               │ libarchive: Race condition in multi-threaded use of          │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ gnutls                      │ CVE-2025-32988 │ MEDIUM   │              │ 3.8.3-6.el9         │               │ gnutls: Vulnerability in GnuTLS otherName SAN export         │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-32988                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-32989 │          │              │                     │               │ gnutls: Vulnerability in GnuTLS SCT extension parsing        │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-32989                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-32990 │          │              │                     │               │ gnutls: Vulnerability in GnuTLS certtool template parsing    │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-32990                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-6395  │          │              │                     │               │ gnutls: NULL pointer dereference in                          │
+│                             │                │          │              │                     │               │ _gnutls_figure_common_ciphersuite()                          │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-6395                    │
+├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libarchive                  │ CVE-2023-30571 │          │ will_not_fix │ 3.5.3-5.el9_6       │               │ libarchive: Race condition in multi-threaded use of          │
 │                             │                │          │              │                     │               │ archive_write_disk_header() on posix based systems...        │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-30571                   │
 │                             ├────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -170,22 +183,11 @@ Total: 198 (UNKNOWN: 0, LOW: 170, MEDIUM: 26, HIGH: 2, CRITICAL: 0)
 │                             │                │          │              │                     │               │                                                              │
 │                             │                │          │              │                     │               │                                                              │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libxml2                     │ CVE-2025-49794 │ HIGH     │              │ 2.9.13-10.el9_6     │               │ libxml: Heap use after free (UAF) leads to Denial of service │
-│                             │                │          │              │                     │               │ (DoS)...                                                     │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-49794                   │
-│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-49796 │          │              │                     │               │ libxml: Type confusion leads to Denial of service (DoS)      │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-49796                   │
-│                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-32414 │ MEDIUM   │              │                     │               │ libxml2: Out-of-Bounds Read in libxml2                       │
+│ libxml2                     │ CVE-2025-32414 │ MEDIUM   │              │ 2.9.13-10.el9_6     │               │ libxml2: Out-of-Bounds Read in libxml2                       │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-32414                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-32415 │          │              │                     │               │ libxml2: Out-of-bounds Read in xmlSchemaIDCFillNodeTables    │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-32415                   │
-│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-6021  │          │              │                     │               │ libxml2: Integer Overflow in xmlBuildQName() Leads to Stack  │
-│                             │                │          │              │                     │               │ Buffer Overflow in libxml2...                                │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-6021                    │
 │                             ├────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2023-45322 │ LOW      │ will_not_fix │                     │               │ libxml2: use-after-free in xmlUnlinkNode() in tree.c         │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-45322                   │
@@ -224,16 +226,16 @@ Total: 198 (UNKNOWN: 0, LOW: 170, MEDIUM: 26, HIGH: 2, CRITICAL: 0)
 │ openssl-libs                │                │          │              │                     │               │                                                              │
 │                             │                │          │              │                     │               │                                                              │
 │                             │                │          │              │                     │               │                                                              │
-├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ pcre2                       │ CVE-2022-41409 │          │              │ 10.40-6.el9         │               │ pcre2: negative repeat value in a pcre2test subject line     │
+├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ pcre2                       │ CVE-2022-41409 │          │ affected     │ 10.40-6.el9         │               │ pcre2: negative repeat value in a pcre2test subject line     │
 │                             │                │          │              │                     │               │ leads to inifinite...                                        │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-41409                   │
 ├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
 │ pcre2-syntax                │                │          │              │                     │               │                                                              │
 │                             │                │          │              │                     │               │                                                              │
 │                             │                │          │              │                     │               │                                                              │
-├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ python-unversioned-command  │ CVE-2025-4516  │ MEDIUM   │ affected     │ 3.9.23-1.el9        │               │ cpython: python: CPython DecodeError Handling Vulnerability  │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ python-unversioned-command  │ CVE-2025-4516  │ MEDIUM   │              │ 3.9.23-1.el9        │               │ cpython: python: CPython DecodeError Handling Vulnerability  │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4516                    │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-6069  │          │              │                     │               │ cpython: Python HTMLParser quadratic complexity              │
@@ -329,8 +331,11 @@ Total: 198 (UNKNOWN: 0, LOW: 170, MEDIUM: 26, HIGH: 2, CRITICAL: 0)
 │ tar                         │ CVE-2005-2541  │          │ will_not_fix │ 2:1.34-7.el9        │               │ tar: does not properly warn the user when extracting setuid  │
 │                             │                │          │              │                     │               │ or setgid...                                                 │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2005-2541                    │
-│                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-39804 │ LOW      │              │                     │               │ tar: Incorrectly handled extension attributes in PAX         │
+│                             ├────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-45582 │          │ affected     │                     │               │ tar: Tar path traversal                                      │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-45582                   │
+│                             ├────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2023-39804 │ LOW      │ will_not_fix │                     │               │ tar: Incorrectly handled extension attributes in PAX         │
 │                             │                │          │              │                     │               │ archives can lead to a...                                    │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-39804                   │
 ├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
