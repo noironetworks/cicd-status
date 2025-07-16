@@ -2,7 +2,7 @@ No vulnerabilities found
 
 quay.io/noiro/opflex:6.1.2.1.81c2369.z (redhat 9.6)
 ===================================================
-Total: 190 (UNKNOWN: 0, LOW: 163, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
+Total: 189 (UNKNOWN: 0, LOW: 163, MEDIUM: 26, HIGH: 0, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬──────────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │  Fixed Version   │                            Title                             │
@@ -71,10 +71,7 @@ Total: 190 (UNKNOWN: 0, LOW: 163, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
 │ gawk                        │ CVE-2023-4156  │          │              │ 5.1.0-6.el9         │                  │ gawk: heap out of bound read in builtin.c                    │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2023-4156                    │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
-│ glib2                       │ CVE-2024-52533 │ MEDIUM   │              │ 2.68.4-16.el9       │                  │ glib: buffer overflow in set_connect_msg()                   │
-│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2024-52533                   │
-│                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-4373  │          │              │                     │                  │ glib: Buffer Underflow on GLib through glib/gstring.c via    │
+│ glib2                       │ CVE-2025-4373  │ MEDIUM   │              │ 2.68.4-16.el9_6.2   │                  │ glib: Buffer Underflow on GLib through glib/gstring.c via    │
 │                             │                │          │              │                     │                  │ function g_string_insert_unichar                             │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-4373                    │
 │                             ├────────────────┼──────────┤              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
@@ -202,16 +199,16 @@ Total: 190 (UNKNOWN: 0, LOW: 163, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
 │ openssl-libs                │                │          │              │                     │                  │                                                              │
 │                             │                │          │              │                     │                  │                                                              │
 │                             │                │          │              │                     │                  │                                                              │
-├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
-│ pcre2                       │ CVE-2022-41409 │          │              │ 10.40-6.el9         │                  │ pcre2: negative repeat value in a pcre2test subject line     │
+├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ pcre2                       │ CVE-2022-41409 │          │ affected     │ 10.40-6.el9         │                  │ pcre2: negative repeat value in a pcre2test subject line     │
 │                             │                │          │              │                     │                  │ leads to inifinite...                                        │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2022-41409                   │
 ├─────────────────────────────┤                │          │              │                     ├──────────────────┤                                                              │
 │ pcre2-syntax                │                │          │              │                     │                  │                                                              │
 │                             │                │          │              │                     │                  │                                                              │
 │                             │                │          │              │                     │                  │                                                              │
-├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
-│ python-unversioned-command  │ CVE-2025-4516  │ MEDIUM   │ affected     │ 3.9.23-1.el9        │                  │ cpython: python: CPython DecodeError Handling Vulnerability  │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ python-unversioned-command  │ CVE-2025-4516  │ MEDIUM   │              │ 3.9.23-1.el9        │                  │ cpython: python: CPython DecodeError Handling Vulnerability  │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-4516                    │
 │                             ├────────────────┤          │              │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-6069  │          │              │                     │                  │ cpython: Python HTMLParser quadratic complexity              │
