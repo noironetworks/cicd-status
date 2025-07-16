@@ -1,5 +1,5 @@
-NAME               INSTALLED  FIXED IN  TYPE       VULNERABILITY        SEVERITY  EPSS %  RISK   
-k8s.io/kubernetes  v1.32.5    1.32.6    go-module  GHSA-hj2p-8wj8-pfq4  Low       3.60    < 0.1
+NAME               INSTALLED  FIXED IN  TYPE       VULNERABILITY        SEVERITY  EPSS          RISK   
+k8s.io/kubernetes  v1.32.5    1.32.6    go-module  GHSA-hj2p-8wj8-pfq4  Low       < 0.1% (3rd)  < 0.1
 
 quay.io/noiro/aci-containers-host:6.1.1.5.81c2369.z (redhat 9.6)
 ================================================================
@@ -72,10 +72,7 @@ Total: 86 (UNKNOWN: 0, LOW: 58, MEDIUM: 28, HIGH: 0, CRITICAL: 0)
 │ gawk                        │ CVE-2023-4156  │          │              │ 5.1.0-6.el9         │               │ gawk: heap out of bound read in builtin.c                    │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-4156                    │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ glib2                       │ CVE-2024-52533 │ MEDIUM   │              │ 2.68.4-16.el9       │               │ glib: buffer overflow in set_connect_msg()                   │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52533                   │
-│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-4373  │          │              │                     │               │ glib: Buffer Underflow on GLib through glib/gstring.c via    │
+│ glib2                       │ CVE-2025-4373  │ MEDIUM   │              │ 2.68.4-16.el9_6.2   │               │ glib: Buffer Underflow on GLib through glib/gstring.c via    │
 │                             │                │          │              │                     │               │ function g_string_insert_unichar                             │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4373                    │
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -211,16 +208,16 @@ Total: 86 (UNKNOWN: 0, LOW: 58, MEDIUM: 28, HIGH: 0, CRITICAL: 0)
 │ openssl-libs                │                │          │              │                     │               │                                                              │
 │                             │                │          │              │                     │               │                                                              │
 │                             │                │          │              │                     │               │                                                              │
-├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ pcre2                       │ CVE-2022-41409 │          │              │ 10.40-6.el9         │               │ pcre2: negative repeat value in a pcre2test subject line     │
+├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ pcre2                       │ CVE-2022-41409 │          │ affected     │ 10.40-6.el9         │               │ pcre2: negative repeat value in a pcre2test subject line     │
 │                             │                │          │              │                     │               │ leads to inifinite...                                        │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-41409                   │
 ├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
 │ pcre2-syntax                │                │          │              │                     │               │                                                              │
 │                             │                │          │              │                     │               │                                                              │
 │                             │                │          │              │                     │               │                                                              │
-├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ python-unversioned-command  │ CVE-2025-4516  │ MEDIUM   │ affected     │ 3.9.23-1.el9        │               │ cpython: python: CPython DecodeError Handling Vulnerability  │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ python-unversioned-command  │ CVE-2025-4516  │ MEDIUM   │              │ 3.9.23-1.el9        │               │ cpython: python: CPython DecodeError Handling Vulnerability  │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4516                    │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-6069  │          │              │                     │               │ cpython: Python HTMLParser quadratic complexity              │
@@ -316,8 +313,11 @@ Total: 86 (UNKNOWN: 0, LOW: 58, MEDIUM: 28, HIGH: 0, CRITICAL: 0)
 │ tar                         │ CVE-2005-2541  │          │ will_not_fix │ 2:1.34-7.el9        │               │ tar: does not properly warn the user when extracting setuid  │
 │                             │                │          │              │                     │               │ or setgid...                                                 │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2005-2541                    │
-│                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-39804 │ LOW      │              │                     │               │ tar: Incorrectly handled extension attributes in PAX         │
+│                             ├────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-45582 │          │ affected     │                     │               │ tar: Tar path traversal                                      │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-45582                   │
+│                             ├────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2023-39804 │ LOW      │ will_not_fix │                     │               │ tar: Incorrectly handled extension attributes in PAX         │
 │                             │                │          │              │                     │               │ archives can lead to a...                                    │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-39804                   │
 ├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
