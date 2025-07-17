@@ -2,7 +2,7 @@ No vulnerabilities found
 
 quay.io/noiro/openvswitch:6.1.1.5.81c2369.z (redhat 9.6)
 ========================================================
-Total: 199 (UNKNOWN: 0, LOW: 170, MEDIUM: 29, HIGH: 0, CRITICAL: 0)
+Total: 200 (UNKNOWN: 0, LOW: 170, MEDIUM: 30, HIGH: 0, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -86,12 +86,8 @@ Total: 199 (UNKNOWN: 0, LOW: 170, MEDIUM: 29, HIGH: 0, CRITICAL: 0)
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ gawk                        │ CVE-2023-4156  │          │              │ 5.1.0-6.el9         │               │ gawk: heap out of bound read in builtin.c                    │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-4156                    │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ glib2                       │ CVE-2025-4373  │ MEDIUM   │              │ 2.68.4-16.el9_6.2   │               │ glib: Buffer Underflow on GLib through glib/gstring.c via    │
-│                             │                │          │              │                     │               │ function g_string_insert_unichar                             │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4373                    │
-│                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-32636 │ LOW      │              │                     │               │ glib: Timeout in fuzz_variant_text                           │
+├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ glib2                       │ CVE-2023-32636 │          │              │ 2.68.4-16.el9_6.2   │               │ glib: Timeout in fuzz_variant_text                           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-32636                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-3360  │          │              │                     │               │ glibc: GLib prior to 2.82.5 is vulnerable to integer         │
@@ -346,6 +342,12 @@ Total: 199 (UNKNOWN: 0, LOW: 170, MEDIUM: 29, HIGH: 0, CRITICAL: 0)
 │ vim-minimal                 │ CVE-2025-29768 │          │              │ 2:8.2.2637-22.el9_6 │               │ vim: Vim vulnerable to potential data loss with zip.vim and  │
 │                             │                │          │              │                     │               │ special crafted...                                           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-29768                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-53905 │          │              │                     │               │ vim: Vim path traversial                                     │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-53905                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-53906 │          │              │                     │               │ vim: Vim path traversal                                      │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-53906                   │
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2021-3927  │ LOW      │              │                     │               │ vim: heap-based buffer overflow in gchar_cursor() in misc1.c │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2021-3927                    │
