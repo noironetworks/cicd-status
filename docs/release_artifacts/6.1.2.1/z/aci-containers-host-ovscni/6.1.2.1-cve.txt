@@ -1,9 +1,9 @@
-NAME               INSTALLED  FIXED IN  TYPE       VULNERABILITY        SEVERITY  EPSS %  RISK   
-k8s.io/kubernetes  v1.32.5    1.32.6    go-module  GHSA-hj2p-8wj8-pfq4  Low       3.60    < 0.1
+NAME               INSTALLED  FIXED IN  TYPE       VULNERABILITY        SEVERITY  EPSS          RISK   
+k8s.io/kubernetes  v1.32.5    1.32.6    go-module  GHSA-hj2p-8wj8-pfq4  Low       < 0.1% (4th)  < 0.1
 
 quay.io/noiro/aci-containers-host-ovscni:6.1.2.1.81c2369.z (redhat 9.6)
 =======================================================================
-Total: 87 (UNKNOWN: 0, LOW: 58, MEDIUM: 29, HIGH: 0, CRITICAL: 0)
+Total: 85 (UNKNOWN: 0, LOW: 58, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -71,15 +71,8 @@ Total: 87 (UNKNOWN: 0, LOW: 58, MEDIUM: 29, HIGH: 0, CRITICAL: 0)
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ gawk                        │ CVE-2023-4156  │          │              │ 5.1.0-6.el9         │               │ gawk: heap out of bound read in builtin.c                    │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-4156                    │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ glib2                       │ CVE-2024-52533 │ MEDIUM   │              │ 2.68.4-16.el9       │               │ glib: buffer overflow in set_connect_msg()                   │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52533                   │
-│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-4373  │          │              │                     │               │ glib: Buffer Underflow on GLib through glib/gstring.c via    │
-│                             │                │          │              │                     │               │ function g_string_insert_unichar                             │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4373                    │
-│                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-32636 │ LOW      │              │                     │               │ glib: Timeout in fuzz_variant_text                           │
+├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ glib2                       │ CVE-2023-32636 │          │              │ 2.68.4-16.el9_6.2   │               │ glib: Timeout in fuzz_variant_text                           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-32636                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-3360  │          │              │                     │               │ glibc: GLib prior to 2.82.5 is vulnerable to integer         │
