@@ -1,15 +1,15 @@
-NAME        INSTALLED  FIXED IN  TYPE    VULNERABILITY        SEVERITY  EPSS %  RISK   
-requests    2.25.1     2.31.0    python  GHSA-j8r2-6x86-q33q  Medium    90.36   3.4    
-urllib3     1.26.5     1.26.17   python  GHSA-v845-jxx5-vc9f  High      67.12   0.4    
-idna        2.10       3.7       python  GHSA-jjg7-2v4v-x38h  Medium    63.17   0.3    
-setuptools  53.0.0     65.5.1    python  GHSA-r9hx-vwmv-q579  High      54.32   0.2    
-setuptools  53.0.0     70.0.0    python  GHSA-cx63-2mw6-8hw5  High      45.53   0.2    
-setuptools  53.0.0     78.1.1    python  GHSA-5rjg-fvgr-3xxf  High      28.62   < 0.1  
-requests    2.25.1     2.32.4    python  GHSA-9hjg-9r4m-mvj7  Medium    21.31   < 0.1  
-urllib3     1.26.5     1.26.18   python  GHSA-g4mx-q9vg-27p4  Medium    19.68   < 0.1  
-requests    2.25.1     2.32.0    python  GHSA-9wx4-h78v-vm56  Medium    13.22   < 0.1  
-urllib3     1.26.5     1.26.19   python  GHSA-34jh-p97f-mpxf  Medium    7.94    < 0.1  
-urllib3     1.26.5     2.5.0     python  GHSA-pq67-6m6q-mj2v  Medium    1.00    < 0.1
+NAME        INSTALLED  FIXED IN  TYPE    VULNERABILITY        SEVERITY  EPSS           RISK   
+requests    2.25.1     2.31.0    python  GHSA-j8r2-6x86-q33q  Medium    6.3% (90th)    3.5    
+urllib3     1.26.5     1.26.17   python  GHSA-v845-jxx5-vc9f  High      0.6% (67th)    0.4    
+setuptools  53.0.0     65.5.1    python  GHSA-r9hx-vwmv-q579  High      0.3% (54th)    0.2    
+setuptools  53.0.0     70.0.0    python  GHSA-cx63-2mw6-8hw5  High      0.3% (48th)    0.2    
+idna        2.10       3.7       python  GHSA-jjg7-2v4v-x38h  Medium    0.3% (55th)    0.2    
+setuptools  53.0.0     78.1.1    python  GHSA-5rjg-fvgr-3xxf  High      0.1% (34th)    0.1    
+urllib3     1.26.5     1.26.18   python  GHSA-g4mx-q9vg-27p4  Medium    < 0.1% (19th)  < 0.1  
+requests    2.25.1     2.32.0    python  GHSA-9wx4-h78v-vm56  Medium    < 0.1% (13th)  < 0.1  
+urllib3     1.26.5     1.26.19   python  GHSA-34jh-p97f-mpxf  Medium    < 0.1% (8th)   < 0.1  
+requests    2.25.1     2.32.4    python  GHSA-9hjg-9r4m-mvj7  Medium    < 0.1% (4th)   < 0.1  
+urllib3     1.26.5     2.5.0     python  GHSA-pq67-6m6q-mj2v  Medium    < 0.1% (1st)   < 0.1
 
 quay.io/noiro/aci-containers-certmanager:6.1.2.1.81c2369.z (redhat 9.6)
 =======================================================================
@@ -116,15 +116,8 @@ Total: 201 (UNKNOWN: 0, LOW: 171, MEDIUM: 30, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2025-3198  │          │              │                     │               │ binutils: GNU Binutils objdump bucomm.c display_info memory  │
 │                             │                │          │              │                     │               │ leak                                                         │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-3198                    │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ glib2                       │ CVE-2024-52533 │ MEDIUM   │              │ 2.68.4-16.el9       │               │ glib: buffer overflow in set_connect_msg()                   │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52533                   │
-│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-4373  │          │              │                     │               │ glib: Buffer Underflow on GLib through glib/gstring.c via    │
-│                             │                │          │              │                     │               │ function g_string_insert_unichar                             │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4373                    │
-│                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-32636 │ LOW      │              │                     │               │ glib: Timeout in fuzz_variant_text                           │
+├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ glib2                       │ CVE-2023-32636 │          │              │ 2.68.4-16.el9_6.2   │               │ glib: Timeout in fuzz_variant_text                           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-32636                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-3360  │          │              │                     │               │ glibc: GLib prior to 2.82.5 is vulnerable to integer         │
@@ -362,6 +355,12 @@ Total: 201 (UNKNOWN: 0, LOW: 171, MEDIUM: 30, HIGH: 0, CRITICAL: 0)
 │ vim-minimal                 │ CVE-2025-29768 │          │              │ 2:8.2.2637-22.el9_6 │               │ vim: Vim vulnerable to potential data loss with zip.vim and  │
 │                             │                │          │              │                     │               │ special crafted...                                           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-29768                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-53905 │          │              │                     │               │ vim: Vim path traversial                                     │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-53905                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-53906 │          │              │                     │               │ vim: Vim path traversal                                      │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-53906                   │
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2021-3927  │ LOW      │              │                     │               │ vim: heap-based buffer overflow in gchar_cursor() in misc1.c │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2021-3927                    │
