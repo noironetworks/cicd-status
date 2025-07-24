@@ -1,14 +1,14 @@
 NAME        INSTALLED  FIXED IN  TYPE    VULNERABILITY        SEVERITY  EPSS           RISK   
-requests    2.25.1     2.31.0    python  GHSA-j8r2-6x86-q33q  Medium    6.3% (90th)    3.5    
+requests    2.25.1     2.31.0    python  GHSA-j8r2-6x86-q33q  Medium    6.1% (90th)    3.4    
 urllib3     1.26.5     1.26.17   python  GHSA-v845-jxx5-vc9f  High      0.6% (67th)    0.4    
 setuptools  53.0.0     65.5.1    python  GHSA-r9hx-vwmv-q579  High      0.3% (54th)    0.2    
-setuptools  53.0.0     70.0.0    python  GHSA-cx63-2mw6-8hw5  High      0.3% (48th)    0.2    
-idna        2.10       3.7       python  GHSA-jjg7-2v4v-x38h  Medium    0.3% (55th)    0.2    
-setuptools  53.0.0     78.1.1    python  GHSA-5rjg-fvgr-3xxf  High      0.1% (34th)    0.1    
+idna        2.10       3.7       python  GHSA-jjg7-2v4v-x38h  Medium    0.3% (56th)    0.2    
+setuptools  53.0.0     70.0.0    python  GHSA-cx63-2mw6-8hw5  High      0.2% (45th)    0.2    
+setuptools  53.0.0     78.1.1    python  GHSA-5rjg-fvgr-3xxf  High      0.1% (31st)    < 0.1  
 urllib3     1.26.5     1.26.18   python  GHSA-g4mx-q9vg-27p4  Medium    < 0.1% (19th)  < 0.1  
 requests    2.25.1     2.32.0    python  GHSA-9wx4-h78v-vm56  Medium    < 0.1% (13th)  < 0.1  
 requests    2.31.0     2.32.0    python  GHSA-9wx4-h78v-vm56  Medium    < 0.1% (13th)  < 0.1  
-urllib3     1.26.5     1.26.19   python  GHSA-34jh-p97f-mpxf  Medium    < 0.1% (8th)   < 0.1  
+urllib3     1.26.5     1.26.19   python  GHSA-34jh-p97f-mpxf  Medium    < 0.1% (7th)   < 0.1  
 requests    2.25.1     2.32.4    python  GHSA-9hjg-9r4m-mvj7  Medium    < 0.1% (4th)   < 0.1  
 requests    2.31.0     2.32.4    python  GHSA-9hjg-9r4m-mvj7  Medium    < 0.1% (4th)   < 0.1  
 urllib3     1.26.20    2.5.0     python  GHSA-pq67-6m6q-mj2v  Medium    < 0.1% (1st)   < 0.1  
@@ -16,7 +16,7 @@ urllib3     1.26.5     2.5.0     python  GHSA-pq67-6m6q-mj2v  Medium    < 0.1% (
 
 quay.io/noiro/acc-provision-operator:6.1.1.5.81c2369.z (redhat 9.6)
 ===================================================================
-Total: 281 (UNKNOWN: 0, LOW: 194, MEDIUM: 79, HIGH: 8, CRITICAL: 0)
+Total: 248 (UNKNOWN: 0, LOW: 179, MEDIUM: 69, HIGH: 0, CRITICAL: 0)
 
 ┌─────────────────────────────┬──────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │  Vulnerability   │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -123,88 +123,16 @@ Total: 281 (UNKNOWN: 0, LOW: 194, MEDIUM: 79, HIGH: 8, CRITICAL: 0)
 │                             │                  │          │              │                     │               │ leak                                                         │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-3198                    │
 ├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ git                         │ CVE-2025-48384   │ HIGH     │              │ 2.47.1-2.el9_6      │               │ git: Git arbitrary code execution                            │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-48384                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-48385   │          │              │                     │               │ git: Git arbitrary file writes                               │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-48385                   │
-│                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-27613   │ MEDIUM   │              │                     │               │ gitk: Git file creation flaw                                 │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-27613                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-27614   │          │              │                     │               │ gitk: git script execution flaw                              │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-27614                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-48386   │          │              │                     │               │ git: Git buffer overflow                                     │
+│ git                         │ CVE-2025-48386   │ MEDIUM   │              │ 2.47.3-1.el9_6      │               │ git: Git buffer overflow                                     │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-48386                   │
-│                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-50349   │ LOW      │              │                     │               │ git: Git does not sanitize URLs when asking for credentials  │
-│                             │                  │          │              │                     │               │ interactively                                                │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-50349                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-52006   │          │              │                     │               │ git: Newline confusion in credential helpers can lead to     │
-│                             │                  │          │              │                     │               │ credential exfiltration in...                                │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52006                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-46835   │          │              │                     │               │ git: Git GUI can create and overwrite files for which the    │
-│                             │                  │          │              │                     │               │ user...                                                      │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-46835                   │
-├─────────────────────────────┼──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ git-core                    │ CVE-2025-48384   │ HIGH     │              │                     │               │ git: Git arbitrary code execution                            │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-48384                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-48385   │          │              │                     │               │ git: Git arbitrary file writes                               │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-48385                   │
-│                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-27613   │ MEDIUM   │              │                     │               │ gitk: Git file creation flaw                                 │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-27613                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-27614   │          │              │                     │               │ gitk: git script execution flaw                              │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-27614                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-48386   │          │              │                     │               │ git: Git buffer overflow                                     │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-48386                   │
-│                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-50349   │ LOW      │              │                     │               │ git: Git does not sanitize URLs when asking for credentials  │
-│                             │                  │          │              │                     │               │ interactively                                                │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-50349                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-52006   │          │              │                     │               │ git: Newline confusion in credential helpers can lead to     │
-│                             │                  │          │              │                     │               │ credential exfiltration in...                                │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52006                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-46835   │          │              │                     │               │ git: Git GUI can create and overwrite files for which the    │
-│                             │                  │          │              │                     │               │ user...                                                      │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-46835                   │
-├─────────────────────────────┼──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ git-core-doc                │ CVE-2025-48384   │ HIGH     │              │                     │               │ git: Git arbitrary code execution                            │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-48384                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-48385   │          │              │                     │               │ git: Git arbitrary file writes                               │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-48385                   │
-│                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-27613   │ MEDIUM   │              │                     │               │ gitk: Git file creation flaw                                 │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-27613                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-27614   │          │              │                     │               │ gitk: git script execution flaw                              │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-27614                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-48386   │          │              │                     │               │ git: Git buffer overflow                                     │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-48386                   │
-│                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-50349   │ LOW      │              │                     │               │ git: Git does not sanitize URLs when asking for credentials  │
-│                             │                  │          │              │                     │               │ interactively                                                │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-50349                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-52006   │          │              │                     │               │ git: Newline confusion in credential helpers can lead to     │
-│                             │                  │          │              │                     │               │ credential exfiltration in...                                │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52006                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-46835   │          │              │                     │               │ git: Git GUI can create and overwrite files for which the    │
-│                             │                  │          │              │                     │               │ user...                                                      │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-46835                   │
-├─────────────────────────────┼──────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ glib2                       │ CVE-2023-32636   │          │              │ 2.68.4-16.el9_6.2   │               │ glib: Timeout in fuzz_variant_text                           │
+├─────────────────────────────┤                  │          │              │                     ├───────────────┤                                                              │
+│ git-core                    │                  │          │              │                     │               │                                                              │
+│                             │                  │          │              │                     │               │                                                              │
+├─────────────────────────────┤                  │          │              │                     ├───────────────┤                                                              │
+│ git-core-doc                │                  │          │              │                     │               │                                                              │
+│                             │                  │          │              │                     │               │                                                              │
+├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ glib2                       │ CVE-2023-32636   │ LOW      │              │ 2.68.4-16.el9_6.2   │               │ glib: Timeout in fuzz_variant_text                           │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-32636                   │
 │                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-3360    │          │              │                     │               │ glibc: GLib prior to 2.82.5 is vulnerable to integer         │
@@ -315,25 +243,21 @@ Total: 281 (UNKNOWN: 0, LOW: 194, MEDIUM: 79, HIGH: 8, CRITICAL: 0)
 ├─────────────────────────────┼──────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ ncurses                     │ CVE-2022-29458   │          │              │ 6.2-10.20210508.el9 │               │ ncurses: segfaulting OOB read                                │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-29458                   │
-│                             ├──────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-50495   │          │ will_not_fix │                     │               │ ncurses: segmentation fault via _nc_wrap_entry()             │
+│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2023-50495   │          │              │                     │               │ ncurses: segmentation fault via _nc_wrap_entry()             │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-50495                   │
-├─────────────────────────────┼──────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ ncurses-base                │ CVE-2022-29458   │          │ affected     │                     │               │ ncurses: segfaulting OOB read                                │
+├─────────────────────────────┼──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ ncurses-base                │ CVE-2022-29458   │          │              │                     │               │ ncurses: segfaulting OOB read                                │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-29458                   │
-│                             ├──────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-50495   │          │ will_not_fix │                     │               │ ncurses: segmentation fault via _nc_wrap_entry()             │
+│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2023-50495   │          │              │                     │               │ ncurses: segmentation fault via _nc_wrap_entry()             │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-50495                   │
-├─────────────────────────────┼──────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ ncurses-libs                │ CVE-2022-29458   │          │ affected     │                     │               │ ncurses: segfaulting OOB read                                │
+├─────────────────────────────┼──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ ncurses-libs                │ CVE-2022-29458   │          │              │                     │               │ ncurses: segfaulting OOB read                                │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-29458                   │
-│                             ├──────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-50495   │          │ will_not_fix │                     │               │ ncurses: segmentation fault via _nc_wrap_entry()             │
+│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2023-50495   │          │              │                     │               │ ncurses: segmentation fault via _nc_wrap_entry()             │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-50495                   │
-├─────────────────────────────┼──────────────────┤          ├──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ openldap                    │ CVE-2023-2953    │          │ affected     │ 2.6.8-4.el9         │               │ openldap: null pointer dereference in ber_memalloc_x         │
-│                             │                  │          │              │                     │               │ function                                                     │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-2953                    │
 ├─────────────────────────────┼──────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ openssh                     │ CVE-2023-51767   │ MEDIUM   │ will_not_fix │ 8.7p1-45.el9        │               │ openssh: authentication bypass via row hammer attack         │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-51767                   │
@@ -412,35 +336,11 @@ Total: 281 (UNKNOWN: 0, LOW: 194, MEDIUM: 79, HIGH: 8, CRITICAL: 0)
 │ perl-Getopt-Std             │                  │          │              │ 1.12-481.el9        │               │                                                              │
 │                             │                  │          │              │                     │               │                                                              │
 │                             │                  │          │              │                     │               │                                                              │
-├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ perl-Git                    │ CVE-2025-48384   │ HIGH     │              │ 2.47.1-2.el9_6      │               │ git: Git arbitrary code execution                            │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-48384                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-48385   │          │              │                     │               │ git: Git arbitrary file writes                               │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-48385                   │
-│                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-27613   │ MEDIUM   │              │                     │               │ gitk: Git file creation flaw                                 │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-27613                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-27614   │          │              │                     │               │ gitk: git script execution flaw                              │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-27614                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-48386   │          │              │                     │               │ git: Git buffer overflow                                     │
+├─────────────────────────────┼──────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ perl-Git                    │ CVE-2025-48386   │          │              │ 2.47.3-1.el9_6      │               │ git: Git buffer overflow                                     │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-48386                   │
-│                             ├──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-50349   │ LOW      │              │                     │               │ git: Git does not sanitize URLs when asking for credentials  │
-│                             │                  │          │              │                     │               │ interactively                                                │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-50349                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-52006   │          │              │                     │               │ git: Newline confusion in credential helpers can lead to     │
-│                             │                  │          │              │                     │               │ credential exfiltration in...                                │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-52006                   │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-46835   │          │              │                     │               │ git: Git GUI can create and overwrite files for which the    │
-│                             │                  │          │              │                     │               │ user...                                                      │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-46835                   │
-├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ perl-IO                     │ CVE-2025-40909   │ MEDIUM   │              │ 1.43-481.el9        │               │ perl: Perl threads have a working directory race condition   │
+├─────────────────────────────┼──────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ perl-IO                     │ CVE-2025-40909   │          │              │ 1.43-481.el9        │               │ perl: Perl threads have a working directory race condition   │
 │                             │                  │          │              │                     │               │ where file operations...                                     │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-40909                   │
 ├─────────────────────────────┤                  │          │              ├─────────────────────┼───────────────┤                                                              │
@@ -552,15 +452,7 @@ Total: 281 (UNKNOWN: 0, LOW: 194, MEDIUM: 79, HIGH: 8, CRITICAL: 0)
 │                             │                  │          │              │                     │               │ references                                                   │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2021-3572                    │
 ├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ python3-setuptools          │ CVE-2025-47273   │ MEDIUM   │              │ 53.0.0-13.el9_6.1   │               │ setuptools: Path Traversal Vulnerability in setuptools       │
-│                             │                  │          │              │                     │               │ PackageIndex                                                 │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-47273                   │
-├─────────────────────────────┤                  │          │              │                     ├───────────────┤                                                              │
-│ python3-setuptools-wheel    │                  │          │              │                     │               │                                                              │
-│                             │                  │          │              │                     │               │                                                              │
-│                             │                  │          │              │                     │               │                                                              │
-├─────────────────────────────┼──────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ python3.12                  │ CVE-2025-4516    │          │              │ 3.12.9-1.el9_6.1    │               │ cpython: python: CPython DecodeError Handling Vulnerability  │
+│ python3.12                  │ CVE-2025-4516    │ MEDIUM   │              │ 3.12.9-1.el9_6.1    │               │ cpython: python: CPython DecodeError Handling Vulnerability  │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4516                    │
 │                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-6069    │          │              │                     │               │ cpython: Python HTMLParser quadratic complexity              │
@@ -573,10 +465,6 @@ Total: 281 (UNKNOWN: 0, LOW: 194, MEDIUM: 79, HIGH: 8, CRITICAL: 0)
 │                             │ CVE-2024-7592    │          │              │                     │               │ cpython: python: Uncontrolled CPU resource consumption when  │
 │                             │                  │          │              │                     │               │ in http.cookies module                                       │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-7592                    │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-1795    │          │              │                     │               │ python: Mishandling of comma during folding and              │
-│                             │                  │          │              │                     │               │ unicode-encoding of email headers                            │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-1795                    │
 ├─────────────────────────────┼──────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │ python3.12-libs             │ CVE-2025-4516    │ MEDIUM   │              │                     │               │ cpython: python: CPython DecodeError Handling Vulnerability  │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4516                    │
@@ -591,10 +479,6 @@ Total: 281 (UNKNOWN: 0, LOW: 194, MEDIUM: 79, HIGH: 8, CRITICAL: 0)
 │                             │ CVE-2024-7592    │          │              │                     │               │ cpython: python: Uncontrolled CPU resource consumption when  │
 │                             │                  │          │              │                     │               │ in http.cookies module                                       │
 │                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-7592                    │
-│                             ├──────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-1795    │          │              │                     │               │ python: Mishandling of comma during folding and              │
-│                             │                  │          │              │                     │               │ unicode-encoding of email headers                            │
-│                             │                  │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-1795                    │
 ├─────────────────────────────┼──────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ python3.12-pip-wheel        │ CVE-2025-50181   │ MEDIUM   │              │ 23.2.1-4.el9        │               │ urllib3: urllib3 redirects are not disabled when retries are │
 │                             │                  │          │              │                     │               │ disabled on PoolManager...                                   │
