@@ -1,10 +1,8 @@
-NAME                 INSTALLED  FIXED IN  TYPE       VULNERABILITY        SEVERITY  EPSS           RISK   
-golang.org/x/oauth2  v0.23.0    0.27.0    go-module  GHSA-6v2p-p543-phr9  High      < 0.1% (21st)  < 0.1  
-k8s.io/kubernetes    v1.32.5    1.32.6    go-module  GHSA-hj2p-8wj8-pfq4  Low       < 0.1% (4th)   < 0.1
+No vulnerabilities found
 
 quay.io/noiro/aci-containers-host-ovscni:6.1.1.5.81c2369.z (redhat 9.6)
 =======================================================================
-Total: 84 (UNKNOWN: 0, LOW: 57, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
+Total: 88 (UNKNOWN: 0, LOW: 58, MEDIUM: 30, HIGH: 0, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -79,8 +77,24 @@ Total: 84 (UNKNOWN: 0, LOW: 57, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2025-3360  │          │              │                     │               │ glibc: GLib prior to 2.82.5 is vulnerable to integer         │
 │                             │                │          │              │                     │               │ overflow and...                                              │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-3360                    │
-├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ gnupg2                      │ CVE-2022-3219  │          │              │ 2.3.3-4.el9         │               │ gnupg: denial of service issue (resource consumption) using  │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ glibc                       │ CVE-2025-8058  │ MEDIUM   │              │ 2.34-214.el9        │               │ The regcomp function in the GNU C library version from 2.4   │
+│                             │                │          │              │                     │               │ to...                                                        │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-8058                    │
+├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
+│ glibc-common                │                │          │              │                     │               │                                                              │
+│                             │                │          │              │                     │               │                                                              │
+│                             │                │          │              │                     │               │                                                              │
+├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
+│ glibc-langpack-en           │                │          │              │                     │               │                                                              │
+│                             │                │          │              │                     │               │                                                              │
+│                             │                │          │              │                     │               │                                                              │
+├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
+│ glibc-minimal-langpack      │                │          │              │                     │               │                                                              │
+│                             │                │          │              │                     │               │                                                              │
+│                             │                │          │              │                     │               │                                                              │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ gnupg2                      │ CVE-2022-3219  │ LOW      │              │ 2.3.3-4.el9         │               │ gnupg: denial of service issue (resource consumption) using  │
 │                             │                │          │              │                     │               │ compressed packets                                           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-3219                    │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -279,12 +293,12 @@ Total: 84 (UNKNOWN: 0, LOW: 57, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2021-3572  │ LOW      │              │                     │               │ python-pip: Incorrect handling of unicode separators in git  │
 │                             │                │          │              │                     │               │ references                                                   │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2021-3572                    │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ shadow-utils                │ CVE-2024-56433 │ MEDIUM   │              │ 2:4.9-13.el9        │               │ shadow-utils: Default subordinate ID configuration in        │
+├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ shadow-utils                │ CVE-2024-56433 │          │              │ 2:4.9-13.el9        │               │ shadow-utils: Default subordinate ID configuration in        │
 │                             │                │          │              │                     │               │ /etc/login.defs could lead to compromise                     │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-56433                   │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ sqlite-libs                 │ CVE-2024-0232  │ LOW      │              │ 3.34.1-8.el9        │               │ sqlite: use-after-free bug in jsonParseAddNodeArray          │
+├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ sqlite-libs                 │ CVE-2024-0232  │          │              │ 3.34.1-8.el9        │               │ sqlite: use-after-free bug in jsonParseAddNodeArray          │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-0232                    │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ systemd                     │ CVE-2025-4598  │ MEDIUM   │              │ 252-53.el9          │               │ systemd-coredump: race condition that allows a local         │
@@ -318,19 +332,3 @@ Total: 84 (UNKNOWN: 0, LOW: 57, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
 │                             │                │          │              │                     │               │ Fapi_VerifyQuote                                             │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-29040                   │
 └─────────────────────────────┴────────────────┴──────────┴──────────────┴─────────────────────┴───────────────┴──────────────────────────────────────────────────────────────┘
-
-usr/local/bin/aci-containers-host-agent (gobinary)
-==================================================
-Total: 2 (UNKNOWN: 0, LOW: 1, MEDIUM: 0, HIGH: 1, CRITICAL: 0)
-
-┌─────────────────────┬────────────────┬──────────┬────────┬───────────────────┬────────────────┬──────────────────────────────────────────────────────────────┐
-│       Library       │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version  │                            Title                             │
-├─────────────────────┼────────────────┼──────────┼────────┼───────────────────┼────────────────┼──────────────────────────────────────────────────────────────┤
-│ golang.org/x/oauth2 │ CVE-2025-22868 │ HIGH     │ fixed  │ v0.23.0           │ 0.27.0         │ golang.org/x/oauth2/jws: Unexpected memory consumption       │
-│                     │                │          │        │                   │                │ during token parsing in golang.org/x/oauth2/jws              │
-│                     │                │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2025-22868                   │
-├─────────────────────┼────────────────┼──────────┤        ├───────────────────┼────────────────┼──────────────────────────────────────────────────────────────┤
-│ k8s.io/kubernetes   │ CVE-2025-4563  │ LOW      │        │ v1.32.5           │ 1.32.6, 1.33.2 │ kube-apiserver: NodeRestriction Admission Controller Dynamic │
-│                     │                │          │        │                   │                │ Resource Allocation Bypass                                   │
-│                     │                │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2025-4563                    │
-└─────────────────────┴────────────────┴──────────┴────────┴───────────────────┴────────────────┴──────────────────────────────────────────────────────────────┘
