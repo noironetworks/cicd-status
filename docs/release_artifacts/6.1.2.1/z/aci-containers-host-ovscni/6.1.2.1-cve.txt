@@ -2,7 +2,7 @@ No vulnerabilities found
 
 quay.io/noiro/aci-containers-host-ovscni:6.1.2.1.81c2369.z (redhat 9.6)
 =======================================================================
-Total: 85 (UNKNOWN: 0, LOW: 56, MEDIUM: 29, HIGH: 0, CRITICAL: 0)
+Total: 83 (UNKNOWN: 0, LOW: 56, MEDIUM: 27, HIGH: 0, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -86,7 +86,7 @@ Total: 85 (UNKNOWN: 0, LOW: 56, MEDIUM: 29, HIGH: 0, CRITICAL: 0)
 │                             │                │          │              │                     │               │ keyring                                                      │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-30258                   │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ gnutls                      │ CVE-2025-32988 │ MEDIUM   │              │ 3.8.3-8.el9         │               │ gnutls: Vulnerability in GnuTLS otherName SAN export         │
+│ gnutls                      │ CVE-2025-32988 │ MEDIUM   │              │ 3.8.3-9.el9         │               │ gnutls: Vulnerability in GnuTLS otherName SAN export         │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-32988                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-32989 │          │              │                     │               │ gnutls: Vulnerability in GnuTLS SCT extension parsing        │
@@ -162,14 +162,8 @@ Total: 85 (UNKNOWN: 0, LOW: 56, MEDIUM: 29, HIGH: 0, CRITICAL: 0)
 │ libstdc++                   │                │          │              │                     │               │                                                              │
 │                             │                │          │              │                     │               │                                                              │
 │                             │                │          │              │                     │               │                                                              │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libxml2                     │ CVE-2025-32414 │ MEDIUM   │              │ 2.9.13-11.el9_6     │               │ libxml2: Out-of-Bounds Read in libxml2                       │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-32414                   │
-│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-32415 │          │              │                     │               │ libxml2: Out-of-bounds Read in xmlSchemaIDCFillNodeTables    │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-32415                   │
-│                             ├────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-45322 │ LOW      │ will_not_fix │                     │               │ libxml2: use-after-free in xmlUnlinkNode() in tree.c         │
+├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libxml2                     │ CVE-2023-45322 │          │ will_not_fix │ 2.9.13-12.el9_6     │               │ libxml2: use-after-free in xmlUnlinkNode() in tree.c         │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-45322                   │
 │                             ├────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-34459 │          │ affected     │                     │               │ libxml2: buffer over-read in xmlHTMLPrintFileContext in      │
