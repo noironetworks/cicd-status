@@ -2,7 +2,7 @@ No vulnerabilities found
 
 quay.io/noiro/aci-containers-host-ovscni:6.1.1.5.81c2369.z (redhat 9.6)
 =======================================================================
-Total: 88 (UNKNOWN: 0, LOW: 58, MEDIUM: 30, HIGH: 0, CRITICAL: 0)
+Total: 83 (UNKNOWN: 0, LOW: 55, MEDIUM: 27, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -11,7 +11,7 @@ Total: 88 (UNKNOWN: 0, LOW: 58, MEDIUM: 30, HIGH: 0, CRITICAL: 0)
 │                             │                │          │              │                     │               │ Key Specification                                            │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-5278                    │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ curl                        │ CVE-2024-11053 │ LOW      │              │ 7.76.1-31.el9       │               │ curl: curl netrc password leak                               │
+│ curl                        │ CVE-2024-11053 │ LOW      │              │ 7.76.1-31.el9_6.1   │               │ curl: curl netrc password leak                               │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-11053                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-7264  │          │              │                     │               │ curl: libcurl: ASN.1 date parser overread                    │
@@ -77,24 +77,8 @@ Total: 88 (UNKNOWN: 0, LOW: 58, MEDIUM: 30, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2025-3360  │          │              │                     │               │ glibc: GLib prior to 2.82.5 is vulnerable to integer         │
 │                             │                │          │              │                     │               │ overflow and...                                              │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-3360                    │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ glibc                       │ CVE-2025-8058  │ MEDIUM   │              │ 2.34-214.el9        │               │ The regcomp function in the GNU C library version from 2.4   │
-│                             │                │          │              │                     │               │ to...                                                        │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-8058                    │
-├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
-│ glibc-common                │                │          │              │                     │               │                                                              │
-│                             │                │          │              │                     │               │                                                              │
-│                             │                │          │              │                     │               │                                                              │
-├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
-│ glibc-langpack-en           │                │          │              │                     │               │                                                              │
-│                             │                │          │              │                     │               │                                                              │
-│                             │                │          │              │                     │               │                                                              │
-├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
-│ glibc-minimal-langpack      │                │          │              │                     │               │                                                              │
-│                             │                │          │              │                     │               │                                                              │
-│                             │                │          │              │                     │               │                                                              │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ gnupg2                      │ CVE-2022-3219  │ LOW      │              │ 2.3.3-4.el9         │               │ gnupg: denial of service issue (resource consumption) using  │
+├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ gnupg2                      │ CVE-2022-3219  │          │              │ 2.3.3-4.el9         │               │ gnupg: denial of service issue (resource consumption) using  │
 │                             │                │          │              │                     │               │ compressed packets                                           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-3219                    │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -102,7 +86,7 @@ Total: 88 (UNKNOWN: 0, LOW: 58, MEDIUM: 30, HIGH: 0, CRITICAL: 0)
 │                             │                │          │              │                     │               │ keyring                                                      │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-30258                   │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ gnutls                      │ CVE-2025-32988 │ MEDIUM   │              │ 3.8.3-6.el9         │               │ gnutls: Vulnerability in GnuTLS otherName SAN export         │
+│ gnutls                      │ CVE-2025-32988 │ MEDIUM   │              │ 3.8.3-9.el9         │               │ gnutls: Vulnerability in GnuTLS otherName SAN export         │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-32988                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-32989 │          │              │                     │               │ gnutls: Vulnerability in GnuTLS SCT extension parsing        │
@@ -115,21 +99,20 @@ Total: 88 (UNKNOWN: 0, LOW: 58, MEDIUM: 30, HIGH: 0, CRITICAL: 0)
 │                             │                │          │              │                     │               │ _gnutls_figure_common_ciphersuite()                          │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-6395                    │
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ iputils                     │ CVE-2025-48964 │          │              │ 20210202-14.el9     │               │ ping in iputils before 20250602 allows a denial of service   │
-│                             │                │          │              │                     │               │ (application error...                                        │
+│ iputils                     │ CVE-2025-48964 │          │              │ 20210202-14.el9     │               │ iputils: iputils integer overflow                            │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-48964                   │
-├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libarchive                  │ CVE-2023-30571 │          │ will_not_fix │ 3.5.3-5.el9_6       │               │ libarchive: Race condition in multi-threaded use of          │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libarchive                  │ CVE-2025-5914  │ HIGH     │              │ 3.5.3-5.el9_6       │               │ libarchive: Double free at                                   │
+│                             │                │          │              │                     │               │ archive_read_format_rar_seek_data() in                       │
+│                             │                │          │              │                     │               │ archive_read_support_format_rar.c                            │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-5914                    │
+│                             ├────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2023-30571 │ MEDIUM   │ will_not_fix │                     │               │ libarchive: Race condition in multi-threaded use of          │
 │                             │                │          │              │                     │               │ archive_write_disk_header() on posix based systems...        │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-30571                   │
 │                             ├────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-1632  │ LOW      │ affected     │                     │               │ libarchive: null pointer dereference in bsdunzip.c           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-1632                    │
-│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-5914  │          │              │                     │               │ libarchive: Double free at                                   │
-│                             │                │          │              │                     │               │ archive_read_format_rar_seek_data() in                       │
-│                             │                │          │              │                     │               │ archive_read_support_format_rar.c                            │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-5914                    │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-5915  │          │              │                     │               │ libarchive: Heap buffer over read in copy_from_lzss_window() │
 │                             │                │          │              │                     │               │ at archive_read_support_format_rar.c                         │
@@ -159,7 +142,7 @@ Total: 88 (UNKNOWN: 0, LOW: 58, MEDIUM: 30, HIGH: 0, CRITICAL: 0)
 │                             │                │          │              │                     │               │ find_prog_by_sec_insn                                        │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-3606                    │
 ├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libcurl-minimal             │ CVE-2024-11053 │          │ affected     │ 7.76.1-31.el9       │               │ curl: curl netrc password leak                               │
+│ libcurl-minimal             │ CVE-2024-11053 │          │ affected     │ 7.76.1-31.el9_6.1   │               │ curl: curl netrc password leak                               │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-11053                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-7264  │          │              │                     │               │ curl: libcurl: ASN.1 date parser overread                    │
@@ -179,14 +162,8 @@ Total: 88 (UNKNOWN: 0, LOW: 58, MEDIUM: 30, HIGH: 0, CRITICAL: 0)
 │ libstdc++                   │                │          │              │                     │               │                                                              │
 │                             │                │          │              │                     │               │                                                              │
 │                             │                │          │              │                     │               │                                                              │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libxml2                     │ CVE-2025-32414 │ MEDIUM   │              │ 2.9.13-10.el9_6     │               │ libxml2: Out-of-Bounds Read in libxml2                       │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-32414                   │
-│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-32415 │          │              │                     │               │ libxml2: Out-of-bounds Read in xmlSchemaIDCFillNodeTables    │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-32415                   │
-│                             ├────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-45322 │ LOW      │ will_not_fix │                     │               │ libxml2: use-after-free in xmlUnlinkNode() in tree.c         │
+├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libxml2                     │ CVE-2023-45322 │          │ will_not_fix │ 2.9.13-12.el9_6     │               │ libxml2: use-after-free in xmlUnlinkNode() in tree.c         │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-45322                   │
 │                             ├────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-34459 │          │ affected     │                     │               │ libxml2: buffer over-read in xmlHTMLPrintFileContext in      │
@@ -200,19 +177,13 @@ Total: 88 (UNKNOWN: 0, LOW: 58, MEDIUM: 30, HIGH: 0, CRITICAL: 0)
 │                             │                │          │              │                     │               │ Command Handling                                             │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-6170                    │
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ ncurses-base                │ CVE-2022-29458 │          │              │ 6.2-12.20210508.el9 │               │ ncurses: segfaulting OOB read                                │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-29458                   │
-│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-50495 │          │              │                     │               │ ncurses: segmentation fault via _nc_wrap_entry()             │
+│ ncurses-base                │ CVE-2023-50495 │          │              │ 6.2-12.20210508.el9 │               │ ncurses: segmentation fault via _nc_wrap_entry()             │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-50495                   │
-├─────────────────────────────┼────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ ncurses-libs                │ CVE-2022-29458 │          │              │                     │               │ ncurses: segfaulting OOB read                                │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-29458                   │
-│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-50495 │          │              │                     │               │ ncurses: segmentation fault via _nc_wrap_entry()             │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-50495                   │
+├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
+│ ncurses-libs                │                │          │              │                     │               │                                                              │
+│                             │                │          │              │                     │               │                                                              │
 ├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ openssl                     │ CVE-2024-41996 │          │ will_not_fix │ 1:3.5.1-2.el9       │               │ openssl: remote attackers (from the client side) to trigger  │
+│ openssl                     │ CVE-2024-41996 │          │ will_not_fix │ 1:3.5.1-3.el9       │               │ openssl: remote attackers (from the client side) to trigger  │
 │                             │                │          │              │                     │               │ unnecessarily expensive server-side...                       │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-41996                   │
 ├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
@@ -233,6 +204,9 @@ Total: 88 (UNKNOWN: 0, LOW: 58, MEDIUM: 30, HIGH: 0, CRITICAL: 0)
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-6069  │          │              │                     │               │ cpython: Python HTMLParser quadratic complexity              │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-6069                    │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-8194  │          │              │                     │               │ cpython: Cpython infinite loop when parsing a tarfile        │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-8194                    │
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-0397  │ LOW      │              │                     │               │ cpython: python: Memory race condition in ssl.SSLContext     │
 │                             │                │          │              │                     │               │ certificate store methods                                    │
@@ -251,6 +225,9 @@ Total: 88 (UNKNOWN: 0, LOW: 58, MEDIUM: 30, HIGH: 0, CRITICAL: 0)
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-6069  │          │              │                     │               │ cpython: Python HTMLParser quadratic complexity              │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-6069                    │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-8194  │          │              │                     │               │ cpython: Cpython infinite loop when parsing a tarfile        │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-8194                    │
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-0397  │ LOW      │              │                     │               │ cpython: python: Memory race condition in ssl.SSLContext     │
 │                             │                │          │              │                     │               │ certificate store methods                                    │
@@ -269,6 +246,9 @@ Total: 88 (UNKNOWN: 0, LOW: 58, MEDIUM: 30, HIGH: 0, CRITICAL: 0)
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-6069  │          │              │                     │               │ cpython: Python HTMLParser quadratic complexity              │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-6069                    │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-8194  │          │              │                     │               │ cpython: Cpython infinite loop when parsing a tarfile        │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-8194                    │
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-0397  │ LOW      │              │                     │               │ cpython: python: Memory race condition in ssl.SSLContext     │
 │                             │                │          │              │                     │               │ certificate store methods                                    │
@@ -294,11 +274,11 @@ Total: 88 (UNKNOWN: 0, LOW: 58, MEDIUM: 30, HIGH: 0, CRITICAL: 0)
 │                             │                │          │              │                     │               │ references                                                   │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2021-3572                    │
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ shadow-utils                │ CVE-2024-56433 │          │              │ 2:4.9-13.el9        │               │ shadow-utils: Default subordinate ID configuration in        │
+│ shadow-utils                │ CVE-2024-56433 │          │              │ 2:4.9-15.el9        │               │ shadow-utils: Default subordinate ID configuration in        │
 │                             │                │          │              │                     │               │ /etc/login.defs could lead to compromise                     │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-56433                   │
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ sqlite-libs                 │ CVE-2024-0232  │          │              │ 3.34.1-8.el9        │               │ sqlite: use-after-free bug in jsonParseAddNodeArray          │
+│ sqlite-libs                 │ CVE-2024-0232  │          │              │ 3.34.1-8.el9_6      │               │ sqlite: use-after-free bug in jsonParseAddNodeArray          │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-0232                    │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ systemd                     │ CVE-2025-4598  │ MEDIUM   │              │ 252-53.el9          │               │ systemd-coredump: race condition that allows a local         │
