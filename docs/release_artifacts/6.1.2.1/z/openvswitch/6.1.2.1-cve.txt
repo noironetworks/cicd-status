@@ -2,7 +2,7 @@ No vulnerabilities found
 
 quay.io/noiro/openvswitch:6.1.2.1.81c2369.z (redhat 9.6)
 ========================================================
-Total: 197 (UNKNOWN: 0, LOW: 168, MEDIUM: 29, HIGH: 0, CRITICAL: 0)
+Total: 198 (UNKNOWN: 0, LOW: 167, MEDIUM: 29, HIGH: 2, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -114,18 +114,18 @@ Total: 197 (UNKNOWN: 0, LOW: 168, MEDIUM: 29, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2025-6395  │          │              │                     │               │ gnutls: NULL pointer dereference in                          │
 │                             │                │          │              │                     │               │ _gnutls_figure_common_ciphersuite()                          │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-6395                    │
-├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libarchive                  │ CVE-2023-30571 │          │ will_not_fix │ 3.5.3-5.el9_6       │               │ libarchive: Race condition in multi-threaded use of          │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libarchive                  │ CVE-2025-5914  │ HIGH     │              │ 3.5.3-5.el9_6       │               │ libarchive: Double free at                                   │
+│                             │                │          │              │                     │               │ archive_read_format_rar_seek_data() in                       │
+│                             │                │          │              │                     │               │ archive_read_support_format_rar.c                            │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-5914                    │
+│                             ├────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2023-30571 │ MEDIUM   │ will_not_fix │                     │               │ libarchive: Race condition in multi-threaded use of          │
 │                             │                │          │              │                     │               │ archive_write_disk_header() on posix based systems...        │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-30571                   │
 │                             ├────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-1632  │ LOW      │ affected     │                     │               │ libarchive: null pointer dereference in bsdunzip.c           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-1632                    │
-│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-5914  │          │              │                     │               │ libarchive: Double free at                                   │
-│                             │                │          │              │                     │               │ archive_read_format_rar_seek_data() in                       │
-│                             │                │          │              │                     │               │ archive_read_support_format_rar.c                            │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-5914                    │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-5915  │          │              │                     │               │ libarchive: Heap buffer over read in copy_from_lzss_window() │
 │                             │                │          │              │                     │               │ at archive_read_support_format_rar.c                         │
@@ -203,8 +203,11 @@ Total: 197 (UNKNOWN: 0, LOW: 168, MEDIUM: 29, HIGH: 0, CRITICAL: 0)
 │ openssl-libs                │                │          │              │                     │               │                                                              │
 │                             │                │          │              │                     │               │                                                              │
 │                             │                │          │              │                     │               │                                                              │
-├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ pcre2                       │ CVE-2022-41409 │          │ affected     │ 10.40-6.el9         │               │ pcre2: negative repeat value in a pcre2test subject line     │
+├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ pam                         │ CVE-2025-8941  │ HIGH     │ affected     │ 1.5.1-26.el9        │               │ linux-pam: Incomplete fix for CVE-2025-6020                  │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-8941                    │
+├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ pcre2                       │ CVE-2022-41409 │ LOW      │              │ 10.40-6.el9         │               │ pcre2: negative repeat value in a pcre2test subject line     │
 │                             │                │          │              │                     │               │ leads to inifinite...                                        │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-41409                   │
 ├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
@@ -287,7 +290,7 @@ Total: 197 (UNKNOWN: 0, LOW: 168, MEDIUM: 29, HIGH: 0, CRITICAL: 0)
 │                             │                │          │              │                     │               │ references                                                   │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2021-3572                    │
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ shadow-utils                │ CVE-2024-56433 │          │              │ 2:4.9-13.el9        │               │ shadow-utils: Default subordinate ID configuration in        │
+│ shadow-utils                │ CVE-2024-56433 │          │              │ 2:4.9-15.el9        │               │ shadow-utils: Default subordinate ID configuration in        │
 │                             │                │          │              │                     │               │ /etc/login.defs could lead to compromise                     │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-56433                   │
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
