@@ -1,8 +1,8 @@
 NAME        INSTALLED  FIXED IN  TYPE    VULNERABILITY        SEVERITY  EPSS           RISK   
 requests    2.25.1     2.31.0    python  GHSA-j8r2-6x86-q33q  Medium    6.1% (90th)    3.4    
+urllib3     1.26.5     1.26.17   python  GHSA-v845-jxx5-vc9f  High      0.5% (64th)    0.3    
 setuptools  53.0.0     65.5.1    python  GHSA-r9hx-vwmv-q579  High      0.3% (54th)    0.2    
-urllib3     1.26.5     1.26.17   python  GHSA-v845-jxx5-vc9f  High      0.4% (57th)    0.2    
-idna        2.10       3.7       python  GHSA-jjg7-2v4v-x38h  Medium    0.3% (56th)    0.2    
+idna        2.10       3.7       python  GHSA-jjg7-2v4v-x38h  Medium    0.3% (55th)    0.2    
 setuptools  53.0.0     70.0.0    python  GHSA-cx63-2mw6-8hw5  High      0.2% (45th)    0.2    
 setuptools  53.0.0     78.1.1    python  GHSA-5rjg-fvgr-3xxf  High      0.1% (34th)    0.1    
 urllib3     1.26.5     1.26.19   python  GHSA-34jh-p97f-mpxf  Medium    0.2% (42nd)    < 0.1  
@@ -13,7 +13,7 @@ urllib3     1.26.5     2.5.0     python  GHSA-pq67-6m6q-mj2v  Medium    < 0.1% (
 
 quay.io/noiro/aci-containers-certmanager:6.1.2.1.81c2369.z (redhat 9.6)
 =======================================================================
-Total: 197 (UNKNOWN: 0, LOW: 168, MEDIUM: 27, HIGH: 2, CRITICAL: 0)
+Total: 196 (UNKNOWN: 0, LOW: 168, MEDIUM: 27, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │    Installed Version    │ Fixed Version │                            Title                             │
@@ -144,13 +144,8 @@ Total: 197 (UNKNOWN: 0, LOW: 168, MEDIUM: 27, HIGH: 2, CRITICAL: 0)
 │                             │ CVE-2025-6395  │          │              │                         │               │ gnutls: NULL pointer dereference in                          │
 │                             │                │          │              │                         │               │ _gnutls_figure_common_ciphersuite()                          │
 │                             │                │          │              │                         │               │ https://avd.aquasec.com/nvd/cve-2025-6395                    │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libarchive                  │ CVE-2025-5914  │ HIGH     │              │ 3.5.3-5.el9_6           │               │ libarchive: Double free at                                   │
-│                             │                │          │              │                         │               │ archive_read_format_rar_seek_data() in                       │
-│                             │                │          │              │                         │               │ archive_read_support_format_rar.c                            │
-│                             │                │          │              │                         │               │ https://avd.aquasec.com/nvd/cve-2025-5914                    │
-│                             ├────────────────┼──────────┼──────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-30571 │ MEDIUM   │ will_not_fix │                         │               │ libarchive: Race condition in multi-threaded use of          │
+├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libarchive                  │ CVE-2023-30571 │          │ will_not_fix │ 3.5.3-6.el9_6           │               │ libarchive: Race condition in multi-threaded use of          │
 │                             │                │          │              │                         │               │ archive_write_disk_header() on posix based systems...        │
 │                             │                │          │              │                         │               │ https://avd.aquasec.com/nvd/cve-2023-30571                   │
 │                             ├────────────────┼──────────┼──────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
