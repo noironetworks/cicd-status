@@ -2,7 +2,7 @@ No vulnerabilities found
 
 quay.io/noiro/openvswitch:6.1.2.1.81c2369.z (redhat 9.6)
 ========================================================
-Total: 198 (UNKNOWN: 0, LOW: 167, MEDIUM: 29, HIGH: 2, CRITICAL: 0)
+Total: 197 (UNKNOWN: 0, LOW: 167, MEDIUM: 29, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -114,13 +114,8 @@ Total: 198 (UNKNOWN: 0, LOW: 167, MEDIUM: 29, HIGH: 2, CRITICAL: 0)
 │                             │ CVE-2025-6395  │          │              │                     │               │ gnutls: NULL pointer dereference in                          │
 │                             │                │          │              │                     │               │ _gnutls_figure_common_ciphersuite()                          │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-6395                    │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libarchive                  │ CVE-2025-5914  │ HIGH     │              │ 3.5.3-5.el9_6       │               │ libarchive: Double free at                                   │
-│                             │                │          │              │                     │               │ archive_read_format_rar_seek_data() in                       │
-│                             │                │          │              │                     │               │ archive_read_support_format_rar.c                            │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-5914                    │
-│                             ├────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-30571 │ MEDIUM   │ will_not_fix │                     │               │ libarchive: Race condition in multi-threaded use of          │
+├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libarchive                  │ CVE-2023-30571 │          │ will_not_fix │ 3.5.3-6.el9_6       │               │ libarchive: Race condition in multi-threaded use of          │
 │                             │                │          │              │                     │               │ archive_write_disk_header() on posix based systems...        │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-30571                   │
 │                             ├────────────────┼──────────┼──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -164,7 +159,7 @@ Total: 198 (UNKNOWN: 0, LOW: 167, MEDIUM: 29, HIGH: 2, CRITICAL: 0)
 │                             │ CVE-2024-9681  │          │              │                     │               │ curl: HSTS subdomain overwrites parent cache entry           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-9681                    │
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libgcc                      │ CVE-2022-27943 │          │              │ 11.5.0-9.el9        │               │ binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows   │
+│ libgcc                      │ CVE-2022-27943 │          │              │ 11.5.0-11.el9       │               │ binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows   │
 │                             │                │          │              │                     │               │ stack exhaustion in demangle_const                           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2022-27943                   │
 ├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
@@ -297,7 +292,7 @@ Total: 198 (UNKNOWN: 0, LOW: 167, MEDIUM: 29, HIGH: 2, CRITICAL: 0)
 │ sqlite-libs                 │ CVE-2024-0232  │          │              │ 3.34.1-8.el9_6      │               │ sqlite: use-after-free bug in jsonParseAddNodeArray          │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-0232                    │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ systemd                     │ CVE-2025-4598  │ MEDIUM   │              │ 252-53.el9          │               │ systemd-coredump: race condition that allows a local         │
+│ systemd                     │ CVE-2025-4598  │ MEDIUM   │              │ 252-55.el9          │               │ systemd-coredump: race condition that allows a local         │
 │                             │                │          │              │                     │               │ attacker to crash a SUID...                                  │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4598                    │
 ├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
