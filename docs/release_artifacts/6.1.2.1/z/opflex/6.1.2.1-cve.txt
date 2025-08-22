@@ -2,7 +2,7 @@ No vulnerabilities found
 
 quay.io/noiro/opflex:6.1.2.1.81c2369.z (redhat 9.6)
 ===================================================
-Total: 188 (UNKNOWN: 0, LOW: 160, MEDIUM: 26, HIGH: 2, CRITICAL: 0)
+Total: 187 (UNKNOWN: 0, LOW: 160, MEDIUM: 26, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬──────────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │  Fixed Version   │                            Title                             │
@@ -98,13 +98,8 @@ Total: 188 (UNKNOWN: 0, LOW: 160, MEDIUM: 26, HIGH: 2, CRITICAL: 0)
 │                             │ CVE-2025-6395  │          │              │                     │                  │ gnutls: NULL pointer dereference in                          │
 │                             │                │          │              │                     │                  │ _gnutls_figure_common_ciphersuite()                          │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-6395                    │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
-│ libarchive                  │ CVE-2025-5914  │ HIGH     │              │ 3.5.3-6.el9         │                  │ libarchive: Double free at                                   │
-│                             │                │          │              │                     │                  │ archive_read_format_rar_seek_data() in                       │
-│                             │                │          │              │                     │                  │ archive_read_support_format_rar.c                            │
-│                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2025-5914                    │
-│                             ├────────────────┼──────────┼──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-30571 │ MEDIUM   │ will_not_fix │                     │                  │ libarchive: Race condition in multi-threaded use of          │
+├─────────────────────────────┼────────────────┤          ├──────────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libarchive                  │ CVE-2023-30571 │          │ will_not_fix │ 3.5.3-6.el9_6       │                  │ libarchive: Race condition in multi-threaded use of          │
 │                             │                │          │              │                     │                  │ archive_write_disk_header() on posix based systems...        │
 │                             │                │          │              │                     │                  │ https://avd.aquasec.com/nvd/cve-2023-30571                   │
 │                             ├────────────────┼──────────┼──────────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
