@@ -1,11 +1,11 @@
 NAME              INSTALLED                           FIXED IN                           TYPE       VULNERABILITY        SEVERITY  EPSS           RISK   
+setuptools        53.0.0                              70.0.0                             python     GHSA-cx63-2mw6-8hw5  High      10.1% (92nd)   8.2    
 requests          2.25.1                              2.31.0                             python     GHSA-j8r2-6x86-q33q  Medium    6.1% (90th)    3.4    
 urllib3           1.26.5                              1.26.17                            python     GHSA-v845-jxx5-vc9f  High      0.5% (64th)    0.3    
 setuptools        53.0.0                              65.5.1                             python     GHSA-r9hx-vwmv-q579  High      0.3% (54th)    0.2    
 idna              2.10                                3.7                                python     GHSA-jjg7-2v4v-x38h  Medium    0.3% (55th)    0.2    
-setuptools        53.0.0                              70.0.0                             python     GHSA-cx63-2mw6-8hw5  High      0.2% (45th)    0.2    
 setuptools        53.0.0                              78.1.1                             python     GHSA-5rjg-fvgr-3xxf  High      0.1% (34th)    0.1    
-urllib3           1.26.5                              1.26.19                            python     GHSA-34jh-p97f-mpxf  Medium    0.2% (42nd)    < 0.1  
+urllib3           1.26.5                              1.26.19                            python     GHSA-34jh-p97f-mpxf  Medium    0.2% (41st)    < 0.1  
 golang.org/x/sys  v0.0.0-20201117170446-d9b008d0a637  0.0.0-20220412211240-33da011f77ad  go-module  GHSA-p782-xgp4-8hr8  Medium    0.2% (39th)    < 0.1  
 urllib3           1.26.5                              1.26.18                            python     GHSA-g4mx-q9vg-27p4  Medium    < 0.1% (17th)  < 0.1  
 requests          2.25.1                              2.32.0                             python     GHSA-9wx4-h78v-vm56  Medium    < 0.1% (13th)  < 0.1  
@@ -14,7 +14,7 @@ urllib3           1.26.5                              2.5.0                     
 
 quay.io/noiro/cnideploy:6.1.2.1.81c2369.z (redhat 9.6)
 ======================================================
-Total: 198 (UNKNOWN: 0, LOW: 168, MEDIUM: 29, HIGH: 1, CRITICAL: 0)
+Total: 199 (UNKNOWN: 0, LOW: 168, MEDIUM: 30, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │    Installed Version    │ Fixed Version │                            Title                             │
@@ -342,6 +342,9 @@ Total: 198 (UNKNOWN: 0, LOW: 168, MEDIUM: 29, HIGH: 1, CRITICAL: 0)
 │                             ├────────────────┤          │              │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-53906 │          │              │                         │               │ vim: Vim path traversal                                      │
 │                             │                │          │              │                         │               │ https://avd.aquasec.com/nvd/cve-2025-53906                   │
+│                             ├────────────────┤          │              │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-9390  │          │              │                         │               │ vim: vim xxd xxd.c main buffer overflow                      │
+│                             │                │          │              │                         │               │ https://avd.aquasec.com/nvd/cve-2025-9390                    │
 │                             ├────────────────┼──────────┤              │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2021-3927  │ LOW      │              │                         │               │ vim: heap-based buffer overflow in gchar_cursor() in misc1.c │
 │                             │                │          │              │                         │               │ https://avd.aquasec.com/nvd/cve-2021-3927                    │
@@ -669,11 +672,11 @@ Total: 198 (UNKNOWN: 0, LOW: 168, MEDIUM: 29, HIGH: 1, CRITICAL: 0)
 │                             │ CVE-2024-41965 │          │              │                         │               │ vim: Double-Free Vulnerability in Vim Could Cause            │
 │                             │                │          │              │                         │               │ Application Crashes                                          │
 │                             │                │          │              │                         │               │ https://avd.aquasec.com/nvd/cve-2024-41965                   │
-│                             ├────────────────┤          ├──────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-43374 │          │ will_not_fix │                         │               │ vim: use-after-free in alist_add() in src/arglist.c          │
-│                             │                │          │              │                         │               │ https://avd.aquasec.com/nvd/cve-2024-43374                   │
 │                             ├────────────────┤          │              │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-43802 │          │              │                         │               │ vim: Heap Buffer Overflow in Vim's Typeahead Buffer Handling │
+│                             │ CVE-2024-43374 │          │              │                         │               │ vim: use-after-free in alist_add() in src/arglist.c          │
+│                             │                │          │              │                         │               │ https://avd.aquasec.com/nvd/cve-2024-43374                   │
+│                             ├────────────────┤          ├──────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2024-43802 │          │ will_not_fix │                         │               │ vim: Heap Buffer Overflow in Vim's Typeahead Buffer Handling │
 │                             │                │          │              │                         │               │ https://avd.aquasec.com/nvd/cve-2024-43802                   │
 │                             ├────────────────┤          ├──────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-45306 │          │ affected     │                         │               │ vim: heap-buffer-overflow in Vim                             │
