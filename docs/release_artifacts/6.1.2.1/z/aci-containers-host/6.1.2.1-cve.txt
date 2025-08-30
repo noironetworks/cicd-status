@@ -1,4 +1,5 @@
-No vulnerabilities found
+NAME               INSTALLED  FIXED IN  TYPE       VULNERABILITY        SEVERITY  EPSS          RISK   
+k8s.io/kubernetes  v1.33.2    1.33.4    go-module  GHSA-4x4m-3c2p-qppc  Medium    < 0.1% (1st)  < 0.1
 
 quay.io/noiro/aci-containers-host:6.1.2.1.81c2369.z (redhat 9.6)
 ================================================================
@@ -314,3 +315,15 @@ Total: 84 (UNKNOWN: 0, LOW: 56, MEDIUM: 27, HIGH: 1, CRITICAL: 0)
 │                             │                │          │              │                     │               │ Fapi_VerifyQuote                                             │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-29040                   │
 └─────────────────────────────┴────────────────┴──────────┴──────────────┴─────────────────────┴───────────────┴──────────────────────────────────────────────────────────────┘
+
+usr/local/bin/aci-containers-host-agent (gobinary)
+==================================================
+Total: 1 (UNKNOWN: 0, LOW: 0, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
+
+┌───────────────────┬───────────────┬──────────┬────────┬───────────────────┬─────────────────────────┬────────────────────────────────────────────────────────────┐
+│      Library      │ Vulnerability │ Severity │ Status │ Installed Version │      Fixed Version      │                           Title                            │
+├───────────────────┼───────────────┼──────────┼────────┼───────────────────┼─────────────────────────┼────────────────────────────────────────────────────────────┤
+│ k8s.io/kubernetes │ CVE-2025-5187 │ MEDIUM   │ fixed  │ v1.33.2           │ 1.31.12, 1.32.8, 1.33.4 │ kubernetes: kube-apiserver: Nodes can delete themselves by │
+│                   │               │          │        │                   │                         │ adding an OwnerReference                                   │
+│                   │               │          │        │                   │                         │ https://avd.aquasec.com/nvd/cve-2025-5187                  │
+└───────────────────┴───────────────┴──────────┴────────┴───────────────────┴─────────────────────────┴────────────────────────────────────────────────────────────┘
