@@ -1,20 +1,20 @@
 NAME              INSTALLED                           FIXED IN                           TYPE       VULNERABILITY        SEVERITY  EPSS           RISK   
-setuptools        53.0.0                              70.0.0                             python     GHSA-cx63-2mw6-8hw5  High      10.1% (92nd)   8.2    
+setuptools        53.0.0                              70.0.0                             python     GHSA-cx63-2mw6-8hw5  High      4.4% (88th)    3.6    
 requests          2.25.1                              2.31.0                             python     GHSA-j8r2-6x86-q33q  Medium    6.1% (90th)    3.4    
 urllib3           1.26.5                              1.26.17                            python     GHSA-v845-jxx5-vc9f  High      0.5% (63rd)    0.3    
 setuptools        53.0.0                              65.5.1                             python     GHSA-r9hx-vwmv-q579  High      0.3% (54th)    0.2    
 idna              2.10                                3.7                                python     GHSA-jjg7-2v4v-x38h  Medium    0.3% (55th)    0.2    
-setuptools        53.0.0                              78.1.1                             python     GHSA-5rjg-fvgr-3xxf  High      0.1% (34th)    0.1    
-urllib3           1.26.5                              1.26.19                            python     GHSA-34jh-p97f-mpxf  Medium    0.2% (41st)    < 0.1  
+setuptools        53.0.0                              78.1.1                             python     GHSA-5rjg-fvgr-3xxf  High      0.2% (37th)    0.1    
 golang.org/x/sys  v0.0.0-20201117170446-d9b008d0a637  0.0.0-20220412211240-33da011f77ad  go-module  GHSA-p782-xgp4-8hr8  Medium    0.2% (39th)    < 0.1  
+urllib3           1.26.5                              1.26.19                            python     GHSA-34jh-p97f-mpxf  Medium    0.1% (35th)    < 0.1  
+requests          2.25.1                              2.32.4                             python     GHSA-9hjg-9r4m-mvj7  Medium    < 0.1% (23rd)  < 0.1  
 urllib3           1.26.5                              1.26.18                            python     GHSA-g4mx-q9vg-27p4  Medium    < 0.1% (17th)  < 0.1  
-requests          2.25.1                              2.32.0                             python     GHSA-9wx4-h78v-vm56  Medium    < 0.1% (12th)  < 0.1  
-requests          2.25.1                              2.32.4                             python     GHSA-9hjg-9r4m-mvj7  Medium    < 0.1% (6th)   < 0.1  
-urllib3           1.26.5                              2.5.0                              python     GHSA-pq67-6m6q-mj2v  Medium    < 0.1% (2nd)   < 0.1
+requests          2.25.1                              2.32.0                             python     GHSA-9wx4-h78v-vm56  Medium    < 0.1% (7th)   < 0.1  
+urllib3           1.26.5                              2.5.0                              python     GHSA-pq67-6m6q-mj2v  Medium    < 0.1% (1st)   < 0.1
 
 quay.io/noiro/cnideploy:6.1.2.1.81c2369.z (redhat 9.6)
 ======================================================
-Total: 194 (UNKNOWN: 0, LOW: 165, MEDIUM: 29, HIGH: 0, CRITICAL: 0)
+Total: 196 (UNKNOWN: 0, LOW: 166, MEDIUM: 29, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬─────────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │    Installed Version    │ Fixed Version │                            Title                             │
@@ -22,8 +22,11 @@ Total: 194 (UNKNOWN: 0, LOW: 165, MEDIUM: 29, HIGH: 0, CRITICAL: 0)
 │ coreutils-single            │ CVE-2025-5278  │ MEDIUM   │ affected            │ 8.32-39.el9             │               │ coreutils: Heap Buffer Under-Read in GNU Coreutils sort via  │
 │                             │                │          │                     │                         │               │ Key Specification                                            │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-5278                    │
-├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ curl-minimal                │ CVE-2024-11053 │ LOW      │                     │ 7.76.1-31.el9_6.1       │               │ curl: curl netrc password leak                               │
+├─────────────────────────────┼────────────────┤          │                     ├─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ curl-minimal                │ CVE-2025-9086  │          │                     │ 7.76.1-31.el9_6.1       │               │ curl: libcurl: Curl out of bounds read for cookie path       │
+│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-9086                    │
+│                             ├────────────────┼──────────┤                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2024-11053 │ LOW      │                     │                         │               │ curl: curl netrc password leak                               │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2024-11053                   │
 │                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-7264  │          │                     │                         │               │ curl: libcurl: ASN.1 date parser overread                    │
@@ -79,8 +82,12 @@ Total: 194 (UNKNOWN: 0, LOW: 165, MEDIUM: 29, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2025-1377  │          │                     │                         │               │ elfutils: GNU elfutils eu-strip strip.c gelf_getsymshndx     │
 │                             │                │          │                     │                         │               │ denial of service                                            │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-1377                    │
-├─────────────────────────────┼────────────────┤          │                     ├─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ gawk                        │ CVE-2023-4156  │          │                     │ 5.1.0-6.el9             │               │ gawk: heap out of bound read in builtin.c                    │
+├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ expat                       │ CVE-2025-59375 │ HIGH     │                     │ 2.5.0-5.el9_6           │               │ expat: libexpat in Expat allows attackers to trigger large   │
+│                             │                │          │                     │                         │               │ dynamic memory allocations...                                │
+│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-59375                   │
+├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ gawk                        │ CVE-2023-4156  │ LOW      │                     │ 5.1.0-6.el9             │               │ gawk: heap out of bound read in builtin.c                    │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2023-4156                    │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ gdb-gdbserver               │ CVE-2025-5245  │ MEDIUM   │                     │ 14.2-4.1.el9_6          │               │ binutils: GNU Binutils objdump debug.c debug_type_samep      │
@@ -172,20 +179,11 @@ Total: 194 (UNKNOWN: 0, LOW: 165, MEDIUM: 29, HIGH: 0, CRITICAL: 0)
 │                             │ CVE-2025-5918  │          │                     │                         │               │ libarchive: Reading past EOF may be triggered for piped file │
 │                             │                │          │                     │                         │               │ streams                                                      │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-5918                    │
-├─────────────────────────────┼────────────────┼──────────┼─────────────────────┼─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libbpf                      │ CVE-2021-45940 │ MEDIUM   │ will_not_fix        │ 2:1.5.0-1.el9           │               │ libbpf: heap-based buffer overflow (4 bytes) in              │
-│                             │                │          │                     │                         │               │ __bpf_object__open                                           │
-│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2021-45940                   │
-│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2021-45941 │          │                     │                         │               │ libbpf: heap-based buffer overflow (8 bytes) in              │
-│                             │                │          │                     │                         │               │ __bpf_object__open                                           │
-│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2021-45941                   │
+├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libcurl-minimal             │ CVE-2025-9086  │ MEDIUM   │                     │ 7.76.1-31.el9_6.1       │               │ curl: libcurl: Curl out of bounds read for cookie path       │
+│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-9086                    │
 │                             ├────────────────┼──────────┤                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-3606  │ LOW      │                     │                         │               │ kernel: libbpf: NULL pointer dereference in                  │
-│                             │                │          │                     │                         │               │ find_prog_by_sec_insn                                        │
-│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2022-3606                    │
-├─────────────────────────────┼────────────────┤          ├─────────────────────┼─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libcurl-minimal             │ CVE-2024-11053 │          │ affected            │ 7.76.1-31.el9_6.1       │               │ curl: curl netrc password leak                               │
+│                             │ CVE-2024-11053 │ LOW      │                     │                         │               │ curl: curl netrc password leak                               │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2024-11053                   │
 │                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-7264  │          │                     │                         │               │ curl: libcurl: ASN.1 date parser overread                    │
@@ -229,14 +227,20 @@ Total: 194 (UNKNOWN: 0, LOW: 165, MEDIUM: 29, HIGH: 0, CRITICAL: 0)
 ├─────────────────────────────┤                │          │                     │                         ├───────────────┤                                                              │
 │ ncurses-libs                │                │          │                     │                         │               │                                                              │
 │                             │                │          │                     │                         │               │                                                              │
-├─────────────────────────────┼────────────────┤          ├─────────────────────┼─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ openssl                     │ CVE-2024-41996 │          │ will_not_fix        │ 1:3.2.2-6.el9_5.1       │               │ openssl: remote attackers (from the client side) to trigger  │
+├─────────────────────────────┼────────────────┤          │                     ├─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ openssl                     │ CVE-2024-13176 │          │                     │ 1:3.2.2-6.el9_5.1       │               │ openssl: Timing side-channel in ECDSA signature computation  │
+│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2024-13176                   │
+│                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2024-41996 │          │ will_not_fix        │                         │               │ openssl: remote attackers (from the client side) to trigger  │
 │                             │                │          │                     │                         │               │ unnecessarily expensive server-side...                       │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2024-41996                   │
-├─────────────────────────────┤                │          │                     │                         ├───────────────┤                                                              │
-│ openssl-libs                │                │          │                     │                         │               │                                                              │
-│                             │                │          │                     │                         │               │                                                              │
-│                             │                │          │                     │                         │               │                                                              │
+├─────────────────────────────┼────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ openssl-libs                │ CVE-2024-13176 │          │ affected            │                         │               │ openssl: Timing side-channel in ECDSA signature computation  │
+│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2024-13176                   │
+│                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2024-41996 │          │ will_not_fix        │                         │               │ openssl: remote attackers (from the client side) to trigger  │
+│                             │                │          │                     │                         │               │ unnecessarily expensive server-side...                       │
+│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2024-41996                   │
 ├─────────────────────────────┼────────────────┤          ├─────────────────────┼─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ pcre2                       │ CVE-2022-41409 │          │ affected            │ 10.40-6.el9             │               │ pcre2: negative repeat value in a pcre2test subject line     │
 │                             │                │          │                     │                         │               │ leads to inifinite...                                        │
@@ -285,7 +289,7 @@ Total: 194 (UNKNOWN: 0, LOW: 165, MEDIUM: 29, HIGH: 0, CRITICAL: 0)
 │ sqlite-libs                 │ CVE-2024-0232  │          │                     │ 3.34.1-8.el9_6          │               │ sqlite: use-after-free bug in jsonParseAddNodeArray          │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2024-0232                    │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ systemd                     │ CVE-2025-4598  │ MEDIUM   │                     │ 252-51.el9_6.1          │               │ systemd-coredump: race condition that allows a local         │
+│ systemd                     │ CVE-2025-4598  │ MEDIUM   │                     │ 252-51.el9_6.2          │               │ systemd-coredump: race condition that allows a local         │
 │                             │                │          │                     │                         │               │ attacker to crash a SUID...                                  │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-4598                    │
 ├─────────────────────────────┤                │          │                     │                         ├───────────────┤                                                              │
