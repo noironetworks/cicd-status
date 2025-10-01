@@ -2,7 +2,7 @@ No vulnerabilities found
 
 quay.io/noiro/openvswitch:6.1.2.1.81c2369.z (redhat 9.6)
 ========================================================
-Total: 188 (UNKNOWN: 0, LOW: 163, MEDIUM: 24, HIGH: 1, CRITICAL: 0)
+Total: 194 (UNKNOWN: 0, LOW: 165, MEDIUM: 28, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │  Installed Version  │ Fixed Version │                            Title                             │
@@ -183,22 +183,40 @@ Total: 188 (UNKNOWN: 0, LOW: 163, MEDIUM: 24, HIGH: 1, CRITICAL: 0)
 ├─────────────────────────────┤                │          │                     │                     ├───────────────┤                                                              │
 │ ncurses-libs                │                │          │                     │                     │               │                                                              │
 │                             │                │          │                     │                     │               │                                                              │
+├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ openssl                     │ CVE-2025-9230  │ MEDIUM   │                     │ 1:3.5.1-5.el9       │               │ openssl: Out-of-bounds read & write in RFC 3211 KEK Unwrap   │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-9230                    │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-9231  │          │                     │                     │               │ openssl: Timing side-channel in SM2 algorithm on 64 bit ARM  │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-9231                    │
+│                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2024-13176 │ LOW      │                     │                     │               │ openssl: Timing side-channel in ECDSA signature computation  │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-13176                   │
+│                             ├────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2024-41996 │          │ will_not_fix        │                     │               │ openssl: remote attackers (from the client side) to trigger  │
+│                             │                │          │                     │                     │               │ unnecessarily expensive server-side...                       │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-41996                   │
+│                             ├────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-9232  │          │ affected            │                     │               │ openssl: Out-of-bounds read in HTTP client no_proxy handling │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-9232                    │
+├─────────────────────────────┼────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ openssl-libs                │ CVE-2025-9230  │ MEDIUM   │                     │                     │               │ openssl: Out-of-bounds read & write in RFC 3211 KEK Unwrap   │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-9230                    │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-9231  │          │                     │                     │               │ openssl: Timing side-channel in SM2 algorithm on 64 bit ARM  │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-9231                    │
+│                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2024-13176 │ LOW      │                     │                     │               │ openssl: Timing side-channel in ECDSA signature computation  │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-13176                   │
+│                             ├────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2024-41996 │          │ will_not_fix        │                     │               │ openssl: remote attackers (from the client side) to trigger  │
+│                             │                │          │                     │                     │               │ unnecessarily expensive server-side...                       │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-41996                   │
+│                             ├────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-9232  │          │ affected            │                     │               │ openssl: Out-of-bounds read in HTTP client no_proxy handling │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-9232                    │
 ├─────────────────────────────┼────────────────┤          │                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ openssl                     │ CVE-2024-13176 │          │                     │ 1:3.5.1-5.el9       │               │ openssl: Timing side-channel in ECDSA signature computation  │
-│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-13176                   │
-│                             ├────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-41996 │          │ will_not_fix        │                     │               │ openssl: remote attackers (from the client side) to trigger  │
-│                             │                │          │                     │                     │               │ unnecessarily expensive server-side...                       │
-│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-41996                   │
-├─────────────────────────────┼────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ openssl-libs                │ CVE-2024-13176 │          │ affected            │                     │               │ openssl: Timing side-channel in ECDSA signature computation  │
-│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-13176                   │
-│                             ├────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-41996 │          │ will_not_fix        │                     │               │ openssl: remote attackers (from the client side) to trigger  │
-│                             │                │          │                     │                     │               │ unnecessarily expensive server-side...                       │
-│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-41996                   │
-├─────────────────────────────┼────────────────┤          ├─────────────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ pcre2                       │ CVE-2022-41409 │          │ affected            │ 10.40-6.el9         │               │ pcre2: negative repeat value in a pcre2test subject line     │
+│ pcre2                       │ CVE-2022-41409 │          │                     │ 10.40-6.el9         │               │ pcre2: negative repeat value in a pcre2test subject line     │
 │                             │                │          │                     │                     │               │ leads to inifinite...                                        │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-41409                   │
 ├─────────────────────────────┤                │          │                     │                     ├───────────────┤                                                              │
