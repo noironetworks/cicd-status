@@ -7,14 +7,14 @@ setuptools        53.0.0                              65.5.1                    
 setuptools        53.0.0                              78.1.1                             python     GHSA-5rjg-fvgr-3xxf  High      0.2% (37th)    0.1    
 golang.org/x/sys  v0.0.0-20201117170446-d9b008d0a637  0.0.0-20220412211240-33da011f77ad  go-module  GHSA-p782-xgp4-8hr8  Medium    0.2% (39th)    < 0.1  
 urllib3           1.26.5                              1.26.19                            python     GHSA-34jh-p97f-mpxf  Medium    0.1% (35th)    < 0.1  
-requests          2.25.1                              2.32.4                             python     GHSA-9hjg-9r4m-mvj7  Medium    < 0.1% (24th)  < 0.1  
+requests          2.25.1                              2.32.4                             python     GHSA-9hjg-9r4m-mvj7  Medium    0.1% (29th)    < 0.1  
 urllib3           1.26.5                              1.26.18                            python     GHSA-g4mx-q9vg-27p4  Medium    < 0.1% (17th)  < 0.1  
-requests          2.25.1                              2.32.0                             python     GHSA-9wx4-h78v-vm56  Medium    < 0.1% (8th)   < 0.1  
+requests          2.25.1                              2.32.0                             python     GHSA-9wx4-h78v-vm56  Medium    < 0.1% (13th)  < 0.1  
 urllib3           1.26.5                              2.5.0                              python     GHSA-pq67-6m6q-mj2v  Medium    < 0.1% (2nd)   < 0.1
 
 quay.io/noiro/cnideploy:6.1.1.5.81c2369.z (redhat 9.6)
 ======================================================
-Total: 201 (UNKNOWN: 0, LOW: 168, MEDIUM: 32, HIGH: 1, CRITICAL: 0)
+Total: 206 (UNKNOWN: 0, LOW: 173, MEDIUM: 32, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬─────────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │    Installed Version    │ Fixed Version │                            Title                             │
@@ -116,6 +116,24 @@ Total: 201 (UNKNOWN: 0, LOW: 168, MEDIUM: 32, HIGH: 1, CRITICAL: 0)
 │                             │ CVE-2024-57360 │          │ affected            │                         │               │ binutils: nm: potential segmentation fault when displaying   │
 │                             │                │          │                     │                         │               │ symbols without version info                                 │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2024-57360                   │
+│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-11412 │          │                     │                         │               │ binutils: GNU Binutils Linker elflink.c                      │
+│                             │                │          │                     │                         │               │ bfd_elf_gc_record_vtentry out-of-bounds                      │
+│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-11412                   │
+│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-11413 │          │                     │                         │               │ binutils: GNU Binutils Linker elflink.c                      │
+│                             │                │          │                     │                         │               │ elf_link_add_object_symbols out-of-bounds                    │
+│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-11413                   │
+│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-11414 │          │                     │                         │               │ binutils: GNU Binutils Linker elflink.c get_link_hash_entry  │
+│                             │                │          │                     │                         │               │ out-of-bounds                                                │
+│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-11414                   │
+│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-11494 │          │                     │                         │               │ binutils: GNU Binutils Linker out-of-bounds read             │
+│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-11494                   │
+│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-11495 │          │                     │                         │               │ binutils: GNU Binutils Linker heap-based overflow            │
+│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-11495                   │
 │                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-1150  │          │                     │                         │               │ binutils: GNU Binutils ld libbfd.c bfd_malloc memory leak    │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-1150                    │
@@ -269,6 +287,10 @@ Total: 201 (UNKNOWN: 0, LOW: 168, MEDIUM: 32, HIGH: 1, CRITICAL: 0)
 │                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-6069  │          │                     │                         │               │ cpython: Python HTMLParser quadratic complexity              │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-6069                    │
+│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-8291  │          │                     │                         │               │ cpython: python: Python zipfile End of Central Directory     │
+│                             │                │          │                     │                         │               │ (EOCD) Locator record offset...                              │
+│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-8291                    │
 │                             ├────────────────┼──────────┤                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-1795  │ LOW      │                     │                         │               │ python: Mishandling of comma during folding and              │
 │                             │                │          │                     │                         │               │ unicode-encoding of email headers                            │
@@ -279,6 +301,10 @@ Total: 201 (UNKNOWN: 0, LOW: 168, MEDIUM: 32, HIGH: 1, CRITICAL: 0)
 │                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-6069  │          │                     │                         │               │ cpython: Python HTMLParser quadratic complexity              │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-6069                    │
+│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-8291  │          │                     │                         │               │ cpython: python: Python zipfile End of Central Directory     │
+│                             │                │          │                     │                         │               │ (EOCD) Locator record offset...                              │
+│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-8291                    │
 │                             ├────────────────┼──────────┤                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-1795  │ LOW      │                     │                         │               │ python: Mishandling of comma during folding and              │
 │                             │                │          │                     │                         │               │ unicode-encoding of email headers                            │
@@ -334,15 +360,9 @@ Total: 201 (UNKNOWN: 0, LOW: 168, MEDIUM: 32, HIGH: 1, CRITICAL: 0)
 │                             │                │          │                     │                         │               │ Fapi_VerifyQuote                                             │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2024-29040                   │
 ├─────────────────────────────┼────────────────┤          │                     ├─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ vim-minimal                 │ CVE-2025-29768 │          │                     │ 2:8.2.2637-22.el9_6     │               │ vim: Vim vulnerable to potential data loss with zip.vim and  │
+│ vim-minimal                 │ CVE-2025-29768 │          │                     │ 2:8.2.2637-22.el9_6.1   │               │ vim: Vim vulnerable to potential data loss with zip.vim and  │
 │                             │                │          │                     │                         │               │ special crafted...                                           │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-29768                   │
-│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-53905 │          │                     │                         │               │ vim: Vim path traversial                                     │
-│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-53905                   │
-│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-53906 │          │                     │                         │               │ vim: Vim path traversal                                      │
-│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-53906                   │
 │                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-9390  │          │                     │                         │               │ vim: vim xxd xxd.c main buffer overflow                      │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-9390                    │
