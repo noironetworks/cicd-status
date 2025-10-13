@@ -3,7 +3,7 @@ k8s.io/kubernetes  v1.33.2    1.33.4    go-module  GHSA-4x4m-3c2p-qppc  Medium  
 
 quay.io/noiro/aci-containers-host:6.1.1.5.81c2369.z (redhat 9.6)
 ================================================================
-Total: 80 (UNKNOWN: 0, LOW: 54, MEDIUM: 25, HIGH: 1, CRITICAL: 0)
+Total: 82 (UNKNOWN: 0, LOW: 54, MEDIUM: 27, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │  Installed Version  │ Fixed Version │                            Title                             │
@@ -97,11 +97,8 @@ Total: 80 (UNKNOWN: 0, LOW: 54, MEDIUM: 25, HIGH: 1, CRITICAL: 0)
 │                             │ CVE-2025-30258 │          │                     │                     │               │ gnupg: verification DoS due to a malicious subkey in the     │
 │                             │                │          │                     │                     │               │ keyring                                                      │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-30258                   │
-├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ iputils                     │ CVE-2025-48964 │ MEDIUM   │                     │ 20210202-15.el9     │               │ iputils: iputils integer overflow                            │
-│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-48964                   │
-├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ jq                          │ CVE-2025-9403  │ LOW      │                     │ 1.6-19.el9          │               │ jq: assertion failure in run_jq_tests() of the file          │
+├─────────────────────────────┼────────────────┤          │                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ jq                          │ CVE-2025-9403  │          │                     │ 1.6-19.el9          │               │ jq: assertion failure in run_jq_tests() of the file          │
 │                             │                │          │                     │                     │               │ jq_test.c                                                    │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-9403                    │
 ├─────────────────────────────┼────────────────┼──────────┼─────────────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
@@ -221,6 +218,10 @@ Total: 80 (UNKNOWN: 0, LOW: 54, MEDIUM: 25, HIGH: 1, CRITICAL: 0)
 │                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-6069  │          │                     │                     │               │ cpython: Python HTMLParser quadratic complexity              │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-6069                    │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-8291  │          │                     │                     │               │ cpython: python: Python zipfile End of Central Directory     │
+│                             │                │          │                     │                     │               │ (EOCD) Locator record offset...                              │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-8291                    │
 │                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-1795  │ LOW      │                     │                     │               │ python: Mishandling of comma during folding and              │
 │                             │                │          │                     │                     │               │ unicode-encoding of email headers                            │
@@ -231,6 +232,10 @@ Total: 80 (UNKNOWN: 0, LOW: 54, MEDIUM: 25, HIGH: 1, CRITICAL: 0)
 │                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-6069  │          │                     │                     │               │ cpython: Python HTMLParser quadratic complexity              │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-6069                    │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-8291  │          │                     │                     │               │ cpython: python: Python zipfile End of Central Directory     │
+│                             │                │          │                     │                     │               │ (EOCD) Locator record offset...                              │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-8291                    │
 │                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-1795  │ LOW      │                     │                     │               │ python: Mishandling of comma during folding and              │
 │                             │                │          │                     │                     │               │ unicode-encoding of email headers                            │
@@ -241,6 +246,10 @@ Total: 80 (UNKNOWN: 0, LOW: 54, MEDIUM: 25, HIGH: 1, CRITICAL: 0)
 │                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-6069  │          │                     │                     │               │ cpython: Python HTMLParser quadratic complexity              │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-6069                    │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-8291  │          │                     │                     │               │ cpython: python: Python zipfile End of Central Directory     │
+│                             │                │          │                     │                     │               │ (EOCD) Locator record offset...                              │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-8291                    │
 │                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-1795  │ LOW      │                     │                     │               │ python: Mishandling of comma during folding and              │
 │                             │                │          │                     │                     │               │ unicode-encoding of email headers                            │
@@ -265,7 +274,7 @@ Total: 80 (UNKNOWN: 0, LOW: 54, MEDIUM: 25, HIGH: 1, CRITICAL: 0)
 │ sqlite-libs                 │ CVE-2024-0232  │          │                     │ 3.34.1-8.el9_6      │               │ sqlite: use-after-free bug in jsonParseAddNodeArray          │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-0232                    │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ systemd                     │ CVE-2025-4598  │ MEDIUM   │                     │ 252-55.el9          │               │ systemd-coredump: race condition that allows a local         │
+│ systemd                     │ CVE-2025-4598  │ MEDIUM   │                     │ 252-57.el9          │               │ systemd-coredump: race condition that allows a local         │
 │                             │                │          │                     │                     │               │ attacker to crash a SUID...                                  │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4598                    │
 ├─────────────────────────────┤                │          │                     │                     ├───────────────┤                                                              │
