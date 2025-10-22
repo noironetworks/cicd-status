@@ -1,20 +1,20 @@
 NAME               INSTALLED  FIXED IN  TYPE       VULNERABILITY        SEVERITY  EPSS           RISK   
-requests           2.25.1     2.31.0    python     GHSA-j8r2-6x86-q33q  Medium    6.3% (90th)    3.5    
-setuptools         53.0.0     70.0.0    python     GHSA-cx63-2mw6-8hw5  High      4.2% (88th)    3.5    
+setuptools         53.0.0     70.0.0    python     GHSA-cx63-2mw6-8hw5  High      4.4% (88th)    3.6    
+requests           2.25.1     2.31.0    python     GHSA-j8r2-6x86-q33q  Medium    6.1% (90th)    3.4    
 urllib3            1.26.5     1.26.17   python     GHSA-v845-jxx5-vc9f  High      0.5% (63rd)    0.3    
-setuptools         53.0.0     65.5.1    python     GHSA-r9hx-vwmv-q579  High      0.3% (54th)    0.2    
-idna               2.10       3.7       python     GHSA-jjg7-2v4v-x38h  Medium    0.3% (56th)    0.2    
+setuptools         53.0.0     65.5.1    python     GHSA-r9hx-vwmv-q579  High      0.3% (56th)    0.3    
+idna               2.10       3.7       python     GHSA-jjg7-2v4v-x38h  Medium    0.3% (55th)    0.2    
 urllib3            1.26.5     1.26.19   python     GHSA-34jh-p97f-mpxf  Medium    0.1% (35th)    < 0.1  
 setuptools         53.0.0     78.1.1    python     GHSA-5rjg-fvgr-3xxf  High      < 0.1% (23rd)  < 0.1  
 requests           2.25.1     2.32.4    python     GHSA-9hjg-9r4m-mvj7  Medium    0.1% (29th)    < 0.1  
 urllib3            1.26.5     1.26.18   python     GHSA-g4mx-q9vg-27p4  Medium    < 0.1% (17th)  < 0.1  
 requests           2.25.1     2.32.0    python     GHSA-9wx4-h78v-vm56  Medium    < 0.1% (13th)  < 0.1  
 k8s.io/kubernetes  v1.33.2    1.33.4    go-module  GHSA-4x4m-3c2p-qppc  Medium    < 0.1% (4th)   < 0.1  
-urllib3            1.26.5     2.5.0     python     GHSA-pq67-6m6q-mj2v  Medium    < 0.1% (2nd)   < 0.1
+urllib3            1.26.5     2.5.0     python     GHSA-pq67-6m6q-mj2v  Medium    < 0.1% (4th)   < 0.1
 
 quay.io/noiro/aci-containers-operator:6.1.2.1.81c2369.z (redhat 9.6)
 ====================================================================
-Total: 204 (UNKNOWN: 0, LOW: 173, MEDIUM: 30, HIGH: 1, CRITICAL: 0)
+Total: 204 (UNKNOWN: 0, LOW: 175, MEDIUM: 28, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬─────────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │    Installed Version    │ Fixed Version │                            Title                             │
@@ -148,6 +148,12 @@ Total: 204 (UNKNOWN: 0, LOW: 173, MEDIUM: 30, HIGH: 1, CRITICAL: 0)
 │                             │                │          │                     │                         │               │ corruption                                                   │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-1153                    │
 │                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-11839 │          │                     │                         │               │ binutils: GNU Binutils prdbg.c tg_tag_type return value      │
+│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-11839                   │
+│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-11840 │          │                     │                         │               │ binutils: GNU Binutils out-of-bounds read                    │
+│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-11840                   │
+│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-3198  │          │                     │                         │               │ binutils: GNU Binutils objdump bucomm.c display_info memory  │
 │                             │                │          │                     │                         │               │ leak                                                         │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-3198                    │
@@ -244,9 +250,6 @@ Total: 204 (UNKNOWN: 0, LOW: 173, MEDIUM: 30, HIGH: 1, CRITICAL: 0)
 ├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ openssl                     │ CVE-2025-9230  │ MEDIUM   │                     │ 1:3.2.2-6.el9_5.1       │               │ openssl: Out-of-bounds read & write in RFC 3211 KEK Unwrap   │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-9230                    │
-│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-9231  │          │                     │                         │               │ openssl: Timing side-channel in SM2 algorithm on 64 bit ARM  │
-│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-9231                    │
 │                             ├────────────────┼──────────┤                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-13176 │ LOW      │                     │                         │               │ openssl: Timing side-channel in ECDSA signature computation  │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2024-13176                   │
@@ -260,9 +263,6 @@ Total: 204 (UNKNOWN: 0, LOW: 173, MEDIUM: 30, HIGH: 1, CRITICAL: 0)
 ├─────────────────────────────┼────────────────┼──────────┤                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │ openssl-libs                │ CVE-2025-9230  │ MEDIUM   │                     │                         │               │ openssl: Out-of-bounds read & write in RFC 3211 KEK Unwrap   │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-9230                    │
-│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-9231  │          │                     │                         │               │ openssl: Timing side-channel in SM2 algorithm on 64 bit ARM  │
-│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-9231                    │
 │                             ├────────────────┼──────────┤                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-13176 │ LOW      │                     │                         │               │ openssl: Timing side-channel in ECDSA signature computation  │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2024-13176                   │
