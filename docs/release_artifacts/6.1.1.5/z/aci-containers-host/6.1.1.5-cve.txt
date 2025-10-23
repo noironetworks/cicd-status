@@ -3,7 +3,7 @@ k8s.io/kubernetes  v1.33.2    1.33.4    go-module  GHSA-4x4m-3c2p-qppc  Medium  
 
 quay.io/noiro/aci-containers-host:6.1.1.5.81c2369.z (redhat 9.6)
 ================================================================
-Total: 80 (UNKNOWN: 0, LOW: 54, MEDIUM: 25, HIGH: 1, CRITICAL: 0)
+Total: 86 (UNKNOWN: 0, LOW: 54, MEDIUM: 25, HIGH: 7, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │  Installed Version  │ Fixed Version │                            Title                             │
@@ -23,8 +23,26 @@ Total: 80 (UNKNOWN: 0, LOW: 54, MEDIUM: 25, HIGH: 1, CRITICAL: 0)
 │                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-9681  │          │                     │                     │               │ curl: HSTS subdomain overwrites parent cache entry           │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-9681                    │
-├─────────────────────────────┼────────────────┤          ├─────────────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ elfutils-default-yama-scope │ CVE-2024-25260 │          │ will_not_fix        │ 0.193-1.el9         │               │ elfutils: global-buffer-overflow exists in the function      │
+├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ dhcp-client                 │ CVE-2025-40778 │ HIGH     │                     │ 12:4.4.2-19.b1.el9  │               │ bind: Cache poisoning attacks with unsolicited RRs           │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-40778                   │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-40780 │          │                     │                     │               │ bind: Cache poisoning due to weak PRNG                       │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-40780                   │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-8677  │          │                     │                     │               │ bind: Resource exhaustion via malformed DNSKEY handling      │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-8677                    │
+├─────────────────────────────┼────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ dhcp-common                 │ CVE-2025-40778 │          │                     │                     │               │ bind: Cache poisoning attacks with unsolicited RRs           │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-40778                   │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-40780 │          │                     │                     │               │ bind: Cache poisoning due to weak PRNG                       │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-40780                   │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-8677  │          │                     │                     │               │ bind: Resource exhaustion via malformed DNSKEY handling      │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-8677                    │
+├─────────────────────────────┼────────────────┼──────────┼─────────────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ elfutils-default-yama-scope │ CVE-2024-25260 │ LOW      │ will_not_fix        │ 0.193-1.el9         │               │ elfutils: global-buffer-overflow exists in the function      │
 │                             │                │          │                     │                     │               │ ebl_machine_flag_name in eblmachineflagname.c                │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-25260                   │
 │                             ├────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
