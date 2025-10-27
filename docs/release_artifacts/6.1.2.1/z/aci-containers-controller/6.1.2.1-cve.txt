@@ -1,14 +1,14 @@
 NAME                                   INSTALLED             FIXED IN  TYPE       VULNERABILITY        SEVERITY  EPSS           RISK          
 golang.org/x/net                       v0.10.0               0.17.0    go-module  GHSA-qppj-fm5r-hxr3  Medium    94.4% (99th)   54.1   (kev)  
-golang.org/x/crypto                    v0.9.0                0.31.0    go-module  GHSA-v778-237x-gjrc  Critical  47.0% (97th)   42.6          
+golang.org/x/crypto                    v0.9.0                0.31.0    go-module  GHSA-v778-237x-gjrc  Critical  42.7% (97th)   38.6          
 golang.org/x/net                       v0.10.0               0.23.0    go-module  GHSA-4v7x-pqxf-cx7m  Medium    66.6% (98th)   34.3          
-golang.org/x/crypto                    v0.9.0                0.17.0    go-module  GHSA-45x7-px36-x8w8  Medium    56.5% (97th)   30.8          
+golang.org/x/crypto                    v0.9.0                0.17.0    go-module  GHSA-45x7-px36-x8w8  Medium    61.4% (98th)   33.5          
 setuptools                             53.0.0                70.0.0    python     GHSA-cx63-2mw6-8hw5  High      4.4% (88th)    3.6           
 requests                               2.25.1                2.31.0    python     GHSA-j8r2-6x86-q33q  Medium    6.1% (90th)    3.4           
 github.com/docker/docker               v23.0.3+incompatible  23.0.15   go-module  GHSA-v23v-6jw2-98fq  Critical  2.0% (83rd)    1.9           
 urllib3                                1.26.5                1.26.17   python     GHSA-v845-jxx5-vc9f  High      0.6% (69th)    0.4           
 setuptools                             53.0.0                65.5.1    python     GHSA-r9hx-vwmv-q579  High      0.3% (56th)    0.3           
-idna                                   2.10                  3.7       python     GHSA-jjg7-2v4v-x38h  Medium    0.3% (55th)    0.2           
+idna                                   2.10                  3.7       python     GHSA-jjg7-2v4v-x38h  Medium    0.3% (56th)    0.2           
 golang.org/x/crypto                    v0.9.0                0.35.0    go-module  GHSA-hcg3-q754-cr77  High      0.2% (47th)    0.2           
 helm.sh/helm/v3                        v3.11.2               3.14.2    go-module  GHSA-r53h-jv2g-vpx6  High      0.2% (44th)    0.2           
 google.golang.org/protobuf             v1.30.0               1.33.0    go-module  GHSA-8r3f-844c-mc37  Medium    0.2% (46th)    0.1           
@@ -18,9 +18,9 @@ github.com/docker/docker               v23.0.3+incompatible  23.0.11   go-module
 helm.sh/helm/v3                        v3.11.2               3.14.1    go-module  GHSA-v53g-5gjp-272r  Medium    0.2% (38th)    < 0.1         
 github.com/lestrrat-go/jwx             v1.2.26               1.2.27    go-module  GHSA-7f9x-gw85-8grf  Medium    0.2% (40th)    < 0.1         
 golang.org/x/oauth2                    v0.7.0                0.27.0    go-module  GHSA-6v2p-p543-phr9  High      < 0.1% (26th)  < 0.1         
+setuptools                             53.0.0                78.1.1    python     GHSA-5rjg-fvgr-3xxf  High      < 0.1% (26th)  < 0.1         
 urllib3                                1.26.5                1.26.19   python     GHSA-34jh-p97f-mpxf  Medium    0.1% (35th)    < 0.1         
 github.com/lestrrat-go/jwx             v1.2.26               1.2.28    go-module  GHSA-pvcr-v8j8-j5q3  Medium    0.1% (33rd)    < 0.1         
-setuptools                             53.0.0                78.1.1    python     GHSA-5rjg-fvgr-3xxf  High      < 0.1% (23rd)  < 0.1         
 requests                               2.25.1                2.32.4    python     GHSA-9hjg-9r4m-mvj7  Medium    0.1% (29th)    < 0.1         
 golang.org/x/net                       v0.10.0               0.13.0    go-module  GHSA-2wrh-6pvc-2jm9  Medium    < 0.1% (27th)  < 0.1         
 github.com/docker/docker               v23.0.3+incompatible  24.0.9    go-module  GHSA-xw73-rw38-6vjc  Medium    < 0.1% (21st)  < 0.1         
@@ -43,7 +43,7 @@ github.com/docker/docker               v23.0.3+incompatible  23.0.8    go-module
 
 quay.io/noiro/aci-containers-controller:6.1.2.1.81c2369.z (redhat 9.6)
 ======================================================================
-Total: 204 (UNKNOWN: 0, LOW: 175, MEDIUM: 28, HIGH: 1, CRITICAL: 0)
+Total: 205 (UNKNOWN: 0, LOW: 175, MEDIUM: 29, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬─────────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │    Installed Version    │ Fixed Version │                            Title                             │
@@ -270,8 +270,11 @@ Total: 204 (UNKNOWN: 0, LOW: 175, MEDIUM: 28, HIGH: 1, CRITICAL: 0)
 │                             │ CVE-2025-6170  │          │                     │                         │               │ libxml2: Stack Buffer Overflow in xmllint Interactive Shell  │
 │                             │                │          │                     │                         │               │ Command Handling                                             │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-6170                    │
-├─────────────────────────────┼────────────────┤          │                     ├─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ ncurses-base                │ CVE-2023-50495 │          │                     │ 6.2-10.20210508.el9_6.2 │               │ ncurses: segmentation fault via _nc_wrap_entry()             │
+├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ lz4-libs                    │ CVE-2025-62813 │ MEDIUM   │                     │ 1.9.3-5.el9             │               │ lz4: LZ4 null handling error                                 │
+│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-62813                   │
+├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ ncurses-base                │ CVE-2023-50495 │ LOW      │                     │ 6.2-10.20210508.el9_6.2 │               │ ncurses: segmentation fault via _nc_wrap_entry()             │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2023-50495                   │
 ├─────────────────────────────┤                │          │                     │                         ├───────────────┤                                                              │
 │ ncurses-libs                │                │          │                     │                         │               │                                                              │
