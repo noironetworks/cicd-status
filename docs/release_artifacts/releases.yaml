@@ -4882,12 +4882,12 @@ releases:
 - release_streams:
   - acc_provision:
     - build-logs: release_artifacts/6.1.2.1/z/acc-provision/6.1.2.1-buildlog.txt
-      build-time: 2025-11-05 08:01:30 PST
+      build-time: 2025-11-06 03:01:44 PST
       commit:
-      - link: https://github.com/noironetworks/acc-provision/commit/84b22b005d0f2aa2f1cc86cd8b9d193b5e3b6543
-        sha: 84b22b005d0f2aa2f1cc86cd8b9d193b5e3b6543
-      link: https://test.pypi.org/project/acc-provision/6.1.2.1.dev11323/#files
-      tag: 6.1.2.1.dev11323
+      - link: https://github.com/noironetworks/acc-provision/commit/6622534a2b51ffc309e7cafbe76ebe7655960f45
+        sha: 6622534a2b51ffc309e7cafbe76ebe7655960f45
+      link: https://test.pypi.org/project/acc-provision/6.1.2.1.dev11338/#files
+      tag: 6.1.2.1.dev11338
     container_images:
     - base-image:
       - base_cve_error: ''
@@ -5319,7 +5319,7 @@ releases:
         U: 0
       severity_link: https://quay.io/repository/noiro/opflex/manifest/sha256:56153cef82f7091e89a13ff7f3ef3d9e493b256a90e42b2c393761242471f21f?tab=vulnerabilities
       severity_type: quay
-    last_updated: 2025-11-05 11:57:03 PST
+    last_updated: 2025-11-06 03:01:44 PST
     release_name: 6.1.2.1.z
   - acc_provision: []
     container_images: []
@@ -8927,7 +8927,7 @@ releases:
       - link: https://github.com/noironetworks/aci-containers/commit/1aca0c59d503cef39218be4f7cfba17cb90151de
         sha: 1aca0c59d503cef39218be4f7cfba17cb90151de
       cve: release_artifacts/6.1.1.5/z/aci-containers-controller/6.1.1.5-quay-cve.txt
-      cve_error: Scanning Queued in Quay
+      cve_error: ''
       docker:
       - link: https://hub.docker.com/layers/noiro/aci-containers-controller/6.1.1.5.81c2369.z/images/sha256-713358ce989be5b54d7c3206d9c81643ee5bcb4662463affca6b631feb09ecb7?context=explore
         sha: 713358ce989be5b54d7c3206d9c81643ee5bcb4662463affca6b631feb09ecb7
@@ -8944,7 +8944,12 @@ releases:
         sha: 713358ce989be5b54d7c3206d9c81643ee5bcb4662463affca6b631feb09ecb7
         tag: 6.1.1.5.81c2369.110625.11296
       sbom: release_artifacts/6.1.1.5/z/aci-containers-controller/6.1.1.5-sbom.txt
-      severity: []
+      severity:
+      - C: 0
+        H: 1
+        L: 155
+        M: 29
+        U: 31
       severity_link: https://quay.io/repository/noiro/aci-containers-controller/manifest/sha256:713358ce989be5b54d7c3206d9c81643ee5bcb4662463affca6b631feb09ecb7?tab=vulnerabilities
       severity_type: quay
     - base-image:
