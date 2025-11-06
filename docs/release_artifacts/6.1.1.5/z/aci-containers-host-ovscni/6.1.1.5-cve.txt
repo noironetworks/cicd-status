@@ -3,7 +3,7 @@ k8s.io/kubernetes  v1.33.2    1.33.4    go-module  GHSA-4x4m-3c2p-qppc  Medium  
 
 quay.io/noiro/aci-containers-host-ovscni:6.1.1.5.81c2369.z (redhat 9.6)
 =======================================================================
-Total: 84 (UNKNOWN: 0, LOW: 54, MEDIUM: 25, HIGH: 5, CRITICAL: 0)
+Total: 85 (UNKNOWN: 0, LOW: 54, MEDIUM: 26, HIGH: 5, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │  Installed Version  │ Fixed Version │                            Title                             │
@@ -87,11 +87,14 @@ Total: 84 (UNKNOWN: 0, LOW: 54, MEDIUM: 25, HIGH: 5, CRITICAL: 0)
 │ expat                       │ CVE-2025-59375 │ HIGH     │                     │ 2.5.0-5.el9_6       │               │ expat: libexpat in Expat allows attackers to trigger large   │
 │                             │                │          │                     │                     │               │ dynamic memory allocations...                                │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-59375                   │
-├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ gawk                        │ CVE-2023-4156  │ LOW      │                     │ 5.1.0-6.el9         │               │ gawk: heap out of bound read in builtin.c                    │
+│                             ├────────────────┼──────────┼─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2013-0340  │ MEDIUM   │ will_not_fix        │                     │               │ expat: internal entity expansion                             │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2013-0340                    │
+├─────────────────────────────┼────────────────┼──────────┼─────────────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ gawk                        │ CVE-2023-4156  │ LOW      │ affected            │ 5.1.0-6.el9         │               │ gawk: heap out of bound read in builtin.c                    │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2023-4156                    │
 ├─────────────────────────────┼────────────────┤          │                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ glib2                       │ CVE-2023-32636 │          │                     │ 2.68.4-16.el9_6.2   │               │ glib: Timeout in fuzz_variant_text                           │
+│ glib2                       │ CVE-2023-32636 │          │                     │ 2.68.4-16.el9_6.3   │               │ glib: Timeout in fuzz_variant_text                           │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2023-32636                   │
 │                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-3360  │          │                     │                     │               │ glibc: GLib prior to 2.82.5 is vulnerable to integer         │
