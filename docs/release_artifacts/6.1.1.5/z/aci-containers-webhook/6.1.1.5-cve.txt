@@ -1,19 +1,19 @@
 NAME        INSTALLED  FIXED IN  TYPE    VULNERABILITY        SEVERITY  EPSS           RISK   
 setuptools  53.0.0     70.0.0    python  GHSA-cx63-2mw6-8hw5  High      4.7% (88th)    3.8    
-requests    2.25.1     2.31.0    python  GHSA-j8r2-6x86-q33q  Medium    6.3% (90th)    3.5    
-urllib3     1.26.5     1.26.17   python  GHSA-v845-jxx5-vc9f  High      0.6% (69th)    0.4    
+requests    2.25.1     2.31.0    python  GHSA-j8r2-6x86-q33q  Medium    6.1% (90th)    3.4    
+urllib3     1.26.5     1.26.17   python  GHSA-v845-jxx5-vc9f  High      0.9% (74th)    0.6    
 setuptools  53.0.0     65.5.1    python  GHSA-r9hx-vwmv-q579  High      0.3% (56th)    0.3    
 idna        2.10       3.7       python  GHSA-jjg7-2v4v-x38h  Medium    0.3% (56th)    0.2    
 setuptools  53.0.0     78.1.1    python  GHSA-5rjg-fvgr-3xxf  High      < 0.1% (26th)  < 0.1  
 urllib3     1.26.5     1.26.19   python  GHSA-34jh-p97f-mpxf  Medium    0.1% (35th)    < 0.1  
-urllib3     1.26.5     1.26.18   python  GHSA-g4mx-q9vg-27p4  Medium    < 0.1% (17th)  < 0.1  
+requests    2.25.1     2.32.0    python  GHSA-9wx4-h78v-vm56  Medium    < 0.1% (13th)  < 0.1  
+urllib3     1.26.5     1.26.18   python  GHSA-g4mx-q9vg-27p4  Medium    < 0.1% (15th)  < 0.1  
 requests    2.25.1     2.32.4    python  GHSA-9hjg-9r4m-mvj7  Medium    < 0.1% (13th)  < 0.1  
-urllib3     1.26.5     2.5.0     python  GHSA-pq67-6m6q-mj2v  Medium    < 0.1% (4th)   < 0.1  
-requests    2.25.1     2.32.0    python  GHSA-9wx4-h78v-vm56  Medium    < 0.1% (4th)   < 0.1
+urllib3     1.26.5     2.5.0     python  GHSA-pq67-6m6q-mj2v  Medium    < 0.1% (4th)   < 0.1
 
 quay.io/noiro/aci-containers-webhook:6.1.1.5.81c2369.z (redhat 9.6)
 ===================================================================
-Total: 204 (UNKNOWN: 0, LOW: 175, MEDIUM: 28, HIGH: 1, CRITICAL: 0)
+Total: 205 (UNKNOWN: 0, LOW: 175, MEDIUM: 29, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬─────────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │    Installed Version    │ Fixed Version │                            Title                             │
@@ -85,8 +85,11 @@ Total: 204 (UNKNOWN: 0, LOW: 175, MEDIUM: 28, HIGH: 1, CRITICAL: 0)
 │ expat                       │ CVE-2025-59375 │ HIGH     │                     │ 2.5.0-5.el9_6           │               │ expat: libexpat in Expat allows attackers to trigger large   │
 │                             │                │          │                     │                         │               │ dynamic memory allocations...                                │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-59375                   │
-├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ gawk                        │ CVE-2023-4156  │ LOW      │                     │ 5.1.0-6.el9             │               │ gawk: heap out of bound read in builtin.c                    │
+│                             ├────────────────┼──────────┼─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2013-0340  │ MEDIUM   │ will_not_fix        │                         │               │ expat: internal entity expansion                             │
+│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2013-0340                    │
+├─────────────────────────────┼────────────────┼──────────┼─────────────────────┼─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ gawk                        │ CVE-2023-4156  │ LOW      │ affected            │ 5.1.0-6.el9             │               │ gawk: heap out of bound read in builtin.c                    │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2023-4156                    │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ gdb-gdbserver               │ CVE-2025-11081 │ MEDIUM   │                     │ 14.2-4.1.el9_6          │               │ binutils: GNU Binutils out-of-bounds read                    │
@@ -157,7 +160,7 @@ Total: 204 (UNKNOWN: 0, LOW: 175, MEDIUM: 28, HIGH: 1, CRITICAL: 0)
 │                             │                │          │                     │                         │               │ leak                                                         │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-3198                    │
 ├─────────────────────────────┼────────────────┤          │                     ├─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ glib2                       │ CVE-2023-32636 │          │                     │ 2.68.4-16.el9_6.2       │               │ glib: Timeout in fuzz_variant_text                           │
+│ glib2                       │ CVE-2023-32636 │          │                     │ 2.68.4-16.el9_6.3       │               │ glib: Timeout in fuzz_variant_text                           │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2023-32636                   │
 │                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-3360  │          │                     │                         │               │ glibc: GLib prior to 2.82.5 is vulnerable to integer         │
@@ -328,7 +331,7 @@ Total: 204 (UNKNOWN: 0, LOW: 175, MEDIUM: 28, HIGH: 1, CRITICAL: 0)
 │ sqlite-libs                 │ CVE-2024-0232  │          │                     │ 3.34.1-8.el9_6          │               │ sqlite: use-after-free bug in jsonParseAddNodeArray          │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2024-0232                    │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ systemd                     │ CVE-2025-4598  │ MEDIUM   │                     │ 252-51.el9_6.2          │               │ systemd-coredump: race condition that allows a local         │
+│ systemd                     │ CVE-2025-4598  │ MEDIUM   │                     │ 252-51.el9_6.3          │               │ systemd-coredump: race condition that allows a local         │
 │                             │                │          │                     │                         │               │ attacker to crash a SUID...                                  │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-4598                    │
 ├─────────────────────────────┤                │          │                     │                         ├───────────────┤                                                              │
@@ -388,24 +391,24 @@ Total: 204 (UNKNOWN: 0, LOW: 175, MEDIUM: 28, HIGH: 1, CRITICAL: 0)
 │                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2021-4166  │          │                     │                         │               │ vim: out-of-bounds read in do_arg_all() in src/arglist.c     │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2021-4166                    │
-│                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2021-4173  │          │ will_not_fix        │                         │               │ vim: use-after-free with nested :def function                │
+│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2021-4173  │          │                     │                         │               │ vim: use-after-free with nested :def function                │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2021-4173                    │
 │                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2021-4187  │          │                     │                         │               │ vim: use-after-free vulnerability                            │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2021-4187                    │
-│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-0213  │          │                     │                         │               │ vim: vim is vulnerable to out of bounds read                 │
+│                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-0213  │          │ will_not_fix        │                         │               │ vim: vim is vulnerable to out of bounds read                 │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2022-0213                    │
 │                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2022-0351  │          │ affected            │                         │               │ vim: access of memory location before start of buffer        │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2022-0351                    │
-│                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-1616  │          │ will_not_fix        │                         │               │ vim: heap-buffer-overflow in append_command of               │
+│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-1616  │          │                     │                         │               │ vim: heap-buffer-overflow in append_command of               │
 │                             │                │          │                     │                         │               │ src/ex_docmd.c                                               │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2022-1616                    │
-│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-1619  │          │                     │                         │               │ vim: heap-buffer-overflow in cmdline_erase_chars of          │
+│                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-1619  │          │ will_not_fix        │                         │               │ vim: heap-buffer-overflow in cmdline_erase_chars of          │
 │                             │                │          │                     │                         │               │ ex_getln.c                                                   │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2022-1619                    │
 │                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -435,11 +438,11 @@ Total: 204 (UNKNOWN: 0, LOW: 175, MEDIUM: 28, HIGH: 1, CRITICAL: 0)
 │                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2022-2126  │          │                     │                         │               │ vim: out of bounds read in suggest_trie_walk()               │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2022-2126                    │
-│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-2129  │          │                     │                         │               │ vim: out of bounds write in vim_regsub_both()                │
+│                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-2129  │          │ affected            │                         │               │ vim: out of bounds write in vim_regsub_both()                │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2022-2129                    │
-│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-2175  │          │                     │                         │               │ vim: buffer over-read in put_on_cmdline() at ex_getln.c      │
+│                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-2175  │          │ will_not_fix        │                         │               │ vim: buffer over-read in put_on_cmdline() at ex_getln.c      │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2022-2175                    │
 │                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2022-2182  │          │                     │                         │               │ vim: heap-based buffer overflow through parse_cmd_address()  │
@@ -477,11 +480,11 @@ Total: 204 (UNKNOWN: 0, LOW: 175, MEDIUM: 28, HIGH: 1, CRITICAL: 0)
 │                             │ CVE-2022-2287  │          │                     │                         │               │ vim: out of bounds read in suggest_trie_walk() at            │
 │                             │                │          │                     │                         │               │ spellsuggest.c                                               │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2022-2287                    │
-│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-2304  │          │                     │                         │               │ vim: stack buffer overflow in spell_dump_compl() at spell.c  │
+│                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-2304  │          │ affected            │                         │               │ vim: stack buffer overflow in spell_dump_compl() at spell.c  │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2022-2304                    │
-│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-2343  │          │                     │                         │               │ vim: heap-based buffer overflow in ins_compl_add() in        │
+│                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-2343  │          │ will_not_fix        │                         │               │ vim: heap-based buffer overflow in ins_compl_add() in        │
 │                             │                │          │                     │                         │               │ insexpand.c                                                  │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2022-2343                    │
 │                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -540,14 +543,14 @@ Total: 204 (UNKNOWN: 0, LOW: 175, MEDIUM: 28, HIGH: 1, CRITICAL: 0)
 │                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2022-3037  │          │ affected            │                         │               │ vim: use after free in function qf_buf_add_line( )           │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2022-3037                    │
-│                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-3099  │          │ will_not_fix        │                         │               │ vim: Use After Free in do_cmdline() in ex_docmd.c            │
+│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-3099  │          │                     │                         │               │ vim: Use After Free in do_cmdline() in ex_docmd.c            │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2022-3099                    │
 │                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2022-3134  │          │                     │                         │               │ vim: heap use-after-free in do_tag() at src/tag.c            │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2022-3134                    │
-│                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-3153  │          │ affected            │                         │               │ vim: null pointer dereference in vim_regcomp()               │
+│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-3153  │          │                     │                         │               │ vim: null pointer dereference in vim_regcomp()               │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2022-3153                    │
 │                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2022-3234  │          │                     │                         │               │ vim: Heap-based Buffer Overflow                              │
@@ -569,21 +572,21 @@ Total: 204 (UNKNOWN: 0, LOW: 175, MEDIUM: 28, HIGH: 1, CRITICAL: 0)
 │                             │ CVE-2022-3297  │          │                     │                         │               │ vim: use-after-free in process_next_cpt_value() at           │
 │                             │                │          │                     │                         │               │ insexpand.c                                                  │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2022-3297                    │
-│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-3324  │          │                     │                         │               │ vim: stack buffer overflow in win_redr_ruler() at            │
+│                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-3324  │          │ affected            │                         │               │ vim: stack buffer overflow in win_redr_ruler() at            │
 │                             │                │          │                     │                         │               │ drawscreen.c                                                 │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2022-3324                    │
-│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-3352  │          │                     │                         │               │ vim: use after free                                          │
+│                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-3352  │          │ will_not_fix        │                         │               │ vim: use after free                                          │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2022-3352                    │
 │                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2022-3705  │          │                     │                         │               │ vim: a use after free in the function qf_update_buffer       │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2022-3705                    │
-│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-4141  │          │                     │                         │               │ vim: invalid memory access in substitute with function       │
+│                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-4141  │          │ affected            │                         │               │ vim: invalid memory access in substitute with function       │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2022-4141                    │
-│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2022-4292  │          │                     │                         │               │ vim: use-after-free in did_set_spelllang() in src/spell.c    │
+│                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2022-4292  │          │ will_not_fix        │                         │               │ vim: use-after-free in did_set_spelllang() in src/spell.c    │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2022-4292                    │
 │                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2022-4293  │          │                     │                         │               │ vim: floating point exception in num_divide() in src/eval.c  │
@@ -595,11 +598,11 @@ Total: 204 (UNKNOWN: 0, LOW: 175, MEDIUM: 28, HIGH: 1, CRITICAL: 0)
 │                             │ CVE-2023-0051  │          │ will_not_fix        │                         │               │ vim: heap-based buffer overflow in msg_puts_printf() in      │
 │                             │                │          │                     │                         │               │ message.c                                                    │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2023-0051                    │
-│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-0054  │          │                     │                         │               │ vim: out-of-bounds write in do_string_sub() in eval.c        │
+│                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2023-0054  │          │ affected            │                         │               │ vim: out-of-bounds write in do_string_sub() in eval.c        │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2023-0054                    │
-│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-0288  │          │                     │                         │               │ vim: a heap-based buffer overflow                            │
+│                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2023-0288  │          │ will_not_fix        │                         │               │ vim: a heap-based buffer overflow                            │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2023-0288                    │
 │                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2023-0433  │          │                     │                         │               │ vim: reading past the end of a line when formatting text     │
@@ -613,11 +616,11 @@ Total: 204 (UNKNOWN: 0, LOW: 175, MEDIUM: 28, HIGH: 1, CRITICAL: 0)
 │                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2023-1170  │          │                     │                         │               │ vim: Heap-based Buffer Overflow                              │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2023-1170                    │
-│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-1175  │          │                     │                         │               │ vim: Incorrect Calculation of Buffer Size                    │
+│                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2023-1175  │          │ affected            │                         │               │ vim: Incorrect Calculation of Buffer Size                    │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2023-1175                    │
-│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-1264  │          │                     │                         │               │ vim: NULL pointer dereference issue in utfc_ptr2len          │
+│                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2023-1264  │          │ will_not_fix        │                         │               │ vim: NULL pointer dereference issue in utfc_ptr2len          │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2023-1264                    │
 │                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2023-2609  │          │                     │                         │               │ vim: NULL Pointer Dereference in get_register() at           │
@@ -635,19 +638,19 @@ Total: 204 (UNKNOWN: 0, LOW: 175, MEDIUM: 28, HIGH: 1, CRITICAL: 0)
 │                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2023-4735  │          │                     │                         │               │ vim: OOB Write ops.c in vim/vim                              │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2023-4735                    │
-│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-4738  │          │                     │                         │               │ vim: heap-buffer-overflow in vim_regsub_both in vim/vim      │
+│                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2023-4738  │          │ affected            │                         │               │ vim: heap-buffer-overflow in vim_regsub_both in vim/vim      │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2023-4738                    │
-│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-4751  │          │                     │                         │               │ vim: heap-buffer-overflow in function utfc_ptr2len in        │
+│                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2023-4751  │          │ will_not_fix        │                         │               │ vim: heap-buffer-overflow in function utfc_ptr2len in        │
 │                             │                │          │                     │                         │               │ vim/vim                                                      │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2023-4751                    │
-│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-4781  │          │                     │                         │               │ vim: heap-buffer-overflow in function vim_regsub_both in     │
+│                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2023-4781  │          │ affected            │                         │               │ vim: heap-buffer-overflow in function vim_regsub_both in     │
 │                             │                │          │                     │                         │               │ vim/vim                                                      │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2023-4781                    │
-│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-48231 │          │                     │                         │               │ vim: use after free in win_close()                           │
+│                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2023-48231 │          │ will_not_fix        │                         │               │ vim: use after free in win_close()                           │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2023-48231                   │
 │                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2023-48232 │          │                     │                         │               │ vim: floating point exception in adjust_plines_for_skipcol() │
