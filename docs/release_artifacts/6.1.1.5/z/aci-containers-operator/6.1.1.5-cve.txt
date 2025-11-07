@@ -5,7 +5,7 @@ urllib3            1.26.5     1.26.17   python     GHSA-v845-jxx5-vc9f  High    
 setuptools         53.0.0     65.5.1    python     GHSA-r9hx-vwmv-q579  High      0.5% (63rd)    0.3    
 idna               2.10       3.7       python     GHSA-jjg7-2v4v-x38h  Medium    0.6% (68th)    0.3    
 setuptools         53.0.0     78.1.1    python     GHSA-5rjg-fvgr-3xxf  High      < 0.1% (26th)  < 0.1  
-urllib3            1.26.5     1.26.19   python     GHSA-34jh-p97f-mpxf  Medium    0.1% (35th)    < 0.1  
+urllib3            1.26.5     1.26.19   python     GHSA-34jh-p97f-mpxf  Medium    0.1% (34th)    < 0.1  
 requests           2.25.1     2.32.0    python     GHSA-9wx4-h78v-vm56  Medium    < 0.1% (13th)  < 0.1  
 urllib3            1.26.5     1.26.18   python     GHSA-g4mx-q9vg-27p4  Medium    < 0.1% (15th)  < 0.1  
 requests           2.25.1     2.32.4    python     GHSA-9hjg-9r4m-mvj7  Medium    < 0.1% (13th)  < 0.1  
@@ -14,7 +14,7 @@ urllib3            1.26.5     2.5.0     python     GHSA-pq67-6m6q-mj2v  Medium  
 
 quay.io/noiro/aci-containers-operator:6.1.1.5.81c2369.z (redhat 9.6)
 ====================================================================
-Total: 209 (UNKNOWN: 0, LOW: 176, MEDIUM: 32, HIGH: 1, CRITICAL: 0)
+Total: 212 (UNKNOWN: 0, LOW: 178, MEDIUM: 33, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬─────────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │    Installed Version    │ Fixed Version │                            Title                             │
@@ -183,8 +183,12 @@ Total: 209 (UNKNOWN: 0, LOW: 176, MEDIUM: 32, HIGH: 1, CRITICAL: 0)
 │ libarchive                  │ CVE-2023-30571 │ MEDIUM   │ will_not_fix        │ 3.5.3-6.el9_6           │               │ libarchive: Race condition in multi-threaded use of          │
 │                             │                │          │                     │                         │               │ archive_write_disk_header() on posix based systems...        │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2023-30571                   │
-│                             ├────────────────┼──────────┼─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-1632  │ LOW      │ affected            │                         │               │ libarchive: null pointer dereference in bsdunzip.c           │
+│                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-60753 │          │ affected            │                         │               │ libarchive: bsdtar hangs and OOMs with zero-length pattern   │
+│                             │                │          │                     │                         │               │ matches                                                      │
+│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-60753                   │
+│                             ├────────────────┼──────────┤                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-1632  │ LOW      │                     │                         │               │ libarchive: null pointer dereference in bsdunzip.c           │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-1632                    │
 │                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-5915  │          │                     │                         │               │ libarchive: Heap buffer over read in copy_from_lzss_window() │
@@ -298,6 +302,10 @@ Total: 209 (UNKNOWN: 0, LOW: 176, MEDIUM: 32, HIGH: 1, CRITICAL: 0)
 │                             │ CVE-2025-1795  │ LOW      │                     │                         │               │ python: Mishandling of comma during folding and              │
 │                             │                │          │                     │                         │               │ unicode-encoding of email headers                            │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-1795                    │
+│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-6075  │          │                     │                         │               │ python: Quadratic complexity in os.path.expandvars() with    │
+│                             │                │          │                     │                         │               │ user-controlled template                                     │
+│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-6075                    │
 ├─────────────────────────────┼────────────────┼──────────┤                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │ python3-libs                │ CVE-2025-4516  │ MEDIUM   │                     │                         │               │ cpython: python: CPython DecodeError Handling Vulnerability  │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-4516                    │
@@ -312,6 +320,10 @@ Total: 209 (UNKNOWN: 0, LOW: 176, MEDIUM: 32, HIGH: 1, CRITICAL: 0)
 │                             │ CVE-2025-1795  │ LOW      │                     │                         │               │ python: Mishandling of comma during folding and              │
 │                             │                │          │                     │                         │               │ unicode-encoding of email headers                            │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-1795                    │
+│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-6075  │          │                     │                         │               │ python: Quadratic complexity in os.path.expandvars() with    │
+│                             │                │          │                     │                         │               │ user-controlled template                                     │
+│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-6075                    │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ python3-pip-wheel           │ CVE-2023-43804 │ MEDIUM   │                     │ 21.3.1-1.el9            │               │ python-urllib3: Cookie request header isn't stripped during  │
 │                             │                │          │                     │                         │               │ cross-origin redirects                                       │
