@@ -2,7 +2,7 @@ NAME                                   INSTALLED             FIXED IN  TYPE     
 golang.org/x/net                       v0.10.0               0.17.0    go-module  GHSA-qppj-fm5r-hxr3  Medium    94.4% (99th)   54.1   (kev)  
 golang.org/x/net                       v0.10.0               0.23.0    go-module  GHSA-4v7x-pqxf-cx7m  Medium    76.5% (98th)   39.4          
 golang.org/x/crypto                    v0.9.0                0.31.0    go-module  GHSA-v778-237x-gjrc  Critical  42.9% (97th)   38.8          
-golang.org/x/crypto                    v0.9.0                0.17.0    go-module  GHSA-45x7-px36-x8w8  Medium    58.2% (98th)   31.7          
+golang.org/x/crypto                    v0.9.0                0.17.0    go-module  GHSA-45x7-px36-x8w8  Medium    61.2% (98th)   33.3          
 setuptools                             53.0.0                70.0.0    python     GHSA-cx63-2mw6-8hw5  High      4.8% (88th)    3.9           
 requests                               2.25.1                2.31.0    python     GHSA-j8r2-6x86-q33q  Medium    6.1% (90th)    3.4           
 github.com/docker/docker               v23.0.3+incompatible  23.0.15   go-module  GHSA-v23v-6jw2-98fq  Critical  2.0% (83rd)    1.9           
@@ -19,7 +19,7 @@ helm.sh/helm/v3                        v3.11.2               3.14.1    go-module
 github.com/lestrrat-go/jwx             v1.2.26               1.2.27    go-module  GHSA-7f9x-gw85-8grf  Medium    0.2% (40th)    < 0.1         
 golang.org/x/oauth2                    v0.7.0                0.27.0    go-module  GHSA-6v2p-p543-phr9  High      0.1% (29th)    < 0.1         
 setuptools                             53.0.0                78.1.1    python     GHSA-5rjg-fvgr-3xxf  High      < 0.1% (26th)  < 0.1         
-urllib3                                1.26.5                1.26.19   python     GHSA-34jh-p97f-mpxf  Medium    0.1% (35th)    < 0.1         
+urllib3                                1.26.5                1.26.19   python     GHSA-34jh-p97f-mpxf  Medium    0.1% (34th)    < 0.1         
 github.com/lestrrat-go/jwx             v1.2.26               1.2.28    go-module  GHSA-pvcr-v8j8-j5q3  Medium    0.1% (32nd)    < 0.1         
 golang.org/x/net                       v0.10.0               0.13.0    go-module  GHSA-2wrh-6pvc-2jm9  Medium    < 0.1% (27th)  < 0.1         
 github.com/docker/docker               v23.0.3+incompatible  24.0.9    go-module  GHSA-xw73-rw38-6vjc  Medium    < 0.1% (21st)  < 0.1         
@@ -43,7 +43,7 @@ github.com/docker/docker               v23.0.3+incompatible  23.0.8    go-module
 
 quay.io/noiro/aci-containers-controller:6.1.1.5.81c2369.z (redhat 9.6)
 ======================================================================
-Total: 209 (UNKNOWN: 0, LOW: 176, MEDIUM: 32, HIGH: 1, CRITICAL: 0)
+Total: 212 (UNKNOWN: 0, LOW: 178, MEDIUM: 33, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬─────────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │    Installed Version    │ Fixed Version │                            Title                             │
@@ -212,8 +212,12 @@ Total: 209 (UNKNOWN: 0, LOW: 176, MEDIUM: 32, HIGH: 1, CRITICAL: 0)
 │ libarchive                  │ CVE-2023-30571 │ MEDIUM   │ will_not_fix        │ 3.5.3-6.el9_6           │               │ libarchive: Race condition in multi-threaded use of          │
 │                             │                │          │                     │                         │               │ archive_write_disk_header() on posix based systems...        │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2023-30571                   │
-│                             ├────────────────┼──────────┼─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-1632  │ LOW      │ affected            │                         │               │ libarchive: null pointer dereference in bsdunzip.c           │
+│                             ├────────────────┤          ├─────────────────────┤                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-60753 │          │ affected            │                         │               │ libarchive: bsdtar hangs and OOMs with zero-length pattern   │
+│                             │                │          │                     │                         │               │ matches                                                      │
+│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-60753                   │
+│                             ├────────────────┼──────────┤                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-1632  │ LOW      │                     │                         │               │ libarchive: null pointer dereference in bsdunzip.c           │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-1632                    │
 │                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-5915  │          │                     │                         │               │ libarchive: Heap buffer over read in copy_from_lzss_window() │
@@ -327,6 +331,10 @@ Total: 209 (UNKNOWN: 0, LOW: 176, MEDIUM: 32, HIGH: 1, CRITICAL: 0)
 │                             │ CVE-2025-1795  │ LOW      │                     │                         │               │ python: Mishandling of comma during folding and              │
 │                             │                │          │                     │                         │               │ unicode-encoding of email headers                            │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-1795                    │
+│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-6075  │          │                     │                         │               │ python: Quadratic complexity in os.path.expandvars() with    │
+│                             │                │          │                     │                         │               │ user-controlled template                                     │
+│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-6075                    │
 ├─────────────────────────────┼────────────────┼──────────┤                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │ python3-libs                │ CVE-2025-4516  │ MEDIUM   │                     │                         │               │ cpython: python: CPython DecodeError Handling Vulnerability  │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-4516                    │
@@ -341,6 +349,10 @@ Total: 209 (UNKNOWN: 0, LOW: 176, MEDIUM: 32, HIGH: 1, CRITICAL: 0)
 │                             │ CVE-2025-1795  │ LOW      │                     │                         │               │ python: Mishandling of comma during folding and              │
 │                             │                │          │                     │                         │               │ unicode-encoding of email headers                            │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-1795                    │
+│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-6075  │          │                     │                         │               │ python: Quadratic complexity in os.path.expandvars() with    │
+│                             │                │          │                     │                         │               │ user-controlled template                                     │
+│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-6075                    │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ python3-pip-wheel           │ CVE-2023-43804 │ MEDIUM   │                     │ 21.3.1-1.el9            │               │ python-urllib3: Cookie request header isn't stripped during  │
 │                             │                │          │                     │                         │               │ cross-origin redirects                                       │
