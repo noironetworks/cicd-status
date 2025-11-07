@@ -14,7 +14,7 @@ pip         23.3.2     25.3      python  GHSA-4xh5-x5gv-qwph  Medium    < 0.1% (
 
 quay.io/noiro/acc-provision-operator:6.1.1.5.81c2369.z (redhat 9.6)
 ===================================================================
-Total: 229 (UNKNOWN: 0, LOW: 177, MEDIUM: 51, HIGH: 1, CRITICAL: 0)
+Total: 236 (UNKNOWN: 0, LOW: 178, MEDIUM: 57, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬──────────────────┬──────────┬─────────────────────┬─────────────────────────┬───────────────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │  Vulnerability   │ Severity │       Status        │    Installed Version    │     Fixed Version     │                            Title                             │
@@ -242,11 +242,11 @@ Total: 229 (UNKNOWN: 0, LOW: 177, MEDIUM: 51, HIGH: 1, CRITICAL: 0)
 │ libxml2                     │ CVE-2025-9714    │ MEDIUM   │                     │ 2.9.13-12.el9_6         │                       │ libxslt: libxml2: Inifinite recursion at exsltDynMapFunction │
 │                             │                  │          │                     │                         │                       │ function in libexslt/dynamic.c                               │
 │                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2025-9714                    │
-│                             ├──────────────────┼──────────┼─────────────────────┤                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-45322   │ LOW      │ will_not_fix        │                         │                       │ libxml2: use-after-free in xmlUnlinkNode() in tree.c         │
+│                             ├──────────────────┼──────────┤                     │                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2023-45322   │ LOW      │                     │                         │                       │ libxml2: use-after-free in xmlUnlinkNode() in tree.c         │
 │                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2023-45322                   │
-│                             ├──────────────────┤          ├─────────────────────┤                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-34459   │          │ affected            │                         │                       │ libxml2: buffer over-read in xmlHTMLPrintFileContext in      │
+│                             ├──────────────────┤          │                     │                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2024-34459   │          │                     │                         │                       │ libxml2: buffer over-read in xmlHTMLPrintFileContext in      │
 │                             │                  │          │                     │                         │                       │ xmllint.c                                                    │
 │                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2024-34459                   │
 │                             ├──────────────────┤          │                     │                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
@@ -359,7 +359,19 @@ Total: 229 (UNKNOWN: 0, LOW: 177, MEDIUM: 51, HIGH: 1, CRITICAL: 0)
 │                             │                  │          │                     │                         │                       │ unicode-encoding of email headers                            │
 │                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2025-1795                    │
 ├─────────────────────────────┼──────────────────┼──────────┤                     ├─────────────────────────┼───────────────────────┼──────────────────────────────────────────────────────────────┤
-│ python3-pip-wheel           │ CVE-2025-50181   │ MEDIUM   │                     │ 21.3.1-1.el9            │                       │ urllib3: urllib3 redirects are not disabled when retries are │
+│ python3-pip-wheel           │ CVE-2023-43804   │ MEDIUM   │                     │ 21.3.1-1.el9            │                       │ python-urllib3: Cookie request header isn't stripped during  │
+│                             │                  │          │                     │                         │                       │ cross-origin redirects                                       │
+│                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2023-43804                   │
+│                             ├──────────────────┤          │                     │                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2023-45803   │          │                     │                         │                       │ urllib3: Request body not stripped after redirect from 303   │
+│                             │                  │          │                     │                         │                       │ status changes request...                                    │
+│                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2023-45803                   │
+│                             ├──────────────────┤          │                     │                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2024-37891   │          │                     │                         │                       │ urllib3: proxy-authorization request header is not stripped  │
+│                             │                  │          │                     │                         │                       │ during cross-origin redirects                                │
+│                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2024-37891                   │
+│                             ├──────────────────┤          │                     │                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-50181   │          │                     │                         │                       │ urllib3: urllib3 redirects are not disabled when retries are │
 │                             │                  │          │                     │                         │                       │ disabled on PoolManager...                                   │
 │                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2025-50181                   │
 │                             ├──────────────────┤          │                     │                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
@@ -370,8 +382,15 @@ Total: 229 (UNKNOWN: 0, LOW: 177, MEDIUM: 51, HIGH: 1, CRITICAL: 0)
 │                             │ CVE-2021-3572    │ LOW      │                     │                         │                       │ python-pip: Incorrect handling of unicode separators in git  │
 │                             │                  │          │                     │                         │                       │ references                                                   │
 │                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2021-3572                    │
+│                             ├──────────────────┤          │                     │                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2023-5752    │          │                     │                         │                       │ pip: Mercurial configuration injectable in repo revision     │
+│                             │                  │          │                     │                         │                       │ when installing via pip                                      │
+│                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2023-5752                    │
 ├─────────────────────────────┼──────────────────┼──────────┤                     ├─────────────────────────┼───────────────────────┼──────────────────────────────────────────────────────────────┤
-│ python3.12                  │ CVE-2025-4516    │ MEDIUM   │                     │ 3.12.9-1.el9_6.2        │                       │ cpython: python: CPython DecodeError Handling Vulnerability  │
+│ python3.12                  │ CVE-2024-11168   │ MEDIUM   │                     │ 3.12.9-1.el9_6.2        │                       │ python: Improper validation of IPv6 and IPvFuture addresses  │
+│                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2024-11168                   │
+│                             ├──────────────────┤          │                     │                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-4516    │          │                     │                         │                       │ cpython: python: CPython DecodeError Handling Vulnerability  │
 │                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2025-4516                    │
 │                             ├──────────────────┤          │                     │                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-6069    │          │                     │                         │                       │ cpython: Python HTMLParser quadratic complexity              │
@@ -381,7 +400,10 @@ Total: 229 (UNKNOWN: 0, LOW: 177, MEDIUM: 51, HIGH: 1, CRITICAL: 0)
 │                             │                  │          │                     │                         │                       │ (EOCD) Locator record offset...                              │
 │                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2025-8291                    │
 ├─────────────────────────────┼──────────────────┤          │                     │                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
-│ python3.12-libs             │ CVE-2025-4516    │          │                     │                         │                       │ cpython: python: CPython DecodeError Handling Vulnerability  │
+│ python3.12-libs             │ CVE-2024-11168   │          │                     │                         │                       │ python: Improper validation of IPv6 and IPvFuture addresses  │
+│                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2024-11168                   │
+│                             ├──────────────────┤          │                     │                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-4516    │          │                     │                         │                       │ cpython: python: CPython DecodeError Handling Vulnerability  │
 │                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2025-4516                    │
 │                             ├──────────────────┤          │                     │                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-6069    │          │                     │                         │                       │ cpython: Python HTMLParser quadratic complexity              │
@@ -391,7 +413,11 @@ Total: 229 (UNKNOWN: 0, LOW: 177, MEDIUM: 51, HIGH: 1, CRITICAL: 0)
 │                             │                  │          │                     │                         │                       │ (EOCD) Locator record offset...                              │
 │                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2025-8291                    │
 ├─────────────────────────────┼──────────────────┤          │                     ├─────────────────────────┼───────────────────────┼──────────────────────────────────────────────────────────────┤
-│ python3.12-pip-wheel        │ CVE-2025-50181   │          │                     │ 23.2.1-4.el9            │                       │ urllib3: urllib3 redirects are not disabled when retries are │
+│ python3.12-pip-wheel        │ CVE-2024-37891   │          │                     │ 23.2.1-4.el9            │                       │ urllib3: proxy-authorization request header is not stripped  │
+│                             │                  │          │                     │                         │                       │ during cross-origin redirects                                │
+│                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2024-37891                   │
+│                             ├──────────────────┤          │                     │                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-50181   │          │                     │                         │                       │ urllib3: urllib3 redirects are not disabled when retries are │
 │                             │                  │          │                     │                         │                       │ disabled on PoolManager...                                   │
 │                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2025-50181                   │
 │                             ├──────────────────┤          │                     │                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
@@ -754,11 +780,11 @@ Total: 229 (UNKNOWN: 0, LOW: 177, MEDIUM: 51, HIGH: 1, CRITICAL: 0)
 │                             ├──────────────────┤          │                     │                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2023-48706   │          │                     │                         │                       │ vim: use-after-free in ex_substitute in Vim                  │
 │                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2023-48706                   │
-│                             ├──────────────────┤          │                     │                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-5344    │          │                     │                         │                       │ vim: Heap-based Buffer Overflow in trunc_string()            │
+│                             ├──────────────────┤          ├─────────────────────┤                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2023-5344    │          │ affected            │                         │                       │ vim: Heap-based Buffer Overflow in trunc_string()            │
 │                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2023-5344                    │
-│                             ├──────────────────┤          │                     │                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-5441    │          │                     │                         │                       │ vim: NULL pointer dereference in screen_line() in            │
+│                             ├──────────────────┤          ├─────────────────────┤                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2023-5441    │          │ will_not_fix        │                         │                       │ vim: NULL pointer dereference in screen_line() in            │
 │                             │                  │          │                     │                         │                       │ src/screen.c                                                 │
 │                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2023-5441                    │
 │                             ├──────────────────┤          │                     │                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
