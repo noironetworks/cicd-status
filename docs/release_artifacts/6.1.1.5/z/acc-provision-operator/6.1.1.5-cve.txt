@@ -14,7 +14,7 @@ pip         23.3.2     25.3      python  GHSA-4xh5-x5gv-qwph  Medium    < 0.1% (
 
 quay.io/noiro/acc-provision-operator:6.1.1.5.81c2369.z (redhat 9.6)
 ===================================================================
-Total: 241 (UNKNOWN: 0, LOW: 182, MEDIUM: 58, HIGH: 1, CRITICAL: 0)
+Total: 244 (UNKNOWN: 0, LOW: 182, MEDIUM: 60, HIGH: 2, CRITICAL: 0)
 
 ┌─────────────────────────────┬──────────────────┬──────────┬─────────────────────┬─────────────────────────┬───────────────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │  Vulnerability   │ Severity │       Status        │    Installed Version    │     Fixed Version     │                            Title                             │
@@ -23,7 +23,11 @@ Total: 241 (UNKNOWN: 0, LOW: 182, MEDIUM: 58, HIGH: 1, CRITICAL: 0)
 │                             │                  │          │                     │                         │                       │ Key Specification                                            │
 │                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2025-5278                    │
 ├─────────────────────────────┼──────────────────┤          │                     ├─────────────────────────┼───────────────────────┼──────────────────────────────────────────────────────────────┤
-│ curl-minimal                │ CVE-2025-9086    │          │                     │ 7.76.1-31.el9_6.1       │                       │ curl: libcurl: Curl out of bounds read for cookie path       │
+│ curl-minimal                │ CVE-2025-10966   │          │                     │ 7.76.1-31.el9_6.1       │                       │ curl: Curl missing SFTP host verification with wolfSSH       │
+│                             │                  │          │                     │                         │                       │ backend                                                      │
+│                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2025-10966                   │
+│                             ├──────────────────┤          │                     │                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-9086    │          │                     │                         │                       │ curl: libcurl: Curl out of bounds read for cookie path       │
 │                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2025-9086                    │
 │                             ├──────────────────┼──────────┤                     │                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-11053   │ LOW      │                     │                         │                       │ curl: curl netrc password leak                               │
@@ -219,7 +223,11 @@ Total: 241 (UNKNOWN: 0, LOW: 182, MEDIUM: 58, HIGH: 1, CRITICAL: 0)
 │                             │                  │          │                     │                         │                       │ streams                                                      │
 │                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2025-5918                    │
 ├─────────────────────────────┼──────────────────┼──────────┤                     ├─────────────────────────┼───────────────────────┼──────────────────────────────────────────────────────────────┤
-│ libcurl-minimal             │ CVE-2025-9086    │ MEDIUM   │                     │ 7.76.1-31.el9_6.1       │                       │ curl: libcurl: Curl out of bounds read for cookie path       │
+│ libcurl-minimal             │ CVE-2025-10966   │ MEDIUM   │                     │ 7.76.1-31.el9_6.1       │                       │ curl: Curl missing SFTP host verification with wolfSSH       │
+│                             │                  │          │                     │                         │                       │ backend                                                      │
+│                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2025-10966                   │
+│                             ├──────────────────┤          │                     │                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-9086    │          │                     │                         │                       │ curl: libcurl: Curl out of bounds read for cookie path       │
 │                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2025-9086                    │
 │                             ├──────────────────┼──────────┤                     │                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-11053   │ LOW      │                     │                         │                       │ curl: curl netrc password leak                               │
@@ -243,7 +251,11 @@ Total: 241 (UNKNOWN: 0, LOW: 182, MEDIUM: 58, HIGH: 1, CRITICAL: 0)
 │                             │                  │          │                     │                         │                       │                                                              │
 │                             │                  │          │                     │                         │                       │                                                              │
 ├─────────────────────────────┼──────────────────┼──────────┤                     ├─────────────────────────┼───────────────────────┼──────────────────────────────────────────────────────────────┤
-│ libxml2                     │ CVE-2025-9714    │ MEDIUM   │                     │ 2.9.13-12.el9_6         │                       │ libxslt: libxml2: Inifinite recursion at exsltDynMapFunction │
+│ libxml2                     │ CVE-2025-12863   │ HIGH     │                     │ 2.9.13-12.el9_6         │                       │ libxml2: Namespace Use-After-Free in xmlSetTreeDoc()         │
+│                             │                  │          │                     │                         │                       │ function of libxml2                                          │
+│                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2025-12863                   │
+│                             ├──────────────────┼──────────┤                     │                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-9714    │ MEDIUM   │                     │                         │                       │ libxslt: libxml2: Inifinite recursion at exsltDynMapFunction │
 │                             │                  │          │                     │                         │                       │ function in libexslt/dynamic.c                               │
 │                             │                  │          │                     │                         │                       │ https://avd.aquasec.com/nvd/cve-2025-9714                    │
 │                             ├──────────────────┼──────────┤                     │                         ├───────────────────────┼──────────────────────────────────────────────────────────────┤
