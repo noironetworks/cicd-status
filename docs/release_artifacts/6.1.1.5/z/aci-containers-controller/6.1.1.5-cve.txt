@@ -1,8 +1,8 @@
 NAME                                   INSTALLED             FIXED IN  TYPE       VULNERABILITY        SEVERITY  EPSS           RISK          
 golang.org/x/net                       v0.10.0               0.17.0    go-module  GHSA-qppj-fm5r-hxr3  Medium    94.4% (99th)   54.1   (kev)  
-golang.org/x/net                       v0.10.0               0.23.0    go-module  GHSA-4v7x-pqxf-cx7m  Medium    76.5% (98th)   39.4          
 golang.org/x/crypto                    v0.9.0                0.31.0    go-module  GHSA-v778-237x-gjrc  Critical  42.9% (97th)   38.8          
-golang.org/x/crypto                    v0.9.0                0.17.0    go-module  GHSA-45x7-px36-x8w8  Medium    61.2% (98th)   33.3          
+golang.org/x/net                       v0.10.0               0.23.0    go-module  GHSA-4v7x-pqxf-cx7m  Medium    61.2% (98th)   31.5          
+golang.org/x/crypto                    v0.9.0                0.17.0    go-module  GHSA-45x7-px36-x8w8  Medium    56.0% (97th)   30.5          
 setuptools                             53.0.0                70.0.0    python     GHSA-cx63-2mw6-8hw5  High      4.8% (88th)    3.9           
 requests                               2.25.1                2.31.0    python     GHSA-j8r2-6x86-q33q  Medium    6.1% (90th)    3.4           
 github.com/docker/docker               v23.0.3+incompatible  23.0.15   go-module  GHSA-v23v-6jw2-98fq  Critical  2.0% (83rd)    1.9           
@@ -31,9 +31,9 @@ k8s.io/kubernetes                      v1.33.2               1.33.4    go-module
 urllib3                                1.26.5                2.5.0     python     GHSA-pq67-6m6q-mj2v  Medium    < 0.1% (4th)   < 0.1         
 golang.org/x/net                       v0.10.0               0.38.0    go-module  GHSA-vvgc-356p-c3xw  Medium    < 0.1% (4th)   < 0.1         
 helm.sh/helm/v3                        v3.11.2               3.18.5    go-module  GHSA-f9f8-9pmf-xv68  Medium    < 0.1% (3rd)   < 0.1         
+helm.sh/helm/v3                        v3.11.2               3.17.4    go-module  GHSA-557j-xg8c-q2mm  High      < 0.1% (1st)   < 0.1         
 helm.sh/helm/v3                        v3.11.2               3.18.5    go-module  GHSA-9h84-qmv7-982p  Medium    < 0.1% (2nd)   < 0.1         
 golang.org/x/net                       v0.10.0               0.36.0    go-module  GHSA-qxp5-gwg8-xv66  Medium    < 0.1% (3rd)   < 0.1         
-helm.sh/helm/v3                        v3.11.2               3.17.4    go-module  GHSA-557j-xg8c-q2mm  High      < 0.1% (0th)   < 0.1         
 helm.sh/helm/v3                        v3.11.2               3.17.3    go-module  GHSA-4hfp-h4cw-hj8p  Medium    < 0.1% (1st)   < 0.1         
 helm.sh/helm/v3                        v3.11.2               3.17.3    go-module  GHSA-5xqw-8hwv-wg92  Medium    < 0.1% (0th)   < 0.1         
 github.com/docker/docker               v23.0.3+incompatible            go-module  GHSA-4vq8-7jfc-9cvp  Low       < 0.1% (0th)   < 0.1         
@@ -43,7 +43,7 @@ github.com/docker/docker               v23.0.3+incompatible  23.0.8    go-module
 
 quay.io/noiro/aci-containers-controller:6.1.1.5.81c2369.z (redhat 9.6)
 ======================================================================
-Total: 212 (UNKNOWN: 0, LOW: 178, MEDIUM: 33, HIGH: 1, CRITICAL: 0)
+Total: 215 (UNKNOWN: 0, LOW: 178, MEDIUM: 35, HIGH: 2, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬─────────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │    Installed Version    │ Fixed Version │                            Title                             │
@@ -52,7 +52,11 @@ Total: 212 (UNKNOWN: 0, LOW: 178, MEDIUM: 33, HIGH: 1, CRITICAL: 0)
 │                             │                │          │                     │                         │               │ Key Specification                                            │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-5278                    │
 ├─────────────────────────────┼────────────────┤          │                     ├─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ curl                        │ CVE-2025-9086  │          │                     │ 7.76.1-31.el9_6.1       │               │ curl: libcurl: Curl out of bounds read for cookie path       │
+│ curl                        │ CVE-2025-10966 │          │                     │ 7.76.1-31.el9_6.1       │               │ curl: Curl missing SFTP host verification with wolfSSH       │
+│                             │                │          │                     │                         │               │ backend                                                      │
+│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-10966                   │
+│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-9086  │          │                     │                         │               │ curl: libcurl: Curl out of bounds read for cookie path       │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-9086                    │
 │                             ├────────────────┼──────────┤                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-11053 │ LOW      │                     │                         │               │ curl: curl netrc password leak                               │
@@ -236,7 +240,11 @@ Total: 212 (UNKNOWN: 0, LOW: 178, MEDIUM: 33, HIGH: 1, CRITICAL: 0)
 │                             │                │          │                     │                         │               │ streams                                                      │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-5918                    │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libcurl-minimal             │ CVE-2025-9086  │ MEDIUM   │                     │ 7.76.1-31.el9_6.1       │               │ curl: libcurl: Curl out of bounds read for cookie path       │
+│ libcurl-minimal             │ CVE-2025-10966 │ MEDIUM   │                     │ 7.76.1-31.el9_6.1       │               │ curl: Curl missing SFTP host verification with wolfSSH       │
+│                             │                │          │                     │                         │               │ backend                                                      │
+│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-10966                   │
+│                             ├────────────────┤          │                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-9086  │          │                     │                         │               │ curl: libcurl: Curl out of bounds read for cookie path       │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-9086                    │
 │                             ├────────────────┼──────────┤                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-11053 │ LOW      │                     │                         │               │ curl: curl netrc password leak                               │
@@ -260,7 +268,11 @@ Total: 212 (UNKNOWN: 0, LOW: 178, MEDIUM: 33, HIGH: 1, CRITICAL: 0)
 │                             │                │          │                     │                         │               │                                                              │
 │                             │                │          │                     │                         │               │                                                              │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libxml2                     │ CVE-2025-9714  │ MEDIUM   │                     │ 2.9.13-12.el9_6         │               │ libxslt: libxml2: Inifinite recursion at exsltDynMapFunction │
+│ libxml2                     │ CVE-2025-12863 │ HIGH     │                     │ 2.9.13-12.el9_6         │               │ libxml2: Namespace Use-After-Free in xmlSetTreeDoc()         │
+│                             │                │          │                     │                         │               │ function of libxml2                                          │
+│                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-12863                   │
+│                             ├────────────────┼──────────┤                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-9714  │ MEDIUM   │                     │                         │               │ libxslt: libxml2: Inifinite recursion at exsltDynMapFunction │
 │                             │                │          │                     │                         │               │ function in libexslt/dynamic.c                               │
 │                             │                │          │                     │                         │               │ https://avd.aquasec.com/nvd/cve-2025-9714                    │
 │                             ├────────────────┼──────────┤                     │                         ├───────────────┼──────────────────────────────────────────────────────────────┤
