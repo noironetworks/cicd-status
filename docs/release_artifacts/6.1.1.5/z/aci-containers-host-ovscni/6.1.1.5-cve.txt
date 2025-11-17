@@ -3,7 +3,7 @@ k8s.io/kubernetes  v1.33.2    1.33.4    go-module  GHSA-4x4m-3c2p-qppc  Medium  
 
 quay.io/noiro/aci-containers-host-ovscni:6.1.1.5.81c2369.z (redhat 9.7)
 =======================================================================
-Total: 99 (UNKNOWN: 0, LOW: 57, MEDIUM: 32, HIGH: 10, CRITICAL: 0)
+Total: 94 (UNKNOWN: 0, LOW: 57, MEDIUM: 29, HIGH: 8, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │  Installed Version  │ Fixed Version │                            Title                             │
@@ -35,9 +35,6 @@ Total: 99 (UNKNOWN: 0, LOW: 57, MEDIUM: 32, HIGH: 10, CRITICAL: 0)
 │                             │                │          │                     │                     │               │ CPU resources                                                │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2023-50868                   │
 │                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-40780 │          │                     │                     │               │ bind: Cache poisoning due to weak PRNG                       │
-│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-40780                   │
-│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-8677  │          │                     │                     │               │ bind: Resource exhaustion via malformed DNSKEY handling      │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-8677                    │
 ├─────────────────────────────┼────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -47,9 +44,6 @@ Total: 99 (UNKNOWN: 0, LOW: 57, MEDIUM: 32, HIGH: 10, CRITICAL: 0)
 │                             │ CVE-2023-50868 │          │                     │                     │               │ bind9: Preparing an NSEC3 closest encloser proof can exhaust │
 │                             │                │          │                     │                     │               │ CPU resources                                                │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2023-50868                   │
-│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-40780 │          │                     │                     │               │ bind: Cache poisoning due to weak PRNG                       │
-│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-40780                   │
 │                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-8677  │          │                     │                     │               │ bind: Resource exhaustion via malformed DNSKEY handling      │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-8677                    │
@@ -101,12 +95,12 @@ Total: 99 (UNKNOWN: 0, LOW: 57, MEDIUM: 32, HIGH: 10, CRITICAL: 0)
 │                             │ CVE-2025-1377  │          │                     │                     │               │ elfutils: GNU elfutils eu-strip strip.c gelf_getsymshndx     │
 │                             │                │          │                     │                     │               │ denial of service                                            │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-1377                    │
-├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ expat                       │ CVE-2025-59375 │ HIGH     │                     │ 2.5.0-5.el9_6       │               │ expat: libexpat in Expat allows attackers to trigger large   │
+├─────────────────────────────┼────────────────┼──────────┼─────────────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ expat                       │ CVE-2025-59375 │ HIGH     │ will_not_fix        │ 2.5.0-5.el9_6       │               │ expat: libexpat in Expat allows attackers to trigger large   │
 │                             │                │          │                     │                     │               │ dynamic memory allocations...                                │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-59375                   │
-│                             ├────────────────┼──────────┼─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2013-0340  │ MEDIUM   │ will_not_fix        │                     │               │ expat: internal entity expansion                             │
+│                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2013-0340  │ MEDIUM   │                     │                     │               │ expat: internal entity expansion                             │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2013-0340                    │
 ├─────────────────────────────┼────────────────┼──────────┼─────────────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ gawk                        │ CVE-2023-4156  │ LOW      │ affected            │ 5.1.0-6.el9         │               │ gawk: heap out of bound read in builtin.c                    │
@@ -217,11 +211,8 @@ Total: 99 (UNKNOWN: 0, LOW: 57, MEDIUM: 32, HIGH: 10, CRITICAL: 0)
 ├─────────────────────────────┤                │          │                     │                     ├───────────────┤                                                              │
 │ ncurses-libs                │                │          │                     │                     │               │                                                              │
 │                             │                │          │                     │                     │               │                                                              │
-├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ openssl                     │ CVE-2025-9230  │ MEDIUM   │                     │ 1:3.5.1-6.el9       │               │ openssl: Out-of-bounds read & write in RFC 3211 KEK Unwrap   │
-│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-9230                    │
-│                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-13176 │ LOW      │                     │                     │               │ openssl: Timing side-channel in ECDSA signature computation  │
+├─────────────────────────────┼────────────────┤          │                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ openssl                     │ CVE-2024-13176 │          │                     │ 1:3.5.1-6.el9       │               │ openssl: Timing side-channel in ECDSA signature computation  │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-13176                   │
 │                             ├────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-41996 │          │ will_not_fix        │                     │               │ openssl: remote attackers (from the client side) to trigger  │
@@ -230,11 +221,8 @@ Total: 99 (UNKNOWN: 0, LOW: 57, MEDIUM: 32, HIGH: 10, CRITICAL: 0)
 │                             ├────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-9232  │          │ affected            │                     │               │ openssl: Out-of-bounds read in HTTP client no_proxy handling │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-9232                    │
-├─────────────────────────────┼────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ openssl-libs                │ CVE-2025-9230  │ MEDIUM   │                     │                     │               │ openssl: Out-of-bounds read & write in RFC 3211 KEK Unwrap   │
-│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-9230                    │
-│                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2024-13176 │ LOW      │                     │                     │               │ openssl: Timing side-channel in ECDSA signature computation  │
+├─────────────────────────────┼────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ openssl-libs                │ CVE-2024-13176 │          │                     │                     │               │ openssl: Timing side-channel in ECDSA signature computation  │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-13176                   │
 │                             ├────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-41996 │          │ will_not_fix        │                     │               │ openssl: remote attackers (from the client side) to trigger  │
@@ -306,11 +294,7 @@ Total: 99 (UNKNOWN: 0, LOW: 57, MEDIUM: 32, HIGH: 10, CRITICAL: 0)
 │                             │                │          │                     │                     │               │ user-controlled template                                     │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-6075                    │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ python3-pip-wheel           │ CVE-2023-43804 │ MEDIUM   │                     │ 21.3.1-1.el9        │               │ python-urllib3: Cookie request header isn't stripped during  │
-│                             │                │          │                     │                     │               │ cross-origin redirects                                       │
-│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2023-43804                   │
-│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2023-45803 │          │                     │                     │               │ urllib3: Request body not stripped after redirect from 303   │
+│ python3-pip-wheel           │ CVE-2023-45803 │ MEDIUM   │                     │ 21.3.1-1.el9        │               │ urllib3: Request body not stripped after redirect from 303   │
 │                             │                │          │                     │                     │               │ status changes request...                                    │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2023-45803                   │
 │                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
