@@ -5251,7 +5251,7 @@ releases:
       - link: https://github.com/noironetworks/aci-containers/commit/e7d66533182131b1cde6bc8a93918a3df547bdf1
         sha: e7d66533182131b1cde6bc8a93918a3df547bdf1
       cve: release_artifacts/6.1.2.1/z/aci-containers-host-ovscni/6.1.2.1-quay-cve.txt
-      cve_error: Scanning Queued in Quay
+      cve_error: ''
       docker:
       - link: https://hub.docker.com/layers/noiro/aci-containers-host-ovscni/6.1.2.1.81c2369.z/images/sha256-f29f37ecca71d5035853565e494a168a667e8b4064e5bbcecaa947e834e028fc?context=explore
         sha: f29f37ecca71d5035853565e494a168a667e8b4064e5bbcecaa947e834e028fc
@@ -5268,7 +5268,12 @@ releases:
         sha: f29f37ecca71d5035853565e494a168a667e8b4064e5bbcecaa947e834e028fc
         tag: 6.1.2.1.81c2369.111925.11433
       sbom: release_artifacts/6.1.2.1/z/aci-containers-host-ovscni/6.1.2.1-sbom.txt
-      severity: []
+      severity:
+      - C: 0
+        H: 1
+        L: 21
+        M: 19
+        U: 14
       severity_link: https://quay.io/repository/noiro/aci-containers-host-ovscni/manifest/sha256:f29f37ecca71d5035853565e494a168a667e8b4064e5bbcecaa947e834e028fc?tab=vulnerabilities
       severity_type: quay
     - base-image:
@@ -9167,13 +9172,13 @@ releases:
         cve: release_artifacts/6.1.1.5/z/aci-containers-host-ovscni/6.1.1.5-cve-base.txt
         severity:
         - C: 0
-          H: 0
-          L: 0
-          M: 0
+          H: 8
+          L: 33
+          M: 38
           U: 0
-        severity_link: https://quay.io/repository/noirolabs/ubi9-minimal/manifest/sha256:error?tab=vulnerabilities
+        severity_link: https://quay.io/repository/noirolabs/ubi9-minimal/manifest/sha256:e8583fe27ca96cb03e2d40c3074ae7e69c9c909ae7302af84491d5672f716089?tab=vulnerabilities
         severity_type: quay
-        sha: error
+        sha: e8583fe27ca96cb03e2d40c3074ae7e69c9c909ae7302af84491d5672f716089
       build-logs: release_artifacts/6.1.1.5/z/aci-containers-host-ovscni/6.1.1.5-buildlog.txt
       build-time: 2025-11-19 03:36:41 PST
       commit:
@@ -9218,7 +9223,7 @@ releases:
         severity_type: quay
         sha: 1d2a8637a706990d5893b70a85abe7812a9f3665a441f8595c957f105dc8cdaf
       build-logs: release_artifacts/6.1.1.5/z/acc-provision-operator/6.1.1.5-buildlog.txt
-      build-time: 2025-11-19 02:57:17 PST
+      build-time: 2025-11-19 05:09:45 PST
       commit:
       - link: https://github.com/noironetworks/acc-provision-operator/commit/9e19db3b3c6df0fb739d0316226e769f3dcc7a14
         sha: 9e19db3b3c6df0fb739d0316226e769f3dcc7a14
@@ -9228,17 +9233,17 @@ releases:
       - link: https://hub.docker.com/layers/noiro/acc-provision-operator/6.1.1.5.81c2369.z/images/sha256-0b0f33ea827eda00a2c81e066763ae4a2ed6f80aa09b93751e27dc269fe76c2f?context=explore
         sha: 0b0f33ea827eda00a2c81e066763ae4a2ed6f80aa09b93751e27dc269fe76c2f
         tag: 6.1.1.5.81c2369.z
-      - link: https://hub.docker.com/layers/noiro/acc-provision-operator/6.1.1.5.81c2369.111925.1091/images/sha256-0b0f33ea827eda00a2c81e066763ae4a2ed6f80aa09b93751e27dc269fe76c2f?context=explore
+      - link: https://hub.docker.com/layers/noiro/acc-provision-operator/6.1.1.5.81c2369.111925.1092/images/sha256-0b0f33ea827eda00a2c81e066763ae4a2ed6f80aa09b93751e27dc269fe76c2f?context=explore
         sha: 0b0f33ea827eda00a2c81e066763ae4a2ed6f80aa09b93751e27dc269fe76c2f
-        tag: 6.1.1.5.81c2369.111925.1091
+        tag: 6.1.1.5.81c2369.111925.1092
       name: acc-provision-operator
       quay:
       - link: https://quay.io/noiro/acc-provision-operator:6.1.1.5.81c2369.z
         sha: 0b0f33ea827eda00a2c81e066763ae4a2ed6f80aa09b93751e27dc269fe76c2f
         tag: 6.1.1.5.81c2369.z
-      - link: https://quay.io/noiro/acc-provision-operator:6.1.1.5.81c2369.111925.1091
+      - link: https://quay.io/noiro/acc-provision-operator:6.1.1.5.81c2369.111925.1092
         sha: 0b0f33ea827eda00a2c81e066763ae4a2ed6f80aa09b93751e27dc269fe76c2f
-        tag: 6.1.1.5.81c2369.111925.1091
+        tag: 6.1.1.5.81c2369.111925.1092
       sbom: release_artifacts/6.1.1.5/z/acc-provision-operator/6.1.1.5-sbom.txt
       severity:
       - C: 0
@@ -9248,7 +9253,7 @@ releases:
         U: 12
       severity_link: https://quay.io/repository/noiro/acc-provision-operator/manifest/sha256:0b0f33ea827eda00a2c81e066763ae4a2ed6f80aa09b93751e27dc269fe76c2f?tab=vulnerabilities
       severity_type: quay
-    last_updated: 2025-11-19 03:36:41 PST
+    last_updated: 2025-11-19 05:09:45 PST
     release_name: 6.1.1.5.z
   - acc_provision: []
     container_images: []
