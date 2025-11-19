@@ -1,9 +1,9 @@
-NAME               INSTALLED  FIXED IN  TYPE       VULNERABILITY        SEVERITY  EPSS          RISK   
-k8s.io/kubernetes  v1.33.2    1.33.4    go-module  GHSA-4x4m-3c2p-qppc  Medium    < 0.1% (4th)  < 0.1
+NAME               INSTALLED  FIXED IN  TYPE       VULNERABILITY        SEVERITY  EPSS           RISK   
+k8s.io/kubernetes  v1.33.2    1.33.4    go-module  GHSA-4x4m-3c2p-qppc  Medium    < 0.1% (11th)  < 0.1
 
 quay.io/noiro/aci-containers-host:6.1.1.5.81c2369.z (redhat 9.7)
 ================================================================
-Total: 94 (UNKNOWN: 0, LOW: 57, MEDIUM: 29, HIGH: 8, CRITICAL: 0)
+Total: 92 (UNKNOWN: 0, LOW: 57, MEDIUM: 29, HIGH: 6, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │  Installed Version  │ Fixed Version │                            Title                             │
@@ -34,9 +34,6 @@ Total: 94 (UNKNOWN: 0, LOW: 57, MEDIUM: 29, HIGH: 8, CRITICAL: 0)
 │                             │ CVE-2023-50868 │          │                     │                     │               │ bind9: Preparing an NSEC3 closest encloser proof can exhaust │
 │                             │                │          │                     │                     │               │ CPU resources                                                │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2023-50868                   │
-│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-8677  │          │                     │                     │               │ bind: Resource exhaustion via malformed DNSKEY handling      │
-│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-8677                    │
 ├─────────────────────────────┼────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │ dhcp-common                 │ CVE-2023-50387 │          │                     │                     │               │ bind9: KeyTrap - Extreme CPU consumption in DNSSEC validator │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2023-50387                   │
@@ -44,11 +41,8 @@ Total: 94 (UNKNOWN: 0, LOW: 57, MEDIUM: 29, HIGH: 8, CRITICAL: 0)
 │                             │ CVE-2023-50868 │          │                     │                     │               │ bind9: Preparing an NSEC3 closest encloser proof can exhaust │
 │                             │                │          │                     │                     │               │ CPU resources                                                │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2023-50868                   │
-│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-8677  │          │                     │                     │               │ bind: Resource exhaustion via malformed DNSKEY handling      │
-│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-8677                    │
 ├─────────────────────────────┼────────────────┼──────────┼─────────────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ elfutils-default-yama-scope │ CVE-2024-25260 │ LOW      │ will_not_fix        │ 0.193-1.el9         │               │ elfutils: global-buffer-overflow exists in the function      │
+│ elfutils-default-yama-scope │ CVE-2024-25260 │ LOW      │ will_not_fix        │ 0.194-1.el9         │               │ elfutils: global-buffer-overflow exists in the function      │
 │                             │                │          │                     │                     │               │ ebl_machine_flag_name in eblmachineflagname.c                │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-25260                   │
 │                             ├────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -172,7 +166,7 @@ Total: 94 (UNKNOWN: 0, LOW: 57, MEDIUM: 29, HIGH: 8, CRITICAL: 0)
 │                             │ CVE-2024-9681  │          │                     │                     │               │ curl: HSTS subdomain overwrites parent cache entry           │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2024-9681                    │
 ├─────────────────────────────┼────────────────┤          │                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libgcc                      │ CVE-2022-27943 │          │                     │ 11.5.0-11.el9       │               │ binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows   │
+│ libgcc                      │ CVE-2022-27943 │          │                     │ 11.5.0-14.el9       │               │ binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows   │
 │                             │                │          │                     │                     │               │ stack exhaustion in demangle_const                           │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-27943                   │
 ├─────────────────────────────┤                │          │                     │                     ├───────────────┤                                                              │
@@ -184,7 +178,7 @@ Total: 94 (UNKNOWN: 0, LOW: 57, MEDIUM: 29, HIGH: 8, CRITICAL: 0)
 │                             │                │          │                     │                     │               │                                                              │
 │                             │                │          │                     │                     │               │                                                              │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libxml2                     │ CVE-2025-12863 │ HIGH     │                     │ 2.9.13-12.el9_6     │               │ libxml2: Namespace Use-After-Free in xmlSetTreeDoc()         │
+│ libxml2                     │ CVE-2025-12863 │ HIGH     │                     │ 2.9.13-14.el9       │               │ libxml2: Namespace Use-After-Free in xmlSetTreeDoc()         │
 │                             │                │          │                     │                     │               │ function of libxml2                                          │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-12863                   │
 │                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
