@@ -1,24 +1,24 @@
 NAME               INSTALLED  FIXED IN  TYPE       VULNERABILITY        SEVERITY  EPSS           RISK   
-setuptools         53.0.0     70.0.0    python     GHSA-cx63-2mw6-8hw5  High      4.8% (89th)    3.9    
+setuptools         53.0.0     70.0.0    python     GHSA-cx63-2mw6-8hw5  High      6.4% (90th)    5.2    
 requests           2.25.1     2.31.0    python     GHSA-j8r2-6x86-q33q  Medium    6.3% (90th)    3.5    
 urllib3            1.26.5     1.26.17   python     GHSA-v845-jxx5-vc9f  High      0.9% (74th)    0.6    
-setuptools         53.0.0     65.5.1    python     GHSA-r9hx-vwmv-q579  High      0.5% (65th)    0.4    
+setuptools         53.0.0     65.5.1    python     GHSA-r9hx-vwmv-q579  High      0.5% (66th)    0.4    
 idna               2.10       3.7       python     GHSA-jjg7-2v4v-x38h  Medium    0.7% (70th)    0.4    
 urllib3            1.26.5     1.26.19   python     GHSA-34jh-p97f-mpxf  Medium    0.3% (48th)    0.1    
 setuptools         53.0.0     78.1.1    python     GHSA-5rjg-fvgr-3xxf  High      0.1% (35th)    0.1    
 requests           2.25.1     2.32.4    python     GHSA-9hjg-9r4m-mvj7  Medium    < 0.1% (27th)  < 0.1  
 urllib3            1.26.5     2.6.0     python     GHSA-gm62-xv2j-4w53  High      < 0.1% (9th)   < 0.1  
+requests           2.25.1     2.32.0    python     GHSA-9wx4-h78v-vm56  Medium    < 0.1% (14th)  < 0.1  
 urllib3            1.26.5     1.26.18   python     GHSA-g4mx-q9vg-27p4  Medium    < 0.1% (16th)  < 0.1  
-requests           2.25.1     2.32.0    python     GHSA-9wx4-h78v-vm56  Medium    < 0.1% (13th)  < 0.1  
 urllib3            1.26.5     2.6.0     python     GHSA-2xpw-w6gg-jr37  High      < 0.1% (6th)   < 0.1  
-k8s.io/kubernetes  v1.33.2    1.33.4    go-module  GHSA-4x4m-3c2p-qppc  Medium    < 0.1% (6th)   < 0.1  
+k8s.io/kubernetes  v1.33.2    1.33.4    go-module  GHSA-4x4m-3c2p-qppc  Medium    < 0.1% (5th)   < 0.1  
 urllib3            1.26.5     2.6.3     python     GHSA-38jv-5279-wg99  High      < 0.1% (3rd)   < 0.1  
-urllib3            1.26.5     2.5.0     python     GHSA-pq67-6m6q-mj2v  Medium    < 0.1% (4th)   < 0.1  
+urllib3            1.26.5     2.5.0     python     GHSA-pq67-6m6q-mj2v  Medium    < 0.1% (3rd)   < 0.1  
 k8s.io/kubernetes  v1.33.2    1.33.6    go-module  GHSA-r6j8-c6r2-37rr  Medium    < 0.1% (1st)   < 0.1
 
 quay.io/noiro/aci-containers-operator:6.1.1.6.81c2369.z (redhat 9.7)
 ====================================================================
-Total: 240 (UNKNOWN: 0, LOW: 194, MEDIUM: 43, HIGH: 3, CRITICAL: 0)
+Total: 251 (UNKNOWN: 0, LOW: 194, MEDIUM: 54, HIGH: 3, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -188,10 +188,7 @@ Total: 240 (UNKNOWN: 0, LOW: 194, MEDIUM: 43, HIGH: 3, CRITICAL: 0)
 │                             │ CVE-2025-66866 │          │              │                     │               │ binutils: BinUtils: Denial of Service via crafted PE file    │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-66866                   │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ glib2                       │ CVE-2025-13601 │ MEDIUM   │              │ 2.68.4-18.el9_7     │               │ glib: Integer overflow in in g_escape_uri_string()           │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-13601                   │
-│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-14087 │          │              │                     │               │ glib: GLib: Buffer underflow in GVariant parser leads to     │
+│ glib2                       │ CVE-2025-14087 │ MEDIUM   │              │ 2.68.4-18.el9_7.1   │               │ glib: GLib: Buffer underflow in GVariant parser leads to     │
 │                             │                │          │              │                     │               │ heap corruption                                              │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-14087                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -401,9 +398,16 @@ Total: 240 (UNKNOWN: 0, LOW: 194, MEDIUM: 43, HIGH: 3, CRITICAL: 0)
 │                             │                │          │              │                     │               │                                                              │
 │                             │                │          │              │                     │               │                                                              │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ python3                     │ CVE-2025-12084 │ MEDIUM   │              │ 3.9.25-2.el9_7      │               │ cpython: python: cpython: Quadratic algorithm in             │
+│ python3                     │ CVE-2025-11468 │ MEDIUM   │              │ 3.9.25-2.el9_7      │               │ cpython: Missing character filtering in Python               │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-11468                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-12084 │          │              │                     │               │ cpython: python: cpython: Quadratic algorithm in             │
 │                             │                │          │              │                     │               │ xml.dom.minidom leads to denial of service...                │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-12084                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-12781 │          │              │                     │               │ cpython: base64.b64decode() always accepts "+/" characters,  │
+│                             │                │          │              │                     │               │ despite setting altchars                                     │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-12781                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-13836 │          │              │                     │               │ cpython: Excessive read buffering DoS in http.client         │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-13836                   │
@@ -411,11 +415,25 @@ Total: 240 (UNKNOWN: 0, LOW: 194, MEDIUM: 43, HIGH: 3, CRITICAL: 0)
 │                             │ CVE-2025-13837 │          │              │                     │               │ cpython: Out-of-memory when loading Plist                    │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-13837                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-15282 │          │              │                     │               │ cpython: Header injection via newlines in data URL mediatype │
+│                             │                │          │              │                     │               │ in Python                                                    │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-15282                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-15366 │          │              │                     │               │ cpython: IMAP command injection in user-controlled commands  │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-15366                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-15367 │          │              │                     │               │ cpython: POP3 command injection in user-controlled commands  │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-15367                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-4516  │          │              │                     │               │ cpython: python: CPython DecodeError Handling Vulnerability  │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4516                    │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-6069  │          │              │                     │               │ cpython: Python HTMLParser quadratic complexity              │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-6069                    │
+│                             │ CVE-2026-0672  │          │              │                     │               │ cpython: Header injection in http.cookies.Morsel in Python   │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2026-0672                    │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-0865  │          │              │                     │               │ cpython: wsgiref.headers.Headers allows header newline       │
+│                             │                │          │              │                     │               │ injection in Python                                          │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2026-0865                    │
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-1795  │ LOW      │              │                     │               │ python: Mishandling of comma during folding and              │
 │                             │                │          │              │                     │               │ unicode-encoding of email headers                            │
@@ -425,9 +443,16 @@ Total: 240 (UNKNOWN: 0, LOW: 194, MEDIUM: 43, HIGH: 3, CRITICAL: 0)
 │                             │                │          │              │                     │               │ user-controlled template                                     │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-6075                    │
 ├─────────────────────────────┼────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ python3-libs                │ CVE-2025-12084 │ MEDIUM   │              │                     │               │ cpython: python: cpython: Quadratic algorithm in             │
+│ python3-libs                │ CVE-2025-11468 │ MEDIUM   │              │                     │               │ cpython: Missing character filtering in Python               │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-11468                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-12084 │          │              │                     │               │ cpython: python: cpython: Quadratic algorithm in             │
 │                             │                │          │              │                     │               │ xml.dom.minidom leads to denial of service...                │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-12084                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-12781 │          │              │                     │               │ cpython: base64.b64decode() always accepts "+/" characters,  │
+│                             │                │          │              │                     │               │ despite setting altchars                                     │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-12781                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-13836 │          │              │                     │               │ cpython: Excessive read buffering DoS in http.client         │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-13836                   │
@@ -435,11 +460,25 @@ Total: 240 (UNKNOWN: 0, LOW: 194, MEDIUM: 43, HIGH: 3, CRITICAL: 0)
 │                             │ CVE-2025-13837 │          │              │                     │               │ cpython: Out-of-memory when loading Plist                    │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-13837                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-15282 │          │              │                     │               │ cpython: Header injection via newlines in data URL mediatype │
+│                             │                │          │              │                     │               │ in Python                                                    │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-15282                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-15366 │          │              │                     │               │ cpython: IMAP command injection in user-controlled commands  │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-15366                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-15367 │          │              │                     │               │ cpython: POP3 command injection in user-controlled commands  │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-15367                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-4516  │          │              │                     │               │ cpython: python: CPython DecodeError Handling Vulnerability  │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-4516                    │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-6069  │          │              │                     │               │ cpython: Python HTMLParser quadratic complexity              │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-6069                    │
+│                             │ CVE-2026-0672  │          │              │                     │               │ cpython: Header injection in http.cookies.Morsel in Python   │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2026-0672                    │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-0865  │          │              │                     │               │ cpython: wsgiref.headers.Headers allows header newline       │
+│                             │                │          │              │                     │               │ injection in Python                                          │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2026-0865                    │
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-1795  │ LOW      │              │                     │               │ python: Mishandling of comma during folding and              │
 │                             │                │          │              │                     │               │ unicode-encoding of email headers                            │
