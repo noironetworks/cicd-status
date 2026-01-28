@@ -18,7 +18,7 @@ k8s.io/kubernetes  v1.33.2    1.33.6    go-module  GHSA-r6j8-c6r2-37rr  Medium  
 
 quay.io/noiro/aci-containers-operator:6.1.2.1.81c2369.z (redhat 9.7)
 ====================================================================
-Total: 277 (UNKNOWN: 0, LOW: 214, MEDIUM: 58, HIGH: 5, CRITICAL: 0)
+Total: 276 (UNKNOWN: 0, LOW: 215, MEDIUM: 56, HIGH: 5, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -91,6 +91,9 @@ Total: 277 (UNKNOWN: 0, LOW: 214, MEDIUM: 58, HIGH: 5, CRITICAL: 0)
 │ expat                       │ CVE-2025-66382 │          │              │ 2.5.0-5.el9_7.1     │               │ libexpat: libexpat: Denial of service via crafted file       │
 │                             │                │          │              │                     │               │ processing                                                   │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-66382                   │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-24515 │          │              │                     │               │ libexpat: libexpat null pointer dereference                  │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2026-24515                   │
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ gawk                        │ CVE-2023-4156  │          │              │ 5.1.0-6.el9         │               │ gawk: heap out of bound read in builtin.c                    │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-4156                    │
@@ -193,12 +196,12 @@ Total: 277 (UNKNOWN: 0, LOW: 214, MEDIUM: 58, HIGH: 5, CRITICAL: 0)
 │                             │                │          │              │                     │               │ Heap Buffer Overflow...                                      │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-14512                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2026-1484  │          │              │                     │               │ A flaw was found in the GLib Base64 encoding routine when    │
-│                             │                │          │              │                     │               │ processing...                                                │
+│                             │ CVE-2026-1484  │          │              │                     │               │ Glib: Integer Overflow Leading to Buffer Underflow and       │
+│                             │                │          │              │                     │               │ Out-of-Bounds Write in GLib...                               │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2026-1484                    │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2026-1489  │          │              │                     │               │ A flaw was found in GLib. An integer overflow vulnerability  │
-│                             │                │          │              │                     │               │ in its...                                                    │
+│                             │ CVE-2026-1489  │          │              │                     │               │ Glib: GLib: Memory corruption via integer overflow in        │
+│                             │                │          │              │                     │               │ Unicode case conversion                                      │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2026-1489                    │
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2023-32636 │ LOW      │              │                     │               │ glib: Timeout in fuzz_variant_text                           │
@@ -216,8 +219,8 @@ Total: 277 (UNKNOWN: 0, LOW: 214, MEDIUM: 58, HIGH: 5, CRITICAL: 0)
 │                             │                │          │              │                     │               │ g_buffered_input_stream_peek()                               │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2026-0988                    │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2026-1485  │          │              │                     │               │ A flaw was found in Glib's content type parsing logic. This  │
-│                             │                │          │              │                     │               │ buffer...                                                    │
+│                             │ CVE-2026-1485  │          │              │                     │               │ Glib: Glib: Local denial of service via buffer underflow in  │
+│                             │                │          │              │                     │               │ content type...                                              │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2026-1485                    │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ glibc                       │ CVE-2026-0915  │ MEDIUM   │              │ 2.34-231.el9_7.2    │               │ glibc: glibc: Information disclosure via zero-valued network │
@@ -380,16 +383,16 @@ Total: 277 (UNKNOWN: 0, LOW: 214, MEDIUM: 58, HIGH: 5, CRITICAL: 0)
 │                             │                │          │              │                     │               │ Disclosure via Heap Buffer...                                │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2026-22185                   │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ openssl                     │ CVE-2025-15467 │ HIGH     │              │ 1:3.5.1-5.el9_7     │               │ Issue summary: Parsing CMS AuthEnvelopedData message with    │
-│                             │                │          │              │                     │               │ maliciously ...                                              │
+│ openssl                     │ CVE-2025-15467 │ HIGH     │              │ 1:3.5.1-5.el9_7     │               │ openssl: OpenSSL: Remote code execution or Denial of Service │
+│                             │                │          │              │                     │               │ via oversized Initialization...                              │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-15467                   │
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-11187 │ MEDIUM   │              │                     │               │ Issue summary: PBMAC1 parameters in PKCS#12 files are        │
-│                             │                │          │              │                     │               │ missing validati ...                                         │
+│                             │ CVE-2025-11187 │ MEDIUM   │              │                     │               │ openssl: OpenSSL: Arbitrary code execution or denial of      │
+│                             │                │          │              │                     │               │ service through crafted PKCS#12...                           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-11187                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-69419 │          │              │                     │               │ Issue summary: Calling PKCS12_get_friendlyname() function on │
-│                             │                │          │              │                     │               │ a malicio ...                                                │
+│                             │ CVE-2025-69419 │          │              │                     │               │ openssl: OpenSSL: Arbitrary code execution due to            │
+│                             │                │          │              │                     │               │ out-of-bounds write in PKCS#12 processing...                 │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-69419                   │
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-13176 │ LOW      │              │                     │               │ openssl: Timing side-channel in ECDSA signature computation  │
@@ -399,55 +402,55 @@ Total: 277 (UNKNOWN: 0, LOW: 214, MEDIUM: 58, HIGH: 5, CRITICAL: 0)
 │                             │                │          │              │                     │               │ unnecessarily expensive server-side...                       │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-41996                   │
 │                             ├────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-15468 │          │ affected     │                     │               │ Issue summary: If an application using the SSL_CIPHER_find() │
-│                             │                │          │              │                     │               │ function ...                                                 │
+│                             │ CVE-2025-15468 │          │ affected     │                     │               │ openssl: OpenSSL: Denial of Service via NULL pointer         │
+│                             │                │          │              │                     │               │ dereference in QUIC protocol...                              │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-15468                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-15469 │          │              │                     │               │ Issue summary: The 'openssl dgst' command-line tool silently │
-│                             │                │          │              │                     │               │ truncates ...                                                │
+│                             │ CVE-2025-15469 │          │              │                     │               │ openssl: OpenSSL: Data integrity bypass in `openssl dgst`    │
+│                             │                │          │              │                     │               │ command due to silent...                                     │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-15469                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-66199 │          │              │                     │               │ Issue summary: A TLS 1.3 connection using certificate        │
-│                             │                │          │              │                     │               │ compression can ......                                       │
+│                             │ CVE-2025-66199 │          │              │                     │               │ openssl: OpenSSL: Denial of Service due to excessive memory  │
+│                             │                │          │              │                     │               │ allocation in TLS...                                         │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-66199                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-68160 │          │              │                     │               │ Issue summary: Writing large, newline-free data into a BIO   │
-│                             │                │          │              │                     │               │ chain using ......                                           │
+│                             │ CVE-2025-68160 │          │              │                     │               │ openssl: OpenSSL: Denial of Service due to out-of-bounds     │
+│                             │                │          │              │                     │               │ write in BIO filter...                                       │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-68160                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-69418 │          │              │                     │               │ Issue summary: When using the low-level OCB API directly     │
-│                             │                │          │              │                     │               │ with AES-NI o...                                             │
+│                             │ CVE-2025-69418 │          │              │                     │               │ openssl: OpenSSL: Information disclosure and data tampering  │
+│                             │                │          │              │                     │               │ via specific low-level OCB encryption/decryption...          │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-69418                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-69420 │          │              │                     │               │ Issue summary: A type confusion vulnerability exists in the  │
-│                             │                │          │              │                     │               │ TimeStamp ......                                             │
+│                             │ CVE-2025-69420 │          │              │                     │               │ openssl: OpenSSL: Denial of Service via malformed TimeStamp  │
+│                             │                │          │              │                     │               │ Response                                                     │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-69420                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-69421 │          │              │                     │               │ Issue summary: Processing a malformed PKCS#12 file can       │
-│                             │                │          │              │                     │               │ trigger a NULL ...                                           │
+│                             │ CVE-2025-69421 │          │              │                     │               │ openssl: OpenSSL: Denial of Service via malformed PKCS#12    │
+│                             │                │          │              │                     │               │ file processing                                              │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-69421                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-9232  │          │              │                     │               │ openssl: Out-of-bounds read in HTTP client no_proxy handling │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-9232                    │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2026-22795 │          │              │                     │               │ Issue summary: An invalid or NULL pointer dereference can    │
-│                             │                │          │              │                     │               │ happen in an...                                              │
+│                             │ CVE-2026-22795 │          │              │                     │               │ openssl: OpenSSL: Denial of Service due to type confusion in │
+│                             │                │          │              │                     │               │ PKCS#12 file...                                              │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2026-22795                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2026-22796 │          │              │                     │               │ Issue summary: A type confusion vulnerability exists in the  │
-│                             │                │          │              │                     │               │ signature ......                                             │
+│                             │ CVE-2026-22796 │          │              │                     │               │ openssl: OpenSSL: Denial of Service via type confusion in    │
+│                             │                │          │              │                     │               │ PKCS#7 signature verification...                             │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2026-22796                   │
 ├─────────────────────────────┼────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ openssl-libs                │ CVE-2025-15467 │ HIGH     │              │                     │               │ Issue summary: Parsing CMS AuthEnvelopedData message with    │
-│                             │                │          │              │                     │               │ maliciously ...                                              │
+│ openssl-libs                │ CVE-2025-15467 │ HIGH     │              │                     │               │ openssl: OpenSSL: Remote code execution or Denial of Service │
+│                             │                │          │              │                     │               │ via oversized Initialization...                              │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-15467                   │
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-11187 │ MEDIUM   │              │                     │               │ Issue summary: PBMAC1 parameters in PKCS#12 files are        │
-│                             │                │          │              │                     │               │ missing validati ...                                         │
+│                             │ CVE-2025-11187 │ MEDIUM   │              │                     │               │ openssl: OpenSSL: Arbitrary code execution or denial of      │
+│                             │                │          │              │                     │               │ service through crafted PKCS#12...                           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-11187                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-69419 │          │              │                     │               │ Issue summary: Calling PKCS12_get_friendlyname() function on │
-│                             │                │          │              │                     │               │ a malicio ...                                                │
+│                             │ CVE-2025-69419 │          │              │                     │               │ openssl: OpenSSL: Arbitrary code execution due to            │
+│                             │                │          │              │                     │               │ out-of-bounds write in PKCS#12 processing...                 │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-69419                   │
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2024-13176 │ LOW      │              │                     │               │ openssl: Timing side-channel in ECDSA signature computation  │
@@ -457,43 +460,43 @@ Total: 277 (UNKNOWN: 0, LOW: 214, MEDIUM: 58, HIGH: 5, CRITICAL: 0)
 │                             │                │          │              │                     │               │ unnecessarily expensive server-side...                       │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-41996                   │
 │                             ├────────────────┤          ├──────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-15468 │          │ affected     │                     │               │ Issue summary: If an application using the SSL_CIPHER_find() │
-│                             │                │          │              │                     │               │ function ...                                                 │
+│                             │ CVE-2025-15468 │          │ affected     │                     │               │ openssl: OpenSSL: Denial of Service via NULL pointer         │
+│                             │                │          │              │                     │               │ dereference in QUIC protocol...                              │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-15468                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-15469 │          │              │                     │               │ Issue summary: The 'openssl dgst' command-line tool silently │
-│                             │                │          │              │                     │               │ truncates ...                                                │
+│                             │ CVE-2025-15469 │          │              │                     │               │ openssl: OpenSSL: Data integrity bypass in `openssl dgst`    │
+│                             │                │          │              │                     │               │ command due to silent...                                     │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-15469                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-66199 │          │              │                     │               │ Issue summary: A TLS 1.3 connection using certificate        │
-│                             │                │          │              │                     │               │ compression can ......                                       │
+│                             │ CVE-2025-66199 │          │              │                     │               │ openssl: OpenSSL: Denial of Service due to excessive memory  │
+│                             │                │          │              │                     │               │ allocation in TLS...                                         │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-66199                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-68160 │          │              │                     │               │ Issue summary: Writing large, newline-free data into a BIO   │
-│                             │                │          │              │                     │               │ chain using ......                                           │
+│                             │ CVE-2025-68160 │          │              │                     │               │ openssl: OpenSSL: Denial of Service due to out-of-bounds     │
+│                             │                │          │              │                     │               │ write in BIO filter...                                       │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-68160                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-69418 │          │              │                     │               │ Issue summary: When using the low-level OCB API directly     │
-│                             │                │          │              │                     │               │ with AES-NI o...                                             │
+│                             │ CVE-2025-69418 │          │              │                     │               │ openssl: OpenSSL: Information disclosure and data tampering  │
+│                             │                │          │              │                     │               │ via specific low-level OCB encryption/decryption...          │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-69418                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-69420 │          │              │                     │               │ Issue summary: A type confusion vulnerability exists in the  │
-│                             │                │          │              │                     │               │ TimeStamp ......                                             │
+│                             │ CVE-2025-69420 │          │              │                     │               │ openssl: OpenSSL: Denial of Service via malformed TimeStamp  │
+│                             │                │          │              │                     │               │ Response                                                     │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-69420                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-69421 │          │              │                     │               │ Issue summary: Processing a malformed PKCS#12 file can       │
-│                             │                │          │              │                     │               │ trigger a NULL ...                                           │
+│                             │ CVE-2025-69421 │          │              │                     │               │ openssl: OpenSSL: Denial of Service via malformed PKCS#12    │
+│                             │                │          │              │                     │               │ file processing                                              │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-69421                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-9232  │          │              │                     │               │ openssl: Out-of-bounds read in HTTP client no_proxy handling │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-9232                    │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2026-22795 │          │              │                     │               │ Issue summary: An invalid or NULL pointer dereference can    │
-│                             │                │          │              │                     │               │ happen in an...                                              │
+│                             │ CVE-2026-22795 │          │              │                     │               │ openssl: OpenSSL: Denial of Service due to type confusion in │
+│                             │                │          │              │                     │               │ PKCS#12 file...                                              │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2026-22795                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2026-22796 │          │              │                     │               │ Issue summary: A type confusion vulnerability exists in the  │
-│                             │                │          │              │                     │               │ signature ......                                             │
+│                             │ CVE-2026-22796 │          │              │                     │               │ openssl: OpenSSL: Denial of Service via type confusion in    │
+│                             │                │          │              │                     │               │ PKCS#7 signature verification...                             │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2026-22796                   │
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ pcre2                       │ CVE-2022-41409 │          │              │ 10.40-6.el9         │               │ pcre2: negative repeat value in a pcre2test subject line     │
@@ -514,9 +517,6 @@ Total: 277 (UNKNOWN: 0, LOW: 214, MEDIUM: 58, HIGH: 5, CRITICAL: 0)
 │                             │ CVE-2025-12781 │          │              │                     │               │ cpython: base64.b64decode() always accepts "+/" characters,  │
 │                             │                │          │              │                     │               │ despite setting altchars                                     │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-12781                   │
-│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-13836 │          │              │                     │               │ cpython: Excessive read buffering DoS in http.client         │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-13836                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-13837 │          │              │                     │               │ cpython: Out-of-memory when loading Plist                    │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-13837                   │
@@ -559,9 +559,6 @@ Total: 277 (UNKNOWN: 0, LOW: 214, MEDIUM: 58, HIGH: 5, CRITICAL: 0)
 │                             │ CVE-2025-12781 │          │              │                     │               │ cpython: base64.b64decode() always accepts "+/" characters,  │
 │                             │                │          │              │                     │               │ despite setting altchars                                     │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-12781                   │
-│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-13836 │          │              │                     │               │ cpython: Excessive read buffering DoS in http.client         │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-13836                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-13837 │          │              │                     │               │ cpython: Out-of-memory when loading Plist                    │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-13837                   │
