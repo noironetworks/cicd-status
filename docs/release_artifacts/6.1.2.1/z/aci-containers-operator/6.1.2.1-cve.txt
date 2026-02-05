@@ -1,24 +1,24 @@
 NAME               INSTALLED  FIXED IN  TYPE       VULNERABILITY        SEVERITY  EPSS           RISK   
-setuptools         53.0.0     70.0.0    python     GHSA-cx63-2mw6-8hw5  High      6.5% (90th)    5.3    
+setuptools         53.0.0     70.0.0    python     GHSA-cx63-2mw6-8hw5  High      6.5% (90th)    5.1    
 requests           2.25.1     2.31.0    python     GHSA-j8r2-6x86-q33q  Medium    6.3% (90th)    3.5    
 urllib3            1.26.5     1.26.17   python     GHSA-v845-jxx5-vc9f  High      0.9% (74th)    0.6    
 setuptools         53.0.0     65.5.1    python     GHSA-r9hx-vwmv-q579  High      0.5% (66th)    0.4    
 idna               2.10       3.7       python     GHSA-jjg7-2v4v-x38h  Medium    0.7% (70th)    0.4    
+setuptools         53.0.0     78.1.1    python     GHSA-5rjg-fvgr-3xxf  High      0.2% (39th)    0.1    
 urllib3            1.26.5     1.26.19   python     GHSA-34jh-p97f-mpxf  Medium    0.3% (49th)    0.1    
-setuptools         53.0.0     78.1.1    python     GHSA-5rjg-fvgr-3xxf  High      0.1% (35th)    0.1    
 requests           2.25.1     2.32.4    python     GHSA-9hjg-9r4m-mvj7  Medium    < 0.1% (27th)  < 0.1  
-urllib3            1.26.5     2.6.0     python     GHSA-gm62-xv2j-4w53  High      < 0.1% (9th)   < 0.1  
+urllib3            1.26.5     1.26.18   python     GHSA-g4mx-q9vg-27p4  Medium    < 0.1% (15th)  < 0.1  
 requests           2.25.1     2.32.0    python     GHSA-9wx4-h78v-vm56  Medium    < 0.1% (13th)  < 0.1  
-urllib3            1.26.5     1.26.18   python     GHSA-g4mx-q9vg-27p4  Medium    < 0.1% (16th)  < 0.1  
+urllib3            1.26.5     2.6.0     python     GHSA-gm62-xv2j-4w53  High      < 0.1% (7th)   < 0.1  
 urllib3            1.26.5     2.6.0     python     GHSA-2xpw-w6gg-jr37  High      < 0.1% (6th)   < 0.1  
-k8s.io/kubernetes  v1.33.2    1.33.4    go-module  GHSA-4x4m-3c2p-qppc  Medium    < 0.1% (5th)   < 0.1  
+k8s.io/kubernetes  v1.33.2    1.33.4    go-module  GHSA-4x4m-3c2p-qppc  Medium    < 0.1% (7th)   < 0.1  
 urllib3            1.26.5     2.6.3     python     GHSA-38jv-5279-wg99  High      < 0.1% (3rd)   < 0.1  
 urllib3            1.26.5     2.5.0     python     GHSA-pq67-6m6q-mj2v  Medium    < 0.1% (3rd)   < 0.1  
 k8s.io/kubernetes  v1.33.2    1.33.6    go-module  GHSA-r6j8-c6r2-37rr  Medium    < 0.1% (1st)   < 0.1
 
 quay.io/noiro/aci-containers-operator:6.1.2.1.81c2369.z (redhat 9.7)
 ====================================================================
-Total: 274 (UNKNOWN: 0, LOW: 214, MEDIUM: 54, HIGH: 6, CRITICAL: 0)
+Total: 268 (UNKNOWN: 0, LOW: 212, MEDIUM: 55, HIGH: 1, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬──────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │    Status    │  Installed Version  │ Fixed Version │                            Title                             │
@@ -256,15 +256,7 @@ Total: 274 (UNKNOWN: 0, LOW: 214, MEDIUM: 54, HIGH: 6, CRITICAL: 0)
 │                             │ CVE-2026-0861  │          │              │                     │               │ glibc: Integer overflow in memalign leads to heap corruption │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2026-0861                    │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ gnupg2                      │ CVE-2026-24881 │ HIGH     │              │ 2.3.3-5.el9_7       │               │ GnuPG: GnuPG: Remote code execution and denial of service    │
-│                             │                │          │              │                     │               │ via crafted CMS...                                           │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2026-24881                   │
-│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2026-24882 │          │              │                     │               │ GnuPG: GnuPG: Stack-based buffer overflow in tpm2daemon      │
-│                             │                │          │              │                     │               │ allows arbitrary code execution                              │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2026-24882                   │
-│                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-68972 │ MEDIUM   │              │                     │               │ gnupg: GnuPG: Signature bypass via form feed character in    │
+│ gnupg2                      │ CVE-2025-68972 │ MEDIUM   │              │ 2.3.3-5.el9_7       │               │ gnupg: GnuPG: Signature bypass via form feed character in    │
 │                             │                │          │              │                     │               │ signed messages                                              │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-68972                   │
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -311,7 +303,7 @@ Total: 274 (UNKNOWN: 0, LOW: 214, MEDIUM: 54, HIGH: 6, CRITICAL: 0)
 │                             │                │          │              │                     │               │ streams                                                      │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-5918                    │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libblkid                    │ CVE-2025-14104 │ MEDIUM   │              │ 2.37.4-21.el9       │               │ util-linux: util-linux: Heap buffer overread in setpwnam()   │
+│ libblkid                    │ CVE-2025-14104 │ MEDIUM   │              │ 2.37.4-21.el9_7     │               │ util-linux: util-linux: Heap buffer overread in setpwnam()   │
 │                             │                │          │              │                     │               │ when processing 256-byte usernames                           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-14104                   │
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
@@ -328,7 +320,7 @@ Total: 274 (UNKNOWN: 0, LOW: 214, MEDIUM: 54, HIGH: 6, CRITICAL: 0)
 │                             │ CVE-2024-9681  │          │              │                     │               │ curl: HSTS subdomain overwrites parent cache entry           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-9681                    │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libfdisk                    │ CVE-2025-14104 │ MEDIUM   │              │ 2.37.4-21.el9       │               │ util-linux: util-linux: Heap buffer overread in setpwnam()   │
+│ libfdisk                    │ CVE-2025-14104 │ MEDIUM   │              │ 2.37.4-21.el9_7     │               │ util-linux: util-linux: Heap buffer overread in setpwnam()   │
 │                             │                │          │              │                     │               │ when processing 256-byte usernames                           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-14104                   │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
@@ -340,7 +332,7 @@ Total: 274 (UNKNOWN: 0, LOW: 214, MEDIUM: 54, HIGH: 6, CRITICAL: 0)
 │                             │                │          │              │                     │               │                                                              │
 │                             │                │          │              │                     │               │                                                              │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libmount                    │ CVE-2025-14104 │ MEDIUM   │              │ 2.37.4-21.el9       │               │ util-linux: util-linux: Heap buffer overread in setpwnam()   │
+│ libmount                    │ CVE-2025-14104 │ MEDIUM   │              │ 2.37.4-21.el9_7     │               │ util-linux: util-linux: Heap buffer overread in setpwnam()   │
 │                             │                │          │              │                     │               │ when processing 256-byte usernames                           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-14104                   │
 ├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
@@ -356,13 +348,17 @@ Total: 274 (UNKNOWN: 0, LOW: 214, MEDIUM: 54, HIGH: 6, CRITICAL: 0)
 │                             │                │          │              │                     │               │ overflow in asn1_expend_octet_string                         │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-13151                   │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libuuid                     │ CVE-2025-14104 │ MEDIUM   │              │ 2.37.4-21.el9       │               │ util-linux: util-linux: Heap buffer overread in setpwnam()   │
+│ libuuid                     │ CVE-2025-14104 │ MEDIUM   │              │ 2.37.4-21.el9_7     │               │ util-linux: util-linux: Heap buffer overread in setpwnam()   │
 │                             │                │          │              │                     │               │ when processing 256-byte usernames                           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-14104                   │
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ libxml2                     │ CVE-2026-0990  │          │              │ 2.9.13-14.el9_7     │               │ libxml2: libxml2: Denial of Service via uncontrolled         │
 │                             │                │          │              │                     │               │ recursion in XML catalog processing...                       │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2026-0990                    │
+│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-1757  │          │              │                     │               │ libxml2: Memory Leak Leading to Local Denial of Service in   │
+│                             │                │          │              │                     │               │ xmllint Interactive...                                       │
+│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2026-1757                    │
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2023-45322 │ LOW      │              │                     │               │ libxml2: use-after-free in xmlUnlinkNode() in tree.c         │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2023-45322                   │
@@ -394,12 +390,8 @@ Total: 274 (UNKNOWN: 0, LOW: 214, MEDIUM: 54, HIGH: 6, CRITICAL: 0)
 │ openldap                    │ CVE-2026-22185 │ MEDIUM   │              │ 2.6.8-4.el9         │               │ OpenLDAP: OpenLDAP LMDB: Denial of Service and Information   │
 │                             │                │          │              │                     │               │ Disclosure via Heap Buffer...                                │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2026-22185                   │
-├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ openssl                     │ CVE-2025-15467 │ HIGH     │              │ 1:3.5.1-7.el9_7     │               │ openssl: OpenSSL: Remote code execution or Denial of Service │
-│                             │                │          │              │                     │               │ via oversized Initialization...                              │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-15467                   │
-│                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-11187 │ MEDIUM   │              │                     │               │ openssl: OpenSSL: Arbitrary code execution or denial of      │
+├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ openssl                     │ CVE-2025-11187 │          │              │ 1:3.5.1-7.el9_7     │               │ openssl: OpenSSL: Arbitrary code execution or denial of      │
 │                             │                │          │              │                     │               │ service through crafted PKCS#12...                           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-11187                   │
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -429,10 +421,6 @@ Total: 274 (UNKNOWN: 0, LOW: 214, MEDIUM: 54, HIGH: 6, CRITICAL: 0)
 │                             │ CVE-2025-69420 │          │              │                     │               │ openssl: OpenSSL: Denial of Service via malformed TimeStamp  │
 │                             │                │          │              │                     │               │ Response                                                     │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-69420                   │
-│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-69421 │          │              │                     │               │ openssl: OpenSSL: Denial of Service via malformed PKCS#12    │
-│                             │                │          │              │                     │               │ file processing                                              │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-69421                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-9232  │          │              │                     │               │ openssl: Out-of-bounds read in HTTP client no_proxy handling │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-9232                    │
@@ -445,11 +433,7 @@ Total: 274 (UNKNOWN: 0, LOW: 214, MEDIUM: 54, HIGH: 6, CRITICAL: 0)
 │                             │                │          │              │                     │               │ PKCS#7 signature verification...                             │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2026-22796                   │
 ├─────────────────────────────┼────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ openssl-libs                │ CVE-2025-15467 │ HIGH     │              │                     │               │ openssl: OpenSSL: Remote code execution or Denial of Service │
-│                             │                │          │              │                     │               │ via oversized Initialization...                              │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-15467                   │
-│                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-11187 │ MEDIUM   │              │                     │               │ openssl: OpenSSL: Arbitrary code execution or denial of      │
+│ openssl-libs                │ CVE-2025-11187 │ MEDIUM   │              │                     │               │ openssl: OpenSSL: Arbitrary code execution or denial of      │
 │                             │                │          │              │                     │               │ service through crafted PKCS#12...                           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-11187                   │
 │                             ├────────────────┼──────────┤              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -479,10 +463,6 @@ Total: 274 (UNKNOWN: 0, LOW: 214, MEDIUM: 54, HIGH: 6, CRITICAL: 0)
 │                             │ CVE-2025-69420 │          │              │                     │               │ openssl: OpenSSL: Denial of Service via malformed TimeStamp  │
 │                             │                │          │              │                     │               │ Response                                                     │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-69420                   │
-│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-69421 │          │              │                     │               │ openssl: OpenSSL: Denial of Service via malformed PKCS#12    │
-│                             │                │          │              │                     │               │ file processing                                              │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-69421                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-9232  │          │              │                     │               │ openssl: Out-of-bounds read in HTTP client no_proxy handling │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-9232                    │
@@ -608,10 +588,6 @@ Total: 274 (UNKNOWN: 0, LOW: 214, MEDIUM: 54, HIGH: 6, CRITICAL: 0)
 │ python3-urllib3             │ CVE-2025-66471 │ HIGH     │              │ 1.26.5-6.el9_7.1    │               │ urllib3: urllib3 Streaming API improperly handles highly     │
 │                             │                │          │              │                     │               │ compressed data                                              │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-66471                   │
-│                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2026-21441 │          │              │                     │               │ urllib3: urllib3 vulnerable to decompression-bomb safeguard  │
-│                             │                │          │              │                     │               │ bypass when following HTTP redirects (streaming...           │
-│                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2026-21441                   │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ sqlite-libs                 │ CVE-2024-0232  │ LOW      │              │ 3.34.1-9.el9_7      │               │ sqlite: use-after-free bug in jsonParseAddNodeArray          │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-0232                    │
@@ -628,7 +604,7 @@ Total: 274 (UNKNOWN: 0, LOW: 214, MEDIUM: 54, HIGH: 6, CRITICAL: 0)
 │                             │                │          │              │                     │               │ Fapi_VerifyQuote                                             │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2024-29040                   │
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ util-linux                  │ CVE-2025-14104 │          │              │ 2.37.4-21.el9       │               │ util-linux: util-linux: Heap buffer overread in setpwnam()   │
+│ util-linux                  │ CVE-2025-14104 │          │              │ 2.37.4-21.el9_7     │               │ util-linux: util-linux: Heap buffer overread in setpwnam()   │
 │                             │                │          │              │                     │               │ when processing 256-byte usernames                           │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-14104                   │
 ├─────────────────────────────┤                │          │              │                     ├───────────────┤                                                              │
