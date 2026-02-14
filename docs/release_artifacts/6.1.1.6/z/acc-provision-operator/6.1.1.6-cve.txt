@@ -4,11 +4,12 @@ pyasn1          0.6.1      0.6.2     python  GHSA-63vm-454h-vhhq  High      < 0.
 urllib3         2.5.0      2.6.0     python  GHSA-gm62-xv2j-4w53  High      < 0.1% (7th)   < 0.1  
 urllib3         2.5.0      2.6.0     python  GHSA-2xpw-w6gg-jr37  High      < 0.1% (6th)   < 0.1  
 wheel           0.45.1     0.46.2    python  GHSA-8rrh-rw8j-w5fx  High      < 0.1% (6th)   < 0.1  
-urllib3         2.5.0      2.6.3     python  GHSA-38jv-5279-wg99  High      < 0.1% (3rd)   < 0.1  
+urllib3         2.5.0      2.6.3     python  GHSA-38jv-5279-wg99  High      < 0.1% (4th)   < 0.1  
 pip             23.3.2     25.3      python  GHSA-4xh5-x5gv-qwph  Medium    < 0.1% (5th)   < 0.1  
-filelock        3.20.0     3.20.3    python  GHSA-qmgc-5h2g-mvrw  Medium    < 0.1% (4th)   < 0.1  
-virtualenv      20.35.4    20.36.1   python  GHSA-597g-3phw-6986  Medium    < 0.1% (4th)   < 0.1  
+filelock        3.20.0     3.20.3    python  GHSA-qmgc-5h2g-mvrw  Medium    < 0.1% (5th)   < 0.1  
+virtualenv      20.35.4    20.36.1   python  GHSA-597g-3phw-6986  Medium    < 0.1% (5th)   < 0.1  
 pip             23.3.2     26.0      python  GHSA-6vgw-5pg2-w6jp  Low       < 0.1% (4th)   < 0.1  
+cryptography    46.0.1     46.0.5    python  GHSA-r6ph-v2qm-q3c2  High      < 0.1% (0th)   < 0.1  
 filelock        3.20.0     3.20.1    python  GHSA-w853-jp5j-5j7f  Medium    < 0.1% (0th)   < 0.1
 
 quay.io/noiro/acc-provision-operator:6.1.1.6.81c2369.z (redhat 9.7)
@@ -468,12 +469,16 @@ Total: 124 (UNKNOWN: 0, LOW: 67, MEDIUM: 57, HIGH: 0, CRITICAL: 0)
 
 Python (python-pkg)
 ===================
-Total: 11 (UNKNOWN: 0, LOW: 1, MEDIUM: 4, HIGH: 6, CRITICAL: 0)
+Total: 12 (UNKNOWN: 0, LOW: 1, MEDIUM: 4, HIGH: 7, CRITICAL: 0)
 
 ┌───────────────────────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │          Library          │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version │                            Title                             │
 ├───────────────────────────┼────────────────┼──────────┼────────┼───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ filelock (METADATA)       │ CVE-2025-68146 │ MEDIUM   │ fixed  │ 3.20.0            │ 3.20.1        │ filelock: filelock: Time-of-Check-Time-of-Use (TOCTOU) race  │
+│ cryptography (METADATA)   │ CVE-2026-26007 │ HIGH     │ fixed  │ 46.0.1            │ 46.0.5        │ cryptography: cryptography Subgroup Attack Due to Missing    │
+│                           │                │          │        │                   │               │ Subgroup Validation for SECT Curves...                       │
+│                           │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2026-26007                   │
+├───────────────────────────┼────────────────┼──────────┤        ├───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ filelock (METADATA)       │ CVE-2025-68146 │ MEDIUM   │        │ 3.20.0            │ 3.20.1        │ filelock: filelock: Time-of-Check-Time-of-Use (TOCTOU) race  │
 │                           │                │          │        │                   │               │ condition and symlink attack allows arbitrary file...        │
 │                           │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2025-68146                   │
 │                           ├────────────────┤          │        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
