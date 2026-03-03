@@ -12638,3 +12638,99 @@ Dropped refs/stash@{0} (ddb93e5e94b4107070b5d3c99da3e723b47790dc)
 [main 6d068cc9f] 6.1.1.6.z-openvswitch-11685-2026-03-03_19:20:31
  3 files changed, 4666 insertions(+), 4696 deletions(-)
 +git push origin main
+remote: Internal Server Error
+fatal: unable to access 'https://github.com/noironetworks/cicd-status.git/': The requested URL returned error: 500
++git checkout .
+Updated 0 paths from the index
++git pull --rebase origin main
+remote: Internal Server Error
+fatal: unable to access 'https://github.com/noironetworks/cicd-status.git/': The requested URL returned error: 500
++echo 'Retrying git_add_commit_push after stash pop failure...'
+Retrying git_add_commit_push after stash pop failure...
++true
++[[ aci-containers != \a\c\c\-\p\r\o\v\i\s\i\o\n ]]
++add_artifacts
++cd /tmp/cicd-status
++git pull --rebase origin main
+From https://github.com/noironetworks/cicd-status
+ * branch                main       -> FETCH_HEAD
+Current branch main is up to date.
++mkdir -p /tmp/cicd-status/docs/release_artifacts/6.1.1.6/z/openvswitch
++curl https://api.travis-ci.com/v3/job/638245003/log.txt
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  675k  100  675k    0     0  1578k      0 --:--:-- --:--:-- --:--:-- 1582k
++cp /tmp/sbom.txt /tmp/cicd-status/docs/release_artifacts/6.1.1.6/z/openvswitch/6.1.1.6-sbom.txt
++cp /tmp/cve.txt /tmp/cicd-status/docs/release_artifacts/6.1.1.6/z/openvswitch/6.1.1.6-cve.txt
++cp /tmp/cve-base.txt /tmp/cicd-status/docs/release_artifacts/6.1.1.6/z/openvswitch/6.1.1.6-cve-base.txt
++update_container_release
++docker rmi -f sha256:cc9f55d05a9cd113a867aa1d02161d14bd55a589e7d5d34eee2c638fbb6121f1
+Untagged: noiro/openvswitch:6.1.1.6.81c2369.030326.11685
+Untagged: noiro/openvswitch:6.1.1.6.81c2369.z
+Untagged: noiro/openvswitch@sha256:3a2e68d8c95397060a75642106de6d0c5fa95851c3e7ddfee914d1f096bdcd53
+Untagged: quay.io/noiro/openvswitch:6.1.1.6.81c2369.030326.11685
+Untagged: quay.io/noiro/openvswitch:6.1.1.6.81c2369.z
+Untagged: quay.io/noiro/openvswitch@sha256:3a2e68d8c95397060a75642106de6d0c5fa95851c3e7ddfee914d1f096bdcd53
+Deleted: sha256:cc9f55d05a9cd113a867aa1d02161d14bd55a589e7d5d34eee2c638fbb6121f1
++python /tmp/cicd/travis/update-release.py quay.io/noiro openvswitch 6.1.1.6.81c2369 6.1.1.6.81c2369,6.1.1.6.81c2369.030326.11685 sha256:cc9f55d05a9cd113a867aa1d02161d14bd55a589e7d5d34eee2c638fbb6121f1 6.1.1.6.81c2369.z 6.1.1.6.81c2369.030326.11685 registry.access.redhat.com/ubi9/ubi-minimal:latest
++[[ aci-containers != \o\p\f\l\e\x ]]
++add_trivy_vulnerabilites
++trivy image quay.io/noiro/openvswitch:6.1.1.6.81c2369.z
+2026-03-03T19:20:42Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-03-03T19:20:42Z	INFO	[secret] Secret scanning is enabled
+2026-03-03T19:20:42Z	INFO	[secret] If your scanning is slow, please try '--scanners vuln' to disable secret scanning
+2026-03-03T19:20:42Z	INFO	[secret] Please see https://trivy.dev/docs/v0.69/guide/scanner/secret#recommendation for faster secret detection
+2026-03-03T19:20:53Z	INFO	Detected OS	family="redhat" version="9.7"
+2026-03-03T19:20:53Z	INFO	[redhat] Detecting RHEL/CentOS vulnerabilities...	os_version="9" pkg_num=190
+2026-03-03T19:20:53Z	INFO	Number of language-specific files	num=1
+2026-03-03T19:20:53Z	INFO	[gobinary] Detecting vulnerabilities...
+2026-03-03T19:20:53Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.69/guide/scanner/vulnerability#severity-selection for details.
++git_add_commit_push
++cd /tmp/cicd-status
++git config --local user.email test@cisco.com
++git config --local user.name travis-tagger
++git stash
+Saved working directory and index state WIP on main: 6d068cc9f 6.1.1.6.z-openvswitch-11685-2026-03-03_19:20:31
++git pull --rebase origin main
+From https://github.com/noironetworks/cicd-status
+ * branch                main       -> FETCH_HEAD
+Current branch main is up to date.
++git stash pop
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   docs/release_artifacts/6.1.1.6/z/openvswitch/6.1.1.6-buildlog.txt
+	modified:   docs/release_artifacts/releases.yaml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (4f5b48417293f2583b256092a30329228fb3bcac)
++git add .
++[[ aci-containers != \a\c\c\-\p\r\o\v\i\s\i\o\n ]]
+++docker image inspect --format '{{index (split (index .RepoDigests 0) "@sha256:") 1}}' docker.io/noiro/openvswitch:6.1.1.6.81c2369.z
++DOCKER_REPO_DIGEST_SHA=3a2e68d8c95397060a75642106de6d0c5fa95851c3e7ddfee914d1f096bdcd53
+++docker image inspect --format '{{index (split (index .RepoDigests 1) "@sha256:") 1}}' quay.io/noiro/openvswitch:6.1.1.6.81c2369.z
++QUAY_REPO_DIGEST_SHA=3a2e68d8c95397060a75642106de6d0c5fa95851c3e7ddfee914d1f096bdcd53
+++date +%F_%H:%M:%S
++git commit -a -m 6.1.1.6.z-openvswitch-11685-2026-03-03_19:20:54 -m 'Commit: 8742e2b4a081bc94cd8ec4eb74875b59fb7599fc' -m 'Tags: 6.1.1.6.81c2369.z, 6.1.1.6.81c2369.030326.11685' -m 'ImageId: sha256:cc9f55d05a9cd113a867aa1d02161d14bd55a589e7d5d34eee2c638fbb6121f1' -m 'DockerSha: 3a2e68d8c95397060a75642106de6d0c5fa95851c3e7ddfee914d1f096bdcd53' -m 'QuaySha: 3a2e68d8c95397060a75642106de6d0c5fa95851c3e7ddfee914d1f096bdcd53'
+[main 9ce4052b9] 6.1.1.6.z-openvswitch-11685-2026-03-03_19:20:54
+ 2 files changed, 108 insertions(+), 3 deletions(-)
++git push origin main
+remote: Internal Server Error
+fatal: unable to access 'https://github.com/noironetworks/cicd-status.git/': The requested URL returned error: 500
++git checkout .
+Updated 0 paths from the index
++git pull --rebase origin main
+From https://github.com/noironetworks/cicd-status
+ * branch                main       -> FETCH_HEAD
+Current branch main is up to date.
++echo 'Retrying git_add_commit_push after stash pop failure...'
+Retrying git_add_commit_push after stash pop failure...
++true
++[[ aci-containers != \a\c\c\-\p\r\o\v\i\s\i\o\n ]]
++add_artifacts
++cd /tmp/cicd-status
++git pull --rebase origin main
