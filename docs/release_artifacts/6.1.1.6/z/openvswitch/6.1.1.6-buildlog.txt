@@ -12514,7 +12514,41 @@ f72d17fd131c: Layer already exists
 adc9471fcc0c: Layer already exists
 d491fce33803: Layer already exists
 c7d126a38ec2: Layer already exists
-61d14bd55a589e7d5d34eee2c638fbb6121f1
+6.1.1.6.81c2369.z: digest: sha256:3a2e68d8c95397060a75642106de6d0c5fa95851c3e7ddfee914d1f096bdcd53 size: 2642
+++docker image inspect '--format={{.Id}}' quay.io/noirolabs/openvswitch:6.1.1.6.81c2369
++IMAGE_SHA=sha256:cc9f55d05a9cd113a867aa1d02161d14bd55a589e7d5d34eee2c638fbb6121f1
++/tmp/cicd/travis/push-to-cicd-status.sh quay.io/noiro openvswitch 6.1.1.6.81c2369 6.1.1.6.81c2369,6.1.1.6.81c2369.030326.11685 sha256:cc9f55d05a9cd113a867aa1d02161d14bd55a589e7d5d34eee2c638fbb6121f1 registry.access.redhat.com/ubi9/ubi-minimal:latest
+++dirname /tmp/cicd/travis/push-to-cicd-status.sh
++SCRIPTS_DIR=/tmp/cicd/travis
++source /tmp/cicd/travis/globals.sh
+++set -x
+++RELEASE_TAG=6.1.1.6
+++export RELEASE_TAG
++++date +%m%d%y
+++DATE_TAG=030326
+++TRAVIS_TAG_WITH_UPSTREAM_ID=6.1.1.6.81c2369
+++TRAVIS_TAG_WITH_UPSTREAM_ID_DATE_TRAVIS_BUILD_NUMBER=6.1.1.6.81c2369.030326.11685
+++IMAGE_TAG=6.1.1.6.81c2369
+++UPSTREAM_IMAGE_TAG=6.1.1.6.81c2369
+++UPSTREAM_IMAGE_Z_TAG=6.1.1.6.81c2369.z
+++IMAGE_Z_TAG=6.1.1.6.81c2369.z
+++RELEASE_Z_TAG=6.1.1.6.z
+++RC_PREFIX=6.1.1.6rc
+++RC_REGEX='6.1.1.6rc[0-9]+'
+++QUAY_REGISTRY=quay.io/noirolabs
+++QUAY_NOIRO_REGISTRY=quay.io/noiro
+++DOCKER_REGISTRY=docker.io/noiro
+++CICD_STATUS_REPO=https://github.com/noironetworks/cicd-status.git
+++CICD_STATUS_REPO_DIR=cicd-status
+++export CICD_STATUS_REPO_DIR
+++git rev-parse --abbrev-ref HEAD
++current_branch=HEAD
++[[ aci-containers != \a\c\c\-\p\r\o\v\i\s\i\o\n ]]
++IMAGE_BUILD_REGISTRY=quay.io/noiro
++IMAGE=openvswitch
++IMAGE_BUILD_TAG=6.1.1.6.81c2369
++OTHER_IMAGE_TAGS=6.1.1.6.81c2369,6.1.1.6.81c2369.030326.11685
++IMAGE_SHA=sha256:cc9f55d05a9cd113a867aa1d02161d14bd55a589e7d5d34eee2c638fbb6121f1
 +BASE_IMAGE=registry.access.redhat.com/ubi9/ubi-minimal:latest
 +GIT_REPO=https://github.com/noironetworks/cicd-status.git
 +GIT_LOCAL_DIR=cicd-status
@@ -12533,3 +12567,74 @@ fatal: destination path 'cicd-status' already exists and is not an empty directo
 +add_artifacts
 +cd /tmp/cicd-status
 +git pull --rebase origin main
+From https://github.com/noironetworks/cicd-status
+ * branch                main       -> FETCH_HEAD
+Already up to date.
++mkdir -p /tmp/cicd-status/docs/release_artifacts/6.1.1.6/z/openvswitch
++curl https://api.travis-ci.com/v3/job/638245003/log.txt
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 72  668k   72  485k    0     0   981k      0 --:--:-- --:--:-- --:--:--  980k100  668k  100  668k    0     0  1348k      0 --:--:-- --:--:-- --:--:-- 1348k
++cp /tmp/sbom.txt /tmp/cicd-status/docs/release_artifacts/6.1.1.6/z/openvswitch/6.1.1.6-sbom.txt
++cp /tmp/cve.txt /tmp/cicd-status/docs/release_artifacts/6.1.1.6/z/openvswitch/6.1.1.6-cve.txt
++cp /tmp/cve-base.txt /tmp/cicd-status/docs/release_artifacts/6.1.1.6/z/openvswitch/6.1.1.6-cve-base.txt
++update_container_release
++docker rmi -f sha256:cc9f55d05a9cd113a867aa1d02161d14bd55a589e7d5d34eee2c638fbb6121f1
+Untagged: noiro/openvswitch:6.1.1.6.81c2369.030326.11685
+Untagged: noiro/openvswitch:6.1.1.6.81c2369.z
+Untagged: noiro/openvswitch@sha256:3a2e68d8c95397060a75642106de6d0c5fa95851c3e7ddfee914d1f096bdcd53
+Untagged: quay.io/noiro/openvswitch:6.1.1.6.81c2369.030326.11685
+Untagged: quay.io/noiro/openvswitch:6.1.1.6.81c2369.z
+Untagged: quay.io/noiro/openvswitch@sha256:3a2e68d8c95397060a75642106de6d0c5fa95851c3e7ddfee914d1f096bdcd53
+Untagged: quay.io/noirolabs/openvswitch:6.1.1.6.81c2369
+Untagged: quay.io/noirolabs/openvswitch:6.1.1.6.81c2369.030326.11685
+Untagged: quay.io/noirolabs/openvswitch:6.1.1.6.81c2369.z
+Untagged: quay.io/noirolabs/openvswitch@sha256:3a2e68d8c95397060a75642106de6d0c5fa95851c3e7ddfee914d1f096bdcd53
+Deleted: sha256:cc9f55d05a9cd113a867aa1d02161d14bd55a589e7d5d34eee2c638fbb6121f1
++python /tmp/cicd/travis/update-release.py quay.io/noiro openvswitch 6.1.1.6.81c2369 6.1.1.6.81c2369,6.1.1.6.81c2369.030326.11685 sha256:cc9f55d05a9cd113a867aa1d02161d14bd55a589e7d5d34eee2c638fbb6121f1 6.1.1.6.81c2369.z 6.1.1.6.81c2369.030326.11685 registry.access.redhat.com/ubi9/ubi-minimal:latest
++[[ aci-containers != \o\p\f\l\e\x ]]
++add_trivy_vulnerabilites
++trivy image quay.io/noiro/openvswitch:6.1.1.6.81c2369.z
+2026-03-03T19:19:04Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-03-03T19:19:04Z	INFO	[secret] Secret scanning is enabled
+2026-03-03T19:19:04Z	INFO	[secret] If your scanning is slow, please try '--scanners vuln' to disable secret scanning
+2026-03-03T19:19:04Z	INFO	[secret] Please see https://trivy.dev/docs/v0.69/guide/scanner/secret#recommendation for faster secret detection
+2026-03-03T19:19:21Z	INFO	[python] Licenses acquired from one or more METADATA files may be subject to additional terms. Use `--debug` flag to see all affected packages.
+2026-03-03T19:19:21Z	INFO	Detected OS	family="redhat" version="9.7"
+2026-03-03T19:19:21Z	INFO	[redhat] Detecting RHEL/CentOS vulnerabilities...	os_version="9" pkg_num=190
+2026-03-03T19:19:21Z	INFO	Number of language-specific files	num=1
+2026-03-03T19:19:21Z	INFO	[gobinary] Detecting vulnerabilities...
+2026-03-03T19:19:21Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.69/guide/scanner/vulnerability#severity-selection for details.
++git_add_commit_push
++cd /tmp/cicd-status
++git config --local user.email test@cisco.com
++git config --local user.name travis-tagger
++git stash
+Saved working directory and index state WIP on main: 342c71b15 6.1.1.6.z-aci-containers-operator-11685-2026-03-03_19:17:11
++git pull --rebase origin main
+remote: Internal Server Error
+fatal: unable to access 'https://github.com/noironetworks/cicd-status.git/': The requested URL returned error: 500
++git stash pop
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   docs/release_artifacts/6.1.1.6/z/openvswitch/6.1.1.6-buildlog.txt
+	modified:   docs/release_artifacts/6.1.1.6/z/openvswitch/6.1.1.6-cve-base.txt
+	modified:   docs/release_artifacts/releases.yaml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (ddb93e5e94b4107070b5d3c99da3e723b47790dc)
++git add .
++[[ aci-containers != \a\c\c\-\p\r\o\v\i\s\i\o\n ]]
+++docker image inspect --format '{{index (split (index .RepoDigests 0) "@sha256:") 1}}' docker.io/noiro/openvswitch:6.1.1.6.81c2369.z
++DOCKER_REPO_DIGEST_SHA=3a2e68d8c95397060a75642106de6d0c5fa95851c3e7ddfee914d1f096bdcd53
+++docker image inspect --format '{{index (split (index .RepoDigests 1) "@sha256:") 1}}' quay.io/noiro/openvswitch:6.1.1.6.81c2369.z
++QUAY_REPO_DIGEST_SHA=3a2e68d8c95397060a75642106de6d0c5fa95851c3e7ddfee914d1f096bdcd53
+++date +%F_%H:%M:%S
++git commit -a -m 6.1.1.6.z-openvswitch-11685-2026-03-03_19:20:31 -m 'Commit: 8742e2b4a081bc94cd8ec4eb74875b59fb7599fc' -m 'Tags: 6.1.1.6.81c2369.z, 6.1.1.6.81c2369.030326.11685' -m 'ImageId: sha256:cc9f55d05a9cd113a867aa1d02161d14bd55a589e7d5d34eee2c638fbb6121f1' -m 'DockerSha: 3a2e68d8c95397060a75642106de6d0c5fa95851c3e7ddfee914d1f096bdcd53' -m 'QuaySha: 3a2e68d8c95397060a75642106de6d0c5fa95851c3e7ddfee914d1f096bdcd53'
+[main 6d068cc9f] 6.1.1.6.z-openvswitch-11685-2026-03-03_19:20:31
+ 3 files changed, 4666 insertions(+), 4696 deletions(-)
++git push origin main
