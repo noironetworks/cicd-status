@@ -9737,43 +9737,43 @@ releases:
       severity_link: https://quay.io/repository/noiro/opflex/manifest/sha256:b4f197e3f2e4b9b3d23652e1412371127397152f7c679c90d98c20a92f66f4b9?tab=vulnerabilities
       severity_type: quay
     - base-image:
-      - base_cve_error: ''
-        cve: release_artifacts/6.1.1.6/z/aci-containers-host/6.1.1.6-cve-base.txt
+      - cve: release_artifacts/6.1.1.6/z/aci-containers-host/6.1.1.6-cve-base.txt
         severity:
         - C: 0
-          H: 1
-          L: 49
-          M: 26
-          U: 1
-        severity_link: https://quay.io/repository/noirolabs/ubi9-minimal/manifest/sha256:bc75879ae5d69edec36b61100b0923f1bbf565456025fc290a86349277bae239?tab=vulnerabilities
-        severity_type: quay
-        sha: bc75879ae5d69edec36b61100b0923f1bbf565456025fc290a86349277bae239
+          H: 0
+          L: 0
+          M: 0
+          U: 0
+        sha: cecb1cde7bda7c8165ae27841c2335667f8a3665a349c0d051329c61660a496c
       build-logs: release_artifacts/6.1.1.6/z/aci-containers-host/6.1.1.6-buildlog.txt
-      build-time: 2026-03-03 09:16:45 PST
+      build-time: 2026-03-03 11:12:31 PST
       commit:
       - link: https://github.com/noironetworks/aci-containers/commit/8742e2b4a081bc94cd8ec4eb74875b59fb7599fc
         sha: 8742e2b4a081bc94cd8ec4eb74875b59fb7599fc
-      cve: release_artifacts/6.1.1.6/z/aci-containers-host/6.1.1.6-quay-cve.txt
-      cve_error: Scanning Queued in Quay
+      cve: release_artifacts/6.1.1.6/z/aci-containers-host/6.1.1.6-cve.txt
       docker:
-      - link: https://hub.docker.com/layers/noiro/aci-containers-host/6.1.1.6.81c2369.z/images/sha256-efa07f17cae0e6868e5759145edd8023f8ab0cc9623bc0647a01a2d00fddbdd4?context=explore
-        sha: efa07f17cae0e6868e5759145edd8023f8ab0cc9623bc0647a01a2d00fddbdd4
+      - link: https://hub.docker.com/layers/noiro/aci-containers-host/6.1.1.6.81c2369.z/images/sha256-443d898c5fd7c2e26f2723f924d5c84f5ab24e8a8e9f10ebba59e8bbef30e860?context=explore
+        sha: 443d898c5fd7c2e26f2723f924d5c84f5ab24e8a8e9f10ebba59e8bbef30e860
         tag: 6.1.1.6.81c2369.z
-      - link: https://hub.docker.com/layers/noiro/aci-containers-host/6.1.1.6.81c2369.030326.11683/images/sha256-efa07f17cae0e6868e5759145edd8023f8ab0cc9623bc0647a01a2d00fddbdd4?context=explore
-        sha: efa07f17cae0e6868e5759145edd8023f8ab0cc9623bc0647a01a2d00fddbdd4
-        tag: 6.1.1.6.81c2369.030326.11683
+      - link: https://hub.docker.com/layers/noiro/aci-containers-host/6.1.1.6.81c2369.030326.11685/images/sha256-443d898c5fd7c2e26f2723f924d5c84f5ab24e8a8e9f10ebba59e8bbef30e860?context=explore
+        sha: 443d898c5fd7c2e26f2723f924d5c84f5ab24e8a8e9f10ebba59e8bbef30e860
+        tag: 6.1.1.6.81c2369.030326.11685
       name: aci-containers-host
       quay:
       - link: https://quay.io/noiro/aci-containers-host:6.1.1.6.81c2369.z
-        sha: efa07f17cae0e6868e5759145edd8023f8ab0cc9623bc0647a01a2d00fddbdd4
+        sha: 443d898c5fd7c2e26f2723f924d5c84f5ab24e8a8e9f10ebba59e8bbef30e860
         tag: 6.1.1.6.81c2369.z
-      - link: https://quay.io/noiro/aci-containers-host:6.1.1.6.81c2369.030326.11683
-        sha: efa07f17cae0e6868e5759145edd8023f8ab0cc9623bc0647a01a2d00fddbdd4
-        tag: 6.1.1.6.81c2369.030326.11683
+      - link: https://quay.io/noiro/aci-containers-host:6.1.1.6.81c2369.030326.11685
+        sha: 443d898c5fd7c2e26f2723f924d5c84f5ab24e8a8e9f10ebba59e8bbef30e860
+        tag: 6.1.1.6.81c2369.030326.11685
       sbom: release_artifacts/6.1.1.6/z/aci-containers-host/6.1.1.6-sbom.txt
-      severity: []
-      severity_link: https://quay.io/repository/noiro/aci-containers-host/manifest/sha256:efa07f17cae0e6868e5759145edd8023f8ab0cc9623bc0647a01a2d00fddbdd4?tab=vulnerabilities
-      severity_type: quay
+      severity:
+      - C: 0
+        H: 0
+        L: 0
+        M: 0
+        U: 0
+      severity_type: grype
     - base-image:
       - base_cve_error: ''
         cve: release_artifacts/6.1.1.6/z/aci-containers-controller/6.1.1.6-cve-base.txt
@@ -10088,7 +10088,7 @@ releases:
         M: 0
         U: 0
       severity_type: grype
-    last_updated: 2026-03-03 10:43:15 PST
+    last_updated: 2026-03-03 11:12:31 PST
     release_name: 6.1.1.6.z
   - acc_provision: []
     container_images: []
