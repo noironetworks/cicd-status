@@ -13198,3 +13198,74 @@ fatal: destination path 'cicd-status' already exists and is not an empty directo
 +add_artifacts
 +cd /tmp/cicd-status
 +git pull --rebase origin main
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
++mkdir -p /tmp/cicd-status/docs/release_artifacts/6.1.1.6/z/aci-containers-webhook
++curl https://api.travis-ci.com/v3/job/638245003/log.txt
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  714k  100  714k    0     0  1548k      0 --:--:-- --:--:-- --:--:-- 1549k
++cp /tmp/sbom.txt /tmp/cicd-status/docs/release_artifacts/6.1.1.6/z/aci-containers-webhook/6.1.1.6-sbom.txt
++cp /tmp/cve.txt /tmp/cicd-status/docs/release_artifacts/6.1.1.6/z/aci-containers-webhook/6.1.1.6-cve.txt
++cp /tmp/cve-base.txt /tmp/cicd-status/docs/release_artifacts/6.1.1.6/z/aci-containers-webhook/6.1.1.6-cve-base.txt
++update_container_release
++docker rmi -f sha256:2e8f493cf8b96f52165d6ebe4413a963b6591baa1379326fea4a155e51f68f39
+Untagged: noiro/aci-containers-webhook:6.1.1.6.81c2369.030326.11685
+Untagged: noiro/aci-containers-webhook:6.1.1.6.81c2369.z
+Untagged: noiro/aci-containers-webhook@sha256:240df65178c550d12d032f7ed2ef9bdbd810c3e332b752304a97ffd90f7a1726
+Untagged: quay.io/noiro/aci-containers-webhook:6.1.1.6.81c2369.030326.11685
+Untagged: quay.io/noiro/aci-containers-webhook:6.1.1.6.81c2369.z
+Untagged: quay.io/noiro/aci-containers-webhook@sha256:240df65178c550d12d032f7ed2ef9bdbd810c3e332b752304a97ffd90f7a1726
+Untagged: quay.io/noirolabs/aci-containers-webhook:6.1.1.6.81c2369
+Untagged: quay.io/noirolabs/aci-containers-webhook:6.1.1.6.81c2369.030326.11685
+Untagged: quay.io/noirolabs/aci-containers-webhook:6.1.1.6.81c2369.z
+Deleted: sha256:2e8f493cf8b96f52165d6ebe4413a963b6591baa1379326fea4a155e51f68f39
++python /tmp/cicd/travis/update-release.py quay.io/noiro aci-containers-webhook 6.1.1.6.81c2369 6.1.1.6.81c2369,6.1.1.6.81c2369.030326.11685 sha256:2e8f493cf8b96f52165d6ebe4413a963b6591baa1379326fea4a155e51f68f39 6.1.1.6.81c2369.z 6.1.1.6.81c2369.030326.11685 registry.access.redhat.com/ubi9/ubi:latest
+Unexpected severity value found: 3.8
+Unexpected severity value found: 3.8
++[[ aci-containers != \o\p\f\l\e\x ]]
++add_trivy_vulnerabilites
++trivy image quay.io/noiro/aci-containers-webhook:6.1.1.6.81c2369.z
+2026-03-03T19:24:24Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-03-03T19:24:24Z	INFO	[secret] Secret scanning is enabled
+2026-03-03T19:24:24Z	INFO	[secret] If your scanning is slow, please try '--scanners vuln' to disable secret scanning
+2026-03-03T19:24:24Z	INFO	[secret] Please see https://trivy.dev/docs/v0.69/guide/scanner/secret#recommendation for faster secret detection
+2026-03-03T19:24:29Z	INFO	Detected OS	family="redhat" version="9.7"
+2026-03-03T19:24:29Z	INFO	[redhat] Detecting RHEL/CentOS vulnerabilities...	os_version="9" pkg_num=186
+2026-03-03T19:24:29Z	INFO	Number of language-specific files	num=1
+2026-03-03T19:24:29Z	INFO	[gobinary] Detecting vulnerabilities...
+2026-03-03T19:24:29Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.69/guide/scanner/vulnerability#severity-selection for details.
++git_add_commit_push
++cd /tmp/cicd-status
++git config --local user.email test@cisco.com
++git config --local user.name travis-tagger
++git stash
+Saved working directory and index state WIP on main: 6ec266d3a 6.1.1.6.z-openvswitch-11685-2026-03-03_19:22:48
++git pull --rebase origin main
+From https://github.com/noironetworks/cicd-status
+ * branch                main       -> FETCH_HEAD
+Already up to date.
++git stash pop
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   docs/release_artifacts/6.1.1.6/z/aci-containers-webhook/6.1.1.6-buildlog.txt
+	modified:   docs/release_artifacts/6.1.1.6/z/aci-containers-webhook/6.1.1.6-cve-base.txt
+	modified:   docs/release_artifacts/releases.yaml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (db00d4a38d6dd37b557d6e5932c9374e2eebc54b)
++git add .
++[[ aci-containers != \a\c\c\-\p\r\o\v\i\s\i\o\n ]]
+++docker image inspect --format '{{index (split (index .RepoDigests 0) "@sha256:") 1}}' docker.io/noiro/aci-containers-webhook:6.1.1.6.81c2369.z
++DOCKER_REPO_DIGEST_SHA=240df65178c550d12d032f7ed2ef9bdbd810c3e332b752304a97ffd90f7a1726
+++docker image inspect --format '{{index (split (index .RepoDigests 1) "@sha256:") 1}}' quay.io/noiro/aci-containers-webhook:6.1.1.6.81c2369.z
++QUAY_REPO_DIGEST_SHA=240df65178c550d12d032f7ed2ef9bdbd810c3e332b752304a97ffd90f7a1726
+++date +%F_%H:%M:%S
++git commit -a -m 6.1.1.6.z-aci-containers-webhook-11685-2026-03-03_19:24:30 -m 'Commit: 8742e2b4a081bc94cd8ec4eb74875b59fb7599fc' -m 'Tags: 6.1.1.6.81c2369.z, 6.1.1.6.81c2369.030326.11685' -m 'ImageId: sha256:2e8f493cf8b96f52165d6ebe4413a963b6591baa1379326fea4a155e51f68f39' -m 'DockerSha: 240df65178c550d12d032f7ed2ef9bdbd810c3e332b752304a97ffd90f7a1726' -m 'QuaySha: 240df65178c550d12d032f7ed2ef9bdbd810c3e332b752304a97ffd90f7a1726'
+[main 4f04aff64] 6.1.1.6.z-aci-containers-webhook-11685-2026-03-03_19:24:30
+ 3 files changed, 5049 insertions(+), 4787 deletions(-)
++git push origin main
