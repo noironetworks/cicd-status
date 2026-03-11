@@ -10,11 +10,11 @@ Report Summary
 ├─────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
 │ quay.io/noiro/aci-containers-host-ovscni:6.1.2.1.81c2369.z (redhat 9.7) │  redhat  │       132       │    -    │
 ├─────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
-│ usr/local/bin/aci-containers-host-agent                                 │ gobinary │       20        │    -    │
+│ usr/local/bin/aci-containers-host-agent                                 │ gobinary │       23        │    -    │
 ├─────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
-│ usr/local/bin/netop-cni                                                 │ gobinary │       17        │    -    │
+│ usr/local/bin/netop-cni                                                 │ gobinary │       20        │    -    │
 ├─────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
-│ usr/local/bin/opflex-agent-cni                                          │ gobinary │       17        │    -    │
+│ usr/local/bin/opflex-agent-cni                                          │ gobinary │       20        │    -    │
 └─────────────────────────────────────────────────────────────────────────┴──────────┴─────────────────┴─────────┘
 Legend:
 - '-': Not scanned
@@ -358,7 +358,7 @@ Total: 132 (UNKNOWN: 0, LOW: 71, MEDIUM: 60, HIGH: 1, CRITICAL: 0)
 │                             │                │          │              │                     │               │                                                              │
 │                             │                │          │              │                     │               │                                                              │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ python-unversioned-command  │ CVE-2025-11468 │ MEDIUM   │              │ 3.9.25-3.el9_7      │               │ cpython: Missing character filtering in Python               │
+│ python-unversioned-command  │ CVE-2025-11468 │ MEDIUM   │              │ 3.9.25-4.el9        │               │ cpython: Missing character filtering in Python               │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-11468                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-12781 │          │              │                     │               │ cpython: base64.b64decode() always accepts "+/" characters,  │
@@ -523,7 +523,7 @@ Total: 132 (UNKNOWN: 0, LOW: 71, MEDIUM: 60, HIGH: 1, CRITICAL: 0)
 
 usr/local/bin/aci-containers-host-agent (gobinary)
 ==================================================
-Total: 20 (UNKNOWN: 0, LOW: 0, MEDIUM: 13, HIGH: 6, CRITICAL: 1)
+Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 14, HIGH: 5, CRITICAL: 1)
 
 ┌──────────────────────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │           Library            │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
@@ -558,10 +558,6 @@ Total: 20 (UNKNOWN: 0, LOW: 0, MEDIUM: 13, HIGH: 6, CRITICAL: 1)
 │                              │ CVE-2025-61729 │          │        │                   │ 1.24.11, 1.25.5              │ crypto/x509: golang: Denial of Service due to excessive      │
 │                              │                │          │        │                   │                              │ resource consumption via crafted...                          │
 │                              │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2025-61729                   │
-│                              ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2025-61730 │          │        │                   │ 1.24.12, 1.25.6              │ During the TLS 1.3 handshake if multiple messages are sent   │
-│                              │                │          │        │                   │                              │ in records...                                                │
-│                              │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2025-61730                   │
 │                              ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                              │ CVE-2025-47910 │ MEDIUM   │        │                   │ 1.25.1                       │ net/http: CrossOriginProtection bypass in net/http           │
 │                              │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2025-47910                   │
@@ -605,11 +601,27 @@ Total: 20 (UNKNOWN: 0, LOW: 0, MEDIUM: 13, HIGH: 6, CRITICAL: 1)
 │                              │ CVE-2025-61727 │          │        │                   │ 1.24.11, 1.25.5              │ golang: crypto/x509: excluded subdomain constraint does not  │
 │                              │                │          │        │                   │                              │ restrict wildcard SANs                                       │
 │                              │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2025-61727                   │
+│                              ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2025-61730 │          │        │                   │ 1.24.12, 1.25.6              │ During the TLS 1.3 handshake if multiple messages are sent   │
+│                              │                │          │        │                   │                              │ in records...                                                │
+│                              │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2025-61730                   │
+│                              ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1               │ On Unix platforms, when listing the contents of a directory  │
+│                              │                │          │        │                   │                              │ using File...                                                │
+│                              │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
+│                              ├────────────────┼──────────┤        │                   │                              ├──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2026-25679 │ UNKNOWN  │        │                   │                              │ url.Parse insufficiently validated the host/authority        │
+│                              │                │          │        │                   │                              │ component and ac ...                                         │
+│                              │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-25679                   │
+│                              ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2026-27142 │          │        │                   │                              │ Actions which insert URLs into the content attribute of HTML │
+│                              │                │          │        │                   │                              │ meta tags...                                                 │
+│                              │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-27142                   │
 └──────────────────────────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────┴──────────────────────────────────────────────────────────────┘
 
 usr/local/bin/netop-cni (gobinary)
 ==================================
-Total: 17 (UNKNOWN: 0, LOW: 0, MEDIUM: 11, HIGH: 5, CRITICAL: 1)
+Total: 20 (UNKNOWN: 2, LOW: 1, MEDIUM: 12, HIGH: 4, CRITICAL: 1)
 
 ┌─────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │ Library │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
@@ -632,10 +644,6 @@ Total: 17 (UNKNOWN: 0, LOW: 0, MEDIUM: 11, HIGH: 5, CRITICAL: 1)
 │         │ CVE-2025-61729 │          │        │                   │ 1.24.11, 1.25.5              │ crypto/x509: golang: Denial of Service due to excessive      │
 │         │                │          │        │                   │                              │ resource consumption via crafted...                          │
 │         │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2025-61729                   │
-│         ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2025-61730 │          │        │                   │ 1.24.12, 1.25.6              │ During the TLS 1.3 handshake if multiple messages are sent   │
-│         │                │          │        │                   │                              │ in records...                                                │
-│         │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2025-61730                   │
 │         ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │         │ CVE-2025-47910 │ MEDIUM   │        │                   │ 1.25.1                       │ net/http: CrossOriginProtection bypass in net/http           │
 │         │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2025-47910                   │
@@ -679,11 +687,27 @@ Total: 17 (UNKNOWN: 0, LOW: 0, MEDIUM: 11, HIGH: 5, CRITICAL: 1)
 │         │ CVE-2025-61727 │          │        │                   │ 1.24.11, 1.25.5              │ golang: crypto/x509: excluded subdomain constraint does not  │
 │         │                │          │        │                   │                              │ restrict wildcard SANs                                       │
 │         │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2025-61727                   │
+│         ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2025-61730 │          │        │                   │ 1.24.12, 1.25.6              │ During the TLS 1.3 handshake if multiple messages are sent   │
+│         │                │          │        │                   │                              │ in records...                                                │
+│         │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2025-61730                   │
+│         ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1               │ On Unix platforms, when listing the contents of a directory  │
+│         │                │          │        │                   │                              │ using File...                                                │
+│         │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
+│         ├────────────────┼──────────┤        │                   │                              ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-25679 │ UNKNOWN  │        │                   │                              │ url.Parse insufficiently validated the host/authority        │
+│         │                │          │        │                   │                              │ component and ac ...                                         │
+│         │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-25679                   │
+│         ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-27142 │          │        │                   │                              │ Actions which insert URLs into the content attribute of HTML │
+│         │                │          │        │                   │                              │ meta tags...                                                 │
+│         │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-27142                   │
 └─────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────┴──────────────────────────────────────────────────────────────┘
 
 usr/local/bin/opflex-agent-cni (gobinary)
 =========================================
-Total: 17 (UNKNOWN: 0, LOW: 0, MEDIUM: 11, HIGH: 5, CRITICAL: 1)
+Total: 20 (UNKNOWN: 2, LOW: 1, MEDIUM: 12, HIGH: 4, CRITICAL: 1)
 
 ┌─────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │ Library │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
@@ -706,10 +730,6 @@ Total: 17 (UNKNOWN: 0, LOW: 0, MEDIUM: 11, HIGH: 5, CRITICAL: 1)
 │         │ CVE-2025-61729 │          │        │                   │ 1.24.11, 1.25.5              │ crypto/x509: golang: Denial of Service due to excessive      │
 │         │                │          │        │                   │                              │ resource consumption via crafted...                          │
 │         │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2025-61729                   │
-│         ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2025-61730 │          │        │                   │ 1.24.12, 1.25.6              │ During the TLS 1.3 handshake if multiple messages are sent   │
-│         │                │          │        │                   │                              │ in records...                                                │
-│         │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2025-61730                   │
 │         ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │         │ CVE-2025-47910 │ MEDIUM   │        │                   │ 1.25.1                       │ net/http: CrossOriginProtection bypass in net/http           │
 │         │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2025-47910                   │
@@ -753,4 +773,20 @@ Total: 17 (UNKNOWN: 0, LOW: 0, MEDIUM: 11, HIGH: 5, CRITICAL: 1)
 │         │ CVE-2025-61727 │          │        │                   │ 1.24.11, 1.25.5              │ golang: crypto/x509: excluded subdomain constraint does not  │
 │         │                │          │        │                   │                              │ restrict wildcard SANs                                       │
 │         │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2025-61727                   │
+│         ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2025-61730 │          │        │                   │ 1.24.12, 1.25.6              │ During the TLS 1.3 handshake if multiple messages are sent   │
+│         │                │          │        │                   │                              │ in records...                                                │
+│         │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2025-61730                   │
+│         ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1               │ On Unix platforms, when listing the contents of a directory  │
+│         │                │          │        │                   │                              │ using File...                                                │
+│         │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
+│         ├────────────────┼──────────┤        │                   │                              ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-25679 │ UNKNOWN  │        │                   │                              │ url.Parse insufficiently validated the host/authority        │
+│         │                │          │        │                   │                              │ component and ac ...                                         │
+│         │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-25679                   │
+│         ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-27142 │          │        │                   │                              │ Actions which insert URLs into the content attribute of HTML │
+│         │                │          │        │                   │                              │ meta tags...                                                 │
+│         │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-27142                   │
 └─────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────┴──────────────────────────────────────────────────────────────┘
