@@ -1,18 +1,18 @@
 NAME        INSTALLED  FIXED IN  TYPE    VULNERABILITY        SEVERITY  EPSS           RISK   
-setuptools  53.0.0     70.0.0    python  GHSA-cx63-2mw6-8hw5  High      4.8% (89th)    3.8    
-requests    2.25.1     2.31.0    python  GHSA-j8r2-6x86-q33q  Medium    6.4% (90th)    3.6    
+setuptools  53.0.0     70.0.0    python  GHSA-cx63-2mw6-8hw5  High      6.4% (90th)    5.0    
+requests    2.25.1     2.31.0    python  GHSA-j8r2-6x86-q33q  Medium    6.3% (90th)    3.5    
 urllib3     1.26.5     1.26.17   python  GHSA-v845-jxx5-vc9f  High      0.9% (74th)    0.6    
 setuptools  53.0.0     65.5.1    python  GHSA-r9hx-vwmv-q579  High      0.5% (66th)    0.4    
-idna        2.10       3.7       python  GHSA-jjg7-2v4v-x38h  Medium    0.7% (71st)    0.4    
+idna        2.10       3.7       python  GHSA-jjg7-2v4v-x38h  Medium    0.7% (70th)    0.4    
 setuptools  53.0.0     78.1.1    python  GHSA-5rjg-fvgr-3xxf  High      0.2% (39th)    0.1    
 urllib3     1.26.5     1.26.19   python  GHSA-34jh-p97f-mpxf  Medium    0.3% (48th)    0.1    
-requests    2.25.1     2.32.4    python  GHSA-9hjg-9r4m-mvj7  Medium    0.1% (34th)    < 0.1  
+requests    2.25.1     2.32.4    python  GHSA-9hjg-9r4m-mvj7  Medium    0.2% (35th)    < 0.1  
 urllib3     1.26.5     1.26.18   python  GHSA-g4mx-q9vg-27p4  Medium    < 0.1% (15th)  < 0.1  
-urllib3     1.26.5     2.6.3     python  GHSA-38jv-5279-wg99  High      < 0.1% (8th)   < 0.1  
 urllib3     1.26.5     2.6.0     python  GHSA-gm62-xv2j-4w53  High      < 0.1% (7th)   < 0.1  
+requests    2.25.1     2.32.0    python  GHSA-9wx4-h78v-vm56  Medium    < 0.1% (13th)  < 0.1  
 urllib3     1.26.5     2.6.0     python  GHSA-2xpw-w6gg-jr37  High      < 0.1% (7th)   < 0.1  
-requests    2.25.1     2.32.0    python  GHSA-9wx4-h78v-vm56  Medium    < 0.1% (5th)   < 0.1  
-urllib3     1.26.5     2.5.0     python  GHSA-pq67-6m6q-mj2v  Medium    < 0.1% (4th)   < 0.1
+urllib3     1.26.5     2.6.3     python  GHSA-38jv-5279-wg99  High      < 0.1% (6th)   < 0.1  
+urllib3     1.26.5     2.5.0     python  GHSA-pq67-6m6q-mj2v  Medium    < 0.1% (6th)   < 0.1
 
 Report Summary
 
@@ -21,7 +21,7 @@ Report Summary
 ├─────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
 │ quay.io/noiro/aci-containers-certmanager:6.1.2.1.81c2369.z (redhat 9.7) │  redhat  │       251       │    -    │
 ├─────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
-│ usr/local/bin/aci-containers-certmanager                                │ gobinary │       17        │    -    │
+│ usr/local/bin/aci-containers-certmanager                                │ gobinary │       20        │    -    │
 └─────────────────────────────────────────────────────────────────────────┴──────────┴─────────────────┴─────────┘
 Legend:
 - '-': Not scanned
@@ -293,7 +293,7 @@ Total: 251 (UNKNOWN: 0, LOW: 196, MEDIUM: 54, HIGH: 1, CRITICAL: 0)
 │                             │                │          │              │                     │               │ signature packet                                             │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2026-24883                   │
 ├─────────────────────────────┼────────────────┤          │              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ gnutls                      │ CVE-2025-9820  │          │              │ 3.8.3-9.el9         │               │ gnutls: Stack-based Buffer Overflow in                       │
+│ gnutls                      │ CVE-2025-9820  │          │              │ 3.8.3-10.el9_7      │               │ gnutls: Stack-based Buffer Overflow in                       │
 │                             │                │          │              │                     │               │ gnutls_pkcs11_token_init() Function                          │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-9820                    │
 ├─────────────────────────────┼────────────────┼──────────┼──────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
@@ -440,7 +440,7 @@ Total: 251 (UNKNOWN: 0, LOW: 196, MEDIUM: 54, HIGH: 1, CRITICAL: 0)
 │                             │                │          │              │                     │               │                                                              │
 │                             │                │          │              │                     │               │                                                              │
 ├─────────────────────────────┼────────────────┼──────────┤              ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ python3                     │ CVE-2025-11468 │ MEDIUM   │              │ 3.9.25-3.el9_7      │               │ cpython: Missing character filtering in Python               │
+│ python3                     │ CVE-2025-11468 │ MEDIUM   │              │ 3.9.25-3.el9_7.1    │               │ cpython: Missing character filtering in Python               │
 │                             │                │          │              │                     │               │ https://avd.aquasec.com/nvd/cve-2025-11468                   │
 │                             ├────────────────┤          │              │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-12781 │          │              │                     │               │ cpython: base64.b64decode() always accepts "+/" characters,  │
@@ -923,7 +923,7 @@ Total: 251 (UNKNOWN: 0, LOW: 196, MEDIUM: 54, HIGH: 1, CRITICAL: 0)
 
 usr/local/bin/aci-containers-certmanager (gobinary)
 ===================================================
-Total: 17 (UNKNOWN: 0, LOW: 0, MEDIUM: 11, HIGH: 5, CRITICAL: 1)
+Total: 20 (UNKNOWN: 2, LOW: 1, MEDIUM: 12, HIGH: 4, CRITICAL: 1)
 
 ┌─────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │ Library │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
@@ -946,10 +946,6 @@ Total: 17 (UNKNOWN: 0, LOW: 0, MEDIUM: 11, HIGH: 5, CRITICAL: 1)
 │         │ CVE-2025-61729 │          │        │                   │ 1.24.11, 1.25.5              │ crypto/x509: golang: Denial of Service due to excessive      │
 │         │                │          │        │                   │                              │ resource consumption via crafted...                          │
 │         │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2025-61729                   │
-│         ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2025-61730 │          │        │                   │ 1.24.12, 1.25.6              │ During the TLS 1.3 handshake if multiple messages are sent   │
-│         │                │          │        │                   │                              │ in records...                                                │
-│         │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2025-61730                   │
 │         ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │         │ CVE-2025-47910 │ MEDIUM   │        │                   │ 1.25.1                       │ net/http: CrossOriginProtection bypass in net/http           │
 │         │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2025-47910                   │
@@ -993,4 +989,20 @@ Total: 17 (UNKNOWN: 0, LOW: 0, MEDIUM: 11, HIGH: 5, CRITICAL: 1)
 │         │ CVE-2025-61727 │          │        │                   │ 1.24.11, 1.25.5              │ golang: crypto/x509: excluded subdomain constraint does not  │
 │         │                │          │        │                   │                              │ restrict wildcard SANs                                       │
 │         │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2025-61727                   │
+│         ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2025-61730 │          │        │                   │ 1.24.12, 1.25.6              │ During the TLS 1.3 handshake if multiple messages are sent   │
+│         │                │          │        │                   │                              │ in records...                                                │
+│         │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2025-61730                   │
+│         ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1               │ On Unix platforms, when listing the contents of a directory  │
+│         │                │          │        │                   │                              │ using File...                                                │
+│         │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
+│         ├────────────────┼──────────┤        │                   │                              ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-25679 │ UNKNOWN  │        │                   │                              │ url.Parse insufficiently validated the host/authority        │
+│         │                │          │        │                   │                              │ component and ac ...                                         │
+│         │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-25679                   │
+│         ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-27142 │          │        │                   │                              │ Actions which insert URLs into the content attribute of HTML │
+│         │                │          │        │                   │                              │ meta tags...                                                 │
+│         │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-27142                   │
 └─────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────┴──────────────────────────────────────────────────────────────┘
