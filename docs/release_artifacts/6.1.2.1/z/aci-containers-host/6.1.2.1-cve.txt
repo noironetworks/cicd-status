@@ -6,7 +6,7 @@ Report Summary
 ┌──────────────────────────────────────────────────────────────────┬──────────┬─────────────────┬─────────┐
 │                              Target                              │   Type   │ Vulnerabilities │ Secrets │
 ├──────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
-│ quay.io/noiro/aci-containers-host:6.1.2.1.81c2369.z (redhat 9.7) │  redhat  │       211       │    -    │
+│ quay.io/noiro/aci-containers-host:6.1.2.1.81c2369.z (redhat 9.7) │  redhat  │       219       │    -    │
 ├──────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
 │ usr/local/bin/aci-containers-host-agent                          │ gobinary │        7        │    -    │
 ├──────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
@@ -30,7 +30,7 @@ To disable this notice, set the TRIVY_DISABLE_VEX_NOTICE environment variable.
 
 quay.io/noiro/aci-containers-host:6.1.2.1.81c2369.z (redhat 9.7)
 ================================================================
-Total: 211 (UNKNOWN: 0, LOW: 97, MEDIUM: 105, HIGH: 9, CRITICAL: 0)
+Total: 219 (UNKNOWN: 0, LOW: 97, MEDIUM: 113, HIGH: 9, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │  Installed Version  │ Fixed Version │                            Title                             │
@@ -216,6 +216,14 @@ Total: 211 (UNKNOWN: 0, LOW: 97, MEDIUM: 105, HIGH: 9, CRITICAL: 0)
 │                             │ CVE-2026-4437  │          │                     │                     │               │ glibc: glibc: Incorrect DNS response parsing via crafted DNS │
 │                             │                │          │                     │                     │               │ server response                                              │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-4437                    │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-5450  │          │                     │                     │               │ glibc: glibc: Heap Buffer Overflow in `scanf` with `%mc`     │
+│                             │                │          │                     │                     │               │ format specifier and...                                      │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-5450                    │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-5928  │          │                     │                     │               │ glibc: glibc: Information disclosure or denial of service    │
+│                             │                │          │                     │                     │               │ via ungetwc function with...                                 │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-5928                    │
 │                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2026-4438  │ LOW      │                     │                     │               │ glibc: glibc: Invalid DNS hostname returned via              │
 │                             │                │          │                     │                     │               │ gethostbyaddr functions                                      │
@@ -228,6 +236,14 @@ Total: 211 (UNKNOWN: 0, LOW: 97, MEDIUM: 105, HIGH: 9, CRITICAL: 0)
 │                             │ CVE-2026-4437  │          │                     │                     │               │ glibc: glibc: Incorrect DNS response parsing via crafted DNS │
 │                             │                │          │                     │                     │               │ server response                                              │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-4437                    │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-5450  │          │                     │                     │               │ glibc: glibc: Heap Buffer Overflow in `scanf` with `%mc`     │
+│                             │                │          │                     │                     │               │ format specifier and...                                      │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-5450                    │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-5928  │          │                     │                     │               │ glibc: glibc: Information disclosure or denial of service    │
+│                             │                │          │                     │                     │               │ via ungetwc function with...                                 │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-5928                    │
 │                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2026-4438  │ LOW      │                     │                     │               │ glibc: glibc: Invalid DNS hostname returned via              │
 │                             │                │          │                     │                     │               │ gethostbyaddr functions                                      │
@@ -240,6 +256,14 @@ Total: 211 (UNKNOWN: 0, LOW: 97, MEDIUM: 105, HIGH: 9, CRITICAL: 0)
 │                             │ CVE-2026-4437  │          │                     │                     │               │ glibc: glibc: Incorrect DNS response parsing via crafted DNS │
 │                             │                │          │                     │                     │               │ server response                                              │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-4437                    │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-5450  │          │                     │                     │               │ glibc: glibc: Heap Buffer Overflow in `scanf` with `%mc`     │
+│                             │                │          │                     │                     │               │ format specifier and...                                      │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-5450                    │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-5928  │          │                     │                     │               │ glibc: glibc: Information disclosure or denial of service    │
+│                             │                │          │                     │                     │               │ via ungetwc function with...                                 │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-5928                    │
 │                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2026-4438  │ LOW      │                     │                     │               │ glibc: glibc: Invalid DNS hostname returned via              │
 │                             │                │          │                     │                     │               │ gethostbyaddr functions                                      │
@@ -252,6 +276,14 @@ Total: 211 (UNKNOWN: 0, LOW: 97, MEDIUM: 105, HIGH: 9, CRITICAL: 0)
 │                             │ CVE-2026-4437  │          │                     │                     │               │ glibc: glibc: Incorrect DNS response parsing via crafted DNS │
 │                             │                │          │                     │                     │               │ server response                                              │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-4437                    │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-5450  │          │                     │                     │               │ glibc: glibc: Heap Buffer Overflow in `scanf` with `%mc`     │
+│                             │                │          │                     │                     │               │ format specifier and...                                      │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-5450                    │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-5928  │          │                     │                     │               │ glibc: glibc: Information disclosure or denial of service    │
+│                             │                │          │                     │                     │               │ via ungetwc function with...                                 │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-5928                    │
 │                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2026-4438  │ LOW      │                     │                     │               │ glibc: glibc: Invalid DNS hostname returned via              │
 │                             │                │          │                     │                     │               │ gethostbyaddr functions                                      │
