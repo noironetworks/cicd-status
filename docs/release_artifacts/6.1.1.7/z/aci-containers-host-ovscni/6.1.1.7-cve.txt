@@ -1,9 +1,5 @@
 NAME                          INSTALLED  FIXED IN  TYPE       VULNERABILITY        SEVERITY  EPSS          RISK   
-k8s.io/kubernetes             v1.33.2    1.33.4    go-module  GHSA-4x4m-3c2p-qppc  Medium    < 0.1% (8th)  < 0.1  
-google.golang.org/grpc        v1.68.1    1.79.3    go-module  GHSA-p77j-4mvh-x3m3  Critical  < 0.1% (5th)  < 0.1  
-go.opentelemetry.io/otel/sdk  v1.33.0    1.40.0    go-module  GHSA-9h8m-3fm2-qjrq  High      < 0.1% (1st)  < 0.1  
-k8s.io/kubernetes             v1.33.2    1.33.6    go-module  GHSA-r6j8-c6r2-37rr  Medium    < 0.1% (2nd)  < 0.1  
-go.opentelemetry.io/otel/sdk  v1.33.0    1.43.0    go-module  GHSA-hfvc-g4fc-pqhx  High      < 0.1% (0th)  < 0.1
+go.opentelemetry.io/otel/sdk  v1.42.0    1.43.0    go-module  GHSA-hfvc-g4fc-pqhx  High      < 0.1% (0th)  < 0.1
 
 Report Summary
 
@@ -12,7 +8,7 @@ Report Summary
 ├─────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
 │ quay.io/noiro/aci-containers-host-ovscni:6.1.1.7.81c2369.z (redhat 9.7) │  redhat  │       224       │    -    │
 ├─────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
-│ usr/local/bin/aci-containers-host-agent                                 │ gobinary │       31        │    -    │
+│ usr/local/bin/aci-containers-host-agent                                 │ gobinary │       27        │    -    │
 ├─────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
 │ usr/local/bin/netop-cni                                                 │ gobinary │       26        │    -    │
 ├─────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
@@ -898,31 +894,14 @@ Total: 224 (UNKNOWN: 0, LOW: 97, MEDIUM: 118, HIGH: 9, CRITICAL: 0)
 
 usr/local/bin/aci-containers-host-agent (gobinary)
 ==================================================
-Total: 31 (UNKNOWN: 0, LOW: 1, MEDIUM: 18, HIGH: 10, CRITICAL: 2)
+Total: 27 (UNKNOWN: 0, LOW: 1, MEDIUM: 16, HIGH: 9, CRITICAL: 1)
 
 ┌──────────────────────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │           Library            │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
 ├──────────────────────────────┼────────────────┼──────────┼────────┼───────────────────┼──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ go.opentelemetry.io/otel/sdk │ CVE-2026-24051 │ HIGH     │ fixed  │ v1.33.0           │ 1.40.0                       │ OpenTelemetry Go SDK Vulnerable to Arbitrary Code Execution  │
-│                              │                │          │        │                   │                              │ via PATH Hijacking                                           │
-│                              │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-24051                   │
-│                              ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2026-39883 │          │        │                   │ 1.43.0                       │ opentelemetry-go: BSD kenv command not using absolute path   │
+│ go.opentelemetry.io/otel/sdk │ CVE-2026-39883 │ HIGH     │ fixed  │ v1.42.0           │ 1.43.0                       │ opentelemetry-go: BSD kenv command not using absolute path   │
 │                              │                │          │        │                   │                              │ enables PATH hijacking                                       │
 │                              │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39883                   │
-├──────────────────────────────┼────────────────┼──────────┤        ├───────────────────┼──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ google.golang.org/grpc       │ CVE-2026-33186 │ CRITICAL │        │ v1.68.1           │ 1.79.3                       │ google.golang.org/grpc/grpc-go:                              │
-│                              │                │          │        │                   │                              │ google.golang.org/grpc/authz: gRPC-Go: Authorization bypass  │
-│                              │                │          │        │                   │                              │ due to improper HTTP/2 path validation                       │
-│                              │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-33186                   │
-├──────────────────────────────┼────────────────┼──────────┤        ├───────────────────┼──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ k8s.io/kubernetes            │ CVE-2025-13281 │ MEDIUM   │        │ v1.33.2           │ 1.32.10, 1.33.6, 1.34.2      │ kube-controller-manager: Portworx Half-Blind SSRF in         │
-│                              │                │          │        │                   │                              │ kube-controller-manager                                      │
-│                              │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2025-13281                   │
-│                              ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2025-5187  │          │        │                   │ 1.31.12, 1.32.8, 1.33.4      │ kubernetes: kube-apiserver: Nodes can delete themselves by   │
-│                              │                │          │        │                   │                              │ adding an OwnerReference                                     │
-│                              │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2025-5187                    │
 ├──────────────────────────────┼────────────────┼──────────┤        ├───────────────────┼──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │ stdlib                       │ CVE-2025-68121 │ CRITICAL │        │ v1.25.0           │ 1.24.13, 1.25.7, 1.26.0-rc.3 │ crypto/tls: crypto/tls: Incorrect certificate validation     │
 │                              │                │          │        │                   │                              │ during TLS session resumption                                │
