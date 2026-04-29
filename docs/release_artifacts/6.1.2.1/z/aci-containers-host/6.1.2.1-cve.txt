@@ -1,14 +1,13 @@
-NAME                          INSTALLED  FIXED IN  TYPE       VULNERABILITY        SEVERITY  EPSS          RISK   
-go.opentelemetry.io/otel/sdk  v1.42.0    1.43.0    go-module  GHSA-hfvc-g4fc-pqhx  High      < 0.1% (0th)  < 0.1
+No vulnerabilities found
 
 Report Summary
 
 ┌──────────────────────────────────────────────────────────────────┬──────────┬─────────────────┬─────────┐
 │                              Target                              │   Type   │ Vulnerabilities │ Secrets │
 ├──────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
-│ quay.io/noiro/aci-containers-host:6.1.2.1.81c2369.z (redhat 9.7) │  redhat  │       219       │    -    │
+│ quay.io/noiro/aci-containers-host:6.1.2.1.81c2369.z (redhat 9.7) │  redhat  │       224       │    -    │
 ├──────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
-│ usr/local/bin/aci-containers-host-agent                          │ gobinary │        7        │    -    │
+│ usr/local/bin/aci-containers-host-agent                          │ gobinary │        6        │    -    │
 ├──────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
 │ usr/local/bin/netop-cni                                          │ gobinary │        6        │    -    │
 ├──────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
@@ -30,7 +29,7 @@ To disable this notice, set the TRIVY_DISABLE_VEX_NOTICE environment variable.
 
 quay.io/noiro/aci-containers-host:6.1.2.1.81c2369.z (redhat 9.7)
 ================================================================
-Total: 219 (UNKNOWN: 0, LOW: 97, MEDIUM: 113, HIGH: 9, CRITICAL: 0)
+Total: 224 (UNKNOWN: 0, LOW: 97, MEDIUM: 118, HIGH: 9, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │  Installed Version  │ Fixed Version │                            Title                             │
@@ -430,10 +429,14 @@ Total: 219 (UNKNOWN: 0, LOW: 97, MEDIUM: 113, HIGH: 9, CRITICAL: 0)
 │ libgcc                      │ CVE-2022-27943 │ LOW      │                     │ 11.5.0-14.el9       │               │ binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows   │
 │                             │                │          │                     │                     │               │ stack exhaustion in demangle_const                           │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-27943                   │
-├─────────────────────────────┤                │          │                     │                     ├───────────────┤                                                              │
-│ libgomp                     │                │          │                     │                     │               │                                                              │
-│                             │                │          │                     │                     │               │                                                              │
-│                             │                │          │                     │                     │               │                                                              │
+├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libgcrypt                   │ CVE-2026-41989 │ MEDIUM   │                     │ 1.10.0-11.el9       │               │ Libgcrypt: Libgcrypt: Denial of Service and buffer overflow  │
+│                             │                │          │                     │                     │               │ via crafted ECDH ciphertext...                               │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-41989                   │
+├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libgomp                     │ CVE-2022-27943 │ LOW      │                     │ 11.5.0-14.el9       │               │ binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows   │
+│                             │                │          │                     │                     │               │ stack exhaustion in demangle_const                           │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2022-27943                   │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ libmount                    │ CVE-2026-27456 │ MEDIUM   │                     │ 2.37.4-25.el9       │               │ util-linux: TOCTOU in the mount program when setting up loop │
 │                             │                │          │                     │                     │               │ devices                                                      │
@@ -462,6 +465,10 @@ Total: 219 (UNKNOWN: 0, LOW: 97, MEDIUM: 113, HIGH: 9, CRITICAL: 0)
 │                             │ CVE-2026-1757  │          │                     │                     │               │ libxml2: Memory Leak Leading to Local Denial of Service in   │
 │                             │                │          │                     │                     │               │ xmllint Interactive...                                       │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-1757                    │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-6732  │          │                     │                     │               │ libxml2: libxml2: Denial of Service via crafted              │
+│                             │                │          │                     │                     │               │ XSD-validated document                                       │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-6732                    │
 │                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2023-45322 │ LOW      │                     │                     │               │ libxml2: use-after-free in xmlUnlinkNode() in tree.c         │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2023-45322                   │
@@ -582,8 +589,8 @@ Total: 219 (UNKNOWN: 0, LOW: 97, MEDIUM: 113, HIGH: 9, CRITICAL: 0)
 │                             │                │          │                     │                     │               │ from large X.509 certificate...                              │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-31789                   │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ p11-kit                     │ CVE-2026-2100  │ MEDIUM   │                     │ 0.26.2-1.el9        │               │ p11-kit: p11-kit: NULL dereference via C_DeriveKey with      │
-│                             │                │          │                     │                     │               │ specific NULL parameters                                     │
+│ p11-kit                     │ CVE-2026-2100  │ MEDIUM   │                     │ 0.26.2-1.el9        │               │ p11-kit: NULL dereference via C_DeriveKey with specific NULL │
+│                             │                │          │                     │                     │               │ parameters                                                   │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-2100                    │
 ├─────────────────────────────┤                │          │                     │                     ├───────────────┤                                                              │
 │ p11-kit-trust               │                │          │                     │                     │               │                                                              │
@@ -641,6 +648,10 @@ Total: 219 (UNKNOWN: 0, LOW: 97, MEDIUM: 113, HIGH: 9, CRITICAL: 0)
 │                             │ CVE-2026-5713  │          │                     │                     │               │ python: Python: Information disclosure and arbitrary code    │
 │                             │                │          │                     │                     │               │ execution via remote debugging with...                       │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-5713                    │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-6019  │          │                     │                     │               │ python: Python: Cross-Site Scripting (XSS) vulnerability in  │
+│                             │                │          │                     │                     │               │ http.cookies module                                          │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-6019                    │
 │                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-1795  │ LOW      │                     │                     │               │ python: Mishandling of comma during folding and              │
 │                             │                │          │                     │                     │               │ unicode-encoding of email headers                            │
@@ -697,6 +708,10 @@ Total: 219 (UNKNOWN: 0, LOW: 97, MEDIUM: 113, HIGH: 9, CRITICAL: 0)
 │                             │ CVE-2026-5713  │          │                     │                     │               │ python: Python: Information disclosure and arbitrary code    │
 │                             │                │          │                     │                     │               │ execution via remote debugging with...                       │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-5713                    │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-6019  │          │                     │                     │               │ python: Python: Cross-Site Scripting (XSS) vulnerability in  │
+│                             │                │          │                     │                     │               │ http.cookies module                                          │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-6019                    │
 │                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-1795  │ LOW      │                     │                     │               │ python: Mishandling of comma during folding and              │
 │                             │                │          │                     │                     │               │ unicode-encoding of email headers                            │
@@ -753,6 +768,10 @@ Total: 219 (UNKNOWN: 0, LOW: 97, MEDIUM: 113, HIGH: 9, CRITICAL: 0)
 │                             │ CVE-2026-5713  │          │                     │                     │               │ python: Python: Information disclosure and arbitrary code    │
 │                             │                │          │                     │                     │               │ execution via remote debugging with...                       │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-5713                    │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-6019  │          │                     │                     │               │ python: Python: Cross-Site Scripting (XSS) vulnerability in  │
+│                             │                │          │                     │                     │               │ http.cookies module                                          │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-6019                    │
 │                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-1795  │ LOW      │                     │                     │               │ python: Mishandling of comma during folding and              │
 │                             │                │          │                     │                     │               │ unicode-encoding of email headers                            │
@@ -874,39 +893,35 @@ Total: 219 (UNKNOWN: 0, LOW: 97, MEDIUM: 113, HIGH: 9, CRITICAL: 0)
 
 usr/local/bin/aci-containers-host-agent (gobinary)
 ==================================================
-Total: 7 (UNKNOWN: 0, LOW: 0, MEDIUM: 3, HIGH: 4, CRITICAL: 0)
+Total: 6 (UNKNOWN: 0, LOW: 0, MEDIUM: 3, HIGH: 3, CRITICAL: 0)
 
-┌──────────────────────────────┬────────────────┬──────────┬────────┬───────────────────┬────────────────┬─────────────────────────────────────────────────────────────┐
-│           Library            │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version  │                            Title                            │
-├──────────────────────────────┼────────────────┼──────────┼────────┼───────────────────┼────────────────┼─────────────────────────────────────────────────────────────┤
-│ go.opentelemetry.io/otel/sdk │ CVE-2026-39883 │ HIGH     │ fixed  │ v1.42.0           │ 1.43.0         │ opentelemetry-go: BSD kenv command not using absolute path  │
-│                              │                │          │        │                   │                │ enables PATH hijacking                                      │
-│                              │                │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2026-39883                  │
-├──────────────────────────────┼────────────────┤          │        ├───────────────────┼────────────────┼─────────────────────────────────────────────────────────────┤
-│ stdlib                       │ CVE-2026-32280 │          │        │ v1.25.8           │ 1.25.9, 1.26.2 │ crypto/x509: crypto/tls: golang: Go: Denial of Service      │
-│                              │                │          │        │                   │                │ vulnerability in certificate chain building...              │
-│                              │                │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2026-32280                  │
-│                              ├────────────────┤          │        │                   │                ├─────────────────────────────────────────────────────────────┤
-│                              │ CVE-2026-32281 │          │        │                   │                │ crypto/x509: golang: Go crypto/x509: Denial of Service via  │
-│                              │                │          │        │                   │                │ inefficient certificate chain validation...                 │
-│                              │                │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2026-32281                  │
-│                              ├────────────────┤          │        │                   │                ├─────────────────────────────────────────────────────────────┤
-│                              │ CVE-2026-32283 │          │        │                   │                │ If one side of the TLS connection sends multiple key update │
-│                              │                │          │        │                   │                │ messages...                                                 │
-│                              │                │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2026-32283                  │
-│                              ├────────────────┼──────────┤        │                   │                ├─────────────────────────────────────────────────────────────┤
-│                              │ CVE-2026-32282 │ MEDIUM   │        │                   │                │ golang: internal/syscall/unix: Root.Chmod can follow        │
-│                              │                │          │        │                   │                │ symlinks out of the root                                    │
-│                              │                │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2026-32282                  │
-│                              ├────────────────┤          │        │                   │                ├─────────────────────────────────────────────────────────────┤
-│                              │ CVE-2026-32288 │          │        │                   │                │ archive/tar: golang: Go's archive/tar package: Denial of    │
-│                              │                │          │        │                   │                │ Service via maliciously-crafted archive                     │
-│                              │                │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2026-32288                  │
-│                              ├────────────────┤          │        │                   │                ├─────────────────────────────────────────────────────────────┤
-│                              │ CVE-2026-32289 │          │        │                   │                │ html/template: golang: html/template: Cross-Site Scripting  │
-│                              │                │          │        │                   │                │ (XSS) via improper context and brace depth...               │
-│                              │                │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2026-32289                  │
-└──────────────────────────────┴────────────────┴──────────┴────────┴───────────────────┴────────────────┴─────────────────────────────────────────────────────────────┘
+┌─────────┬────────────────┬──────────┬────────┬───────────────────┬────────────────┬─────────────────────────────────────────────────────────────┐
+│ Library │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version  │                            Title                            │
+├─────────┼────────────────┼──────────┼────────┼───────────────────┼────────────────┼─────────────────────────────────────────────────────────────┤
+│ stdlib  │ CVE-2026-32280 │ HIGH     │ fixed  │ v1.25.8           │ 1.25.9, 1.26.2 │ crypto/x509: crypto/tls: golang: Go: Denial of Service      │
+│         │                │          │        │                   │                │ vulnerability in certificate chain building...              │
+│         │                │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2026-32280                  │
+│         ├────────────────┤          │        │                   │                ├─────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-32281 │          │        │                   │                │ crypto/x509: golang: Go crypto/x509: Denial of Service via  │
+│         │                │          │        │                   │                │ inefficient certificate chain validation...                 │
+│         │                │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2026-32281                  │
+│         ├────────────────┤          │        │                   │                ├─────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-32283 │          │        │                   │                │ If one side of the TLS connection sends multiple key update │
+│         │                │          │        │                   │                │ messages...                                                 │
+│         │                │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2026-32283                  │
+│         ├────────────────┼──────────┤        │                   │                ├─────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-32282 │ MEDIUM   │        │                   │                │ golang: internal/syscall/unix: Root.Chmod can follow        │
+│         │                │          │        │                   │                │ symlinks out of the root                                    │
+│         │                │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2026-32282                  │
+│         ├────────────────┤          │        │                   │                ├─────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-32288 │          │        │                   │                │ archive/tar: golang: Go's archive/tar package: Denial of    │
+│         │                │          │        │                   │                │ Service via maliciously-crafted archive                     │
+│         │                │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2026-32288                  │
+│         ├────────────────┤          │        │                   │                ├─────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-32289 │          │        │                   │                │ html/template: golang: html/template: Cross-Site Scripting  │
+│         │                │          │        │                   │                │ (XSS) via improper context and brace depth...               │
+│         │                │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2026-32289                  │
+└─────────┴────────────────┴──────────┴────────┴───────────────────┴────────────────┴─────────────────────────────────────────────────────────────┘
 
 usr/local/bin/netop-cni (gobinary)
 ==================================
