@@ -2,15 +2,15 @@ NAME        INSTALLED  FIXED IN  TYPE    VULNERABILITY        SEVERITY  EPSS    
 setuptools  53.0.0     70.0.0    python  GHSA-cx63-2mw6-8hw5  High      5.7% (90th)    4.5    
 requests    2.25.1     2.31.0    python  GHSA-j8r2-6x86-q33q  Medium    6.3% (90th)    3.5    
 urllib3     1.26.5     1.26.17   python  GHSA-v845-jxx5-vc9f  High      0.9% (76th)    0.7    
+idna        2.10       3.7       python  GHSA-jjg7-2v4v-x38h  Medium    0.7% (72nd)    0.4    
 setuptools  53.0.0     65.5.1    python  GHSA-r9hx-vwmv-q579  High      0.5% (66th)    0.4    
-idna        2.10       3.7       python  GHSA-jjg7-2v4v-x38h  Medium    0.7% (71st)    0.4    
 setuptools  53.0.0     78.1.1    python  GHSA-5rjg-fvgr-3xxf  High      0.5% (65th)    0.4    
 urllib3     1.26.5     1.26.19   python  GHSA-34jh-p97f-mpxf  Medium    0.3% (49th)    0.1    
 requests    2.25.1     2.32.4    python  GHSA-9hjg-9r4m-mvj7  Medium    0.2% (43rd)    0.1    
 urllib3     1.26.5     2.5.0     python  GHSA-pq67-6m6q-mj2v  Medium    < 0.1% (23rd)  < 0.1  
+urllib3     1.26.5     1.26.18   python  GHSA-g4mx-q9vg-27p4  Medium    < 0.1% (17th)  < 0.1  
 urllib3     1.26.5     2.6.0     python  GHSA-gm62-xv2j-4w53  High      < 0.1% (9th)   < 0.1  
-urllib3     1.26.5     2.6.0     python  GHSA-2xpw-w6gg-jr37  High      < 0.1% (9th)   < 0.1  
-urllib3     1.26.5     1.26.18   python  GHSA-g4mx-q9vg-27p4  Medium    < 0.1% (15th)  < 0.1  
+urllib3     1.26.5     2.6.0     python  GHSA-2xpw-w6gg-jr37  High      < 0.1% (8th)   < 0.1  
 urllib3     1.26.5     2.6.3     python  GHSA-38jv-5279-wg99  High      < 0.1% (8th)   < 0.1  
 requests    2.25.1     2.32.0    python  GHSA-9wx4-h78v-vm56  Medium    < 0.1% (13th)  < 0.1  
 requests    2.25.1     2.33.0    python  GHSA-gc5v-m9x4-r6x2  Medium    < 0.1% (0th)   < 0.1
@@ -20,7 +20,7 @@ Report Summary
 ┌─────────────────────────────────────────────────────────────────────────┬──────────┬─────────────────┬─────────┐
 │                                 Target                                  │   Type   │ Vulnerabilities │ Secrets │
 ├─────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
-│ quay.io/noiro/aci-containers-certmanager:6.1.2.1.81c2369.z (redhat 9.7) │  redhat  │       344       │    -    │
+│ quay.io/noiro/aci-containers-certmanager:6.1.2.1.81c2369.z (redhat 9.7) │  redhat  │       348       │    -    │
 ├─────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
 │ usr/local/bin/aci-containers-certmanager                                │ gobinary │        6        │    -    │
 └─────────────────────────────────────────────────────────────────────────┴──────────┴─────────────────┴─────────┘
@@ -40,7 +40,7 @@ To disable this notice, set the TRIVY_DISABLE_VEX_NOTICE environment variable.
 
 quay.io/noiro/aci-containers-certmanager:6.1.2.1.81c2369.z (redhat 9.7)
 =======================================================================
-Total: 344 (UNKNOWN: 0, LOW: 232, MEDIUM: 105, HIGH: 7, CRITICAL: 0)
+Total: 348 (UNKNOWN: 0, LOW: 232, MEDIUM: 109, HIGH: 7, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬───────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │   Installed Version   │ Fixed Version │                            Title                             │
@@ -519,10 +519,14 @@ Total: 344 (UNKNOWN: 0, LOW: 232, MEDIUM: 105, HIGH: 7, CRITICAL: 0)
 │ libgcc                      │ CVE-2022-27943 │ LOW      │                     │ 11.5.0-11.el9         │               │ binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows   │
 │                             │                │          │                     │                       │               │ stack exhaustion in demangle_const                           │
 │                             │                │          │                     │                       │               │ https://avd.aquasec.com/nvd/cve-2022-27943                   │
-├─────────────────────────────┤                │          │                     │                       ├───────────────┤                                                              │
-│ libgomp                     │                │          │                     │                       │               │                                                              │
-│                             │                │          │                     │                       │               │                                                              │
-│                             │                │          │                     │                       │               │                                                              │
+├─────────────────────────────┼────────────────┼──────────┤                     ├───────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libgcrypt                   │ CVE-2026-41989 │ MEDIUM   │                     │ 1.10.0-11.el9         │               │ Libgcrypt: Libgcrypt: Denial of Service and buffer overflow  │
+│                             │                │          │                     │                       │               │ via crafted ECDH ciphertext...                               │
+│                             │                │          │                     │                       │               │ https://avd.aquasec.com/nvd/cve-2026-41989                   │
+├─────────────────────────────┼────────────────┼──────────┤                     ├───────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libgomp                     │ CVE-2022-27943 │ LOW      │                     │ 11.5.0-11.el9         │               │ binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows   │
+│                             │                │          │                     │                       │               │ stack exhaustion in demangle_const                           │
+│                             │                │          │                     │                       │               │ https://avd.aquasec.com/nvd/cve-2022-27943                   │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├───────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ libmount                    │ CVE-2026-27456 │ MEDIUM   │                     │ 2.37.4-21.el9_7       │               │ util-linux: TOCTOU in the mount program when setting up loop │
 │                             │                │          │                     │                       │               │ devices                                                      │
@@ -551,6 +555,10 @@ Total: 344 (UNKNOWN: 0, LOW: 232, MEDIUM: 105, HIGH: 7, CRITICAL: 0)
 │                             │ CVE-2026-1757  │          │                     │                       │               │ libxml2: Memory Leak Leading to Local Denial of Service in   │
 │                             │                │          │                     │                       │               │ xmllint Interactive...                                       │
 │                             │                │          │                     │                       │               │ https://avd.aquasec.com/nvd/cve-2026-1757                    │
+│                             ├────────────────┤          │                     │                       ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-6732  │          │                     │                       │               │ libxml2: libxml2: Denial of Service via crafted              │
+│                             │                │          │                     │                       │               │ XSD-validated document                                       │
+│                             │                │          │                     │                       │               │ https://avd.aquasec.com/nvd/cve-2026-6732                    │
 │                             ├────────────────┼──────────┤                     │                       ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2023-45322 │ LOW      │                     │                       │               │ libxml2: use-after-free in xmlUnlinkNode() in tree.c         │
 │                             │                │          │                     │                       │               │ https://avd.aquasec.com/nvd/cve-2023-45322                   │
@@ -675,8 +683,8 @@ Total: 344 (UNKNOWN: 0, LOW: 232, MEDIUM: 105, HIGH: 7, CRITICAL: 0)
 │                             │                │          │                     │                       │               │ from large X.509 certificate...                              │
 │                             │                │          │                     │                       │               │ https://avd.aquasec.com/nvd/cve-2026-31789                   │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├───────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ p11-kit                     │ CVE-2026-2100  │ MEDIUM   │                     │ 0.25.3-3.el9_5        │               │ p11-kit: p11-kit: NULL dereference via C_DeriveKey with      │
-│                             │                │          │                     │                       │               │ specific NULL parameters                                     │
+│ p11-kit                     │ CVE-2026-2100  │ MEDIUM   │                     │ 0.25.3-3.el9_5        │               │ p11-kit: NULL dereference via C_DeriveKey with specific NULL │
+│                             │                │          │                     │                       │               │ parameters                                                   │
 │                             │                │          │                     │                       │               │ https://avd.aquasec.com/nvd/cve-2026-2100                    │
 ├─────────────────────────────┤                │          │                     │                       ├───────────────┤                                                              │
 │ p11-kit-trust               │                │          │                     │                       │               │                                                              │
@@ -734,6 +742,10 @@ Total: 344 (UNKNOWN: 0, LOW: 232, MEDIUM: 105, HIGH: 7, CRITICAL: 0)
 │                             │ CVE-2026-5713  │          │                     │                       │               │ python: Python: Information disclosure and arbitrary code    │
 │                             │                │          │                     │                       │               │ execution via remote debugging with...                       │
 │                             │                │          │                     │                       │               │ https://avd.aquasec.com/nvd/cve-2026-5713                    │
+│                             ├────────────────┤          │                     │                       ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-6019  │          │                     │                       │               │ python: Python: Cross-Site Scripting (XSS) vulnerability in  │
+│                             │                │          │                     │                       │               │ http.cookies module                                          │
+│                             │                │          │                     │                       │               │ https://avd.aquasec.com/nvd/cve-2026-6019                    │
 │                             ├────────────────┼──────────┤                     │                       ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-1795  │ LOW      │                     │                       │               │ python: Mishandling of comma during folding and              │
 │                             │                │          │                     │                       │               │ unicode-encoding of email headers                            │
@@ -790,6 +802,10 @@ Total: 344 (UNKNOWN: 0, LOW: 232, MEDIUM: 105, HIGH: 7, CRITICAL: 0)
 │                             │ CVE-2026-5713  │          │                     │                       │               │ python: Python: Information disclosure and arbitrary code    │
 │                             │                │          │                     │                       │               │ execution via remote debugging with...                       │
 │                             │                │          │                     │                       │               │ https://avd.aquasec.com/nvd/cve-2026-5713                    │
+│                             ├────────────────┤          │                     │                       ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-6019  │          │                     │                       │               │ python: Python: Cross-Site Scripting (XSS) vulnerability in  │
+│                             │                │          │                     │                       │               │ http.cookies module                                          │
+│                             │                │          │                     │                       │               │ https://avd.aquasec.com/nvd/cve-2026-6019                    │
 │                             ├────────────────┼──────────┤                     │                       ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-1795  │ LOW      │                     │                       │               │ python: Mishandling of comma during folding and              │
 │                             │                │          │                     │                       │               │ unicode-encoding of email headers                            │
