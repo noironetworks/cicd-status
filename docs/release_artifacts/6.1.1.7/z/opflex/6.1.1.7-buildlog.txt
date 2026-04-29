@@ -1,0 +1,680 @@
+travis_fold:start:worker_info[0K[33;1mWorker information[0m
+hostname: 7b1218b9-44af-4363-929a-35b07efe4469@1.worker-com-69f554d7db-tcxs6.gce-production-2
+version: deploy_2025.08.20.CI.1 https://github.com/travis-ci/worker/tree/70d52e32e4e4cfdcfeda8e5e475406670be2589f
+instance: travis-job-a9b3beff-55f8-4681-a46b-d12aaf07270e travis-ci-ubuntu-2204-1761745415-2d890300-dirty (via amqp)
+startup: 5.495595828s
+travis_fold:end:worker_info[0Ktravis_time:start:04e4c3de[0Ktravis_time:end:04e4c3de:start=1777441297602528056,finish=1777441298028133761,duration=425605705,event=no_world_writable_dirs[0Ktravis_time:start:08dd4caf[0Ktravis_time:end:08dd4caf:start=1777441298031541299,finish=1777441298035263611,duration=3722312,event=setup_filter[0Ktravis_time:start:074c03f5[0Ktravis_time:end:074c03f5:start=1777441298039835531,finish=1777441298053808794,duration=13973263,event=agent[0Ktravis_time:start:04a9a8eb[0Ktravis_time:end:04a9a8eb:start=1777441298058844478,finish=1777441298062894681,duration=4050203,event=check_unsupported[0Ktravis_time:start:014814ed[0Ktravis_fold:start:system_info[0K[33;1mBuild system information[0m
+Build language: cpp
+Build dist: jammy
+Build id: 278022362
+Job id: 639102991
+Runtime kernel version: 6.8.0-1042-gcp
+VM: default
+travis-build version: 2812e526
+[34m[1mBuild image provisioning date and time[0m
+Wed Oct 29 02:02:41 PM UTC 2025
+[34m[1mOperating System Details[0m
+Distributor ID:	Ubuntu
+Description:	Ubuntu 22.04.5 LTS
+Release:	22.04
+Codename:	jammy
+[34m[1mSystemd Version[0m
+systemd 249 (249.11-0ubuntu3.17)
+[34m[1mCookbooks Version[0m
+b08f983 https://github.com/travis-ci/travis-cookbooks/tree/b08f983
+[34m[1mgit version[0m
+git version 2.51.1
+[34m[1mbash version[0m
+GNU bash, version 5.1.16(1)-release (x86_64-pc-linux-gnu)
+[34m[1mgcc version[0m
+gcc (Ubuntu 11.4.0-1ubuntu1~22.04.2) 11.4.0
+[34m[1mdocker version[0m
+Client:
+ Version:           28.2.2
+ API version:       1.50
+ Go version:        go1.23.1
+ Git commit:        28.2.2-0ubuntu1~22.04.1
+ Built:             Wed Sep 10 14:50:16 2025
+ OS/Arch:           linux/amd64
+ Context:           default
+
+Server:
+ Engine:
+  Version:          28.2.2
+  API version:      1.50 (minimum version 1.24)
+  Go version:       go1.23.1
+  Git commit:       28.2.2-0ubuntu1~22.04.1
+  Built:            Wed Sep 10 14:50:16 2025
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          1.7.28
+  GitCommit:        
+ runc:
+  Version:          1.3.0-0ubuntu2~22.04.1
+  GitCommit:        
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        
+[34m[1mclang version[0m
+clang version 18.1.8
+[34m[1mjq version[0m
+jq-1.7.1
+[34m[1mbats version[0m
+Bats 1.12.0
+[34m[1mshellcheck version[0m
+0.11.0
+[34m[1mshfmt version[0m
+v3.12.0
+[34m[1mccache version[0m
+4.5.1
+[34m[1mcmake version[0m
+cmake version 4.1.2
+[34m[1mheroku version[0m
+heroku/10.14.0 linux-x64 node-v20.19.5
+[34m[1mimagemagick version[0m
+Version: ImageMagick 6.9.11-60 Q16 x86_64 2021-01-25 https://imagemagick.org
+[34m[1mmd5deep version[0m
+4.4
+[34m[1mmercurial version[0m
+version 7.0.3
+[34m[1mmysql version[0m
+mysql  Ver 8.0.43-0ubuntu0.22.04.2 for Linux on x86_64 ((Ubuntu))
+[34m[1mopenssl version[0m
+OpenSSL 3.0.2 15 Mar 2022 (Library: OpenSSL 3.0.2 15 Mar 2022)
+[34m[1mpacker version[0m
+Packer v1.14.2
+[34m[1mpostgresql client version[0m
+psql (PostgreSQL) 14.19 (Ubuntu 14.19-1.pgdg22.04+1)
+[34m[1mragel version[0m
+Ragel State Machine Compiler version 6.10 March 2017
+[34m[1msudo version[0m
+1.9.9
+[34m[1mgzip version[0m
+gzip 1.10
+[34m[1mzip version[0m
+Zip 3.0
+[34m[1mvim version[0m
+VIM - Vi IMproved 8.2 (2019 Dec 12, compiled Apr 02 2025 12:39:01)
+[34m[1miptables version[0m
+iptables v1.8.7 (nf_tables)
+[34m[1mcurl version[0m
+curl 7.81.0 (x86_64-pc-linux-gnu) libcurl/7.81.0 OpenSSL/3.0.2 zlib/1.2.11 brotli/1.0.9 zstd/1.4.8 libidn2/2.3.2 libpsl/0.21.0 (+libidn2/2.3.2) libssh/0.9.6/openssl/zlib nghttp2/1.43.0 librtmp/2.3 OpenLDAP/2.5.19
+[34m[1mwget version[0m
+GNU Wget 1.21.2 built on linux-gnu.
+[34m[1mrsync version[0m
+rsync  version 3.2.7  protocol version 31
+[34m[1mgo version[0m
+go version go1.25.3 linux/amd64
+[34m[1mnvm version[0m
+0.40.3
+[34m[1mperlbrew version[0m
+/home/travis/perl5/perlbrew/bin/perlbrew  - App::perlbrew/0.95
+[34m[1mphpenv version[0m
+rbenv 1.3.2
+[34m[1mrvm version[0m
+rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+[34m[1mdefault ruby version[0m
+ruby 3.3.10 (2025-10-23 revision 343ea05002) [x86_64-linux]
+[34m[1mdefault python version[0m
+Python 3.10.19
+[34m[1mElasticSearch version[0m
+9.1.0
+[34m[1mInstalled Firefox version[0m
+firefox 144.0
+[34m[1mMongoDB version[0m
+MongoDB 8.2.1
+[34m[1mRedis version[0m
+redis-server 8.2.2
+[34m[1mPre-installed Go versions[0m
+go version go1.25.3 linux/amd64
+[34m[1mant version[0m
+Apache Ant(TM) version 1.10.12 compiled on January 17 1970
+[34m[1mmvn version[0m
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+[34m[1mgradle version[0m
+Gradle 9.1.0!
+[34m[1mlein version[0m
+Leiningen 2.12.0 on Java 11.0.28 OpenJDK 64-Bit Server VM
+[34m[1mPre-installed Node.js versions[0m
+v10.24.1
+v12.22.12
+v14.21.3
+v16.20.2
+v18.20
+v18.20.3
+v18.20.8
+v20.19.5
+v22.21.1
+v24.11.0
+v4.9.1
+v6.17.1
+v8.17.0
+[34m[1mphpenv versions[0m
+  system
+  8.3
+* 8.3.27 (set by /home/travis/.phpenv/version)
+  hhvm-stable
+  hhvm
+[34m[1mcomposer --version[0m
+Composer version 2.8.12 2025-09-19 13:41:59
+[34m[1mPre-installed Ruby versions[0m
+ruby-2.7.8
+ruby-3.3.10
+[34m[1melixirs[0m
+=* elixir-1.19.1
+travis_fold:end:system_info[0K
+travis_time:end:014814ed:start=1777441298067418174,finish=1777441298081582528,duration=14164354,event=show_system_info[0Ktravis_time:start:007f7088[0Ktravis_time:end:007f7088:start=1777441298089508317,finish=1777441298124525899,duration=35017582,event=rm_riak_source[0Ktravis_time:start:0224638e[0Ktravis_time:end:0224638e:start=1777441298128544181,finish=1777441298135844346,duration=7300165,event=fix_rwky_redis[0Ktravis_time:start:0a3f7da2[0Ktravis_time:end:0a3f7da2:start=1777441298140160895,finish=1777441298661696912,duration=521536017,event=wait_for_network[0Ktravis_time:start:23969268[0Ktravis_time:end:23969268:start=1777441298666117900,finish=1777441298965878430,duration=299760530,event=update_apt_keys[0Ktravis_time:start:2a5066f1[0Ktravis_time:end:2a5066f1:start=1777441298969625503,finish=1777441299035718726,duration=66093223,event=fix_hhvm_source[0Ktravis_time:start:1c128638[0Ktravis_time:end:1c128638:start=1777441299040005971,finish=1777441299042926524,duration=2920553,event=update_mongo_arch[0Ktravis_time:start:20d8876f[0Ktravis_time:end:20d8876f:start=1777441299047027413,finish=1777441299085026713,duration=37999300,event=fix_sudo_enabled_trusty[0Ktravis_time:start:35a4d262[0Ktravis_time:end:35a4d262:start=1777441299088598601,finish=1777441299091158518,duration=2559917,event=update_glibc[0Ktravis_time:start:19b8a6d2[0Ktravis_time:end:19b8a6d2:start=1777441299095737377,finish=1777441299105215793,duration=9478416,event=clean_up_path[0Ktravis_time:start:1bc34054[0Ktravis_time:end:1bc34054:start=1777441299109146153,finish=1777441299124828905,duration=15682752,event=fix_resolv_conf[0Ktravis_time:start:032415a3[0Ktravis_time:end:032415a3:start=1777441299129023520,finish=1777441299159667400,duration=30643880,event=fix_etc_hosts[0Ktravis_time:start:15633280[0Ktravis_time:end:15633280:start=1777441299163507510,finish=1777441299172246973,duration=8739463,event=fix_mvn_settings_xml[0Ktravis_time:start:0a293cc0[0Ktravis_time:end:0a293cc0:start=1777441299175571291,finish=1777441299190389363,duration=14818072,event=no_ipv6_localhost[0Ktravis_time:start:0efbb030[0Ktravis_time:end:0efbb030:start=1777441299194543382,finish=1777441299197008096,duration=2464714,event=fix_etc_mavenrc[0Ktravis_time:start:02308afc[0KOK
+travis_time:end:02308afc:start=1777441299201027467,finish=1777441299639268462,duration=438240995,event=fix_perforce_key[0Ktravis_time:start:0d557601[0Ktravis_time:end:0d557601:start=1777441299643165197,finish=1777441299646435514,duration=3270317,event=fix_wwdr_certificate[0Ktravis_time:start:0197ebb4[0Ktravis_time:end:0197ebb4:start=1777441299650464976,finish=1777441299724205552,duration=73740576,event=put_localhost_first[0Ktravis_time:start:3633eb26[0Ktravis_time:end:3633eb26:start=1777441299728055054,finish=1777441299731260832,duration=3205778,event=home_paths[0Ktravis_time:start:03455622[0Ktravis_time:end:03455622:start=1777441299735243554,finish=1777441299753271650,duration=18028096,event=disable_initramfs[0Ktravis_time:start:04bfb388[0Ktravis_time:end:04bfb388:start=1777441299757177977,finish=1777441300002600422,duration=245422445,event=disable_ssh_roaming[0Ktravis_time:start:004b4760[0Ktravis_time:end:004b4760:start=1777441300006527940,finish=1777441300008800250,duration=2272310,event=debug_tools[0Ktravis_time:start:325a6232[0Ktravis_time:end:325a6232:start=1777441300012818912,finish=1777441300015779133,duration=2960221,event=uninstall_oclint[0Ktravis_time:start:26de546a[0Ktravis_time:end:26de546a:start=1777441300019732070,finish=1777441300022875444,duration=3143374,event=rvm_use[0Ktravis_time:start:2eee2b80[0Ktravis_time:end:2eee2b80:start=1777441300025936642,finish=1777441300037660807,duration=11724165,event=rm_etc_boto_cfg[0Ktravis_time:start:0b4690b7[0Ktravis_time:end:0b4690b7:start=1777441300041502915,finish=1777441300044936650,duration=3433735,event=rm_oraclejdk8_symlink[0Ktravis_time:start:15143a98[0Ktravis_time:end:15143a98:start=1777441300048866239,finish=1777441300176974015,duration=128107776,event=enable_i386[0Ktravis_time:start:03bb3570[0Ktravis_time:end:03bb3570:start=1777441300180488035,finish=1777441300185663533,duration=5175498,event=update_rubygems[0Ktravis_time:start:25d94f36[0Ktravis_time:end:25d94f36:start=1777441300190061408,finish=1777441301233490365,duration=1043428957,event=ensure_path_components[0Ktravis_time:start:0be42cd2[0Ktravis_time:end:0be42cd2:start=1777441301237329044,finish=1777441301239937118,duration=2608074,event=redefine_curl[0Ktravis_time:start:04c02273[0Ktravis_time:end:04c02273:start=1777441301243568437,finish=1777441301403393844,duration=159825407,event=nonblock_pipe[0Ktravis_time:start:09b10040[0Ktravis_time:end:09b10040:start=1777441301408276927,finish=1777441307458048870,duration=6049771943,event=apt_get_update[0Ktravis_time:start:00b07994[0Ktravis_time:end:00b07994:start=1777441307461552645,finish=1777441307463968757,duration=2416112,event=deprecate_xcode_64[0Ktravis_time:start:069f87d5[0Ktravis_time:end:069f87d5:start=1777441307467551572,finish=1777441311727423777,duration=4259872205,event=update_heroku[0Ktravis_time:start:2928e590[0Ktravis_time:end:2928e590:start=1777441311731077817,finish=1777441311733459711,duration=2381894,event=shell_session_update[0Ktravis_time:start:25f02da4[0Ktravis_fold:start:docker_mtu_and_registry_mirrors[0Ktravis_fold:end:docker_mtu_and_registry_mirrors[0Ktravis_time:end:25f02da4:start=1777441311737243978,finish=1777441314511023015,duration=2773779037,event=set_docker_mtu_and_registry_mirrors[0Ktravis_time:start:026cdd74[0Ktravis_fold:start:Docker[0Ktravis_fold:end:Docker[0Ktravis_time:end:026cdd74:start=1777441314515748687,finish=1777441314518813535,duration=3064848,event=docker_config[0Ktravis_time:start:03bb97ec[0Ktravis_fold:start:resolvconf[0Ktravis_fold:end:resolvconf[0Ktravis_time:end:03bb97ec:start=1777441314522672782,finish=1777441314596990596,duration=74317814,event=resolvconf[0Ktravis_time:start:079e69f0[0Ktravis_time:end:079e69f0:start=1777441314600967922,finish=1777441314806229203,duration=205261281,event=maven_central_mirror[0Ktravis_time:start:00164518[0Ktravis_time:end:00164518:start=1777441314809963164,finish=1777441314936090937,duration=126127773,event=maven_https[0Ktravis_time:start:05fa6770[0Ktravis_fold:start:services[0Ktravis_time:start:1694a2dc[0K$ sudo systemctl start docker
+travis_time:end:1694a2dc:start=1777441314944674358,finish=1777441314963083028,duration=18408670,event=prepare[0Ktravis_fold:end:services[0Ktravis_time:end:1694a2dc:start=1777441314944674358,finish=1777441317970220526,duration=3025546168,event=services[0Ktravis_time:start:26606c38[0Ktravis_time:end:26606c38:start=1777441317974303828,finish=1777441317977186716,duration=2882888,event=fix_ps4[0Ktravis_time:start:00dce561[0K
+travis_fold:start:git.checkout[0Ktravis_time:start:25e83cb0[0Ktravis_time:end:25e83cb0:start=1777441317985706506,finish=1777441317998177984,duration=12471478,event=checkout[0Ktravis_time:start:00c96d80[0K$ git clone --depth=50 --branch=6.1.1.7 https://github.com/noironetworks/opflex.git noironetworks/opflex
+Cloning into 'noironetworks/opflex'...
+warning: refs/tags/6.1.1.7 7a7d52a083fe1497dc3d8e9f64440d538000d2b4 is not a commit!
+Note: switching to 'b89d4a01bd879ff1e5d88914b7c02d46b4ec6b23'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+travis_time:end:00c96d80:start=1777441318002675514,finish=1777441319183920621,duration=1181245107,event=checkout[0K$ cd noironetworks/opflex
+$ git checkout -qf 6.1.1.7
+travis_fold:end:git.checkout[0K
+travis_time:end:00c96d80:start=1777441318002675514,finish=1777441319343772981,duration=1341097467,event=checkout[0Ktravis_time:start:002a6e10[0K
+[33;1mSetting environment variables from repository settings[0m
+$ export TRAVIS_TAGGER=[secure]
+$ export QUAY_TRAVIS_NOIRO_ROBO_USER=[secure]
+$ export QUAY_TRAVIS_NOIRO_ROBO_PSWD=[secure]
+$ export DOCKER_NOIRO_USER=[secure]
+$ export DOCKER_NOIRO_PSWD=[secure]
+$ export QUAY_TRAVIS_NOIROLABS_ROBO_USER=[secure]
+$ export QUAY_TRAVIS_NOIROLABS_ROBO_PSWD=[secure]
+
+travis_time:end:002a6e10:start=1777441319349172543,finish=1777441319355161257,duration=5988714,event=env[0K$ export TRAVIS_COMPILER=gcc
+$ export CXX=${CXX:-g++}
+$ export CXX_FOR_BUILD=${CXX_FOR_BUILD:-g++}
+$ export CC=${CC:-gcc}
+$ export CC_FOR_BUILD=${CC_FOR_BUILD:-gcc}
+travis_fold:start:cache.1[0KSetting up build cache
+$ export CASHER_DIR=${TRAVIS_HOME}/.casher
+travis_time:start:0937a3bc[0K$ Installing caching utilities
+travis_time:end:0937a3bc:start=1777441320249013728,finish=1777441320338697352,duration=89683624,event=setup_casher[0Ktravis_time:start:07377015[0Ktravis_time:end:07377015:start=1777441320346015437,finish=1777441320350138142,duration=4122705,event=setup_casher[0Ktravis_time:start:019a16a5[0Kattempting to download cache archive[0m
+[32;1mfetching 6.1.1.7/cache--linux-jammy-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855--compiler-gcc.tgz[0m
+[32;1mfetching 6.1.1.7/cache-linux-jammy-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855--compiler-gcc.tgz[0m
+[32;1mfetching 6.1.1.7/cache--compiler-gcc.tgz[0m
+[32;1mfetching master/cache--linux-jammy-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855--compiler-gcc.tgz[0m
+[32;1mfetching master/cache-linux-jammy-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855--compiler-gcc.tgz[0m
+[32;1mfetching master/cache--compiler-gcc.tgz[0m
+[31;1mcould not download cache[0m
+travis_time:end:019a16a5:start=1777441320356091821,finish=1777441322733256526,duration=2377164705,event=setup_casher[0Ktravis_time:start:02e55e33[0Ktravis_time:end:02e55e33:start=1777441322740250786,finish=1777441322744763995,duration=4513209,event=setup_casher[0Ktravis_time:start:00de5bab[0Kadding /home/travis/build/noironetworks/grpc to cache[0m
+creating directory /home/travis/build/noironetworks/grpc[0m
+adding /home/travis/.m2 to cache[0m
+travis_time:end:00de5bab:start=1777441322750815981,finish=1777441323991738526,duration=1240922545,event=setup_casher[0Ktravis_fold:end:cache.1[0K
+$ gcc --version
+gcc (Ubuntu 11.4.0-1ubuntu1~22.04.2) 11.4.0
+Copyright (C) 2021 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+travis_fold:start:before_install.1[0Ktravis_time:start:0fa103d6[0K$ mkdir -vp ~/.docker/cli-plugins/
+mkdir: created directory '/home/travis/.docker'
+mkdir: created directory '/home/travis/.docker/cli-plugins/'
+travis_time:end:0fa103d6:start=1777441324015760336,finish=1777441324022788492,duration=7028156,event=before_install[0Ktravis_fold:end:before_install.1[0Ktravis_fold:start:before_install.2[0Ktravis_time:start:2199c6d3[0K$ curl --silent -L "https://github.com/docker/buildx/releases/download/v0.3.0/buildx-v0.3.0.linux-amd64" > ~/.docker/cli-plugins/docker-buildx
+travis_time:end:2199c6d3:start=1777441324029931836,finish=1777441325101950151,duration=1072018315,event=before_install[0Ktravis_fold:end:before_install.2[0Ktravis_fold:start:before_install.3[0Ktravis_time:start:150dd5e0[0K$ chmod a+x ~/.docker/cli-plugins/docker-buildx
+travis_time:end:150dd5e0:start=1777441325108487599,finish=1777441325114291414,duration=5803815,event=before_install[0Ktravis_fold:end:before_install.3[0Ktravis_fold:start:install.1[0Ktravis_time:start:0ac1d030[0K$ pip install pyyaml pytz
+Collecting pyyaml
+  Downloading pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting pytz
+  Downloading pytz-2026.1.post1-py2.py3-none-any.whl.metadata (22 kB)
+Downloading pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (770 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 770.3/770.3 kB 17.7 MB/s  0:00:00
+Downloading pytz-2026.1.post1-py2.py3-none-any.whl (510 kB)
+Installing collected packages: pytz, pyyaml
+
+Successfully installed pytz-2026.1.post1 pyyaml-6.0.3
+
+[notice] A new release of pip is available: 25.2 -> 26.1
+[notice] To update, run: python -m pip install --upgrade pip
+travis_time:end:0ac1d030:start=1777441325120674963,finish=1777441327016061775,duration=1895386812,event=install[0Ktravis_fold:end:install.1[0Ktravis_fold:start:install.2[0Ktravis_time:start:12370cf2[0K$ curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sudo sh -s -- -b /usr/local/bin
+aquasecurity/trivy info checking GitHub for latest tag
+aquasecurity/trivy info found version: 0.70.0 for v0.70.0/Linux/64bit
+aquasecurity/trivy info installed /usr/local/bin/trivy
+travis_time:end:12370cf2:start=1777441327021892991,finish=1777441330144236831,duration=3122343840,event=install[0Ktravis_fold:end:install.2[0Ktravis_fold:start:before_script.1[0Ktravis_time:start:21ae2c56[0K$ export DOCKER_BUILDKIT=1
+travis_time:end:21ae2c56:start=1777441330150556302,finish=1777441330155001852,duration=4445550,event=before_script[0Ktravis_fold:end:before_script.1[0Ktravis_fold:start:before_script.2[0Ktravis_time:start:25ddda46[0K$ export UPSTREAM_ID=81c2369
+travis_time:end:25ddda46:start=1777441330161313636,finish=1777441330165552248,duration=4238612,event=before_script[0Ktravis_fold:end:before_script.2[0Ktravis_time:start:2b626910[0K$ echo "Skip running UTs"
+Skip running UTs
+travis_time:end:2b626910:start=1777441330173091236,finish=1777441330177276339,duration=4185103,event=script[0K[32;1mThe command "echo "Skip running UTs"" exited with 0.[0m
+travis_time:start:0f95add4[0K$ git clone http://www.github.com/noironetworks/cicd -b mmr-6.1.1 /tmp/cicd
+Cloning into '/tmp/cicd'...
+warning: redirecting to https://github.com/noironetworks/cicd.git/
+travis_time:end:0f95add4:start=1777441330184507262,finish=1777441330584187757,duration=399680495,event=script[0K[32;1mThe command "git clone http://www.github.com/noironetworks/cicd -b mmr-6.1.1 /tmp/cicd" exited with 0.[0m
+travis_time:start:03688934[0K$ /tmp/cicd/travis/check-git-tag.sh; RETURN_CODE=$? ; if [ $RETURN_CODE -eq 140 ]; then travis_terminate 0; elif [ $RETURN_CODE -ne 0 ]; then travis_terminate $RETURN_CODE; fi
+++dirname /tmp/cicd/travis/check-git-tag.sh
++SCRIPTS_DIR=/tmp/cicd/travis
++source /tmp/cicd/travis/globals.sh
+++set -x
+++RELEASE_TAG=6.1.1.7
+++export RELEASE_TAG
++++date +%m%d%y
+++DATE_TAG=042926
+++TRAVIS_TAG_WITH_UPSTREAM_ID=6.1.1.7.81c2369
+++TRAVIS_TAG_WITH_UPSTREAM_ID_DATE_TRAVIS_BUILD_NUMBER=6.1.1.7.81c2369.042926.5289
+++IMAGE_TAG=6.1.1.7.81c2369
+++UPSTREAM_IMAGE_TAG=6.1.1.7.81c2369
+++UPSTREAM_IMAGE_Z_TAG=6.1.1.7.81c2369.z
+++IMAGE_Z_TAG=6.1.1.7.81c2369.z
+++RELEASE_Z_TAG=6.1.1.7.z
+++RC_PREFIX=6.1.1.7rc
+++RC_REGEX='6.1.1.7rc[0-9]+'
+++QUAY_REGISTRY=quay.io/noirolabs
+++QUAY_NOIRO_REGISTRY=quay.io/noiro
+++DOCKER_REGISTRY=docker.io/noiro
+++CICD_STATUS_REPO=https://github.com/noironetworks/cicd-status.git
+++CICD_STATUS_REPO_DIR=cicd-status
+++export CICD_STATUS_REPO_DIR
++git show --summary
+commit b89d4a01bd879ff1e5d88914b7c02d46b4ec6b23
+Merge: 67318bf 1a345a6
+Author: Mahesh Kurund <mahesh.kurund@oneconvergence.com>
+Date:   Tue Mar 3 17:23:50 2026 +0530
+
+    Merge pull request #662 from noironetworks/fix-trivy
+    
+    Fix trivy install in travis.yaml
+
++EXPECTED_TAG_PREFIX=6.1.1.7
++[[ 6.1.1.7 != \6\.\1\.\1\.\7* ]]
+++git show -s --format=%B 6.1.1.7
+++grep 'Created by Travis Job'
++tag_message=
++[[ ! -z '' ]]
+travis_time:end:03688934:start=1777441330591473705,finish=1777441330619649845,duration=28176140,event=script[0K[32;1mThe command "/tmp/cicd/travis/check-git-tag.sh; RETURN_CODE=$? ; if [ $RETURN_CODE -eq 140 ]; then travis_terminate 0; elif [ $RETURN_CODE -ne 0 ]; then travis_terminate $RETURN_CODE; fi" exited with 0.[0m
+travis_time:start:2dea9589[0K$ /tmp/cicd/travis/build-push-opflex-images.sh || travis_terminate 1
+++dirname /tmp/cicd/travis/build-push-opflex-images.sh
++SCRIPTS_DIR=/tmp/cicd/travis
++source /tmp/cicd/travis/globals.sh
+++set -x
+++RELEASE_TAG=6.1.1.7
+++export RELEASE_TAG
++++date +%m%d%y
+++DATE_TAG=042926
+++TRAVIS_TAG_WITH_UPSTREAM_ID=6.1.1.7.81c2369
+++TRAVIS_TAG_WITH_UPSTREAM_ID_DATE_TRAVIS_BUILD_NUMBER=6.1.1.7.81c2369.042926.5289
+++IMAGE_TAG=6.1.1.7.81c2369
+++UPSTREAM_IMAGE_TAG=6.1.1.7.81c2369
+++UPSTREAM_IMAGE_Z_TAG=6.1.1.7.81c2369.z
+++IMAGE_Z_TAG=6.1.1.7.81c2369.z
+++RELEASE_Z_TAG=6.1.1.7.z
+++RC_PREFIX=6.1.1.7rc
+++RC_REGEX='6.1.1.7rc[0-9]+'
+++QUAY_REGISTRY=quay.io/noirolabs
+++QUAY_NOIRO_REGISTRY=quay.io/noiro
+++DOCKER_REGISTRY=docker.io/noiro
+++CICD_STATUS_REPO=https://github.com/noironetworks/cicd-status.git
+++CICD_STATUS_REPO_DIR=cicd-status
+++export CICD_STATUS_REPO_DIR
++git show --summary
+commit b89d4a01bd879ff1e5d88914b7c02d46b4ec6b23
+Merge: 67318bf 1a345a6
+Author: Mahesh Kurund <mahesh.kurund@oneconvergence.com>
+Date:   Tue Mar 3 17:23:50 2026 +0530
+
+    Merge pull request #662 from noironetworks/fix-trivy
+    
+    Fix trivy install in travis.yaml
+
++IMAGE_BUILD_REGISTRY=quay.io/noirolabs
++IMAGE_BUILD_TAG=6.1.1.7.81c2369
++OTHER_IMAGE_TAGS=6.1.1.7.81c2369,6.1.1.7.81c2369.042926.5289
++RELEASE_TAG_WITH_UPSTREAM_ID=6.1.1.7.81c2369
++[[ 6.1.1.7 == *\o\p\f\l\e\x\-\b\u\i\l\d\-\b\a\s\e* ]]
++BUILD_BASE=false
++docker/travis/build-opflex-travis.sh quay.io/noirolabs 6.1.1.7.81c2369
++OPFLEX_BRANCH=kmr2-5.2.7
++DOCKER_HUB_ID=quay.io/noirolabs
++DOCKER_TAG=6.1.1.7.81c2369
++BUILDARG=
++'[' -z quay.io/noirolabs ']'
++'[' -z 6.1.1.7.81c2369 ']'
++'[' -z '' ']'
++BUILDARG=
++export DOCKER_HUB_ID
++export DOCKER_TAG
++export BUILDARG
++SECOPT=
++export SECOPT
++DOCKER_DIR=docker/travis
++OPFLEX_DIR=.
++export OPFLEX_DIR
++[[ 6.1.1.7 == *\o\p\f\l\e\x\-\b\u\i\l\d\-\b\a\s\e* ]]
++BUILD_BASE=false
++set -Eeuxo pipefail
++[[ false == true ]]
++echo 'starting opflex build'
+starting opflex build
++docker pull quay.io/noirolabs/opflex-build-base:6.1.1.7.81c2369
+Error response from daemon: manifest for quay.io/noirolabs/opflex-build-base:6.1.1.7.81c2369 not found: manifest unknown: manifest unknown
++docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+++grep -E '^FROM' docker/travis/Dockerfile-opflex
+++awk '{print $2}'
++BASE_IMAGE=registry.access.redhat.com/ubi9/ubi-minimal:latest
++docker pull registry.access.redhat.com/ubi9/ubi-minimal:latest
+latest: Pulling from ubi9/ubi-minimal
+c770e69088fa: Pulling fs layer
+c770e69088fa: Verifying Checksum
+c770e69088fa: Download complete
+c770e69088fa: Pull complete
+Digest: sha256:7d4e47500f28ac3a2bff06c25eff9127ff21048538ae03ce240d57cf756acd00
+Status: Downloaded newer image for registry.access.redhat.com/ubi9/ubi-minimal:latest
+registry.access.redhat.com/ubi9/ubi-minimal:latest
++docker images
+REPOSITORY                                    TAG       IMAGE ID       CREATED      SIZE
+registry.access.redhat.com/ubi9/ubi-minimal   latest    e7dcff818680   7 days ago   105MB
++[[ false == true ]]
++ALL_IMAGES='opflex-build opflex'
++for IMAGE in ${ALL_IMAGES}
++/tmp/cicd/travis/push-images.sh quay.io/noirolabs opflex-build 6.1.1.7.81c2369 6.1.1.7.81c2369,6.1.1.7.81c2369.042926.5289 registry.access.redhat.com/ubi9/ubi-minimal:latest
+++dirname /tmp/cicd/travis/push-images.sh
++SCRIPTS_DIR=/tmp/cicd/travis
++source /tmp/cicd/travis/globals.sh
+++set -x
+++RELEASE_TAG=6.1.1.7
+++export RELEASE_TAG
++++date +%m%d%y
+++DATE_TAG=042926
+++TRAVIS_TAG_WITH_UPSTREAM_ID=6.1.1.7.81c2369
+++TRAVIS_TAG_WITH_UPSTREAM_ID_DATE_TRAVIS_BUILD_NUMBER=6.1.1.7.81c2369.042926.5289
+++IMAGE_TAG=6.1.1.7.81c2369
+++UPSTREAM_IMAGE_TAG=6.1.1.7.81c2369
+++UPSTREAM_IMAGE_Z_TAG=6.1.1.7.81c2369.z
+++IMAGE_Z_TAG=6.1.1.7.81c2369.z
+++RELEASE_Z_TAG=6.1.1.7.z
+++RC_PREFIX=6.1.1.7rc
+++RC_REGEX='6.1.1.7rc[0-9]+'
+++QUAY_REGISTRY=quay.io/noirolabs
+++QUAY_NOIRO_REGISTRY=quay.io/noiro
+++DOCKER_REGISTRY=docker.io/noiro
+++CICD_STATUS_REPO=https://github.com/noironetworks/cicd-status.git
+++CICD_STATUS_REPO_DIR=cicd-status
+++export CICD_STATUS_REPO_DIR
++IMAGE_BUILD_REGISTRY=quay.io/noirolabs
++IMAGE=opflex-build
++IMAGE_BUILD_TAG=6.1.1.7.81c2369
++OTHER_IMAGE_TAGS='6.1.1.7.81c2369 6.1.1.7.81c2369.042926.5289'
++BASE_IMAGE=registry.access.redhat.com/ubi9/ubi-minimal:latest
++OTHER_IMAGE_TAGS='6.1.1.7.81c2369 6.1.1.7.81c2369.042926.5289 6.1.1.7.81c2369.z'
++BUILT_IMAGE=quay.io/noirolabs/opflex-build:6.1.1.7.81c2369
++curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh
++sh -s -- -b /tmp
+[info] checking github for the current release tag 
+[info] fetching release script for tag='v0.111.1' 
+[info] checking github for the current release tag 
+[info] using release tag='v0.111.1' version='0.111.1' os='linux' arch='amd64' 
+[info] installed /tmp/grype 
++curl -sSfL https://raw.githubusercontent.com/docker/sbom-cli-plugin/main/install.sh
++sh -s --
+[info] fetching release script for tag='v0.6.1' 
+[info] using release tag='v0.6.1' version='0.6.1' os='linux' arch='amd64' 
+[info] installed /home/travis/.docker/cli-plugins/docker-sbom 
++docker sbom --format spdx-json quay.io/noirolabs/opflex-build:6.1.1.7.81c2369
++/tmp/grype
++tee /tmp/cve.txt
+1 error occurred:
+	* failed to fetch the image "quay.io/noirolabs/opflex-build:6.1.1.7.81c2369": pull failed: Error response from daemon: manifest for quay.io/noirolabs/opflex-build:6.1.1.7.81c2369 not found: manifest unknown: manifest unknown
+
+
+[0062] ERROR [31mfailed to catalog: unable to decode sbom: sbom format not recognized[0m
++docker sbom quay.io/noirolabs/opflex-build:6.1.1.7.81c2369
++tee /tmp/sbom.txt
+1 error occurred:
+	* failed to fetch the image "quay.io/noirolabs/opflex-build:6.1.1.7.81c2369": pull failed: Error response from daemon: manifest for quay.io/noirolabs/opflex-build:6.1.1.7.81c2369 not found: manifest unknown: manifest unknown
+
+
++docker sbom --format spdx-json registry.access.redhat.com/ubi9/ubi-minimal:latest
++/tmp/grype
++tee /tmp/cve-base.txt
+No vulnerabilities found
++docker login -u=[secure] -p=[secure] quay.io
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+
+WARNING! Your credentials are stored unencrypted in '/home/travis/.docker/config.json'.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/go/credential-store/
+
+Login Succeeded
++docker push quay.io/noirolabs/opflex-build:6.1.1.7.81c2369
+The push refers to repository [quay.io/noirolabs/opflex-build]
+An image does not exist locally with the tag: quay.io/noirolabs/opflex-build
++for OTHER_TAG in ${OTHER_IMAGE_TAGS}
++docker tag quay.io/noirolabs/opflex-build:6.1.1.7.81c2369 quay.io/noirolabs/opflex-build:6.1.1.7.81c2369
+Error response from daemon: No such image: quay.io/noirolabs/opflex-build:6.1.1.7.81c2369
++docker push quay.io/noirolabs/opflex-build:6.1.1.7.81c2369
+The push refers to repository [quay.io/noirolabs/opflex-build]
+An image does not exist locally with the tag: quay.io/noirolabs/opflex-build
++for OTHER_TAG in ${OTHER_IMAGE_TAGS}
++docker tag quay.io/noirolabs/opflex-build:6.1.1.7.81c2369 quay.io/noirolabs/opflex-build:6.1.1.7.81c2369.042926.5289
+Error response from daemon: No such image: quay.io/noirolabs/opflex-build:6.1.1.7.81c2369
++docker push quay.io/noirolabs/opflex-build:6.1.1.7.81c2369.042926.5289
+The push refers to repository [quay.io/noirolabs/opflex-build]
+An image does not exist locally with the tag: quay.io/noirolabs/opflex-build
++for OTHER_TAG in ${OTHER_IMAGE_TAGS}
++docker tag quay.io/noirolabs/opflex-build:6.1.1.7.81c2369 quay.io/noirolabs/opflex-build:6.1.1.7.81c2369.z
+Error response from daemon: No such image: quay.io/noirolabs/opflex-build:6.1.1.7.81c2369
++docker push quay.io/noirolabs/opflex-build:6.1.1.7.81c2369.z
+The push refers to repository [quay.io/noirolabs/opflex-build]
+An image does not exist locally with the tag: quay.io/noirolabs/opflex-build
++docker login -u=[secure] -p=[secure] quay.io
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+
+WARNING! Your credentials are stored unencrypted in '/home/travis/.docker/config.json'.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/go/credential-store/
+
+Login Succeeded
++docker tag quay.io/noirolabs/opflex-build:6.1.1.7.81c2369 quay.io/noiro/opflex-build:6.1.1.7.81c2369.042926.5289
+Error response from daemon: No such image: quay.io/noirolabs/opflex-build:6.1.1.7.81c2369
++docker push quay.io/noiro/opflex-build:6.1.1.7.81c2369.042926.5289
+The push refers to repository [quay.io/noiro/opflex-build]
+An image does not exist locally with the tag: quay.io/noiro/opflex-build
++docker tag quay.io/noirolabs/opflex-build:6.1.1.7.81c2369 quay.io/noiro/opflex-build:6.1.1.7.81c2369.z
+Error response from daemon: No such image: quay.io/noirolabs/opflex-build:6.1.1.7.81c2369
++docker push quay.io/noiro/opflex-build:6.1.1.7.81c2369.z
+The push refers to repository [quay.io/noiro/opflex-build]
+An image does not exist locally with the tag: quay.io/noiro/opflex-build
++docker login -u=[secure] '-p=[secure]' docker.io
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+
+WARNING! Your credentials are stored unencrypted in '/home/travis/.docker/config.json'.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/go/credential-store/
+
+Login Succeeded
++docker tag quay.io/noirolabs/opflex-build:6.1.1.7.81c2369 docker.io/noiro/opflex-build:6.1.1.7.81c2369.042926.5289
+Error response from daemon: No such image: quay.io/noirolabs/opflex-build:6.1.1.7.81c2369
++docker push docker.io/noiro/opflex-build:6.1.1.7.81c2369.042926.5289
+The push refers to repository [docker.io/noiro/opflex-build]
+An image does not exist locally with the tag: noiro/opflex-build
++docker tag quay.io/noirolabs/opflex-build:6.1.1.7.81c2369 docker.io/noiro/opflex-build:6.1.1.7.81c2369.z
+Error response from daemon: No such image: quay.io/noirolabs/opflex-build:6.1.1.7.81c2369
++docker push docker.io/noiro/opflex-build:6.1.1.7.81c2369.z
+The push refers to repository [docker.io/noiro/opflex-build]
+An image does not exist locally with the tag: noiro/opflex-build
++for IMAGE in ${ALL_IMAGES}
++/tmp/cicd/travis/push-images.sh quay.io/noirolabs opflex 6.1.1.7.81c2369 6.1.1.7.81c2369,6.1.1.7.81c2369.042926.5289 registry.access.redhat.com/ubi9/ubi-minimal:latest
+++dirname /tmp/cicd/travis/push-images.sh
++SCRIPTS_DIR=/tmp/cicd/travis
++source /tmp/cicd/travis/globals.sh
+++set -x
+++RELEASE_TAG=6.1.1.7
+++export RELEASE_TAG
++++date +%m%d%y
+++DATE_TAG=042926
+++TRAVIS_TAG_WITH_UPSTREAM_ID=6.1.1.7.81c2369
+++TRAVIS_TAG_WITH_UPSTREAM_ID_DATE_TRAVIS_BUILD_NUMBER=6.1.1.7.81c2369.042926.5289
+++IMAGE_TAG=6.1.1.7.81c2369
+++UPSTREAM_IMAGE_TAG=6.1.1.7.81c2369
+++UPSTREAM_IMAGE_Z_TAG=6.1.1.7.81c2369.z
+++IMAGE_Z_TAG=6.1.1.7.81c2369.z
+++RELEASE_Z_TAG=6.1.1.7.z
+++RC_PREFIX=6.1.1.7rc
+++RC_REGEX='6.1.1.7rc[0-9]+'
+++QUAY_REGISTRY=quay.io/noirolabs
+++QUAY_NOIRO_REGISTRY=quay.io/noiro
+++DOCKER_REGISTRY=docker.io/noiro
+++CICD_STATUS_REPO=https://github.com/noironetworks/cicd-status.git
+++CICD_STATUS_REPO_DIR=cicd-status
+++export CICD_STATUS_REPO_DIR
++IMAGE_BUILD_REGISTRY=quay.io/noirolabs
++IMAGE=opflex
++IMAGE_BUILD_TAG=6.1.1.7.81c2369
++OTHER_IMAGE_TAGS='6.1.1.7.81c2369 6.1.1.7.81c2369.042926.5289'
++BASE_IMAGE=registry.access.redhat.com/ubi9/ubi-minimal:latest
++OTHER_IMAGE_TAGS='6.1.1.7.81c2369 6.1.1.7.81c2369.042926.5289 6.1.1.7.81c2369.z'
++BUILT_IMAGE=quay.io/noirolabs/opflex:6.1.1.7.81c2369
++curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh
++sh -s -- -b /tmp
+[info] checking github for the current release tag 
+[info] fetching release script for tag='v0.111.1' 
+[info] checking github for the current release tag 
+[info] using release tag='v0.111.1' version='0.111.1' os='linux' arch='amd64' 
+[info] installed /tmp/grype 
++curl -sSfL https://raw.githubusercontent.com/docker/sbom-cli-plugin/main/install.sh
++sh -s --
+[info] fetching release script for tag='v0.6.1' 
+[info] using release tag='v0.6.1' version='0.6.1' os='linux' arch='amd64' 
+[info] installed /home/travis/.docker/cli-plugins/docker-sbom 
++docker sbom --format spdx-json quay.io/noirolabs/opflex:6.1.1.7.81c2369
++/tmp/grype
++tee /tmp/cve.txt
+1 error occurred:
+	* failed to fetch the image "quay.io/noirolabs/opflex:6.1.1.7.81c2369": pull failed: Error response from daemon: manifest for quay.io/noirolabs/opflex:6.1.1.7.81c2369 not found: manifest unknown: manifest unknown
+
+
+[0000] ERROR [31mfailed to catalog: unable to decode sbom: sbom format not recognized[0m
++docker sbom quay.io/noirolabs/opflex:6.1.1.7.81c2369
++tee /tmp/sbom.txt
+1 error occurred:
+	* failed to fetch the image "quay.io/noirolabs/opflex:6.1.1.7.81c2369": pull failed: Error response from daemon: manifest for quay.io/noirolabs/opflex:6.1.1.7.81c2369 not found: manifest unknown: manifest unknown
+
+
++docker sbom --format spdx-json registry.access.redhat.com/ubi9/ubi-minimal:latest
++/tmp/grype
++tee /tmp/cve-base.txt
+No vulnerabilities found
++docker login -u=[secure] -p=[secure] quay.io
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+
+WARNING! Your credentials are stored unencrypted in '/home/travis/.docker/config.json'.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/go/credential-store/
+
+Login Succeeded
++docker push quay.io/noirolabs/opflex:6.1.1.7.81c2369
+The push refers to repository [quay.io/noirolabs/opflex]
+An image does not exist locally with the tag: quay.io/noirolabs/opflex
++for OTHER_TAG in ${OTHER_IMAGE_TAGS}
++docker tag quay.io/noirolabs/opflex:6.1.1.7.81c2369 quay.io/noirolabs/opflex:6.1.1.7.81c2369
+Error response from daemon: No such image: quay.io/noirolabs/opflex:6.1.1.7.81c2369
++docker push quay.io/noirolabs/opflex:6.1.1.7.81c2369
+The push refers to repository [quay.io/noirolabs/opflex]
+An image does not exist locally with the tag: quay.io/noirolabs/opflex
++for OTHER_TAG in ${OTHER_IMAGE_TAGS}
++docker tag quay.io/noirolabs/opflex:6.1.1.7.81c2369 quay.io/noirolabs/opflex:6.1.1.7.81c2369.042926.5289
+Error response from daemon: No such image: quay.io/noirolabs/opflex:6.1.1.7.81c2369
++docker push quay.io/noirolabs/opflex:6.1.1.7.81c2369.042926.5289
+The push refers to repository [quay.io/noirolabs/opflex]
+An image does not exist locally with the tag: quay.io/noirolabs/opflex
++for OTHER_TAG in ${OTHER_IMAGE_TAGS}
++docker tag quay.io/noirolabs/opflex:6.1.1.7.81c2369 quay.io/noirolabs/opflex:6.1.1.7.81c2369.z
+Error response from daemon: No such image: quay.io/noirolabs/opflex:6.1.1.7.81c2369
++docker push quay.io/noirolabs/opflex:6.1.1.7.81c2369.z
+The push refers to repository [quay.io/noirolabs/opflex]
+An image does not exist locally with the tag: quay.io/noirolabs/opflex
++docker login -u=[secure] -p=[secure] quay.io
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+
+WARNING! Your credentials are stored unencrypted in '/home/travis/.docker/config.json'.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/go/credential-store/
+
+Login Succeeded
++docker tag quay.io/noirolabs/opflex:6.1.1.7.81c2369 quay.io/noiro/opflex:6.1.1.7.81c2369.042926.5289
+Error response from daemon: No such image: quay.io/noirolabs/opflex:6.1.1.7.81c2369
++docker push quay.io/noiro/opflex:6.1.1.7.81c2369.042926.5289
+The push refers to repository [quay.io/noiro/opflex]
+An image does not exist locally with the tag: quay.io/noiro/opflex
++docker tag quay.io/noirolabs/opflex:6.1.1.7.81c2369 quay.io/noiro/opflex:6.1.1.7.81c2369.z
+Error response from daemon: No such image: quay.io/noirolabs/opflex:6.1.1.7.81c2369
++docker push quay.io/noiro/opflex:6.1.1.7.81c2369.z
+The push refers to repository [quay.io/noiro/opflex]
+An image does not exist locally with the tag: quay.io/noiro/opflex
++docker login -u=[secure] '-p=[secure]' docker.io
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+Login Succeeded
++docker tag quay.io/noirolabs/opflex:6.1.1.7.81c2369 docker.io/noiro/opflex:6.1.1.7.81c2369.042926.5289
+Error response from daemon: No such image: quay.io/noirolabs/opflex:6.1.1.7.81c2369
++docker push docker.io/noiro/opflex:6.1.1.7.81c2369.042926.5289
+The push refers to repository [docker.io/noiro/opflex]
+An image does not exist locally with the tag: noiro/opflex
++docker tag quay.io/noirolabs/opflex:6.1.1.7.81c2369 docker.io/noiro/opflex:6.1.1.7.81c2369.z
+Error response from daemon: No such image: quay.io/noirolabs/opflex:6.1.1.7.81c2369
++docker push docker.io/noiro/opflex:6.1.1.7.81c2369.z
+The push refers to repository [docker.io/noiro/opflex]
+An image does not exist locally with the tag: noiro/opflex
+++docker image inspect '--format={{.Id}}' quay.io/noirolabs/opflex:6.1.1.7.81c2369
+Error response from daemon: No such image: quay.io/noirolabs/opflex:6.1.1.7.81c2369
++IMAGE_SHA=
++/tmp/cicd/travis/push-to-cicd-status.sh quay.io/noiro opflex 6.1.1.7.81c2369 6.1.1.7.81c2369,6.1.1.7.81c2369.042926.5289 registry.access.redhat.com/ubi9/ubi-minimal:latest
+++dirname /tmp/cicd/travis/push-to-cicd-status.sh
++SCRIPTS_DIR=/tmp/cicd/travis
++source /tmp/cicd/travis/globals.sh
+++set -x
+++RELEASE_TAG=6.1.1.7
+++export RELEASE_TAG
++++date +%m%d%y
+++DATE_TAG=042926
+++TRAVIS_TAG_WITH_UPSTREAM_ID=6.1.1.7.81c2369
+++TRAVIS_TAG_WITH_UPSTREAM_ID_DATE_TRAVIS_BUILD_NUMBER=6.1.1.7.81c2369.042926.5289
+++IMAGE_TAG=6.1.1.7.81c2369
+++UPSTREAM_IMAGE_TAG=6.1.1.7.81c2369
+++UPSTREAM_IMAGE_Z_TAG=6.1.1.7.81c2369.z
+++IMAGE_Z_TAG=6.1.1.7.81c2369.z
+++RELEASE_Z_TAG=6.1.1.7.z
+++RC_PREFIX=6.1.1.7rc
+++RC_REGEX='6.1.1.7rc[0-9]+'
+++QUAY_REGISTRY=quay.io/noirolabs
+++QUAY_NOIRO_REGISTRY=quay.io/noiro
+++DOCKER_REGISTRY=docker.io/noiro
+++CICD_STATUS_REPO=https://github.com/noironetworks/cicd-status.git
+++CICD_STATUS_REPO_DIR=cicd-status
+++export CICD_STATUS_REPO_DIR
+++git rev-parse --abbrev-ref HEAD
++current_branch=HEAD
++[[ opflex != \a\c\c\-\p\r\o\v\i\s\i\o\n ]]
++IMAGE_BUILD_REGISTRY=quay.io/noiro
++IMAGE=opflex
++IMAGE_BUILD_TAG=6.1.1.7.81c2369
++OTHER_IMAGE_TAGS=6.1.1.7.81c2369,6.1.1.7.81c2369.042926.5289
++IMAGE_SHA=registry.access.redhat.com/ubi9/ubi-minimal:latest
++BASE_IMAGE=
++GIT_REPO=https://github.com/noironetworks/cicd-status.git
++GIT_LOCAL_DIR=cicd-status
++GIT_BRANCH=main
++GIT_EMAIL=test@cisco.com
++GIT_TOKEN=[secure]
++GIT_USER=travis-tagger
++git_clone_repo
++cd /tmp/
++git clone https://travis-tagger:[secure]@github.com/noironetworks/cicd-status.git -b main cicd-status
+Cloning into 'cicd-status'...
