@@ -36,19 +36,16 @@ urllib3                                1.26.5                2.6.3              
 requests                               2.25.1                2.32.0                                 python     GHSA-9wx4-h78v-vm56  Medium    < 0.1% (13th)  < 0.1         
 golang.org/x/crypto                    v0.9.0                0.45.0                                 go-module  GHSA-j5w8-q4qc-rx2x  Medium    < 0.1% (11th)  < 0.1         
 helm.sh/helm/v3                        v3.11.2               3.17.3                                 go-module  GHSA-5xqw-8hwv-wg92  Medium    < 0.1% (9th)   < 0.1         
-k8s.io/kubernetes                      v1.33.2               1.33.4                                 go-module  GHSA-4x4m-3c2p-qppc  Medium    < 0.1% (8th)   < 0.1         
 google.golang.org/grpc                 v1.54.0               1.79.3                                 go-module  GHSA-p77j-4mvh-x3m3  Critical  < 0.1% (5th)   < 0.1         
 github.com/docker/cli                  v23.0.3+incompatible  29.2.0                                 go-module  GHSA-p436-gjf2-799p  High      < 0.1% (6th)   < 0.1         
 github.com/moby/spdystream             v0.2.0                0.5.1                                  go-module  GHSA-pc3f-x583-g7j2  High      < 0.1% (4th)   < 0.1         
 golang.org/x/net                       v0.10.0               0.36.0                                 go-module  GHSA-qxp5-gwg8-xv66  Medium    < 0.1% (6th)   < 0.1         
 helm.sh/helm/v3                        v3.11.2               3.18.5                                 go-module  GHSA-f9f8-9pmf-xv68  Medium    < 0.1% (4th)   < 0.1         
 github.com/docker/docker               v23.0.3+incompatible                                         go-module  GHSA-pxq6-2prw-chj9  Medium    < 0.1% (3rd)   < 0.1         
-go.opentelemetry.io/otel/sdk           v1.33.0               1.40.0                                 go-module  GHSA-9h8m-3fm2-qjrq  High      < 0.1% (1st)   < 0.1         
-k8s.io/kubernetes                      v1.33.2               1.33.6                                 go-module  GHSA-r6j8-c6r2-37rr  Medium    < 0.1% (2nd)   < 0.1         
 helm.sh/helm/v3                        v3.11.2               3.18.5                                 go-module  GHSA-9h84-qmv7-982p  Medium    < 0.1% (2nd)   < 0.1         
 helm.sh/helm/v3                        v3.11.2               3.17.4                                 go-module  GHSA-557j-xg8c-q2mm  High      < 0.1% (0th)   < 0.1         
 github.com/docker/docker               v23.0.3+incompatible                                         go-module  GHSA-x744-4wpc-v9h2  High      < 0.1% (0th)   < 0.1         
-go.opentelemetry.io/otel/sdk           v1.33.0               1.43.0                                 go-module  GHSA-hfvc-g4fc-pqhx  High      < 0.1% (0th)   < 0.1         
+go.opentelemetry.io/otel/sdk           v1.42.0               1.43.0                                 go-module  GHSA-hfvc-g4fc-pqhx  High      < 0.1% (0th)   < 0.1         
 github.com/prometheus/prometheus       v0.43.0               0.311.2-0.20260410083055-07c6232d159b  go-module  GHSA-vffh-x6r8-xx99  Medium    < 0.1% (1st)   < 0.1         
 helm.sh/helm/v3                        v3.11.2               3.20.2                                 go-module  GHSA-hr2v-4r36-88hr  Medium    < 0.1% (1st)   < 0.1         
 golang.org/x/crypto                    v0.9.0                0.45.0                                 go-module  GHSA-f6x5-jh6r-wrfv  Medium    < 0.1% (1st)   < 0.1         
@@ -65,7 +62,7 @@ Report Summary
 ├────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
 │ quay.io/noiro/aci-containers-controller:6.1.1.7.81c2369.z (redhat 9.7) │  redhat  │       348       │    -    │
 ├────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
-│ usr/local/bin/aci-containers-controller                                │ gobinary │       30        │    -    │
+│ usr/local/bin/aci-containers-controller                                │ gobinary │       27        │    -    │
 ├────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
 │ usr/local/bin/istioctl                                                 │ gobinary │       93        │    -    │
 ├────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
@@ -1367,26 +1364,14 @@ Total: 348 (UNKNOWN: 0, LOW: 232, MEDIUM: 109, HIGH: 7, CRITICAL: 0)
 
 usr/local/bin/aci-containers-controller (gobinary)
 ==================================================
-Total: 30 (UNKNOWN: 0, LOW: 1, MEDIUM: 18, HIGH: 10, CRITICAL: 1)
+Total: 27 (UNKNOWN: 0, LOW: 1, MEDIUM: 16, HIGH: 9, CRITICAL: 1)
 
 ┌──────────────────────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │           Library            │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
 ├──────────────────────────────┼────────────────┼──────────┼────────┼───────────────────┼──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ go.opentelemetry.io/otel/sdk │ CVE-2026-24051 │ HIGH     │ fixed  │ v1.33.0           │ 1.40.0                       │ OpenTelemetry Go SDK Vulnerable to Arbitrary Code Execution  │
-│                              │                │          │        │                   │                              │ via PATH Hijacking                                           │
-│                              │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-24051                   │
-│                              ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2026-39883 │          │        │                   │ 1.43.0                       │ opentelemetry-go: BSD kenv command not using absolute path   │
+│ go.opentelemetry.io/otel/sdk │ CVE-2026-39883 │ HIGH     │ fixed  │ v1.42.0           │ 1.43.0                       │ opentelemetry-go: BSD kenv command not using absolute path   │
 │                              │                │          │        │                   │                              │ enables PATH hijacking                                       │
 │                              │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39883                   │
-├──────────────────────────────┼────────────────┼──────────┤        ├───────────────────┼──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ k8s.io/kubernetes            │ CVE-2025-13281 │ MEDIUM   │        │ v1.33.2           │ 1.32.10, 1.33.6, 1.34.2      │ kube-controller-manager: Portworx Half-Blind SSRF in         │
-│                              │                │          │        │                   │                              │ kube-controller-manager                                      │
-│                              │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2025-13281                   │
-│                              ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2025-5187  │          │        │                   │ 1.31.12, 1.32.8, 1.33.4      │ kubernetes: kube-apiserver: Nodes can delete themselves by   │
-│                              │                │          │        │                   │                              │ adding an OwnerReference                                     │
-│                              │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2025-5187                    │
 ├──────────────────────────────┼────────────────┼──────────┤        ├───────────────────┼──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │ stdlib                       │ CVE-2025-68121 │ CRITICAL │        │ v1.25.0           │ 1.24.13, 1.25.7, 1.26.0-rc.3 │ crypto/tls: crypto/tls: Incorrect certificate validation     │
 │                              │                │          │        │                   │                              │ during TLS session resumption                                │
