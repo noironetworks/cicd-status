@@ -5,7 +5,7 @@ Report Summary
 ┌─────────────────────────────────────────────────────────────────────────┬──────────┬─────────────────┬─────────┐
 │                                 Target                                  │   Type   │ Vulnerabilities │ Secrets │
 ├─────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
-│ quay.io/noiro/aci-containers-host-ovscni:6.1.1.7.81c2369.z (redhat 9.7) │  redhat  │       234       │    -    │
+│ quay.io/noiro/aci-containers-host-ovscni:6.1.1.7.81c2369.z (redhat 9.7) │  redhat  │       236       │    -    │
 ├─────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
 │ usr/local/bin/aci-containers-host-agent                                 │ gobinary │       14        │    -    │
 ├─────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
@@ -29,7 +29,7 @@ To disable this notice, set the TRIVY_DISABLE_VEX_NOTICE environment variable.
 
 quay.io/noiro/aci-containers-host-ovscni:6.1.1.7.81c2369.z (redhat 9.7)
 =======================================================================
-Total: 234 (UNKNOWN: 0, LOW: 96, MEDIUM: 134, HIGH: 4, CRITICAL: 0)
+Total: 236 (UNKNOWN: 0, LOW: 96, MEDIUM: 136, HIGH: 4, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │  Installed Version  │ Fixed Version │                            Title                             │
@@ -358,6 +358,10 @@ Total: 234 (UNKNOWN: 0, LOW: 96, MEDIUM: 134, HIGH: 4, CRITICAL: 0)
 │                             │                │          │                     │                     │               │ jv_contains ......                                           │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-40612                   │
 │                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-41257 │          │                     │                     │               │ jq is a command-line JSON processor. In 1.8.1 and earlier,   │
+│                             │                │          │                     │                     │               │ the jq...                                                    │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-41257                   │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2026-43894 │          │                     │                     │               │ jq: jq: Arbitrary Code Execution or Denial of Service via    │
 │                             │                │          │                     │                     │               │ Signed Integer...                                            │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-43894                   │
@@ -365,6 +369,10 @@ Total: 234 (UNKNOWN: 0, LOW: 96, MEDIUM: 134, HIGH: 4, CRITICAL: 0)
 │                             │ CVE-2026-43896 │          │                     │                     │               │ jq is a command-line JSON processor. In 1.8.1 and earlier,   │
 │                             │                │          │                     │                     │               │ unbounded r...                                               │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-43896                   │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-44777 │          │                     │                     │               │ jq is a command-line JSON processor. In 1.8.2rc1 and         │
+│                             │                │          │                     │                     │               │ earlier, the ordi...                                         │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-44777                   │
 │                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-9403  │ LOW      │                     │                     │               │ jq: assertion failure in run_jq_tests() of the file          │
 │                             │                │          │                     │                     │               │ jq_test.c                                                    │
