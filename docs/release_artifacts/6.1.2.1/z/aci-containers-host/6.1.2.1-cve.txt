@@ -5,7 +5,7 @@ Report Summary
 ┌──────────────────────────────────────────────────────────────────┬──────────┬─────────────────┬─────────┐
 │                              Target                              │   Type   │ Vulnerabilities │ Secrets │
 ├──────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
-│ quay.io/noiro/aci-containers-host:6.1.2.1.81c2369.z (redhat 9.7) │  redhat  │       235       │    -    │
+│ quay.io/noiro/aci-containers-host:6.1.2.1.81c2369.z (redhat 9.7) │  redhat  │       236       │    -    │
 ├──────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
 │ usr/local/bin/aci-containers-host-agent                          │ gobinary │       14        │    -    │
 ├──────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
@@ -29,7 +29,7 @@ To disable this notice, set the TRIVY_DISABLE_VEX_NOTICE environment variable.
 
 quay.io/noiro/aci-containers-host:6.1.2.1.81c2369.z (redhat 9.7)
 ================================================================
-Total: 235 (UNKNOWN: 0, LOW: 96, MEDIUM: 133, HIGH: 6, CRITICAL: 0)
+Total: 236 (UNKNOWN: 0, LOW: 96, MEDIUM: 136, HIGH: 4, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │  Installed Version  │ Fixed Version │                            Title                             │
@@ -38,7 +38,7 @@ Total: 235 (UNKNOWN: 0, LOW: 96, MEDIUM: 133, HIGH: 6, CRITICAL: 0)
 │                             │                │          │                     │                     │               │ Key Specification                                            │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-5278                    │
 ├─────────────────────────────┼────────────────┤          │                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ curl                        │ CVE-2025-13034 │          │                     │ 7.76.1-41.el9       │               │ curl: Public key pinning bypass via QUIC and GnuTLS allows   │
+│ curl                        │ CVE-2025-13034 │          │                     │ 7.76.1-43.el9       │               │ curl: Public key pinning bypass via QUIC and GnuTLS allows   │
 │                             │                │          │                     │                     │               │ server impersonation...                                      │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-13034                   │
 │                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -182,16 +182,8 @@ Total: 235 (UNKNOWN: 0, LOW: 96, MEDIUM: 133, HIGH: 6, CRITICAL: 0)
 ├─────────────────────────────┼────────────────┤          │                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ gawk                        │ CVE-2023-4156  │          │                     │ 5.1.0-6.el9         │               │ gawk: heap out of bound read in builtin.c                    │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2023-4156                    │
-├─────────────────────────────┼────────────────┼──────────┼─────────────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ glib2                       │ CVE-2025-14087 │ MEDIUM   │ will_not_fix        │ 2.68.4-19.el9       │               │ glib: GLib: Buffer underflow in GVariant parser leads to     │
-│                             │                │          │                     │                     │               │ heap corruption                                              │
-│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-14087                   │
-│                             ├────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-14512 │          │ affected            │                     │               │ glib: Integer Overflow in GLib GIO Attribute Escaping Causes │
-│                             │                │          │                     │                     │               │ Heap Buffer Overflow...                                      │
-│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-14512                   │
-│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2026-1484  │          │                     │                     │               │ Glib: Integer Overflow Leading to Buffer Underflow and       │
+├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ glib2                       │ CVE-2026-1484  │ MEDIUM   │                     │ 2.68.4-20.el9       │               │ Glib: Integer Overflow Leading to Buffer Underflow and       │
 │                             │                │          │                     │                     │               │ Out-of-Bounds Write in GLib...                               │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-1484                    │
 │                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -218,7 +210,7 @@ Total: 235 (UNKNOWN: 0, LOW: 96, MEDIUM: 133, HIGH: 6, CRITICAL: 0)
 │                             │                │          │                     │                     │               │ content type...                                              │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-1485                    │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ glibc                       │ CVE-2026-4046  │ MEDIUM   │                     │ 2.34-262.el9        │               │ glibc: glibc: Denial of Service via iconv() function with    │
+│ glibc                       │ CVE-2026-4046  │ MEDIUM   │                     │ 2.34-270.el9        │               │ glibc: glibc: Denial of Service via iconv() function with    │
 │                             │                │          │                     │                     │               │ specific character sets...                                   │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-4046                    │
 │                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -350,15 +342,7 @@ Total: 235 (UNKNOWN: 0, LOW: 96, MEDIUM: 133, HIGH: 6, CRITICAL: 0)
 │                             │                │          │                     │                     │               │ server certificates via crafted...                           │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-3832                    │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ jq                          │ CVE-2026-39979 │ HIGH     │                     │ 1.6-21.el9          │               │ jq: out-of-bounds read in jv_parse_sized() on error          │
-│                             │                │          │                     │                     │               │ formatting for non-NUL-terminated buffers                    │
-│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-39979                   │
-│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2026-40164 │          │                     │                     │               │ jq: jq: Denial of Service via crafted JSON object causing    │
-│                             │                │          │                     │                     │               │ hash collisions...                                           │
-│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-40164                   │
-│                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2026-32316 │ MEDIUM   │                     │                     │               │ jq: jq: Denial of Service or potential arbitrary code        │
+│ jq                          │ CVE-2026-32316 │ MEDIUM   │                     │ 1.6-21.el9          │               │ jq: jq: Denial of Service or potential arbitrary code        │
 │                             │                │          │                     │                     │               │ execution due to...                                          │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-32316                   │
 │                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -369,6 +353,26 @@ Total: 235 (UNKNOWN: 0, LOW: 96, MEDIUM: 133, HIGH: 6, CRITICAL: 0)
 │                             │ CVE-2026-39956 │          │                     │                     │               │ jq: missing runtime type checks for _strindices lead to      │
 │                             │                │          │                     │                     │               │ crash and limited...                                         │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-39956                   │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-40612 │          │                     │                     │               │ jq is a command-line JSON processor. In 1.8.1 and earlier,   │
+│                             │                │          │                     │                     │               │ jv_contains ......                                           │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-40612                   │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-41257 │          │                     │                     │               │ jq is a command-line JSON processor. In 1.8.1 and earlier,   │
+│                             │                │          │                     │                     │               │ the jq...                                                    │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-41257                   │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-43894 │          │                     │                     │               │ jq: jq: Arbitrary Code Execution or Denial of Service via    │
+│                             │                │          │                     │                     │               │ Signed Integer...                                            │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-43894                   │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-43896 │          │                     │                     │               │ jq is a command-line JSON processor. In 1.8.1 and earlier,   │
+│                             │                │          │                     │                     │               │ unbounded r...                                               │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-43896                   │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-44777 │          │                     │                     │               │ jq is a command-line JSON processor. In 1.8.2rc1 and         │
+│                             │                │          │                     │                     │               │ earlier, the ordi...                                         │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-44777                   │
 │                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-9403  │ LOW      │                     │                     │               │ jq: assertion failure in run_jq_tests() of the file          │
 │                             │                │          │                     │                     │               │ jq_test.c                                                    │
@@ -425,7 +429,7 @@ Total: 235 (UNKNOWN: 0, LOW: 96, MEDIUM: 133, HIGH: 6, CRITICAL: 0)
 │                             │                │          │                     │                     │               │ devices                                                      │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-27456                   │
 ├─────────────────────────────┼────────────────┤          │                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ libcurl-minimal             │ CVE-2025-13034 │          │                     │ 7.76.1-41.el9       │               │ curl: Public key pinning bypass via QUIC and GnuTLS allows   │
+│ libcurl-minimal             │ CVE-2025-13034 │          │                     │ 7.76.1-43.el9       │               │ curl: Public key pinning bypass via QUIC and GnuTLS allows   │
 │                             │                │          │                     │                     │               │ server impersonation...                                      │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-13034                   │
 │                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -935,7 +939,7 @@ Total: 235 (UNKNOWN: 0, LOW: 96, MEDIUM: 133, HIGH: 6, CRITICAL: 0)
 
 usr/local/bin/aci-containers-host-agent (gobinary)
 ==================================================
-Total: 14 (UNKNOWN: 8, LOW: 0, MEDIUM: 3, HIGH: 3, CRITICAL: 0)
+Total: 14 (UNKNOWN: 0, LOW: 0, MEDIUM: 6, HIGH: 8, CRITICAL: 0)
 
 ┌─────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬──────────────────────────────────────────────────────────────┐
 │ Library │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                            Title                             │
@@ -951,20 +955,8 @@ Total: 14 (UNKNOWN: 8, LOW: 0, MEDIUM: 3, HIGH: 3, CRITICAL: 0)
 │         │ CVE-2026-32283 │          │        │                   │                 │ crypto/tls: golang: Go crypto/tls: Denial of Service via     │
 │         │                │          │        │                   │                 │ multiple TLS 1.3 key...                                      │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32283                   │
-│         ├────────────────┼──────────┤        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-32282 │ MEDIUM   │        │                   │                 │ golang: internal/syscall/unix: Root.Chmod can follow         │
-│         │                │          │        │                   │                 │ symlinks out of the root                                     │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32282                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-32288 │          │        │                   │                 │ archive/tar: golang: Go's archive/tar package: Denial of     │
-│         │                │          │        │                   │                 │ Service via maliciously-crafted archive                      │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32288                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-32289 │          │        │                   │                 │ html/template: golang: html/template: Cross-Site Scripting   │
-│         │                │          │        │                   │                 │ (XSS) via improper context and brace depth...                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32289                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33811 │ UNKNOWN  │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33811 │          │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
 │         │                │          │        │                   │                 │ long CNAME...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
@@ -976,7 +968,27 @@ Total: 14 (UNKNOWN: 8, LOW: 0, MEDIUM: 3, HIGH: 3, CRITICAL: 0)
 │         │                │          │        │                   │                 │ and Parse ...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39823 │          │        │                   │                 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
+│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
+│         │                │          │        │                   │                 │ Windows in...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
+│         │                │          │        │                   │                 │ when parsing ...                                             │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
+│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-32282 │ MEDIUM   │        │                   │ 1.25.9, 1.26.2  │ golang: internal/syscall/unix: Root.Chmod can follow         │
+│         │                │          │        │                   │                 │ symlinks out of the root                                     │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32282                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-32288 │          │        │                   │                 │ archive/tar: golang: Go's archive/tar package: Denial of     │
+│         │                │          │        │                   │                 │ Service via maliciously-crafted archive                      │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32288                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-32289 │          │        │                   │                 │ html/template: golang: html/template: Cross-Site Scripting   │
+│         │                │          │        │                   │                 │ (XSS) via improper context and brace depth...                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32289                   │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39823 │          │        │                   │ 1.25.10, 1.26.3 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
 │         │                │          │        │                   │                 │ correctly ......                                             │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39823                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
@@ -987,19 +999,11 @@ Total: 14 (UNKNOWN: 8, LOW: 0, MEDIUM: 3, HIGH: 3, CRITICAL: 0)
 │         │ CVE-2026-39826 │          │        │                   │                 │ If a trusted template author were to write a <script> tag    │
 │         │                │          │        │                   │                 │ containing...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39826                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
-│         │                │          │        │                   │                 │ Windows in...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
-│         │                │          │        │                   │                 │ when parsing ...                                             │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
 └─────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴──────────────────────────────────────────────────────────────┘
 
 usr/local/bin/netop-cni (gobinary)
 ==================================
-Total: 14 (UNKNOWN: 8, LOW: 0, MEDIUM: 3, HIGH: 3, CRITICAL: 0)
+Total: 14 (UNKNOWN: 0, LOW: 0, MEDIUM: 6, HIGH: 8, CRITICAL: 0)
 
 ┌─────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬──────────────────────────────────────────────────────────────┐
 │ Library │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                            Title                             │
@@ -1015,20 +1019,8 @@ Total: 14 (UNKNOWN: 8, LOW: 0, MEDIUM: 3, HIGH: 3, CRITICAL: 0)
 │         │ CVE-2026-32283 │          │        │                   │                 │ crypto/tls: golang: Go crypto/tls: Denial of Service via     │
 │         │                │          │        │                   │                 │ multiple TLS 1.3 key...                                      │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32283                   │
-│         ├────────────────┼──────────┤        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-32282 │ MEDIUM   │        │                   │                 │ golang: internal/syscall/unix: Root.Chmod can follow         │
-│         │                │          │        │                   │                 │ symlinks out of the root                                     │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32282                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-32288 │          │        │                   │                 │ archive/tar: golang: Go's archive/tar package: Denial of     │
-│         │                │          │        │                   │                 │ Service via maliciously-crafted archive                      │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32288                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-32289 │          │        │                   │                 │ html/template: golang: html/template: Cross-Site Scripting   │
-│         │                │          │        │                   │                 │ (XSS) via improper context and brace depth...                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32289                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33811 │ UNKNOWN  │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33811 │          │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
 │         │                │          │        │                   │                 │ long CNAME...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
@@ -1040,7 +1032,27 @@ Total: 14 (UNKNOWN: 8, LOW: 0, MEDIUM: 3, HIGH: 3, CRITICAL: 0)
 │         │                │          │        │                   │                 │ and Parse ...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39823 │          │        │                   │                 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
+│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
+│         │                │          │        │                   │                 │ Windows in...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
+│         │                │          │        │                   │                 │ when parsing ...                                             │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
+│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-32282 │ MEDIUM   │        │                   │ 1.25.9, 1.26.2  │ golang: internal/syscall/unix: Root.Chmod can follow         │
+│         │                │          │        │                   │                 │ symlinks out of the root                                     │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32282                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-32288 │          │        │                   │                 │ archive/tar: golang: Go's archive/tar package: Denial of     │
+│         │                │          │        │                   │                 │ Service via maliciously-crafted archive                      │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32288                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-32289 │          │        │                   │                 │ html/template: golang: html/template: Cross-Site Scripting   │
+│         │                │          │        │                   │                 │ (XSS) via improper context and brace depth...                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32289                   │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39823 │          │        │                   │ 1.25.10, 1.26.3 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
 │         │                │          │        │                   │                 │ correctly ......                                             │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39823                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
@@ -1051,19 +1063,11 @@ Total: 14 (UNKNOWN: 8, LOW: 0, MEDIUM: 3, HIGH: 3, CRITICAL: 0)
 │         │ CVE-2026-39826 │          │        │                   │                 │ If a trusted template author were to write a <script> tag    │
 │         │                │          │        │                   │                 │ containing...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39826                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
-│         │                │          │        │                   │                 │ Windows in...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
-│         │                │          │        │                   │                 │ when parsing ...                                             │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
 └─────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴──────────────────────────────────────────────────────────────┘
 
 usr/local/bin/opflex-agent-cni (gobinary)
 =========================================
-Total: 14 (UNKNOWN: 8, LOW: 0, MEDIUM: 3, HIGH: 3, CRITICAL: 0)
+Total: 14 (UNKNOWN: 0, LOW: 0, MEDIUM: 6, HIGH: 8, CRITICAL: 0)
 
 ┌─────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬──────────────────────────────────────────────────────────────┐
 │ Library │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                            Title                             │
@@ -1079,20 +1083,8 @@ Total: 14 (UNKNOWN: 8, LOW: 0, MEDIUM: 3, HIGH: 3, CRITICAL: 0)
 │         │ CVE-2026-32283 │          │        │                   │                 │ crypto/tls: golang: Go crypto/tls: Denial of Service via     │
 │         │                │          │        │                   │                 │ multiple TLS 1.3 key...                                      │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32283                   │
-│         ├────────────────┼──────────┤        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-32282 │ MEDIUM   │        │                   │                 │ golang: internal/syscall/unix: Root.Chmod can follow         │
-│         │                │          │        │                   │                 │ symlinks out of the root                                     │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32282                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-32288 │          │        │                   │                 │ archive/tar: golang: Go's archive/tar package: Denial of     │
-│         │                │          │        │                   │                 │ Service via maliciously-crafted archive                      │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32288                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-32289 │          │        │                   │                 │ html/template: golang: html/template: Cross-Site Scripting   │
-│         │                │          │        │                   │                 │ (XSS) via improper context and brace depth...                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32289                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33811 │ UNKNOWN  │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33811 │          │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
 │         │                │          │        │                   │                 │ long CNAME...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
@@ -1104,7 +1096,27 @@ Total: 14 (UNKNOWN: 8, LOW: 0, MEDIUM: 3, HIGH: 3, CRITICAL: 0)
 │         │                │          │        │                   │                 │ and Parse ...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39823 │          │        │                   │                 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
+│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
+│         │                │          │        │                   │                 │ Windows in...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
+│         │                │          │        │                   │                 │ when parsing ...                                             │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
+│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-32282 │ MEDIUM   │        │                   │ 1.25.9, 1.26.2  │ golang: internal/syscall/unix: Root.Chmod can follow         │
+│         │                │          │        │                   │                 │ symlinks out of the root                                     │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32282                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-32288 │          │        │                   │                 │ archive/tar: golang: Go's archive/tar package: Denial of     │
+│         │                │          │        │                   │                 │ Service via maliciously-crafted archive                      │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32288                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-32289 │          │        │                   │                 │ html/template: golang: html/template: Cross-Site Scripting   │
+│         │                │          │        │                   │                 │ (XSS) via improper context and brace depth...                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32289                   │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39823 │          │        │                   │ 1.25.10, 1.26.3 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
 │         │                │          │        │                   │                 │ correctly ......                                             │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39823                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
@@ -1115,12 +1127,4 @@ Total: 14 (UNKNOWN: 8, LOW: 0, MEDIUM: 3, HIGH: 3, CRITICAL: 0)
 │         │ CVE-2026-39826 │          │        │                   │                 │ If a trusted template author were to write a <script> tag    │
 │         │                │          │        │                   │                 │ containing...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39826                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
-│         │                │          │        │                   │                 │ Windows in...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
-│         │                │          │        │                   │                 │ when parsing ...                                             │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
 └─────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴──────────────────────────────────────────────────────────────┘
