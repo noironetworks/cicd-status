@@ -5,22 +5,23 @@ urllib3     1.26.5     1.26.17   python  GHSA-v845-jxx5-vc9f  High      0.9% (76
 idna        2.10       3.7       python  GHSA-jjg7-2v4v-x38h  Medium    0.9% (75th)    0.5    
 setuptools  53.0.0     65.5.1    python  GHSA-r9hx-vwmv-q579  High      0.5% (66th)    0.4    
 setuptools  53.0.0     78.1.1    python  GHSA-5rjg-fvgr-3xxf  High      0.5% (65th)    0.4    
-urllib3     1.26.5     1.26.19   python  GHSA-34jh-p97f-mpxf  Medium    0.3% (49th)    0.1    
-requests    2.25.1     2.32.4    python  GHSA-9hjg-9r4m-mvj7  Medium    0.2% (42nd)    0.1    
+requests    2.25.1     2.32.4    python  GHSA-9hjg-9r4m-mvj7  Medium    0.2% (43rd)    0.1    
+urllib3     1.26.5     1.26.19   python  GHSA-34jh-p97f-mpxf  Medium    0.2% (43rd)    0.1    
 urllib3     1.26.5     2.5.0     python  GHSA-pq67-6m6q-mj2v  Medium    < 0.1% (23rd)  < 0.1  
 urllib3     1.26.5     1.26.18   python  GHSA-g4mx-q9vg-27p4  Medium    < 0.1% (17th)  < 0.1  
 urllib3     1.26.5     2.6.3     python  GHSA-38jv-5279-wg99  High      < 0.1% (9th)   < 0.1  
 requests    2.25.1     2.32.0    python  GHSA-9wx4-h78v-vm56  Medium    < 0.1% (14th)  < 0.1  
 urllib3     1.26.5     2.6.0     python  GHSA-gm62-xv2j-4w53  High      < 0.1% (3rd)   < 0.1  
 urllib3     1.26.5     2.6.0     python  GHSA-2xpw-w6gg-jr37  High      < 0.1% (2nd)   < 0.1  
-requests    2.25.1     2.33.0    python  GHSA-gc5v-m9x4-r6x2  Medium    < 0.1% (0th)   < 0.1
+requests    2.25.1     2.33.0    python  GHSA-gc5v-m9x4-r6x2  Medium    < 0.1% (0th)   < 0.1  
+urllib3     1.26.5     2.7.0     python  GHSA-qccp-gfcp-xxvc  High      N/A            N/A
 
 Report Summary
 
 ┌────────────────────────────────────────────────────────┬──────────┬─────────────────┬─────────┐
 │                         Target                         │   Type   │ Vulnerabilities │ Secrets │
 ├────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
-│ quay.io/noiro/cnideploy:6.1.2.1.81c2369.z (redhat 9.7) │  redhat  │       367       │    -    │
+│ quay.io/noiro/cnideploy:6.1.2.1.81c2369.z (redhat 9.7) │  redhat  │       365       │    -    │
 ├────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
 │ opt/cni/bin/bandwidth                                  │ gobinary │       17        │    -    │
 ├────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
@@ -74,7 +75,7 @@ To disable this notice, set the TRIVY_DISABLE_VEX_NOTICE environment variable.
 
 quay.io/noiro/cnideploy:6.1.2.1.81c2369.z (redhat 9.7)
 ======================================================
-Total: 367 (UNKNOWN: 0, LOW: 230, MEDIUM: 132, HIGH: 5, CRITICAL: 0)
+Total: 365 (UNKNOWN: 0, LOW: 230, MEDIUM: 130, HIGH: 5, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬───────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │   Installed Version   │ Fixed Version │                            Title                             │
@@ -368,16 +369,8 @@ Total: 367 (UNKNOWN: 0, LOW: 230, MEDIUM: 132, HIGH: 5, CRITICAL: 0)
 │                             │ CVE-2025-69652 │          │                     │                       │               │ binutils: abort in readelf via crafted ELF binary with       │
 │                             │                │          │                     │                       │               │ malformed DWARF abbrev...                                    │
 │                             │                │          │                     │                       │               │ https://avd.aquasec.com/nvd/cve-2025-69652                   │
-├─────────────────────────────┼────────────────┼──────────┼─────────────────────┼───────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ glib2                       │ CVE-2025-14087 │ MEDIUM   │ will_not_fix        │ 2.68.4-18.el9_7.1     │               │ glib: GLib: Buffer underflow in GVariant parser leads to     │
-│                             │                │          │                     │                       │               │ heap corruption                                              │
-│                             │                │          │                     │                       │               │ https://avd.aquasec.com/nvd/cve-2025-14087                   │
-│                             ├────────────────┤          ├─────────────────────┤                       ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2025-14512 │          │ affected            │                       │               │ glib: Integer Overflow in GLib GIO Attribute Escaping Causes │
-│                             │                │          │                     │                       │               │ Heap Buffer Overflow...                                      │
-│                             │                │          │                     │                       │               │ https://avd.aquasec.com/nvd/cve-2025-14512                   │
-│                             ├────────────────┤          │                     │                       ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2026-1484  │          │                     │                       │               │ Glib: Integer Overflow Leading to Buffer Underflow and       │
+├─────────────────────────────┼────────────────┼──────────┤                     ├───────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ glib2                       │ CVE-2026-1484  │ MEDIUM   │                     │ 2.68.4-18.el9_7.2     │               │ Glib: Integer Overflow Leading to Buffer Underflow and       │
 │                             │                │          │                     │                       │               │ Out-of-Bounds Write in GLib...                               │
 │                             │                │          │                     │                       │               │ https://avd.aquasec.com/nvd/cve-2026-1484                    │
 │                             ├────────────────┤          │                     │                       ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -1419,7 +1412,7 @@ Total: 367 (UNKNOWN: 0, LOW: 230, MEDIUM: 132, HIGH: 5, CRITICAL: 0)
 
 opt/cni/bin/bandwidth (gobinary)
 ================================
-Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
+Total: 17 (UNKNOWN: 0, LOW: 1, MEDIUM: 7, HIGH: 9, CRITICAL: 0)
 
 ┌─────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬──────────────────────────────────────────────────────────────┐
 │ Library │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                            Title                             │
@@ -1438,6 +1431,26 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32283 │          │        │                   │                 │ crypto/tls: golang: Go crypto/tls: Denial of Service via     │
 │         │                │          │        │                   │                 │ multiple TLS 1.3 key...                                      │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32283                   │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33811 │          │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
+│         │                │          │        │                   │                 │ long CNAME...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
+│         │                │          │        │                   │                 │ an infini ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
+│         │                │          │        │                   │                 │ and Parse ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
+│         │                │          │        │                   │                 │ Windows in...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
+│         │                │          │        │                   │                 │ when parsing ...                                             │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
 │         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
 │         │ CVE-2026-27142 │ MEDIUM   │        │                   │ 1.25.8, 1.26.1  │ html/template: URLs in meta content attribute actions are    │
 │         │                │          │        │                   │                 │ not escaped in html/template...                              │
@@ -1454,23 +1467,8 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32289 │          │        │                   │                 │ html/template: golang: html/template: Cross-Site Scripting   │
 │         │                │          │        │                   │                 │ (XSS) via improper context and brace depth...                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32289                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33811 │ UNKNOWN  │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
-│         │                │          │        │                   │                 │ long CNAME...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
-│         │                │          │        │                   │                 │ an infini ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
-│         │                │          │        │                   │                 │ and Parse ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39823 │          │        │                   │                 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39823 │          │        │                   │ 1.25.10, 1.26.3 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
 │         │                │          │        │                   │                 │ correctly ......                                             │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39823                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
@@ -1481,19 +1479,14 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-39826 │          │        │                   │                 │ If a trusted template author were to write a <script> tag    │
 │         │                │          │        │                   │                 │ containing...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39826                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
-│         │                │          │        │                   │                 │ Windows in...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
-│         │                │          │        │                   │                 │ when parsing ...                                             │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
+│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
 └─────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/bridge (gobinary)
 =============================
-Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
+Total: 17 (UNKNOWN: 0, LOW: 1, MEDIUM: 7, HIGH: 9, CRITICAL: 0)
 
 ┌─────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬──────────────────────────────────────────────────────────────┐
 │ Library │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                            Title                             │
@@ -1512,6 +1505,26 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32283 │          │        │                   │                 │ crypto/tls: golang: Go crypto/tls: Denial of Service via     │
 │         │                │          │        │                   │                 │ multiple TLS 1.3 key...                                      │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32283                   │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33811 │          │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
+│         │                │          │        │                   │                 │ long CNAME...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
+│         │                │          │        │                   │                 │ an infini ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
+│         │                │          │        │                   │                 │ and Parse ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
+│         │                │          │        │                   │                 │ Windows in...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
+│         │                │          │        │                   │                 │ when parsing ...                                             │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
 │         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
 │         │ CVE-2026-27142 │ MEDIUM   │        │                   │ 1.25.8, 1.26.1  │ html/template: URLs in meta content attribute actions are    │
 │         │                │          │        │                   │                 │ not escaped in html/template...                              │
@@ -1528,23 +1541,8 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32289 │          │        │                   │                 │ html/template: golang: html/template: Cross-Site Scripting   │
 │         │                │          │        │                   │                 │ (XSS) via improper context and brace depth...                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32289                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33811 │ UNKNOWN  │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
-│         │                │          │        │                   │                 │ long CNAME...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
-│         │                │          │        │                   │                 │ an infini ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
-│         │                │          │        │                   │                 │ and Parse ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39823 │          │        │                   │                 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39823 │          │        │                   │ 1.25.10, 1.26.3 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
 │         │                │          │        │                   │                 │ correctly ......                                             │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39823                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
@@ -1555,19 +1553,14 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-39826 │          │        │                   │                 │ If a trusted template author were to write a <script> tag    │
 │         │                │          │        │                   │                 │ containing...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39826                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
-│         │                │          │        │                   │                 │ Windows in...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
-│         │                │          │        │                   │                 │ when parsing ...                                             │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
+│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
 └─────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/dhcp (gobinary)
 ===========================
-Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
+Total: 17 (UNKNOWN: 0, LOW: 1, MEDIUM: 7, HIGH: 9, CRITICAL: 0)
 
 ┌─────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬──────────────────────────────────────────────────────────────┐
 │ Library │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                            Title                             │
@@ -1586,6 +1579,26 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32283 │          │        │                   │                 │ crypto/tls: golang: Go crypto/tls: Denial of Service via     │
 │         │                │          │        │                   │                 │ multiple TLS 1.3 key...                                      │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32283                   │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33811 │          │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
+│         │                │          │        │                   │                 │ long CNAME...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
+│         │                │          │        │                   │                 │ an infini ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
+│         │                │          │        │                   │                 │ and Parse ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
+│         │                │          │        │                   │                 │ Windows in...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
+│         │                │          │        │                   │                 │ when parsing ...                                             │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
 │         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
 │         │ CVE-2026-27142 │ MEDIUM   │        │                   │ 1.25.8, 1.26.1  │ html/template: URLs in meta content attribute actions are    │
 │         │                │          │        │                   │                 │ not escaped in html/template...                              │
@@ -1602,23 +1615,8 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32289 │          │        │                   │                 │ html/template: golang: html/template: Cross-Site Scripting   │
 │         │                │          │        │                   │                 │ (XSS) via improper context and brace depth...                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32289                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33811 │ UNKNOWN  │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
-│         │                │          │        │                   │                 │ long CNAME...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
-│         │                │          │        │                   │                 │ an infini ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
-│         │                │          │        │                   │                 │ and Parse ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39823 │          │        │                   │                 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39823 │          │        │                   │ 1.25.10, 1.26.3 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
 │         │                │          │        │                   │                 │ correctly ......                                             │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39823                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
@@ -1629,19 +1627,14 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-39826 │          │        │                   │                 │ If a trusted template author were to write a <script> tag    │
 │         │                │          │        │                   │                 │ containing...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39826                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
-│         │                │          │        │                   │                 │ Windows in...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
-│         │                │          │        │                   │                 │ when parsing ...                                             │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
+│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
 └─────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/dummy (gobinary)
 ============================
-Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
+Total: 17 (UNKNOWN: 0, LOW: 1, MEDIUM: 7, HIGH: 9, CRITICAL: 0)
 
 ┌─────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬──────────────────────────────────────────────────────────────┐
 │ Library │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                            Title                             │
@@ -1660,6 +1653,26 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32283 │          │        │                   │                 │ crypto/tls: golang: Go crypto/tls: Denial of Service via     │
 │         │                │          │        │                   │                 │ multiple TLS 1.3 key...                                      │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32283                   │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33811 │          │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
+│         │                │          │        │                   │                 │ long CNAME...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
+│         │                │          │        │                   │                 │ an infini ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
+│         │                │          │        │                   │                 │ and Parse ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
+│         │                │          │        │                   │                 │ Windows in...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
+│         │                │          │        │                   │                 │ when parsing ...                                             │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
 │         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
 │         │ CVE-2026-27142 │ MEDIUM   │        │                   │ 1.25.8, 1.26.1  │ html/template: URLs in meta content attribute actions are    │
 │         │                │          │        │                   │                 │ not escaped in html/template...                              │
@@ -1676,23 +1689,8 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32289 │          │        │                   │                 │ html/template: golang: html/template: Cross-Site Scripting   │
 │         │                │          │        │                   │                 │ (XSS) via improper context and brace depth...                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32289                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33811 │ UNKNOWN  │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
-│         │                │          │        │                   │                 │ long CNAME...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
-│         │                │          │        │                   │                 │ an infini ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
-│         │                │          │        │                   │                 │ and Parse ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39823 │          │        │                   │                 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39823 │          │        │                   │ 1.25.10, 1.26.3 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
 │         │                │          │        │                   │                 │ correctly ......                                             │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39823                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
@@ -1703,19 +1701,14 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-39826 │          │        │                   │                 │ If a trusted template author were to write a <script> tag    │
 │         │                │          │        │                   │                 │ containing...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39826                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
-│         │                │          │        │                   │                 │ Windows in...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
-│         │                │          │        │                   │                 │ when parsing ...                                             │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
+│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
 └─────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/firewall (gobinary)
 ===============================
-Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
+Total: 17 (UNKNOWN: 0, LOW: 1, MEDIUM: 7, HIGH: 9, CRITICAL: 0)
 
 ┌─────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬──────────────────────────────────────────────────────────────┐
 │ Library │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                            Title                             │
@@ -1734,6 +1727,26 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32283 │          │        │                   │                 │ crypto/tls: golang: Go crypto/tls: Denial of Service via     │
 │         │                │          │        │                   │                 │ multiple TLS 1.3 key...                                      │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32283                   │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33811 │          │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
+│         │                │          │        │                   │                 │ long CNAME...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
+│         │                │          │        │                   │                 │ an infini ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
+│         │                │          │        │                   │                 │ and Parse ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
+│         │                │          │        │                   │                 │ Windows in...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
+│         │                │          │        │                   │                 │ when parsing ...                                             │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
 │         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
 │         │ CVE-2026-27142 │ MEDIUM   │        │                   │ 1.25.8, 1.26.1  │ html/template: URLs in meta content attribute actions are    │
 │         │                │          │        │                   │                 │ not escaped in html/template...                              │
@@ -1750,23 +1763,8 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32289 │          │        │                   │                 │ html/template: golang: html/template: Cross-Site Scripting   │
 │         │                │          │        │                   │                 │ (XSS) via improper context and brace depth...                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32289                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33811 │ UNKNOWN  │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
-│         │                │          │        │                   │                 │ long CNAME...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
-│         │                │          │        │                   │                 │ an infini ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
-│         │                │          │        │                   │                 │ and Parse ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39823 │          │        │                   │                 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39823 │          │        │                   │ 1.25.10, 1.26.3 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
 │         │                │          │        │                   │                 │ correctly ......                                             │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39823                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
@@ -1777,19 +1775,14 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-39826 │          │        │                   │                 │ If a trusted template author were to write a <script> tag    │
 │         │                │          │        │                   │                 │ containing...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39826                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
-│         │                │          │        │                   │                 │ Windows in...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
-│         │                │          │        │                   │                 │ when parsing ...                                             │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
+│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
 └─────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/host-device (gobinary)
 ==================================
-Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
+Total: 17 (UNKNOWN: 0, LOW: 1, MEDIUM: 7, HIGH: 9, CRITICAL: 0)
 
 ┌─────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬──────────────────────────────────────────────────────────────┐
 │ Library │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                            Title                             │
@@ -1808,6 +1801,26 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32283 │          │        │                   │                 │ crypto/tls: golang: Go crypto/tls: Denial of Service via     │
 │         │                │          │        │                   │                 │ multiple TLS 1.3 key...                                      │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32283                   │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33811 │          │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
+│         │                │          │        │                   │                 │ long CNAME...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
+│         │                │          │        │                   │                 │ an infini ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
+│         │                │          │        │                   │                 │ and Parse ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
+│         │                │          │        │                   │                 │ Windows in...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
+│         │                │          │        │                   │                 │ when parsing ...                                             │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
 │         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
 │         │ CVE-2026-27142 │ MEDIUM   │        │                   │ 1.25.8, 1.26.1  │ html/template: URLs in meta content attribute actions are    │
 │         │                │          │        │                   │                 │ not escaped in html/template...                              │
@@ -1824,23 +1837,8 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32289 │          │        │                   │                 │ html/template: golang: html/template: Cross-Site Scripting   │
 │         │                │          │        │                   │                 │ (XSS) via improper context and brace depth...                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32289                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33811 │ UNKNOWN  │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
-│         │                │          │        │                   │                 │ long CNAME...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
-│         │                │          │        │                   │                 │ an infini ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
-│         │                │          │        │                   │                 │ and Parse ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39823 │          │        │                   │                 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39823 │          │        │                   │ 1.25.10, 1.26.3 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
 │         │                │          │        │                   │                 │ correctly ......                                             │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39823                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
@@ -1851,19 +1849,14 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-39826 │          │        │                   │                 │ If a trusted template author were to write a <script> tag    │
 │         │                │          │        │                   │                 │ containing...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39826                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
-│         │                │          │        │                   │                 │ Windows in...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
-│         │                │          │        │                   │                 │ when parsing ...                                             │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
+│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
 └─────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/host-local (gobinary)
 =================================
-Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
+Total: 17 (UNKNOWN: 0, LOW: 1, MEDIUM: 7, HIGH: 9, CRITICAL: 0)
 
 ┌─────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬──────────────────────────────────────────────────────────────┐
 │ Library │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                            Title                             │
@@ -1882,6 +1875,26 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32283 │          │        │                   │                 │ crypto/tls: golang: Go crypto/tls: Denial of Service via     │
 │         │                │          │        │                   │                 │ multiple TLS 1.3 key...                                      │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32283                   │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33811 │          │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
+│         │                │          │        │                   │                 │ long CNAME...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
+│         │                │          │        │                   │                 │ an infini ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
+│         │                │          │        │                   │                 │ and Parse ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
+│         │                │          │        │                   │                 │ Windows in...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
+│         │                │          │        │                   │                 │ when parsing ...                                             │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
 │         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
 │         │ CVE-2026-27142 │ MEDIUM   │        │                   │ 1.25.8, 1.26.1  │ html/template: URLs in meta content attribute actions are    │
 │         │                │          │        │                   │                 │ not escaped in html/template...                              │
@@ -1898,23 +1911,8 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32289 │          │        │                   │                 │ html/template: golang: html/template: Cross-Site Scripting   │
 │         │                │          │        │                   │                 │ (XSS) via improper context and brace depth...                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32289                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33811 │ UNKNOWN  │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
-│         │                │          │        │                   │                 │ long CNAME...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
-│         │                │          │        │                   │                 │ an infini ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
-│         │                │          │        │                   │                 │ and Parse ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39823 │          │        │                   │                 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39823 │          │        │                   │ 1.25.10, 1.26.3 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
 │         │                │          │        │                   │                 │ correctly ......                                             │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39823                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
@@ -1925,19 +1923,14 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-39826 │          │        │                   │                 │ If a trusted template author were to write a <script> tag    │
 │         │                │          │        │                   │                 │ containing...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39826                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
-│         │                │          │        │                   │                 │ Windows in...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
-│         │                │          │        │                   │                 │ when parsing ...                                             │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
+│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
 └─────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/ipvlan (gobinary)
 =============================
-Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
+Total: 17 (UNKNOWN: 0, LOW: 1, MEDIUM: 7, HIGH: 9, CRITICAL: 0)
 
 ┌─────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬──────────────────────────────────────────────────────────────┐
 │ Library │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                            Title                             │
@@ -1956,6 +1949,26 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32283 │          │        │                   │                 │ crypto/tls: golang: Go crypto/tls: Denial of Service via     │
 │         │                │          │        │                   │                 │ multiple TLS 1.3 key...                                      │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32283                   │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33811 │          │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
+│         │                │          │        │                   │                 │ long CNAME...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
+│         │                │          │        │                   │                 │ an infini ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
+│         │                │          │        │                   │                 │ and Parse ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
+│         │                │          │        │                   │                 │ Windows in...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
+│         │                │          │        │                   │                 │ when parsing ...                                             │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
 │         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
 │         │ CVE-2026-27142 │ MEDIUM   │        │                   │ 1.25.8, 1.26.1  │ html/template: URLs in meta content attribute actions are    │
 │         │                │          │        │                   │                 │ not escaped in html/template...                              │
@@ -1972,23 +1985,8 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32289 │          │        │                   │                 │ html/template: golang: html/template: Cross-Site Scripting   │
 │         │                │          │        │                   │                 │ (XSS) via improper context and brace depth...                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32289                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33811 │ UNKNOWN  │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
-│         │                │          │        │                   │                 │ long CNAME...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
-│         │                │          │        │                   │                 │ an infini ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
-│         │                │          │        │                   │                 │ and Parse ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39823 │          │        │                   │                 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39823 │          │        │                   │ 1.25.10, 1.26.3 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
 │         │                │          │        │                   │                 │ correctly ......                                             │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39823                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
@@ -1999,19 +1997,14 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-39826 │          │        │                   │                 │ If a trusted template author were to write a <script> tag    │
 │         │                │          │        │                   │                 │ containing...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39826                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
-│         │                │          │        │                   │                 │ Windows in...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
-│         │                │          │        │                   │                 │ when parsing ...                                             │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
+│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
 └─────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/loopback (gobinary)
 ===============================
-Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
+Total: 17 (UNKNOWN: 0, LOW: 1, MEDIUM: 7, HIGH: 9, CRITICAL: 0)
 
 ┌─────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬──────────────────────────────────────────────────────────────┐
 │ Library │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                            Title                             │
@@ -2030,6 +2023,26 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32283 │          │        │                   │                 │ crypto/tls: golang: Go crypto/tls: Denial of Service via     │
 │         │                │          │        │                   │                 │ multiple TLS 1.3 key...                                      │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32283                   │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33811 │          │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
+│         │                │          │        │                   │                 │ long CNAME...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
+│         │                │          │        │                   │                 │ an infini ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
+│         │                │          │        │                   │                 │ and Parse ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
+│         │                │          │        │                   │                 │ Windows in...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
+│         │                │          │        │                   │                 │ when parsing ...                                             │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
 │         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
 │         │ CVE-2026-27142 │ MEDIUM   │        │                   │ 1.25.8, 1.26.1  │ html/template: URLs in meta content attribute actions are    │
 │         │                │          │        │                   │                 │ not escaped in html/template...                              │
@@ -2046,23 +2059,8 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32289 │          │        │                   │                 │ html/template: golang: html/template: Cross-Site Scripting   │
 │         │                │          │        │                   │                 │ (XSS) via improper context and brace depth...                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32289                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33811 │ UNKNOWN  │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
-│         │                │          │        │                   │                 │ long CNAME...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
-│         │                │          │        │                   │                 │ an infini ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
-│         │                │          │        │                   │                 │ and Parse ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39823 │          │        │                   │                 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39823 │          │        │                   │ 1.25.10, 1.26.3 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
 │         │                │          │        │                   │                 │ correctly ......                                             │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39823                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
@@ -2073,19 +2071,14 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-39826 │          │        │                   │                 │ If a trusted template author were to write a <script> tag    │
 │         │                │          │        │                   │                 │ containing...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39826                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
-│         │                │          │        │                   │                 │ Windows in...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
-│         │                │          │        │                   │                 │ when parsing ...                                             │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
+│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
 └─────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/macvlan (gobinary)
 ==============================
-Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
+Total: 17 (UNKNOWN: 0, LOW: 1, MEDIUM: 7, HIGH: 9, CRITICAL: 0)
 
 ┌─────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬──────────────────────────────────────────────────────────────┐
 │ Library │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                            Title                             │
@@ -2104,6 +2097,26 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32283 │          │        │                   │                 │ crypto/tls: golang: Go crypto/tls: Denial of Service via     │
 │         │                │          │        │                   │                 │ multiple TLS 1.3 key...                                      │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32283                   │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33811 │          │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
+│         │                │          │        │                   │                 │ long CNAME...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
+│         │                │          │        │                   │                 │ an infini ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
+│         │                │          │        │                   │                 │ and Parse ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
+│         │                │          │        │                   │                 │ Windows in...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
+│         │                │          │        │                   │                 │ when parsing ...                                             │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
 │         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
 │         │ CVE-2026-27142 │ MEDIUM   │        │                   │ 1.25.8, 1.26.1  │ html/template: URLs in meta content attribute actions are    │
 │         │                │          │        │                   │                 │ not escaped in html/template...                              │
@@ -2120,23 +2133,8 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32289 │          │        │                   │                 │ html/template: golang: html/template: Cross-Site Scripting   │
 │         │                │          │        │                   │                 │ (XSS) via improper context and brace depth...                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32289                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33811 │ UNKNOWN  │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
-│         │                │          │        │                   │                 │ long CNAME...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
-│         │                │          │        │                   │                 │ an infini ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
-│         │                │          │        │                   │                 │ and Parse ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39823 │          │        │                   │                 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39823 │          │        │                   │ 1.25.10, 1.26.3 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
 │         │                │          │        │                   │                 │ correctly ......                                             │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39823                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
@@ -2147,19 +2145,14 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-39826 │          │        │                   │                 │ If a trusted template author were to write a <script> tag    │
 │         │                │          │        │                   │                 │ containing...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39826                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
-│         │                │          │        │                   │                 │ Windows in...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
-│         │                │          │        │                   │                 │ when parsing ...                                             │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
+│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
 └─────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/portmap (gobinary)
 ==============================
-Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
+Total: 17 (UNKNOWN: 0, LOW: 1, MEDIUM: 7, HIGH: 9, CRITICAL: 0)
 
 ┌─────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬──────────────────────────────────────────────────────────────┐
 │ Library │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                            Title                             │
@@ -2178,6 +2171,26 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32283 │          │        │                   │                 │ crypto/tls: golang: Go crypto/tls: Denial of Service via     │
 │         │                │          │        │                   │                 │ multiple TLS 1.3 key...                                      │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32283                   │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33811 │          │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
+│         │                │          │        │                   │                 │ long CNAME...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
+│         │                │          │        │                   │                 │ an infini ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
+│         │                │          │        │                   │                 │ and Parse ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
+│         │                │          │        │                   │                 │ Windows in...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
+│         │                │          │        │                   │                 │ when parsing ...                                             │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
 │         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
 │         │ CVE-2026-27142 │ MEDIUM   │        │                   │ 1.25.8, 1.26.1  │ html/template: URLs in meta content attribute actions are    │
 │         │                │          │        │                   │                 │ not escaped in html/template...                              │
@@ -2194,23 +2207,8 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32289 │          │        │                   │                 │ html/template: golang: html/template: Cross-Site Scripting   │
 │         │                │          │        │                   │                 │ (XSS) via improper context and brace depth...                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32289                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33811 │ UNKNOWN  │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
-│         │                │          │        │                   │                 │ long CNAME...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
-│         │                │          │        │                   │                 │ an infini ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
-│         │                │          │        │                   │                 │ and Parse ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39823 │          │        │                   │                 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39823 │          │        │                   │ 1.25.10, 1.26.3 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
 │         │                │          │        │                   │                 │ correctly ......                                             │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39823                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
@@ -2221,19 +2219,14 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-39826 │          │        │                   │                 │ If a trusted template author were to write a <script> tag    │
 │         │                │          │        │                   │                 │ containing...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39826                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
-│         │                │          │        │                   │                 │ Windows in...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
-│         │                │          │        │                   │                 │ when parsing ...                                             │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
+│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
 └─────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/ptp (gobinary)
 ==========================
-Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
+Total: 17 (UNKNOWN: 0, LOW: 1, MEDIUM: 7, HIGH: 9, CRITICAL: 0)
 
 ┌─────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬──────────────────────────────────────────────────────────────┐
 │ Library │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                            Title                             │
@@ -2252,6 +2245,26 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32283 │          │        │                   │                 │ crypto/tls: golang: Go crypto/tls: Denial of Service via     │
 │         │                │          │        │                   │                 │ multiple TLS 1.3 key...                                      │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32283                   │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33811 │          │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
+│         │                │          │        │                   │                 │ long CNAME...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
+│         │                │          │        │                   │                 │ an infini ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
+│         │                │          │        │                   │                 │ and Parse ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
+│         │                │          │        │                   │                 │ Windows in...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
+│         │                │          │        │                   │                 │ when parsing ...                                             │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
 │         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
 │         │ CVE-2026-27142 │ MEDIUM   │        │                   │ 1.25.8, 1.26.1  │ html/template: URLs in meta content attribute actions are    │
 │         │                │          │        │                   │                 │ not escaped in html/template...                              │
@@ -2268,23 +2281,8 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32289 │          │        │                   │                 │ html/template: golang: html/template: Cross-Site Scripting   │
 │         │                │          │        │                   │                 │ (XSS) via improper context and brace depth...                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32289                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33811 │ UNKNOWN  │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
-│         │                │          │        │                   │                 │ long CNAME...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
-│         │                │          │        │                   │                 │ an infini ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
-│         │                │          │        │                   │                 │ and Parse ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39823 │          │        │                   │                 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39823 │          │        │                   │ 1.25.10, 1.26.3 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
 │         │                │          │        │                   │                 │ correctly ......                                             │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39823                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
@@ -2295,19 +2293,14 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-39826 │          │        │                   │                 │ If a trusted template author were to write a <script> tag    │
 │         │                │          │        │                   │                 │ containing...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39826                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
-│         │                │          │        │                   │                 │ Windows in...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
-│         │                │          │        │                   │                 │ when parsing ...                                             │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
+│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
 └─────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/sbr (gobinary)
 ==========================
-Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
+Total: 17 (UNKNOWN: 0, LOW: 1, MEDIUM: 7, HIGH: 9, CRITICAL: 0)
 
 ┌─────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬──────────────────────────────────────────────────────────────┐
 │ Library │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                            Title                             │
@@ -2326,6 +2319,26 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32283 │          │        │                   │                 │ crypto/tls: golang: Go crypto/tls: Denial of Service via     │
 │         │                │          │        │                   │                 │ multiple TLS 1.3 key...                                      │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32283                   │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33811 │          │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
+│         │                │          │        │                   │                 │ long CNAME...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
+│         │                │          │        │                   │                 │ an infini ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
+│         │                │          │        │                   │                 │ and Parse ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
+│         │                │          │        │                   │                 │ Windows in...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
+│         │                │          │        │                   │                 │ when parsing ...                                             │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
 │         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
 │         │ CVE-2026-27142 │ MEDIUM   │        │                   │ 1.25.8, 1.26.1  │ html/template: URLs in meta content attribute actions are    │
 │         │                │          │        │                   │                 │ not escaped in html/template...                              │
@@ -2342,23 +2355,8 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32289 │          │        │                   │                 │ html/template: golang: html/template: Cross-Site Scripting   │
 │         │                │          │        │                   │                 │ (XSS) via improper context and brace depth...                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32289                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33811 │ UNKNOWN  │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
-│         │                │          │        │                   │                 │ long CNAME...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
-│         │                │          │        │                   │                 │ an infini ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
-│         │                │          │        │                   │                 │ and Parse ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39823 │          │        │                   │                 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39823 │          │        │                   │ 1.25.10, 1.26.3 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
 │         │                │          │        │                   │                 │ correctly ......                                             │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39823                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
@@ -2369,19 +2367,14 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-39826 │          │        │                   │                 │ If a trusted template author were to write a <script> tag    │
 │         │                │          │        │                   │                 │ containing...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39826                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
-│         │                │          │        │                   │                 │ Windows in...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
-│         │                │          │        │                   │                 │ when parsing ...                                             │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
+│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
 └─────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/static (gobinary)
 =============================
-Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
+Total: 17 (UNKNOWN: 0, LOW: 1, MEDIUM: 7, HIGH: 9, CRITICAL: 0)
 
 ┌─────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬──────────────────────────────────────────────────────────────┐
 │ Library │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                            Title                             │
@@ -2400,6 +2393,26 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32283 │          │        │                   │                 │ crypto/tls: golang: Go crypto/tls: Denial of Service via     │
 │         │                │          │        │                   │                 │ multiple TLS 1.3 key...                                      │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32283                   │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33811 │          │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
+│         │                │          │        │                   │                 │ long CNAME...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
+│         │                │          │        │                   │                 │ an infini ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
+│         │                │          │        │                   │                 │ and Parse ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
+│         │                │          │        │                   │                 │ Windows in...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
+│         │                │          │        │                   │                 │ when parsing ...                                             │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
 │         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
 │         │ CVE-2026-27142 │ MEDIUM   │        │                   │ 1.25.8, 1.26.1  │ html/template: URLs in meta content attribute actions are    │
 │         │                │          │        │                   │                 │ not escaped in html/template...                              │
@@ -2416,23 +2429,8 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32289 │          │        │                   │                 │ html/template: golang: html/template: Cross-Site Scripting   │
 │         │                │          │        │                   │                 │ (XSS) via improper context and brace depth...                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32289                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33811 │ UNKNOWN  │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
-│         │                │          │        │                   │                 │ long CNAME...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
-│         │                │          │        │                   │                 │ an infini ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
-│         │                │          │        │                   │                 │ and Parse ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39823 │          │        │                   │                 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39823 │          │        │                   │ 1.25.10, 1.26.3 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
 │         │                │          │        │                   │                 │ correctly ......                                             │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39823                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
@@ -2443,19 +2441,14 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-39826 │          │        │                   │                 │ If a trusted template author were to write a <script> tag    │
 │         │                │          │        │                   │                 │ containing...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39826                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
-│         │                │          │        │                   │                 │ Windows in...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
-│         │                │          │        │                   │                 │ when parsing ...                                             │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
+│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
 └─────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/tap (gobinary)
 ==========================
-Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
+Total: 17 (UNKNOWN: 0, LOW: 1, MEDIUM: 7, HIGH: 9, CRITICAL: 0)
 
 ┌─────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬──────────────────────────────────────────────────────────────┐
 │ Library │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                            Title                             │
@@ -2474,6 +2467,26 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32283 │          │        │                   │                 │ crypto/tls: golang: Go crypto/tls: Denial of Service via     │
 │         │                │          │        │                   │                 │ multiple TLS 1.3 key...                                      │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32283                   │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33811 │          │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
+│         │                │          │        │                   │                 │ long CNAME...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
+│         │                │          │        │                   │                 │ an infini ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
+│         │                │          │        │                   │                 │ and Parse ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
+│         │                │          │        │                   │                 │ Windows in...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
+│         │                │          │        │                   │                 │ when parsing ...                                             │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
 │         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
 │         │ CVE-2026-27142 │ MEDIUM   │        │                   │ 1.25.8, 1.26.1  │ html/template: URLs in meta content attribute actions are    │
 │         │                │          │        │                   │                 │ not escaped in html/template...                              │
@@ -2490,23 +2503,8 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32289 │          │        │                   │                 │ html/template: golang: html/template: Cross-Site Scripting   │
 │         │                │          │        │                   │                 │ (XSS) via improper context and brace depth...                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32289                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33811 │ UNKNOWN  │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
-│         │                │          │        │                   │                 │ long CNAME...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
-│         │                │          │        │                   │                 │ an infini ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
-│         │                │          │        │                   │                 │ and Parse ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39823 │          │        │                   │                 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39823 │          │        │                   │ 1.25.10, 1.26.3 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
 │         │                │          │        │                   │                 │ correctly ......                                             │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39823                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
@@ -2517,19 +2515,14 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-39826 │          │        │                   │                 │ If a trusted template author were to write a <script> tag    │
 │         │                │          │        │                   │                 │ containing...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39826                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
-│         │                │          │        │                   │                 │ Windows in...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
-│         │                │          │        │                   │                 │ when parsing ...                                             │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
+│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
 └─────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/tuning (gobinary)
 =============================
-Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
+Total: 17 (UNKNOWN: 0, LOW: 1, MEDIUM: 7, HIGH: 9, CRITICAL: 0)
 
 ┌─────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬──────────────────────────────────────────────────────────────┐
 │ Library │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                            Title                             │
@@ -2548,6 +2541,26 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32283 │          │        │                   │                 │ crypto/tls: golang: Go crypto/tls: Denial of Service via     │
 │         │                │          │        │                   │                 │ multiple TLS 1.3 key...                                      │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32283                   │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33811 │          │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
+│         │                │          │        │                   │                 │ long CNAME...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
+│         │                │          │        │                   │                 │ an infini ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
+│         │                │          │        │                   │                 │ and Parse ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
+│         │                │          │        │                   │                 │ Windows in...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
+│         │                │          │        │                   │                 │ when parsing ...                                             │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
 │         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
 │         │ CVE-2026-27142 │ MEDIUM   │        │                   │ 1.25.8, 1.26.1  │ html/template: URLs in meta content attribute actions are    │
 │         │                │          │        │                   │                 │ not escaped in html/template...                              │
@@ -2564,23 +2577,8 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32289 │          │        │                   │                 │ html/template: golang: html/template: Cross-Site Scripting   │
 │         │                │          │        │                   │                 │ (XSS) via improper context and brace depth...                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32289                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33811 │ UNKNOWN  │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
-│         │                │          │        │                   │                 │ long CNAME...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
-│         │                │          │        │                   │                 │ an infini ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
-│         │                │          │        │                   │                 │ and Parse ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39823 │          │        │                   │                 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39823 │          │        │                   │ 1.25.10, 1.26.3 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
 │         │                │          │        │                   │                 │ correctly ......                                             │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39823                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
@@ -2591,19 +2589,14 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-39826 │          │        │                   │                 │ If a trusted template author were to write a <script> tag    │
 │         │                │          │        │                   │                 │ containing...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39826                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
-│         │                │          │        │                   │                 │ Windows in...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
-│         │                │          │        │                   │                 │ when parsing ...                                             │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
+│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
 └─────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/vlan (gobinary)
 ===========================
-Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
+Total: 17 (UNKNOWN: 0, LOW: 1, MEDIUM: 7, HIGH: 9, CRITICAL: 0)
 
 ┌─────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬──────────────────────────────────────────────────────────────┐
 │ Library │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                            Title                             │
@@ -2622,6 +2615,26 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32283 │          │        │                   │                 │ crypto/tls: golang: Go crypto/tls: Denial of Service via     │
 │         │                │          │        │                   │                 │ multiple TLS 1.3 key...                                      │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32283                   │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33811 │          │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
+│         │                │          │        │                   │                 │ long CNAME...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
+│         │                │          │        │                   │                 │ an infini ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
+│         │                │          │        │                   │                 │ and Parse ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
+│         │                │          │        │                   │                 │ Windows in...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
+│         │                │          │        │                   │                 │ when parsing ...                                             │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
 │         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
 │         │ CVE-2026-27142 │ MEDIUM   │        │                   │ 1.25.8, 1.26.1  │ html/template: URLs in meta content attribute actions are    │
 │         │                │          │        │                   │                 │ not escaped in html/template...                              │
@@ -2638,23 +2651,8 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32289 │          │        │                   │                 │ html/template: golang: html/template: Cross-Site Scripting   │
 │         │                │          │        │                   │                 │ (XSS) via improper context and brace depth...                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32289                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33811 │ UNKNOWN  │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
-│         │                │          │        │                   │                 │ long CNAME...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
-│         │                │          │        │                   │                 │ an infini ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
-│         │                │          │        │                   │                 │ and Parse ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39823 │          │        │                   │                 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39823 │          │        │                   │ 1.25.10, 1.26.3 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
 │         │                │          │        │                   │                 │ correctly ......                                             │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39823                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
@@ -2665,19 +2663,14 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-39826 │          │        │                   │                 │ If a trusted template author were to write a <script> tag    │
 │         │                │          │        │                   │                 │ containing...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39826                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
-│         │                │          │        │                   │                 │ Windows in...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
-│         │                │          │        │                   │                 │ when parsing ...                                             │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
+│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
 └─────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/vrf (gobinary)
 ==========================
-Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
+Total: 17 (UNKNOWN: 0, LOW: 1, MEDIUM: 7, HIGH: 9, CRITICAL: 0)
 
 ┌─────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬──────────────────────────────────────────────────────────────┐
 │ Library │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                            Title                             │
@@ -2696,6 +2689,26 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32283 │          │        │                   │                 │ crypto/tls: golang: Go crypto/tls: Denial of Service via     │
 │         │                │          │        │                   │                 │ multiple TLS 1.3 key...                                      │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32283                   │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33811 │          │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
+│         │                │          │        │                   │                 │ long CNAME...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
+│         │                │          │        │                   │                 │ an infini ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
+│         │                │          │        │                   │                 │ and Parse ...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
+│         │                │          │        │                   │                 │ Windows in...                                                │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
+│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
+│         │                │          │        │                   │                 │ when parsing ...                                             │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
 │         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
 │         │ CVE-2026-27142 │ MEDIUM   │        │                   │ 1.25.8, 1.26.1  │ html/template: URLs in meta content attribute actions are    │
 │         │                │          │        │                   │                 │ not escaped in html/template...                              │
@@ -2712,23 +2725,8 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-32289 │          │        │                   │                 │ html/template: golang: html/template: Cross-Site Scripting   │
 │         │                │          │        │                   │                 │ (XSS) via improper context and brace depth...                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-32289                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33811 │ UNKNOWN  │        │                   │ 1.25.10, 1.26.3 │ When using LookupCNAME with the cgo DNS resolver, a very     │
-│         │                │          │        │                   │                 │ long CNAME...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33811                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-33814 │          │        │                   │                 │ When processing HTTP/2 SETTINGS frames, transport will enter │
-│         │                │          │        │                   │                 │ an infini ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-33814                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39820 │          │        │                   │                 │ Well-crafted inputs reaching ParseAddress, ParseAddressList, │
-│         │                │          │        │                   │                 │ and Parse ...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39823 │          │        │                   │                 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
+│         ├────────────────┤          │        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-39823 │          │        │                   │ 1.25.10, 1.26.3 │ CVE-2026-27142 fixed a vulnerability in which URLs were not  │
 │         │                │          │        │                   │                 │ correctly ......                                             │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39823                   │
 │         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
@@ -2739,12 +2737,7 @@ Total: 17 (UNKNOWN: 8, LOW: 1, MEDIUM: 4, HIGH: 4, CRITICAL: 0)
 │         │ CVE-2026-39826 │          │        │                   │                 │ If a trusted template author were to write a <script> tag    │
 │         │                │          │        │                   │                 │ containing...                                                │
 │         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39826                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-39836 │          │        │                   │                 │ Panic in Dial and LookupPort when handling NUL byte on       │
-│         │                │          │        │                   │                 │ Windows in...                                                │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
-│         ├────────────────┤          │        │                   │                 ├──────────────────────────────────────────────────────────────┤
-│         │ CVE-2026-42499 │          │        │                   │                 │ Pathological inputs could cause DoS through consumePhrase    │
-│         │                │          │        │                   │                 │ when parsing ...                                             │
-│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-42499                   │
+│         ├────────────────┼──────────┤        │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│         │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1  │ os: FileInfo can escape from a Root in golang os module      │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
 └─────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴──────────────────────────────────────────────────────────────┘
