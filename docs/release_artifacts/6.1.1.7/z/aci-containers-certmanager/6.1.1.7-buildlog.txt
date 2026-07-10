@@ -11579,3 +11579,126 @@ d4d4d2f9b9fe: Preparing
 9dc2813d27e7: Layer already exists
 a64cdbbb6bab: Layer already exists
 d4d4d2f9b9fe: Layer already exists
+6.1.1.7.81c2369.z: digest: sha256:f2082963e33fc717d5137c0e55caf2060cbf23bab8279a962ce796396122b223 size: 1159
+++docker image inspect '--format={{.Id}}' quay.io/noirolabs/aci-containers-certmanager:6.1.1.7.81c2369
++IMAGE_SHA=sha256:79caec6e6b227e47dd153bfa2f985e4845132c38b867b0d9d747b033d76896bb
++/tmp/cicd/travis/push-to-cicd-status.sh quay.io/noiro aci-containers-certmanager 6.1.1.7.81c2369 6.1.1.7.81c2369,6.1.1.7.81c2369.071026.12068 sha256:79caec6e6b227e47dd153bfa2f985e4845132c38b867b0d9d747b033d76896bb registry.access.redhat.com/ubi9/ubi:latest
+++dirname /tmp/cicd/travis/push-to-cicd-status.sh
++SCRIPTS_DIR=/tmp/cicd/travis
++source /tmp/cicd/travis/globals.sh
+++set -x
+++RELEASE_TAG=6.1.1.7
+++export RELEASE_TAG
++++date +%m%d%y
+++DATE_TAG=071026
+++TRAVIS_TAG_WITH_UPSTREAM_ID=6.1.1.7.81c2369
+++TRAVIS_TAG_WITH_UPSTREAM_ID_DATE_TRAVIS_BUILD_NUMBER=6.1.1.7.81c2369.071026.12068
+++IMAGE_TAG=6.1.1.7.81c2369
+++UPSTREAM_IMAGE_TAG=6.1.1.7.81c2369
+++UPSTREAM_IMAGE_Z_TAG=6.1.1.7.81c2369.z
+++IMAGE_Z_TAG=6.1.1.7.81c2369.z
+++RELEASE_Z_TAG=6.1.1.7.z
+++RC_PREFIX=6.1.1.7rc
+++RC_REGEX='6.1.1.7rc[0-9]+'
+++QUAY_REGISTRY=quay.io/noirolabs
+++QUAY_NOIRO_REGISTRY=quay.io/noiro
+++DOCKER_REGISTRY=docker.io/noiro
+++CICD_STATUS_REPO=https://github.com/noironetworks/cicd-status.git
+++CICD_STATUS_REPO_DIR=cicd-status
+++export CICD_STATUS_REPO_DIR
+++git rev-parse --abbrev-ref HEAD
++current_branch=HEAD
++[[ aci-containers != \a\c\c\-\p\r\o\v\i\s\i\o\n ]]
++IMAGE_BUILD_REGISTRY=quay.io/noiro
++IMAGE=aci-containers-certmanager
++IMAGE_BUILD_TAG=6.1.1.7.81c2369
++OTHER_IMAGE_TAGS=6.1.1.7.81c2369,6.1.1.7.81c2369.071026.12068
++IMAGE_SHA=sha256:79caec6e6b227e47dd153bfa2f985e4845132c38b867b0d9d747b033d76896bb
++BASE_IMAGE=registry.access.redhat.com/ubi9/ubi:latest
++GIT_REPO=https://github.com/noironetworks/cicd-status.git
++GIT_LOCAL_DIR=cicd-status
++GIT_BRANCH=main
++GIT_EMAIL=test@cisco.com
++GIT_TOKEN=[secure]
++GIT_USER=travis-tagger
++git_clone_repo
++cd /tmp/
++git clone https://travis-tagger:[secure]@github.com/noironetworks/cicd-status.git -b main cicd-status
+fatal: destination path 'cicd-status' already exists and is not an empty directory.
++cd /tmp/cicd-status
++git remote set-url origin https://travis-tagger:[secure]@github.com/noironetworks/cicd-status.git
++true
++[[ aci-containers != \a\c\c\-\p\r\o\v\i\s\i\o\n ]]
++add_artifacts
++cd /tmp/cicd-status
++git pull --rebase origin main
+From https://github.com/noironetworks/cicd-status
+ * branch                main       -> FETCH_HEAD
+Already up to date.
++mkdir -p /tmp/cicd-status/docs/release_artifacts/6.1.1.7/z/aci-containers-certmanager
++curl https://api.travis-ci.com/v3/job/640012742/log.txt
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  550k  100  550k    0     0  1307k      0 --:--:-- --:--:-- --:--:-- 1308k
++cp /tmp/sbom.txt /tmp/cicd-status/docs/release_artifacts/6.1.1.7/z/aci-containers-certmanager/6.1.1.7-sbom.txt
++cp /tmp/cve.txt /tmp/cicd-status/docs/release_artifacts/6.1.1.7/z/aci-containers-certmanager/6.1.1.7-cve.txt
++cp /tmp/cve-base.txt /tmp/cicd-status/docs/release_artifacts/6.1.1.7/z/aci-containers-certmanager/6.1.1.7-cve-base.txt
++update_container_release
++docker rmi -f sha256:79caec6e6b227e47dd153bfa2f985e4845132c38b867b0d9d747b033d76896bb
+Untagged: noiro/aci-containers-certmanager:6.1.1.7.81c2369.071026.12068
+Untagged: noiro/aci-containers-certmanager:6.1.1.7.81c2369.z
+Untagged: noiro/aci-containers-certmanager@sha256:f2082963e33fc717d5137c0e55caf2060cbf23bab8279a962ce796396122b223
+Untagged: quay.io/noiro/aci-containers-certmanager:6.1.1.7.81c2369.071026.12068
+Untagged: quay.io/noiro/aci-containers-certmanager:6.1.1.7.81c2369.z
+Untagged: quay.io/noiro/aci-containers-certmanager@sha256:f2082963e33fc717d5137c0e55caf2060cbf23bab8279a962ce796396122b223
+Untagged: quay.io/noirolabs/aci-containers-certmanager:6.1.1.7.81c2369
+Untagged: quay.io/noirolabs/aci-containers-certmanager:6.1.1.7.81c2369.071026.12068
+Untagged: quay.io/noirolabs/aci-containers-certmanager:6.1.1.7.81c2369.z
+Deleted: sha256:79caec6e6b227e47dd153bfa2f985e4845132c38b867b0d9d747b033d76896bb
++python /tmp/cicd/travis/update-release.py quay.io/noiro aci-containers-certmanager 6.1.1.7.81c2369 6.1.1.7.81c2369,6.1.1.7.81c2369.071026.12068 sha256:79caec6e6b227e47dd153bfa2f985e4845132c38b867b0d9d747b033d76896bb 6.1.1.7.81c2369.z 6.1.1.7.81c2369.071026.12068 registry.access.redhat.com/ubi9/ubi:latest
++[[ aci-containers != \o\p\f\l\e\x ]]
++add_trivy_vulnerabilites
++trivy image quay.io/noiro/aci-containers-certmanager:6.1.1.7.81c2369.z
+2026-07-10T16:42:07Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-07-10T16:42:07Z	INFO	[secret] Secret scanning is enabled
+2026-07-10T16:42:07Z	INFO	[secret] If your scanning is slow, please try '--scanners vuln' to disable secret scanning
+2026-07-10T16:42:07Z	INFO	[secret] Please see https://trivy.dev/docs/v0.72/guide/scanner/secret#recommendation for faster secret detection
+2026-07-10T16:42:11Z	INFO	Detected OS	family="redhat" version="9.8"
+2026-07-10T16:42:11Z	INFO	[redhat] Detecting RHEL/CentOS vulnerabilities...	os_version="9" pkg_num=186
+2026-07-10T16:42:11Z	INFO	Number of language-specific files	num=1
+2026-07-10T16:42:11Z	INFO	[gobinary] Detecting vulnerabilities...
+2026-07-10T16:42:11Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.72/guide/scanner/vulnerability#severity-selection for details.
++git_add_commit_push
++cd /tmp/cicd-status
++git config --local user.email test@cisco.com
++git config --local user.name travis-tagger
++git stash
+Saved working directory and index state WIP on main: 06a27be3b 6.1.1.7.z-aci-containers-webhook-12068-2026-07-10_16:41:23
++git pull --rebase origin main
+From https://github.com/noironetworks/cicd-status
+ * branch                main       -> FETCH_HEAD
+Already up to date.
++git stash pop
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   docs/release_artifacts/6.1.1.7/z/aci-containers-certmanager/6.1.1.7-buildlog.txt
+	modified:   docs/release_artifacts/6.1.1.7/z/aci-containers-certmanager/6.1.1.7-cve-base.txt
+	modified:   docs/release_artifacts/releases.yaml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (e72d8ac8f5683bbd7e6774e71ed73aa43bfcbbde)
++git add .
++[[ aci-containers != \a\c\c\-\p\r\o\v\i\s\i\o\n ]]
+++docker image inspect --format '{{index (split (index .RepoDigests 0) "@sha256:") 1}}' docker.io/noiro/aci-containers-certmanager:6.1.1.7.81c2369.z
++DOCKER_REPO_DIGEST_SHA=f2082963e33fc717d5137c0e55caf2060cbf23bab8279a962ce796396122b223
+++docker image inspect --format '{{index (split (index .RepoDigests 1) "@sha256:") 1}}' quay.io/noiro/aci-containers-certmanager:6.1.1.7.81c2369.z
++QUAY_REPO_DIGEST_SHA=f2082963e33fc717d5137c0e55caf2060cbf23bab8279a962ce796396122b223
+++date +%F_%H:%M:%S
++git commit -a -m 6.1.1.7.z-aci-containers-certmanager-12068-2026-07-10_16:42:12 -m 'Commit: 3bee3b56cb85edab4bceae2a2a642ca237aca104' -m 'Tags: 6.1.1.7.81c2369.z, 6.1.1.7.81c2369.071026.12068' -m 'ImageId: sha256:79caec6e6b227e47dd153bfa2f985e4845132c38b867b0d9d747b033d76896bb' -m 'DockerSha: f2082963e33fc717d5137c0e55caf2060cbf23bab8279a962ce796396122b223' -m 'QuaySha: f2082963e33fc717d5137c0e55caf2060cbf23bab8279a962ce796396122b223'
+[main bf75828eb] 6.1.1.7.z-aci-containers-certmanager-12068-2026-07-10_16:42:12
+ 3 files changed, 3816 insertions(+), 3821 deletions(-)
++git push origin main
