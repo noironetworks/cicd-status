@@ -4,7 +4,7 @@ Report Summary
 ┌──────────────────────────────────────────────────────────────────┬──────────┬─────────────────┬─────────┐
 │                              Target                              │   Type   │ Vulnerabilities │ Secrets │
 ├──────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
-│ quay.io/noiro/aci-containers-host:6.1.1.7.81c2369.z (redhat 9.8) │  redhat  │       300       │    -    │
+│ quay.io/noiro/aci-containers-host:6.1.1.7.81c2369.z (redhat 9.8) │  redhat  │       308       │    -    │
 ├──────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
 │ usr/local/bin/aci-containers-host-agent                          │ gobinary │       13        │    -    │
 ├──────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
@@ -28,7 +28,7 @@ To disable this notice, set the TRIVY_DISABLE_VEX_NOTICE environment variable.
 
 quay.io/noiro/aci-containers-host:6.1.1.7.81c2369.z (redhat 9.8)
 ================================================================
-Total: 300 (UNKNOWN: 0, LOW: 99, MEDIUM: 186, HIGH: 15, CRITICAL: 0)
+Total: 308 (UNKNOWN: 0, LOW: 99, MEDIUM: 189, HIGH: 20, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │  Installed Version  │ Fixed Version │                            Title                             │
@@ -807,7 +807,11 @@ Total: 300 (UNKNOWN: 0, LOW: 99, MEDIUM: 186, HIGH: 15, CRITICAL: 0)
 │                             │                │          │                     │                     │               │                                                              │
 │                             │                │          │                     │                     │               │                                                              │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ python-unversioned-command  │ CVE-2025-11468 │ MEDIUM   │                     │ 3.9.25-7.el9_8      │               │ cpython: Missing character filtering in Python               │
+│ python-unversioned-command  │ CVE-2026-15308 │ HIGH     │                     │ 3.9.25-7.el9_8      │               │ python: Python: CPU Denial of Service in HTML parser via     │
+│                             │                │          │                     │                     │               │ repeated unterminated...                                     │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-15308                   │
+│                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-11468 │ MEDIUM   │                     │                     │               │ cpython: Missing character filtering in Python               │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-11468                   │
 │                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-12781 │          │                     │                     │               │ cpython: base64.b64decode() always accepts "+/" characters,  │
@@ -879,7 +883,11 @@ Total: 300 (UNKNOWN: 0, LOW: 99, MEDIUM: 186, HIGH: 15, CRITICAL: 0)
 │                             │                │          │                     │                     │               │ improper resource argument validation                        │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-3479                    │
 ├─────────────────────────────┼────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ python3                     │ CVE-2025-11468 │ MEDIUM   │                     │                     │               │ cpython: Missing character filtering in Python               │
+│ python3                     │ CVE-2026-15308 │ HIGH     │                     │                     │               │ python: Python: CPU Denial of Service in HTML parser via     │
+│                             │                │          │                     │                     │               │ repeated unterminated...                                     │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-15308                   │
+│                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-11468 │ MEDIUM   │                     │                     │               │ cpython: Missing character filtering in Python               │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-11468                   │
 │                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-12781 │          │                     │                     │               │ cpython: base64.b64decode() always accepts "+/" characters,  │
@@ -951,7 +959,11 @@ Total: 300 (UNKNOWN: 0, LOW: 99, MEDIUM: 186, HIGH: 15, CRITICAL: 0)
 │                             │                │          │                     │                     │               │ improper resource argument validation                        │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-3479                    │
 ├─────────────────────────────┼────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ python3-libs                │ CVE-2025-11468 │ MEDIUM   │                     │                     │               │ cpython: Missing character filtering in Python               │
+│ python3-libs                │ CVE-2026-15308 │ HIGH     │                     │                     │               │ python: Python: CPU Denial of Service in HTML parser via     │
+│                             │                │          │                     │                     │               │ repeated unterminated...                                     │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-15308                   │
+│                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2025-11468 │ MEDIUM   │                     │                     │               │ cpython: Missing character filtering in Python               │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2025-11468                   │
 │                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2025-12781 │          │                     │                     │               │ cpython: base64.b64decode() always accepts "+/" characters,  │
@@ -1043,8 +1055,8 @@ Total: 300 (UNKNOWN: 0, LOW: 99, MEDIUM: 186, HIGH: 15, CRITICAL: 0)
 │                             │                │          │                     │                     │               │ truncated fixext data                                        │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-32284                   │
 │                             ├────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
-│                             │ CVE-2026-45409 │          │ affected            │                     │               │ Internationalized Domain Names in Applications (IDNA) for    │
-│                             │                │          │                     │                     │               │ Python provi ...                                             │
+│                             │ CVE-2026-45409 │          │ affected            │                     │               │ python-idna: idna: Denial of Service via specially crafted   │
+│                             │                │          │                     │                     │               │ long inputs                                                  │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-45409                   │
 │                             ├────────────────┼──────────┤                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2021-3572  │ LOW      │                     │                     │               │ python-pip: Incorrect handling of unicode separators in git  │
@@ -1117,8 +1129,15 @@ Total: 300 (UNKNOWN: 0, LOW: 99, MEDIUM: 186, HIGH: 15, CRITICAL: 0)
 │ systemd-rpm-macros          │                │          │                     │                     │               │                                                              │
 │                             │                │          │                     │                     │               │                                                              │
 │                             │                │          │                     │                     │               │                                                              │
-├─────────────────────────────┼────────────────┤          ├─────────────────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
-│ tar                         │ CVE-2005-2541  │          │ will_not_fix        │ 2:1.34-11.el9       │               │ tar: does not properly warn the user when extracting setuid  │
+├─────────────────────────────┼────────────────┼──────────┤                     ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ tar                         │ CVE-2026-59873 │ HIGH     │                     │ 2:1.34-11.el9       │               │ tar: node-tar: Denial of Service via crafted gzip bomb       │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-59873                   │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-59874 │          │                     │                     │               │ tar: Node-tar: Denial of Service via malformed tar archive   │
+│                             │                │          │                     │                     │               │ header                                                       │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-59874                   │
+│                             ├────────────────┼──────────┼─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2005-2541  │ MEDIUM   │ will_not_fix        │                     │               │ tar: does not properly warn the user when extracting setuid  │
 │                             │                │          │                     │                     │               │ or setgid...                                                 │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2005-2541                    │
 │                             ├────────────────┤          ├─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -1130,8 +1149,20 @@ Total: 300 (UNKNOWN: 0, LOW: 99, MEDIUM: 186, HIGH: 15, CRITICAL: 0)
 │                             │                │          │                     │                     │               │ via crafted tar archive                                      │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-33056                   │
 │                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-53655 │          │                     │                     │               │ node-tar: node-tar: File smuggling due to inconsistent tar   │
+│                             │                │          │                     │                     │               │ archive parsing                                              │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-53655                   │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2026-5704  │          │                     │                     │               │ tar: tar: Hidden file injection via crafted archives         │
 │                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-5704                    │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-59871 │          │                     │                     │               │ node-tar: node-tar: Denial of Service due to incorrect PAX   │
+│                             │                │          │                     │                     │               │ path handling                                                │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-59871                   │
+│                             ├────────────────┤          │                     │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-59875 │          │                     │                     │               │ node-tar: node-tar: Denial of Service via crafted archive    │
+│                             │                │          │                     │                     │               │ with NUL bytes in...                                         │
+│                             │                │          │                     │                     │               │ https://avd.aquasec.com/nvd/cve-2026-59875                   │
 │                             ├────────────────┼──────────┼─────────────────────┤                     ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2023-39804 │ LOW      │ will_not_fix        │                     │               │ tar: Incorrectly handled extension attributes in PAX         │
 │                             │                │          │                     │                     │               │ archives can lead to a...                                    │
@@ -1168,7 +1199,7 @@ Total: 300 (UNKNOWN: 0, LOW: 99, MEDIUM: 186, HIGH: 15, CRITICAL: 0)
 
 usr/local/bin/aci-containers-host-agent (gobinary)
 ==================================================
-Total: 13 (UNKNOWN: 3, LOW: 0, MEDIUM: 4, HIGH: 6, CRITICAL: 0)
+Total: 13 (UNKNOWN: 2, LOW: 0, MEDIUM: 5, HIGH: 6, CRITICAL: 0)
 
 ┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
@@ -1213,23 +1244,23 @@ Total: 13 (UNKNOWN: 3, LOW: 0, MEDIUM: 4, HIGH: 6, CRITICAL: 0)
 │                  │ CVE-2026-42504 │          │        │                   │                              │ mime: golang: Golang MIME: Denial of Service via             │
 │                  │                │          │        │                   │                              │ maliciously-crafted MIME header                              │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-42504                   │
-│                  ├────────────────┼──────────┤        │                   │                              ├──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-42507 │ MEDIUM   │        │                   │                              │ net/textproto: golang: Golang net/textproto: Misleading      │
+│                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-42505 │ MEDIUM   │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ crypto/tls: golang: Go crypto/tls: Information disclosure in │
+│                  │                │          │        │                   │                              │ Encrypted Client Hello                                       │
+│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-42505                   │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-42507 │          │        │                   │ 1.25.11, 1.26.4              │ net/textproto: golang: Golang net/textproto: Misleading      │
 │                  │                │          │        │                   │                              │ error messages via input injection                           │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-42507                   │
 │                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-39822 │ UNKNOWN  │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ On Unix systems, opening a file in an os.Root improperly     │
 │                  │                │          │        │                   │                              │ follows symli...                                             │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
-│                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-42505 │          │        │                   │                              │ Handshakes which used Encrypted Client Hello could be        │
-│                  │                │          │        │                   │                              │ de-anonymized by ...                                         │
-│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-42505                   │
 └──────────────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────┴──────────────────────────────────────────────────────────────┘
 
 usr/local/bin/netop-cni (gobinary)
 ==================================
-Total: 13 (UNKNOWN: 3, LOW: 0, MEDIUM: 4, HIGH: 6, CRITICAL: 0)
+Total: 13 (UNKNOWN: 2, LOW: 0, MEDIUM: 5, HIGH: 6, CRITICAL: 0)
 
 ┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
@@ -1274,23 +1305,23 @@ Total: 13 (UNKNOWN: 3, LOW: 0, MEDIUM: 4, HIGH: 6, CRITICAL: 0)
 │                  │ CVE-2026-42504 │          │        │                   │                              │ mime: golang: Golang MIME: Denial of Service via             │
 │                  │                │          │        │                   │                              │ maliciously-crafted MIME header                              │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-42504                   │
-│                  ├────────────────┼──────────┤        │                   │                              ├──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-42507 │ MEDIUM   │        │                   │                              │ net/textproto: golang: Golang net/textproto: Misleading      │
+│                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-42505 │ MEDIUM   │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ crypto/tls: golang: Go crypto/tls: Information disclosure in │
+│                  │                │          │        │                   │                              │ Encrypted Client Hello                                       │
+│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-42505                   │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-42507 │          │        │                   │ 1.25.11, 1.26.4              │ net/textproto: golang: Golang net/textproto: Misleading      │
 │                  │                │          │        │                   │                              │ error messages via input injection                           │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-42507                   │
 │                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-39822 │ UNKNOWN  │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ On Unix systems, opening a file in an os.Root improperly     │
 │                  │                │          │        │                   │                              │ follows symli...                                             │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
-│                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-42505 │          │        │                   │                              │ Handshakes which used Encrypted Client Hello could be        │
-│                  │                │          │        │                   │                              │ de-anonymized by ...                                         │
-│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-42505                   │
 └──────────────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────┴──────────────────────────────────────────────────────────────┘
 
 usr/local/bin/opflex-agent-cni (gobinary)
 =========================================
-Total: 13 (UNKNOWN: 3, LOW: 0, MEDIUM: 4, HIGH: 6, CRITICAL: 0)
+Total: 13 (UNKNOWN: 2, LOW: 0, MEDIUM: 5, HIGH: 6, CRITICAL: 0)
 
 ┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
@@ -1335,16 +1366,16 @@ Total: 13 (UNKNOWN: 3, LOW: 0, MEDIUM: 4, HIGH: 6, CRITICAL: 0)
 │                  │ CVE-2026-42504 │          │        │                   │                              │ mime: golang: Golang MIME: Denial of Service via             │
 │                  │                │          │        │                   │                              │ maliciously-crafted MIME header                              │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-42504                   │
-│                  ├────────────────┼──────────┤        │                   │                              ├──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-42507 │ MEDIUM   │        │                   │                              │ net/textproto: golang: Golang net/textproto: Misleading      │
+│                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-42505 │ MEDIUM   │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ crypto/tls: golang: Go crypto/tls: Information disclosure in │
+│                  │                │          │        │                   │                              │ Encrypted Client Hello                                       │
+│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-42505                   │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-42507 │          │        │                   │ 1.25.11, 1.26.4              │ net/textproto: golang: Golang net/textproto: Misleading      │
 │                  │                │          │        │                   │                              │ error messages via input injection                           │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-42507                   │
 │                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-39822 │ UNKNOWN  │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ On Unix systems, opening a file in an os.Root improperly     │
 │                  │                │          │        │                   │                              │ follows symli...                                             │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
-│                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-42505 │          │        │                   │                              │ Handshakes which used Encrypted Client Hello could be        │
-│                  │                │          │        │                   │                              │ de-anonymized by ...                                         │
-│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-42505                   │
 └──────────────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────┴──────────────────────────────────────────────────────────────┘
