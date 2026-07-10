@@ -9591,3 +9591,111 @@ cd8278e68c93: Layer already exists
 +cd /tmp/
 +git clone https://travis-tagger:[secure]@github.com/noironetworks/cicd-status.git -b main cicd-status
 Cloning into 'cicd-status'...
++cd /tmp/cicd-status
++git remote set-url origin https://travis-tagger:[secure]@github.com/noironetworks/cicd-status.git
++true
++[[ aci-containers != \a\c\c\-\p\r\o\v\i\s\i\o\n ]]
++add_artifacts
++cd /tmp/cicd-status
++git pull --rebase origin main
+From https://github.com/noironetworks/cicd-status
+ * branch                main       -> FETCH_HEAD
+   f9dea7122..c81f835f1  main       -> origin/main
+Updating f9dea7122..c81f835f1
+Fast-forward
+ .../6.1.2.1-buildlog.txt                           | 7608 ++++++++++----------
+ .../6.1.2.1-cve-base.txt                           |    1 -
+ .../z/aci-containers-certmanager/6.1.2.1-cve.txt   |   77 +-
+ docs/release_artifacts/releases.yaml               |   53 +-
+ 4 files changed, 3902 insertions(+), 3837 deletions(-)
++mkdir -p /tmp/cicd-status/docs/release_artifacts/6.1.1.7/z/aci-containers-host
++curl https://api.travis-ci.com/v3/job/640010643/log.txt
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  443k  100  443k    0     0  2664k      0 --:--:-- --:--:-- --:--:-- 2674k
++cp /tmp/sbom.txt /tmp/cicd-status/docs/release_artifacts/6.1.1.7/z/aci-containers-host/6.1.1.7-sbom.txt
++cp /tmp/cve.txt /tmp/cicd-status/docs/release_artifacts/6.1.1.7/z/aci-containers-host/6.1.1.7-cve.txt
++cp /tmp/cve-base.txt /tmp/cicd-status/docs/release_artifacts/6.1.1.7/z/aci-containers-host/6.1.1.7-cve-base.txt
++update_container_release
++docker rmi -f sha256:9515dcddd49c981cdf89c7b6f057bd6f9de1e8c14fec39334217d2acf54d313a
+Untagged: noiro/aci-containers-host:6.1.1.7.81c2369.071026.12062
+Untagged: noiro/aci-containers-host:6.1.1.7.81c2369.z
+Untagged: noiro/aci-containers-host@sha256:a7cb6de23ca2b47c7e940067f7e208e4008e9055e28d1f100b0692f661f46cf2
+Untagged: quay.io/noiro/aci-containers-host:6.1.1.7.81c2369.071026.12062
+Untagged: quay.io/noiro/aci-containers-host:6.1.1.7.81c2369.z
+Untagged: quay.io/noiro/aci-containers-host@sha256:a7cb6de23ca2b47c7e940067f7e208e4008e9055e28d1f100b0692f661f46cf2
+Untagged: quay.io/noirolabs/aci-containers-host:6.1.1.7.81c2369
+Untagged: quay.io/noirolabs/aci-containers-host:6.1.1.7.81c2369.071026.12062
+Untagged: quay.io/noirolabs/aci-containers-host:6.1.1.7.81c2369.z
+Untagged: quay.io/noirolabs/aci-containers-host@sha256:a7cb6de23ca2b47c7e940067f7e208e4008e9055e28d1f100b0692f661f46cf2
+Deleted: sha256:9515dcddd49c981cdf89c7b6f057bd6f9de1e8c14fec39334217d2acf54d313a
++python /tmp/cicd/travis/update-release.py quay.io/noiro aci-containers-host 6.1.1.7.81c2369 6.1.1.7.81c2369,6.1.1.7.81c2369.071026.12062 sha256:9515dcddd49c981cdf89c7b6f057bd6f9de1e8c14fec39334217d2acf54d313a 6.1.1.7.81c2369.z 6.1.1.7.81c2369.071026.12062 registry.access.redhat.com/ubi9/ubi:latest
++[[ aci-containers != \o\p\f\l\e\x ]]
++add_trivy_vulnerabilites
++trivy image quay.io/noiro/aci-containers-host:6.1.1.7.81c2369.z
+2026-07-10T13:44:44Z	INFO	[vulndb] Need to update DB
+2026-07-10T13:44:44Z	INFO	[vulndb] Downloading vulnerability DB...
+2026-07-10T13:44:44Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
+31.41 MiB / 99.83 MiB [------------>____________________________] 31.47% ? p/s ?63.41 MiB / 99.83 MiB [-------------------------->______________] 63.52% ? p/s ?95.57 MiB / 99.83 MiB [--------------------------------------->_] 95.73% ? p/s ?99.83 MiB / 99.83 MiB [------------------------->] 100.00% 114.13 MiB p/s ETA 0s99.83 MiB / 99.83 MiB [------------------------->] 100.00% 114.13 MiB p/s ETA 0s99.83 MiB / 99.83 MiB [------------------------->] 100.00% 114.13 MiB p/s ETA 0s99.83 MiB / 99.83 MiB [------------------------->] 100.00% 106.76 MiB p/s ETA 0s99.83 MiB / 99.83 MiB [------------------------->] 100.00% 106.76 MiB p/s ETA 0s99.83 MiB / 99.83 MiB [------------------------->] 100.00% 106.76 MiB p/s ETA 0s99.83 MiB / 99.83 MiB [-------------------------->] 100.00% 99.88 MiB p/s ETA 0s99.83 MiB / 99.83 MiB [-------------------------->] 100.00% 99.88 MiB p/s ETA 0s99.83 MiB / 99.83 MiB [-------------------------->] 100.00% 99.88 MiB p/s ETA 0s99.83 MiB / 99.83 MiB [-------------------------->] 100.00% 93.43 MiB p/s ETA 0s99.83 MiB / 99.83 MiB [-------------------------->] 100.00% 93.43 MiB p/s ETA 0s99.83 MiB / 99.83 MiB [-------------------------->] 100.00% 93.43 MiB p/s ETA 0s99.83 MiB / 99.83 MiB [-------------------------->] 100.00% 87.40 MiB p/s ETA 0s99.83 MiB / 99.83 MiB [-------------------------->] 100.00% 87.40 MiB p/s ETA 0s99.83 MiB / 99.83 MiB [-------------------------->] 100.00% 87.40 MiB p/s ETA 0s99.83 MiB / 99.83 MiB [-------------------------->] 100.00% 81.76 MiB p/s ETA 0s99.83 MiB / 99.83 MiB [-------------------------->] 100.00% 81.76 MiB p/s ETA 0s99.83 MiB / 99.83 MiB [-------------------------->] 100.00% 81.76 MiB p/s ETA 0s99.83 MiB / 99.83 MiB [-----------------------------] 100.00% 24.50 MiB p/s 4.3s2026-07-10T13:44:50Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+2026-07-10T13:44:50Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-07-10T13:44:50Z	INFO	[secret] Secret scanning is enabled
+2026-07-10T13:44:50Z	INFO	[secret] If your scanning is slow, please try '--scanners vuln' to disable secret scanning
+2026-07-10T13:44:50Z	INFO	[secret] Please see https://trivy.dev/docs/v0.72/guide/scanner/secret#recommendation for faster secret detection
+2026-07-10T13:45:05Z	INFO	[python] Licenses acquired from one or more METADATA files may be subject to additional terms. Use `--debug` flag to see all affected packages.
+2026-07-10T13:45:05Z	INFO	Detected OS	family="redhat" version="9.8"
+2026-07-10T13:45:05Z	INFO	[redhat] Detecting RHEL/CentOS vulnerabilities...	os_version="9" pkg_num=185
+2026-07-10T13:45:05Z	INFO	Number of language-specific files	num=3
+2026-07-10T13:45:05Z	INFO	[gobinary] Detecting vulnerabilities...
+2026-07-10T13:45:05Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.72/guide/scanner/vulnerability#severity-selection for details.
++git_add_commit_push
++cd /tmp/cicd-status
++git config --local user.email test@cisco.com
++git config --local user.name travis-tagger
++git stash
+Saved working directory and index state WIP on main: c81f835f1 6.1.2.1.z-aci-containers-certmanager-12059-2026-07-10_13:44:02
++git pull --rebase origin main
+From https://github.com/noironetworks/cicd-status
+ * branch                main       -> FETCH_HEAD
+Already up to date.
++git stash pop
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   docs/release_artifacts/6.1.1.7/z/aci-containers-host/6.1.1.7-buildlog.txt
+	modified:   docs/release_artifacts/6.1.1.7/z/aci-containers-host/6.1.1.7-cve-base.txt
+	modified:   docs/release_artifacts/6.1.1.7/z/aci-containers-host/6.1.1.7-cve.txt
+	modified:   docs/release_artifacts/releases.yaml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (2c0dd8879aa322fc69cd58b44d367b70ddcaa724)
++git add .
++[[ aci-containers != \a\c\c\-\p\r\o\v\i\s\i\o\n ]]
+++docker image inspect --format '{{index (split (index .RepoDigests 0) "@sha256:") 1}}' docker.io/noiro/aci-containers-host:6.1.1.7.81c2369.z
++DOCKER_REPO_DIGEST_SHA=a7cb6de23ca2b47c7e940067f7e208e4008e9055e28d1f100b0692f661f46cf2
+++docker image inspect --format '{{index (split (index .RepoDigests 1) "@sha256:") 1}}' quay.io/noiro/aci-containers-host:6.1.1.7.81c2369.z
++QUAY_REPO_DIGEST_SHA=a7cb6de23ca2b47c7e940067f7e208e4008e9055e28d1f100b0692f661f46cf2
+++date +%F_%H:%M:%S
++git commit -a -m 6.1.1.7.z-aci-containers-host-12062-2026-07-10_13:45:06 -m 'Commit: d32b3b84528034246aba1f2560a8cafc76b3ca65' -m 'Tags: 6.1.1.7.81c2369.z, 6.1.1.7.81c2369.071026.12062' -m 'ImageId: sha256:9515dcddd49c981cdf89c7b6f057bd6f9de1e8c14fec39334217d2acf54d313a' -m 'DockerSha: a7cb6de23ca2b47c7e940067f7e208e4008e9055e28d1f100b0692f661f46cf2' -m 'QuaySha: a7cb6de23ca2b47c7e940067f7e208e4008e9055e28d1f100b0692f661f46cf2'
+[main 16f6bac6f] 6.1.1.7.z-aci-containers-host-12062-2026-07-10_13:45:06
+ 4 files changed, 3083 insertions(+), 3050 deletions(-)
++git push origin main
+To https://github.com/noironetworks/cicd-status.git
+ ! [remote rejected]     main -> main (cannot lock ref 'refs/heads/main': is at 0e5e0afbd9d5156689d393fff644336fae10ad8b but expected c81f835f1ea723d847a60ad5ef66d37dd473333a)
+error: failed to push some refs to 'https://github.com/noironetworks/cicd-status.git'
++git checkout .
+Updated 0 paths from the index
++git pull --rebase origin main
+From https://github.com/noironetworks/cicd-status
+ * branch                main       -> FETCH_HEAD
+   c81f835f1..0e5e0afbd  main       -> origin/main
+Rebasing (1/1)Successfully rebased and updated refs/heads/main.
++echo 'Retrying git_add_commit_push after stash pop failure...'
+Retrying git_add_commit_push after stash pop failure...
++true
++[[ aci-containers != \a\c\c\-\p\r\o\v\i\s\i\o\n ]]
++add_artifacts
++cd /tmp/cicd-status
++git pull --rebase origin main
