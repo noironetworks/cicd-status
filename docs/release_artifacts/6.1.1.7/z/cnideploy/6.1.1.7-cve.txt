@@ -4,7 +4,7 @@ Report Summary
 ┌────────────────────────────────────────────────────────┬──────────┬─────────────────┬─────────┐
 │                         Target                         │   Type   │ Vulnerabilities │ Secrets │
 ├────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
-│ quay.io/noiro/cnideploy:6.1.1.7.81c2369.z (redhat 9.8) │  redhat  │       435       │    -    │
+│ quay.io/noiro/cnideploy:6.1.1.7.81c2369.z (redhat 9.8) │  redhat  │       437       │    -    │
 ├────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
 │ opt/cni/bin/bandwidth                                  │ gobinary │       23        │    -    │
 ├────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
@@ -58,7 +58,7 @@ To disable this notice, set the TRIVY_DISABLE_VEX_NOTICE environment variable.
 
 quay.io/noiro/cnideploy:6.1.1.7.81c2369.z (redhat 9.8)
 ======================================================
-Total: 435 (UNKNOWN: 0, LOW: 232, MEDIUM: 181, HIGH: 22, CRITICAL: 0)
+Total: 437 (UNKNOWN: 0, LOW: 233, MEDIUM: 182, HIGH: 22, CRITICAL: 0)
 
 ┌─────────────────────────────┬────────────────┬──────────┬─────────────────────┬───────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
 │           Library           │ Vulnerability  │ Severity │       Status        │   Installed Version   │ Fixed Version │                            Title                             │
@@ -577,6 +577,10 @@ Total: 435 (UNKNOWN: 0, LOW: 232, MEDIUM: 181, HIGH: 22, CRITICAL: 0)
 │                             │ CVE-2025-5918  │          │                     │                       │               │ libarchive: Reading past EOF may be triggered for piped file │
 │                             │                │          │                     │                       │               │ streams                                                      │
 │                             │                │          │                     │                       │               │ https://avd.aquasec.com/nvd/cve-2025-5918                    │
+│                             ├────────────────┤          │                     │                       ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-15028 │          │                     │                       │               │ libarchive: heap overflow OOB read while parsing a tar       │
+│                             │                │          │                     │                       │               │ archive contains a...                                        │
+│                             │                │          │                     │                       │               │ https://avd.aquasec.com/nvd/cve-2026-15028                   │
 ├─────────────────────────────┼────────────────┼──────────┤                     ├───────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
 │ libattr                     │ CVE-2026-54371 │ MEDIUM   │                     │ 2.5.1-3.el9           │               │ attr: Symlink Traversal Privilege Escalation via getfattr    │
 │                             │                │          │                     │                       │               │ and setfattr                                                 │
@@ -1258,6 +1262,9 @@ Total: 435 (UNKNOWN: 0, LOW: 232, MEDIUM: 181, HIGH: 22, CRITICAL: 0)
 │                             │                │          │                     │                       │               │ terminal handling                                            │
 │                             │                │          │                     │                       │               │ https://avd.aquasec.com/nvd/cve-2026-52859                   │
 │                             ├────────────────┤          │                     │                       ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                             │ CVE-2026-55693 │          │                     │                       │               │ vim: Vim: Out-of-bounds Write in Spell File Word Count       │
+│                             │                │          │                     │                       │               │ https://avd.aquasec.com/nvd/cve-2026-55693                   │
+│                             ├────────────────┤          │                     │                       ├───────────────┼──────────────────────────────────────────────────────────────┤
 │                             │ CVE-2026-55892 │          │                     │                       │               │ vim: Vim: Denial of Service via crafted spell file           │
 │                             │                │          │                     │                       │               │ https://avd.aquasec.com/nvd/cve-2026-55892                   │
 │                             ├────────────────┤          │                     │                       ├───────────────┼──────────────────────────────────────────────────────────────┤
@@ -1651,7 +1658,7 @@ Total: 435 (UNKNOWN: 0, LOW: 232, MEDIUM: 181, HIGH: 22, CRITICAL: 0)
 
 opt/cni/bin/bandwidth (gobinary)
 ================================
-Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
+Total: 23 (UNKNOWN: 1, LOW: 1, MEDIUM: 9, HIGH: 12, CRITICAL: 0)
 
 ┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
@@ -1691,8 +1698,12 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  │ CVE-2026-39820 │          │        │                   │                              │ net/mail: golang: Go net/mail: Denial of Service via crafted │
 │                  │                │          │        │                   │                              │ email inputs                                                 │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39836 │          │        │                   │                              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39822 │          │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ os: golang: Go os.Root: Symlink following vulnerability      │
+│                  │                │          │        │                   │                              │ allows directory traversal                                   │
+│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39836 │          │        │                   │ 1.25.10, 1.26.3              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
 │                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-42499 │          │        │                   │                              │ net/mail: golang: net/mail: Denial of Service via            │
@@ -1742,15 +1753,11 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1               │ os: FileInfo can escape from a Root in golang os module      │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39822 │ UNKNOWN  │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ On Unix systems, opening a file in an os.Root improperly     │
-│                  │                │          │        │                   │                              │ follows symli...                                             │
-│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
 └──────────────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/bridge (gobinary)
 =============================
-Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
+Total: 23 (UNKNOWN: 1, LOW: 1, MEDIUM: 9, HIGH: 12, CRITICAL: 0)
 
 ┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
@@ -1790,8 +1797,12 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  │ CVE-2026-39820 │          │        │                   │                              │ net/mail: golang: Go net/mail: Denial of Service via crafted │
 │                  │                │          │        │                   │                              │ email inputs                                                 │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39836 │          │        │                   │                              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39822 │          │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ os: golang: Go os.Root: Symlink following vulnerability      │
+│                  │                │          │        │                   │                              │ allows directory traversal                                   │
+│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39836 │          │        │                   │ 1.25.10, 1.26.3              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
 │                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-42499 │          │        │                   │                              │ net/mail: golang: net/mail: Denial of Service via            │
@@ -1841,15 +1852,11 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1               │ os: FileInfo can escape from a Root in golang os module      │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39822 │ UNKNOWN  │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ On Unix systems, opening a file in an os.Root improperly     │
-│                  │                │          │        │                   │                              │ follows symli...                                             │
-│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
 └──────────────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/dhcp (gobinary)
 ===========================
-Total: 32 (UNKNOWN: 2, LOW: 1, MEDIUM: 14, HIGH: 15, CRITICAL: 0)
+Total: 32 (UNKNOWN: 1, LOW: 1, MEDIUM: 14, HIGH: 16, CRITICAL: 0)
 
 ┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
@@ -1926,8 +1933,12 @@ Total: 32 (UNKNOWN: 2, LOW: 1, MEDIUM: 14, HIGH: 15, CRITICAL: 0)
 │                  │ CVE-2026-39820 │          │        │                   │                              │ net/mail: golang: Go net/mail: Denial of Service via crafted │
 │                  │                │          │        │                   │                              │ email inputs                                                 │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39836 │          │        │                   │                              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39822 │          │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ os: golang: Go os.Root: Symlink following vulnerability      │
+│                  │                │          │        │                   │                              │ allows directory traversal                                   │
+│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39836 │          │        │                   │ 1.25.10, 1.26.3              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
 │                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-42499 │          │        │                   │                              │ net/mail: golang: net/mail: Denial of Service via            │
@@ -1977,15 +1988,11 @@ Total: 32 (UNKNOWN: 2, LOW: 1, MEDIUM: 14, HIGH: 15, CRITICAL: 0)
 │                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1               │ os: FileInfo can escape from a Root in golang os module      │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39822 │ UNKNOWN  │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ On Unix systems, opening a file in an os.Root improperly     │
-│                  │                │          │        │                   │                              │ follows symli...                                             │
-│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
 └──────────────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/dummy (gobinary)
 ============================
-Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
+Total: 23 (UNKNOWN: 1, LOW: 1, MEDIUM: 9, HIGH: 12, CRITICAL: 0)
 
 ┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
@@ -2025,8 +2032,12 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  │ CVE-2026-39820 │          │        │                   │                              │ net/mail: golang: Go net/mail: Denial of Service via crafted │
 │                  │                │          │        │                   │                              │ email inputs                                                 │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39836 │          │        │                   │                              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39822 │          │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ os: golang: Go os.Root: Symlink following vulnerability      │
+│                  │                │          │        │                   │                              │ allows directory traversal                                   │
+│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39836 │          │        │                   │ 1.25.10, 1.26.3              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
 │                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-42499 │          │        │                   │                              │ net/mail: golang: net/mail: Denial of Service via            │
@@ -2076,15 +2087,11 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1               │ os: FileInfo can escape from a Root in golang os module      │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39822 │ UNKNOWN  │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ On Unix systems, opening a file in an os.Root improperly     │
-│                  │                │          │        │                   │                              │ follows symli...                                             │
-│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
 └──────────────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/firewall (gobinary)
 ===============================
-Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
+Total: 23 (UNKNOWN: 1, LOW: 1, MEDIUM: 9, HIGH: 12, CRITICAL: 0)
 
 ┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
@@ -2124,8 +2131,12 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  │ CVE-2026-39820 │          │        │                   │                              │ net/mail: golang: Go net/mail: Denial of Service via crafted │
 │                  │                │          │        │                   │                              │ email inputs                                                 │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39836 │          │        │                   │                              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39822 │          │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ os: golang: Go os.Root: Symlink following vulnerability      │
+│                  │                │          │        │                   │                              │ allows directory traversal                                   │
+│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39836 │          │        │                   │ 1.25.10, 1.26.3              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
 │                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-42499 │          │        │                   │                              │ net/mail: golang: net/mail: Denial of Service via            │
@@ -2175,15 +2186,11 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1               │ os: FileInfo can escape from a Root in golang os module      │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39822 │ UNKNOWN  │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ On Unix systems, opening a file in an os.Root improperly     │
-│                  │                │          │        │                   │                              │ follows symli...                                             │
-│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
 └──────────────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/host-device (gobinary)
 ==================================
-Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
+Total: 23 (UNKNOWN: 1, LOW: 1, MEDIUM: 9, HIGH: 12, CRITICAL: 0)
 
 ┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
@@ -2223,8 +2230,12 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  │ CVE-2026-39820 │          │        │                   │                              │ net/mail: golang: Go net/mail: Denial of Service via crafted │
 │                  │                │          │        │                   │                              │ email inputs                                                 │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39836 │          │        │                   │                              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39822 │          │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ os: golang: Go os.Root: Symlink following vulnerability      │
+│                  │                │          │        │                   │                              │ allows directory traversal                                   │
+│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39836 │          │        │                   │ 1.25.10, 1.26.3              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
 │                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-42499 │          │        │                   │                              │ net/mail: golang: net/mail: Denial of Service via            │
@@ -2274,15 +2285,11 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1               │ os: FileInfo can escape from a Root in golang os module      │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39822 │ UNKNOWN  │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ On Unix systems, opening a file in an os.Root improperly     │
-│                  │                │          │        │                   │                              │ follows symli...                                             │
-│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
 └──────────────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/host-local (gobinary)
 =================================
-Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
+Total: 23 (UNKNOWN: 1, LOW: 1, MEDIUM: 9, HIGH: 12, CRITICAL: 0)
 
 ┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
@@ -2322,8 +2329,12 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  │ CVE-2026-39820 │          │        │                   │                              │ net/mail: golang: Go net/mail: Denial of Service via crafted │
 │                  │                │          │        │                   │                              │ email inputs                                                 │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39836 │          │        │                   │                              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39822 │          │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ os: golang: Go os.Root: Symlink following vulnerability      │
+│                  │                │          │        │                   │                              │ allows directory traversal                                   │
+│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39836 │          │        │                   │ 1.25.10, 1.26.3              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
 │                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-42499 │          │        │                   │                              │ net/mail: golang: net/mail: Denial of Service via            │
@@ -2373,15 +2384,11 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1               │ os: FileInfo can escape from a Root in golang os module      │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39822 │ UNKNOWN  │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ On Unix systems, opening a file in an os.Root improperly     │
-│                  │                │          │        │                   │                              │ follows symli...                                             │
-│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
 └──────────────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/ipvlan (gobinary)
 =============================
-Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
+Total: 23 (UNKNOWN: 1, LOW: 1, MEDIUM: 9, HIGH: 12, CRITICAL: 0)
 
 ┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
@@ -2421,8 +2428,12 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  │ CVE-2026-39820 │          │        │                   │                              │ net/mail: golang: Go net/mail: Denial of Service via crafted │
 │                  │                │          │        │                   │                              │ email inputs                                                 │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39836 │          │        │                   │                              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39822 │          │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ os: golang: Go os.Root: Symlink following vulnerability      │
+│                  │                │          │        │                   │                              │ allows directory traversal                                   │
+│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39836 │          │        │                   │ 1.25.10, 1.26.3              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
 │                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-42499 │          │        │                   │                              │ net/mail: golang: net/mail: Denial of Service via            │
@@ -2472,15 +2483,11 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1               │ os: FileInfo can escape from a Root in golang os module      │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39822 │ UNKNOWN  │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ On Unix systems, opening a file in an os.Root improperly     │
-│                  │                │          │        │                   │                              │ follows symli...                                             │
-│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
 └──────────────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/loopback (gobinary)
 ===============================
-Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
+Total: 23 (UNKNOWN: 1, LOW: 1, MEDIUM: 9, HIGH: 12, CRITICAL: 0)
 
 ┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
@@ -2520,8 +2527,12 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  │ CVE-2026-39820 │          │        │                   │                              │ net/mail: golang: Go net/mail: Denial of Service via crafted │
 │                  │                │          │        │                   │                              │ email inputs                                                 │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39836 │          │        │                   │                              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39822 │          │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ os: golang: Go os.Root: Symlink following vulnerability      │
+│                  │                │          │        │                   │                              │ allows directory traversal                                   │
+│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39836 │          │        │                   │ 1.25.10, 1.26.3              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
 │                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-42499 │          │        │                   │                              │ net/mail: golang: net/mail: Denial of Service via            │
@@ -2571,15 +2582,11 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1               │ os: FileInfo can escape from a Root in golang os module      │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39822 │ UNKNOWN  │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ On Unix systems, opening a file in an os.Root improperly     │
-│                  │                │          │        │                   │                              │ follows symli...                                             │
-│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
 └──────────────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/macvlan (gobinary)
 ==============================
-Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
+Total: 23 (UNKNOWN: 1, LOW: 1, MEDIUM: 9, HIGH: 12, CRITICAL: 0)
 
 ┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
@@ -2619,8 +2626,12 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  │ CVE-2026-39820 │          │        │                   │                              │ net/mail: golang: Go net/mail: Denial of Service via crafted │
 │                  │                │          │        │                   │                              │ email inputs                                                 │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39836 │          │        │                   │                              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39822 │          │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ os: golang: Go os.Root: Symlink following vulnerability      │
+│                  │                │          │        │                   │                              │ allows directory traversal                                   │
+│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39836 │          │        │                   │ 1.25.10, 1.26.3              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
 │                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-42499 │          │        │                   │                              │ net/mail: golang: net/mail: Denial of Service via            │
@@ -2670,15 +2681,11 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1               │ os: FileInfo can escape from a Root in golang os module      │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39822 │ UNKNOWN  │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ On Unix systems, opening a file in an os.Root improperly     │
-│                  │                │          │        │                   │                              │ follows symli...                                             │
-│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
 └──────────────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/portmap (gobinary)
 ==============================
-Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
+Total: 23 (UNKNOWN: 1, LOW: 1, MEDIUM: 9, HIGH: 12, CRITICAL: 0)
 
 ┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
@@ -2718,8 +2725,12 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  │ CVE-2026-39820 │          │        │                   │                              │ net/mail: golang: Go net/mail: Denial of Service via crafted │
 │                  │                │          │        │                   │                              │ email inputs                                                 │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39836 │          │        │                   │                              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39822 │          │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ os: golang: Go os.Root: Symlink following vulnerability      │
+│                  │                │          │        │                   │                              │ allows directory traversal                                   │
+│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39836 │          │        │                   │ 1.25.10, 1.26.3              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
 │                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-42499 │          │        │                   │                              │ net/mail: golang: net/mail: Denial of Service via            │
@@ -2769,15 +2780,11 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1               │ os: FileInfo can escape from a Root in golang os module      │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39822 │ UNKNOWN  │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ On Unix systems, opening a file in an os.Root improperly     │
-│                  │                │          │        │                   │                              │ follows symli...                                             │
-│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
 └──────────────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/ptp (gobinary)
 ==========================
-Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
+Total: 23 (UNKNOWN: 1, LOW: 1, MEDIUM: 9, HIGH: 12, CRITICAL: 0)
 
 ┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
@@ -2817,8 +2824,12 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  │ CVE-2026-39820 │          │        │                   │                              │ net/mail: golang: Go net/mail: Denial of Service via crafted │
 │                  │                │          │        │                   │                              │ email inputs                                                 │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39836 │          │        │                   │                              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39822 │          │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ os: golang: Go os.Root: Symlink following vulnerability      │
+│                  │                │          │        │                   │                              │ allows directory traversal                                   │
+│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39836 │          │        │                   │ 1.25.10, 1.26.3              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
 │                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-42499 │          │        │                   │                              │ net/mail: golang: net/mail: Denial of Service via            │
@@ -2868,15 +2879,11 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1               │ os: FileInfo can escape from a Root in golang os module      │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39822 │ UNKNOWN  │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ On Unix systems, opening a file in an os.Root improperly     │
-│                  │                │          │        │                   │                              │ follows symli...                                             │
-│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
 └──────────────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/sbr (gobinary)
 ==========================
-Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
+Total: 23 (UNKNOWN: 1, LOW: 1, MEDIUM: 9, HIGH: 12, CRITICAL: 0)
 
 ┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
@@ -2916,8 +2923,12 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  │ CVE-2026-39820 │          │        │                   │                              │ net/mail: golang: Go net/mail: Denial of Service via crafted │
 │                  │                │          │        │                   │                              │ email inputs                                                 │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39836 │          │        │                   │                              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39822 │          │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ os: golang: Go os.Root: Symlink following vulnerability      │
+│                  │                │          │        │                   │                              │ allows directory traversal                                   │
+│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39836 │          │        │                   │ 1.25.10, 1.26.3              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
 │                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-42499 │          │        │                   │                              │ net/mail: golang: net/mail: Denial of Service via            │
@@ -2967,15 +2978,11 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1               │ os: FileInfo can escape from a Root in golang os module      │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39822 │ UNKNOWN  │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ On Unix systems, opening a file in an os.Root improperly     │
-│                  │                │          │        │                   │                              │ follows symli...                                             │
-│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
 └──────────────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/static (gobinary)
 =============================
-Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
+Total: 23 (UNKNOWN: 1, LOW: 1, MEDIUM: 9, HIGH: 12, CRITICAL: 0)
 
 ┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
@@ -3015,8 +3022,12 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  │ CVE-2026-39820 │          │        │                   │                              │ net/mail: golang: Go net/mail: Denial of Service via crafted │
 │                  │                │          │        │                   │                              │ email inputs                                                 │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39836 │          │        │                   │                              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39822 │          │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ os: golang: Go os.Root: Symlink following vulnerability      │
+│                  │                │          │        │                   │                              │ allows directory traversal                                   │
+│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39836 │          │        │                   │ 1.25.10, 1.26.3              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
 │                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-42499 │          │        │                   │                              │ net/mail: golang: net/mail: Denial of Service via            │
@@ -3066,15 +3077,11 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1               │ os: FileInfo can escape from a Root in golang os module      │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39822 │ UNKNOWN  │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ On Unix systems, opening a file in an os.Root improperly     │
-│                  │                │          │        │                   │                              │ follows symli...                                             │
-│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
 └──────────────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/tap (gobinary)
 ==========================
-Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
+Total: 23 (UNKNOWN: 1, LOW: 1, MEDIUM: 9, HIGH: 12, CRITICAL: 0)
 
 ┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
@@ -3114,8 +3121,12 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  │ CVE-2026-39820 │          │        │                   │                              │ net/mail: golang: Go net/mail: Denial of Service via crafted │
 │                  │                │          │        │                   │                              │ email inputs                                                 │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39836 │          │        │                   │                              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39822 │          │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ os: golang: Go os.Root: Symlink following vulnerability      │
+│                  │                │          │        │                   │                              │ allows directory traversal                                   │
+│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39836 │          │        │                   │ 1.25.10, 1.26.3              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
 │                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-42499 │          │        │                   │                              │ net/mail: golang: net/mail: Denial of Service via            │
@@ -3165,15 +3176,11 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1               │ os: FileInfo can escape from a Root in golang os module      │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39822 │ UNKNOWN  │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ On Unix systems, opening a file in an os.Root improperly     │
-│                  │                │          │        │                   │                              │ follows symli...                                             │
-│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
 └──────────────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/tuning (gobinary)
 =============================
-Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
+Total: 23 (UNKNOWN: 1, LOW: 1, MEDIUM: 9, HIGH: 12, CRITICAL: 0)
 
 ┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
@@ -3213,8 +3220,12 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  │ CVE-2026-39820 │          │        │                   │                              │ net/mail: golang: Go net/mail: Denial of Service via crafted │
 │                  │                │          │        │                   │                              │ email inputs                                                 │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39836 │          │        │                   │                              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39822 │          │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ os: golang: Go os.Root: Symlink following vulnerability      │
+│                  │                │          │        │                   │                              │ allows directory traversal                                   │
+│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39836 │          │        │                   │ 1.25.10, 1.26.3              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
 │                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-42499 │          │        │                   │                              │ net/mail: golang: net/mail: Denial of Service via            │
@@ -3264,15 +3275,11 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1               │ os: FileInfo can escape from a Root in golang os module      │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39822 │ UNKNOWN  │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ On Unix systems, opening a file in an os.Root improperly     │
-│                  │                │          │        │                   │                              │ follows symli...                                             │
-│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
 └──────────────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/vlan (gobinary)
 ===========================
-Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
+Total: 23 (UNKNOWN: 1, LOW: 1, MEDIUM: 9, HIGH: 12, CRITICAL: 0)
 
 ┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
@@ -3312,8 +3319,12 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  │ CVE-2026-39820 │          │        │                   │                              │ net/mail: golang: Go net/mail: Denial of Service via crafted │
 │                  │                │          │        │                   │                              │ email inputs                                                 │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39836 │          │        │                   │                              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39822 │          │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ os: golang: Go os.Root: Symlink following vulnerability      │
+│                  │                │          │        │                   │                              │ allows directory traversal                                   │
+│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39836 │          │        │                   │ 1.25.10, 1.26.3              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
 │                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-42499 │          │        │                   │                              │ net/mail: golang: net/mail: Denial of Service via            │
@@ -3363,15 +3374,11 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1               │ os: FileInfo can escape from a Root in golang os module      │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39822 │ UNKNOWN  │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ On Unix systems, opening a file in an os.Root improperly     │
-│                  │                │          │        │                   │                              │ follows symli...                                             │
-│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
 └──────────────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────┴──────────────────────────────────────────────────────────────┘
 
 opt/cni/bin/vrf (gobinary)
 ==========================
-Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
+Total: 23 (UNKNOWN: 1, LOW: 1, MEDIUM: 9, HIGH: 12, CRITICAL: 0)
 
 ┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                            Title                             │
@@ -3411,8 +3418,12 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  │ CVE-2026-39820 │          │        │                   │                              │ net/mail: golang: Go net/mail: Denial of Service via crafted │
 │                  │                │          │        │                   │                              │ email inputs                                                 │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39820                   │
-│                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39836 │          │        │                   │                              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39822 │          │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ os: golang: Go os.Root: Symlink following vulnerability      │
+│                  │                │          │        │                   │                              │ allows directory traversal                                   │
+│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
+│                  ├────────────────┤          │        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                  │ CVE-2026-39836 │          │        │                   │ 1.25.10, 1.26.3              │ ELSA-2026-22121: golang security update (IMPORTANT)          │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39836                   │
 │                  ├────────────────┤          │        │                   │                              ├──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-42499 │          │        │                   │                              │ net/mail: golang: net/mail: Denial of Service via            │
@@ -3462,8 +3473,4 @@ Total: 23 (UNKNOWN: 2, LOW: 1, MEDIUM: 9, HIGH: 11, CRITICAL: 0)
 │                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                  │ CVE-2026-27139 │ LOW      │        │                   │ 1.25.8, 1.26.1               │ os: FileInfo can escape from a Root in golang os module      │
 │                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-27139                   │
-│                  ├────────────────┼──────────┤        │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                  │ CVE-2026-39822 │ UNKNOWN  │        │                   │ 1.25.12, 1.26.5, 1.27.0-rc.2 │ On Unix systems, opening a file in an os.Root improperly     │
-│                  │                │          │        │                   │                              │ follows symli...                                             │
-│                  │                │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-39822                   │
 └──────────────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────┴──────────────────────────────────────────────────────────────┘
