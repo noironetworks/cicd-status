@@ -11657,7 +11657,36 @@ releases:
       sbom: "release_artifacts/6.1.1.8/z/aci-containers-host-ovscni/6.1.1.8-sbom.txt"
       severity: [{"C": 0, "H": 35, "M": 277, "L": 129, "U": 0}]
       severity_type: "quay"
-    last_updated: "2026-10-05T07:56:20Z"
+    - base-image:
+      - cve: "release_artifacts/6.1.1.8/z/opflex/6.1.1.8-cve-base.txt"
+        severity: [{"C": 0, "H": 12, "M": 118, "L": 74, "U": 0}]
+        severity_type: "quay"
+        sha: "1d7c5517a4a1a8e2688620b39ee980e82505ca1ab7ae5541b5463120ae9b3897"
+      build-logs: "https://github.com/noironetworks/opflex/actions/runs/37282136684/attempts/1"
+      build-time: "2026-10-05T09:19:31Z"
+      commit:
+      - link: "https://github.com/noironetworks/opflex/commit/430a5f972f97453991deb8201d1124874653a811"
+        sha: "430a5f972f97453991deb8201d1124874653a811"
+      cve: "release_artifacts/6.1.1.8/z/opflex/6.1.1.8-cve.txt"
+      docker:
+      - link: "https://hub.docker.com/layers/noiro/opflex/6.1.1.8.81c2369.z/images/sha256-26ec66264f10d9f363ac2cbd9e02a25c55508660ce43a4625b533ec9e865eb7a?context=explore"
+        sha: "26ec66264f10d9f363ac2cbd9e02a25c55508660ce43a4625b533ec9e865eb7a"
+        tag: "6.1.1.8.81c2369.z"
+      - link: "https://hub.docker.com/layers/noiro/opflex/6.1.1.8.81c2369.100526.10/images/sha256-26ec66264f10d9f363ac2cbd9e02a25c55508660ce43a4625b533ec9e865eb7a?context=explore"
+        sha: "26ec66264f10d9f363ac2cbd9e02a25c55508660ce43a4625b533ec9e865eb7a"
+        tag: "6.1.1.8.81c2369.100526.10"
+      name: "opflex"
+      quay:
+      - link: "https://quay.io/noiro/opflex:6.1.1.8.81c2369.z"
+        sha: "26ec66264f10d9f363ac2cbd9e02a25c55508660ce43a4625b533ec9e865eb7a"
+        tag: "6.1.1.8.81c2369.z"
+      - link: "https://quay.io/noiro/opflex:6.1.1.8.81c2369.100526.10"
+        sha: "26ec66264f10d9f363ac2cbd9e02a25c55508660ce43a4625b533ec9e865eb7a"
+        tag: "6.1.1.8.81c2369.100526.10"
+      sbom: "release_artifacts/6.1.1.8/z/opflex/6.1.1.8-sbom.txt"
+      severity: [{"C": 0, "H": 24, "M": 254, "L": 231, "U": 0}]
+      severity_type: "quay"
+    last_updated: "2026-10-05T09:19:31Z"
     release_name: 6.1.1.8.z
   - acc_provision: []
     container_images: []
