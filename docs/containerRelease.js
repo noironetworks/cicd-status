@@ -24,13 +24,19 @@
   function scanCell(image, subject) {
     const cell = element('td', null, `scan-cell scan-${subject}`);
     for (const scan of ScanStatus.normalize(image, subject)) {
-      const block = element('section', null, `scan-observation scan-${scan.namespace}`);
-      block.appendChild(element('strong', scan.namespace === 'legacy' ? 'Legacy scan' : `${scan.namespace === 'build' ? 'Build' : 'Refresh'} scan`));
+      const block = element('section', null, `scan-observation scan-${scan.namespace}${scan.historical ? ' scan-historical' : ''}`);
+      block.appendChild(element('strong', scan.namespace === 'legacy' ? 'Legacy build scan'
+        : scan.historical ? 'Historical refresh scan' : `${scan.namespace === 'build' ? 'Build' : 'Refresh'} scan`));
+      if (scan.historical) {
+        block.appendChild(element('div', 'Recorded for a different build digest.'));
+        block.appendChild(element('div', `Current build digest: ${scan.current_digest}`, 'scan-digest'));
+      } else if (scan.binding === 'unknown') block.appendChild(element('div', 'Build identity: unverified'));
       block.appendChild(element('div', `Scanner: ${scan.scanner}`));
       block.appendChild(element('div', `Result: ${scan.state}`));
       block.appendChild(element('div', `Freshness: ${scan.freshness}`));
       if (scan.observed_at) block.appendChild(element('div', `Observed: ${scan.observed_at}`));
       if (scan.digest) block.appendChild(element('div', `Digest: ${scan.digest}`, 'scan-digest'));
+      if (scan.source_digest && scan.source_digest !== scan.digest) block.appendChild(element('div', `Source digest: ${scan.source_digest}`, 'scan-digest'));
       if (scan.state === 'ok') appendCounts(block, scan.counts);
       if (scan.report) block.appendChild(link(scan.report, 'Scan report'));
       if (scan.last_success) {

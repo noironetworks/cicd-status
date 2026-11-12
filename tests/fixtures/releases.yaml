@@ -46,7 +46,7 @@
                   "image": {
                     "state": "ok",
                     "scanner": "<img src=x onerror=\"window.hostile=true\">",
-                    "digest": "sha256:current",
+                    "digest": "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
                     "observed_at": "2026-11-12T00:00:00Z",
                     "counts": {
                       "C": 0,
@@ -58,14 +58,26 @@
                     "freshness": {
                       "state": "fresh",
                       "max_age_seconds": 86400
-                    }
+                    },
+                    "source_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
                   },
                   "base": {
                     "state": "unsupported",
-                    "scanner": "quay"
+                    "scanner": "quay",
+                    "source_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
                   }
                 }
-              }
+              },
+              "quay": [
+                {
+                  "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "base-image": [
+                {
+                  "sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+                }
+              ]
             },
             {
               "name": "unavailable",
@@ -91,15 +103,27 @@
                   "image": {
                     "state": "unavailable",
                     "scanner": "<img src=x onerror=\"window.hostile=true\">",
-                    "digest": "sha256:current",
-                    "observed_at": "2026-11-12T00:00:00Z"
+                    "digest": "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+                    "observed_at": "2026-11-12T00:00:00Z",
+                    "source_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
                   },
                   "base": {
                     "state": "unsupported",
-                    "scanner": "quay"
+                    "scanner": "quay",
+                    "source_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
                   }
                 }
-              }
+              },
+              "quay": [
+                {
+                  "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "base-image": [
+                {
+                  "sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+                }
+              ]
             },
             {
               "name": "queued",
@@ -125,15 +149,27 @@
                   "image": {
                     "state": "queued",
                     "scanner": "<img src=x onerror=\"window.hostile=true\">",
-                    "digest": "sha256:current",
-                    "observed_at": "2026-11-12T00:00:00Z"
+                    "digest": "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+                    "observed_at": "2026-11-12T00:00:00Z",
+                    "source_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
                   },
                   "base": {
                     "state": "unsupported",
-                    "scanner": "quay"
+                    "scanner": "quay",
+                    "source_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
                   }
                 }
-              }
+              },
+              "quay": [
+                {
+                  "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "base-image": [
+                {
+                  "sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+                }
+              ]
             },
             {
               "name": "unsupported",
@@ -159,15 +195,27 @@
                   "image": {
                     "state": "unsupported",
                     "scanner": "<img src=x onerror=\"window.hostile=true\">",
-                    "digest": "sha256:current",
-                    "observed_at": "2026-11-12T00:00:00Z"
+                    "digest": "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+                    "observed_at": "2026-11-12T00:00:00Z",
+                    "source_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
                   },
                   "base": {
                     "state": "unsupported",
-                    "scanner": "quay"
+                    "scanner": "quay",
+                    "source_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
                   }
                 }
-              }
+              },
+              "quay": [
+                {
+                  "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "base-image": [
+                {
+                  "sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+                }
+              ]
             },
             {
               "name": "error",
@@ -193,7 +241,7 @@
                   "image": {
                     "state": "error",
                     "scanner": "<img src=x onerror=\"window.hostile=true\">",
-                    "digest": "sha256:current",
+                    "digest": "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
                     "observed_at": "2026-11-12T00:00:00Z",
                     "freshness": {
                       "state": "stale",
@@ -209,14 +257,26 @@
                         "L": 0,
                         "U": 0
                       }
-                    }
+                    },
+                    "source_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
                   },
                   "base": {
                     "state": "unsupported",
-                    "scanner": "quay"
+                    "scanner": "quay",
+                    "source_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
                   }
                 }
-              }
+              },
+              "quay": [
+                {
+                  "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "base-image": [
+                {
+                  "sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+                }
+              ]
             }
           ]
         }

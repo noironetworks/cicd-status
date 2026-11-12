@@ -23,3 +23,9 @@ and all network responses intercepted. Browser dependencies are development
 only; the site remains static. CI uses Linux and the Chromium revision pinned
 by Playwright 1.56.1. The local fixtures use pinned js-yaml 4.3.2 in place of
 the external CDN so tests run without a CDN connection.
+
+Legacy build fields remain visible independently when the first refresh record
+arrives. Refresh observations bind `source_digest` to the current build digest;
+`digest` can identify its distinct linux/amd64 child manifest. A mismatched
+refresh is labeled historical, with its original source and current build digest
+shown separately. Missing identity stays unverified and cannot be shown fresh.
