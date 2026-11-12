@@ -18,7 +18,12 @@
     }
     const state = states.has(value.state) && (value.state !== 'ok' || counts(value.counts || value.severity)) ? value.state : 'error';
     const policy = value.freshness && typeof value.freshness === 'object' && value.freshness;
-    const freshness = policy && Number.isFinite(policy.max_age_seconds) && policy.max_age_seconds > 0 ? policy.state : 'unknown';
+    let freshness = policy && Number.isFinite(policy.max_age_seconds) && policy.max_age_seconds > 0 ? policy.state : 'unknown';
+    if (freshness === 'fresh') {
+      const observed = Date.parse(value.observed_at);
+      const age = (Date.now() - observed) / 1000;
+      freshness = !Number.isFinite(age) || age < 0 ? 'unknown' : (age > policy.max_age_seconds ? 'stale' : 'fresh');
+    }
     const last = value.last_success;
     return {state, scanner: value.scanner || 'unknown', counts: state === 'ok' ? counts(value.counts || value.severity) : null,
       digest: value.digest || null, observed_at: value.observed_at || null,

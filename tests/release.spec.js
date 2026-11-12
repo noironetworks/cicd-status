@@ -3,6 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const root = path.join(__dirname, '..');
 async function pageWithFixture(page, fixture) {
+  await page.clock.install({time: new Date('2026-11-12T01:00:00Z')});
   const errors = []; page.on('pageerror', error => errors.push(error.message));
   await page.route('**/*', async route => {
     const url = new URL(route.request().url());

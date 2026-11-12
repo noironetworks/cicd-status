@@ -24,3 +24,8 @@ test('published freshness without a policy is unknown and malformed success is e
   assert.equal(normalize({scan:{refresh:{image:{state:'ok',counts:zero,freshness:{state:'fresh'}}}}},'image')[0].freshness,'unknown');
   assert.equal(normalize({scan:{refresh:{image:{state:'ok'}}}},'image')[0].state,'error');
 });
+
+test('an explicitly fresh observation expires under its age policy', () => {
+  const observation = {state:'ok',counts:zero,observed_at:'2000-01-01T00:00:00Z',freshness:{state:'fresh',max_age_seconds:60}};
+  assert.equal(normalize({scan:{refresh:{image:observation}}},'image')[0].freshness,'stale');
+});
