@@ -3,7 +3,10 @@ const assert = require('node:assert/strict');
 const {normalize, counts} = require('../docs/scanStatus');
 const zero = {C: 0, H: 0, M: 0, L: 0, U: 0};
 test('legacy requires complete non-negative counts and treats errors as unavailable evidence', () => {
-  assert.equal(normalize({severity: [zero]}, 'image')[0].state, 'ok');
+  assert.equal(normalize({severity: [zero]}, 'image')[0].state, 'unavailable');
+  assert.equal(normalize({severity: [zero]}, 'image')[0].verification, 'unverified');
+  assert.equal(normalize({severity: [zero]}, 'image')[0].counts, null);
+  assert.deepEqual(normalize({severity: [zero]}, 'image')[0].legacy_counts, zero);
   assert.equal(normalize({}, 'base')[0].state, 'unavailable');
   assert.equal(normalize({severity: [zero], cve_error: 'Scanning Queued in Quay'}, 'image')[0].counts, null);
   assert.equal(counts({C: 0}), null);
@@ -57,11 +60,24 @@ test('first refresh preserves legacy image and base build observations', () => {
   for (const [subject, high, report] of [['image',6,'legacy-image.txt'],['base',7,'legacy-base.txt']]) {
     const result = normalize(image,subject);
     assert.equal(result.length,2); assert.equal(result[0].namespace,'legacy');
-    assert.equal(result[0].state,'ok'); assert.equal(result[0].counts.H,high); assert.equal(result[0].report,report);
+    assert.equal(result[0].state,'unavailable'); assert.equal(result[0].verification,'unverified'); assert.equal(result[0].legacy_counts.H,high); assert.equal(result[0].report,report);
     assert.equal(result[1].namespace,'refresh');
   }
 });
 test('base matching uses the build-time digest rather than a moved current tag', () => {
   const result = normalize({'base-image':[{sha:digest('a')}],scan:{refresh:{current_base:{digest:digest('b')},base:{state:'ok',source_digest:digest('a'),digest:digest('f'),counts:zero}}}},'base').find(value=>value.namespace==='refresh');
   assert.equal(result.binding,'current'); assert.equal(result.historical,false);
+});
+
+test('production parser assets match the pinned npm package and license', () => {
+  const fs = require('node:fs'); const path = require('node:path');
+  const packageRoot = path.dirname(require.resolve('js-yaml'));
+  assert.equal(JSON.parse(fs.readFileSync(path.join(packageRoot,'package.json'))).version,'4.3.2');
+  for (const [vendor, original] of [['js-yaml.min.js','dist/js-yaml.min.js'],['LICENSE','LICENSE']]) {
+    assert.deepEqual(fs.readFileSync(path.join(__dirname,'../docs/vendor/js-yaml-4.3.2',vendor)), fs.readFileSync(path.join(packageRoot,original)));
+  }
+  for (const file of ['release.html','index.html','manifest-sha.html']) {
+    const html = fs.readFileSync(path.join(__dirname,'../docs',file),'utf8');
+    assert.ok(html.includes('vendor/js-yaml-4.3.2/js-yaml.min.js')); assert.ok(!html.includes('cdnjs.cloudflare.com'));
+  }
 });

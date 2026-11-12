@@ -11,8 +11,8 @@
   function observation(value, legacy) {
     if (!value || typeof value !== 'object') {
       const error = legacy.cve_error || legacy.base_cve_error;
-      return {state: error ? (/queued/i.test(error) ? 'queued' : 'error') : (counts(legacy.severity) ? 'ok' : 'unavailable'),
-        scanner: legacy.severity_type || 'grype', counts: error ? null : counts(legacy.severity),
+      return {state: error ? (/queued/i.test(error) ? 'queued' : 'error') : 'unavailable',
+        scanner: legacy.severity_type || 'grype', counts: null, legacy_counts: error ? null : counts(legacy.severity), verification: 'unverified',
         digest: legacy.sha || null, observed_at: null, freshness: 'unknown', legacy: true,
         report: legacy.severity_link || legacy.cve || null, last_success: null};
     }

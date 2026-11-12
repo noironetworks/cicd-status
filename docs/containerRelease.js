@@ -8,12 +8,16 @@
     return node;
   }
   function link(href, text) {
-    const node = element('a', text);
+    const label = text === undefined || text === null ? href : text;
     if (typeof href === 'string') {
-      const url = new URL(href, window.location.href);
-      if (['https:', 'http:'].includes(url.protocol)) node.href = url.href;
+      try {
+        const url = new URL(href, window.location.href);
+        if (['https:', 'http:'].includes(url.protocol)) {
+          const node = element('a', label); node.href = url.href; return node;
+        }
+      } catch (_) { /* Invalid metadata remains readable without a link. */ }
     }
-    return node;
+    return element('span', label);
   }
   function appendCounts(parent, counts) {
     if (!counts) { parent.appendChild(element('div', 'Counts unavailable')); return; }
@@ -25,19 +29,24 @@
     const cell = element('td', null, `scan-cell scan-${subject}`);
     for (const scan of ScanStatus.normalize(image, subject)) {
       const block = element('section', null, `scan-observation scan-${scan.namespace}${scan.historical ? ' scan-historical' : ''}`);
-      block.appendChild(element('strong', scan.namespace === 'legacy' ? 'Legacy build scan'
+      block.appendChild(element('strong', scan.namespace === 'legacy' ? 'Legacy build scan (unverified)'
         : scan.historical ? 'Historical refresh scan' : `${scan.namespace === 'build' ? 'Build' : 'Refresh'} scan`));
       if (scan.historical) {
         block.appendChild(element('div', 'Recorded for a different build digest.'));
         block.appendChild(element('div', `Current build digest: ${scan.current_digest}`, 'scan-digest'));
       } else if (scan.binding === 'unknown') block.appendChild(element('div', 'Build identity: unverified'));
       block.appendChild(element('div', `Scanner: ${scan.scanner}`));
-      block.appendChild(element('div', `Result: ${scan.state}`));
+      block.appendChild(element('div', `Result: ${scan.legacy && scan.legacy_counts && scan.state === 'unavailable' ? 'unknown (legacy, unverified)' : scan.state}`));
       block.appendChild(element('div', `Freshness: ${scan.freshness}`));
       if (scan.observed_at) block.appendChild(element('div', `Observed: ${scan.observed_at}`));
       if (scan.digest) block.appendChild(element('div', `Digest: ${scan.digest}`, 'scan-digest'));
       if (scan.source_digest && scan.source_digest !== scan.digest) block.appendChild(element('div', `Source digest: ${scan.source_digest}`, 'scan-digest'));
       if (scan.state === 'ok') appendCounts(block, scan.counts);
+      if (scan.legacy_counts) {
+        const legacyCounts = element('div', null, 'legacy-counts');
+        legacyCounts.appendChild(element('strong', 'Historical unverified counts'));
+        appendCounts(legacyCounts, scan.legacy_counts); block.appendChild(legacyCounts);
+      }
       if (scan.report) block.appendChild(link(scan.report, 'Scan report'));
       if (scan.last_success) {
         const historical = element('details', null, 'scan-history');

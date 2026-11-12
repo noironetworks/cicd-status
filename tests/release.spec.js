@@ -7,10 +7,11 @@ async function pageWithFixture(page, fixture) {
   const errors = []; page.on('pageerror', error => errors.push(error.message));
   await page.route('**/*', async route => {
     const url = new URL(route.request().url());
-    if (url.hostname === 'cdnjs.cloudflare.com') return route.fulfill({contentType: 'application/javascript', body: fs.readFileSync(path.join(path.dirname(require.resolve('js-yaml')), 'dist/js-yaml.min.js'))});
+    if (url.hostname !== 'portal.test') return route.abort();
     if (url.pathname.endsWith('/release_artifacts/releases.yaml')) return route.fulfill({contentType: 'text/yaml', body: fixture});
-    const file = path.join(root, 'docs', path.basename(url.pathname));
-    if (!fs.existsSync(file)) return route.abort();
+    const docs = path.join(root, 'docs');
+    const file = path.resolve(docs, '.' + url.pathname);
+    if (!file.startsWith(docs + path.sep) || !fs.existsSync(file)) return route.abort();
     return route.fulfill({body: fs.readFileSync(file), contentType: file.endsWith('.html') ? 'text/html' : file.endsWith('.css') ? 'text/css' : 'application/javascript'});
   });
   await page.goto('http://portal.test/release.html?release=6.1.1.z');
@@ -78,5 +79,42 @@ test('refresh binding keeps replaced builds historical and preserves legacy buil
   await expect(replaced.locator('.scan-image .scan-refresh')).toContainText('Source digest: ' + digest('a'));
   await expect(row('index-child').locator('.scan-image .scan-refresh')).not.toHaveClass(/scan-historical/);
   await expect(row('index-child').locator('.scan-image .scan-refresh')).toContainText('Freshness: fresh');
+  expect(errors).toEqual([]);
+});
+
+for (const file of ['unsafe-js-function.yaml','unsafe-js-regexp.yaml']) {
+  test(`production YAML parser rejects ${file}`, async ({page}) => {
+    const fixture = fs.readFileSync(path.join(__dirname,'fixtures',file),'utf8');
+    const errors = await pageWithFixture(page,fixture);
+    await expect(page.locator('#container-release-table')).toContainText('Release data unavailable');
+    const rejection = await page.evaluate(text => {
+      try { window.jsyaml.load(text); return null; } catch (error) { return error.reason; }
+    },fixture);
+    expect(rejection).toContain('unknown tag');
+    expect(await page.evaluate(() => window.yamlExecuted)).toBeUndefined();
+    expect(errors).toEqual([]);
+    await expect(page.locator('script[src*="vendor/js-yaml-4.3.2/js-yaml.min.js"]')).toHaveCount(1);
+    await expect(page.locator('script[src^="https://"]')).toHaveCount(0);
+  });
+}
+
+test('actual YAML metadata stays text, malformed links do not abort rows, and legacy zeros are unverified', async ({page}) => {
+  const errors = await pageWithFixture(page,fs.readFileSync(path.join(__dirname,'fixtures/hostile-metadata.yaml'),'utf8'));
+  const rows = page.locator('#container-release-table tbody tr');
+  await expect(rows).toHaveCount(2);
+  const hostile = rows.filter({hasText:'<img src=x onerror="window.domExecuted=true">'});
+  await expect(hostile.locator('.scan-image .scan-legacy')).toContainText('Legacy build scan (unverified)');
+  await expect(hostile.locator('.scan-image .scan-legacy')).toContainText('Result: unknown (legacy, unverified)');
+  await expect(hostile.locator('.scan-image .scan-legacy')).not.toContainText('Result: ok');
+  await expect(hostile.locator('.scan-image .legacy-counts')).toContainText('Historical unverified counts');
+  await expect(hostile.locator('.scan-image .legacy-counts')).toContainText('C:0');
+  await expect(hostile.locator('.scan-base .legacy-counts')).toContainText('H:2');
+  await expect(hostile.locator('a[href^="javascript:"]')).toHaveCount(0);
+  await expect(hostile.locator('a', {hasText:'SBoM'})).toHaveCount(0);
+  await expect(hostile.locator('span', {hasText:'SBoM'})).toHaveCount(1);
+  await expect(hostile.locator('span', {hasText:'Scan report'})).toHaveCount(2);
+  await expect(page.locator('#container-release-table img, #container-release-table script')).toHaveCount(0);
+  await expect(rows.filter({hasText:'after-bad-link'}).locator('.scan-build')).toContainText('Result: ok');
+  expect(await page.evaluate(() => window.domExecuted)).toBeUndefined();
   expect(errors).toEqual([]);
 });
