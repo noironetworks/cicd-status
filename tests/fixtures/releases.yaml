@@ -1,0 +1,286 @@
+{
+  "releases": [
+    {
+      "release_tag": "6.1.1",
+      "release_streams": [
+        {
+          "release_name": "6.1.1.z",
+          "container_images": [
+            {
+              "name": "legacy",
+              "severity": [
+                {
+                  "C": 0,
+                  "H": 2,
+                  "M": 0,
+                  "L": 0,
+                  "U": 0
+                }
+              ],
+              "severity_type": "grype"
+            },
+            {
+              "name": "missing"
+            },
+            {
+              "name": "ok",
+              "scan": {
+                "build": {
+                  "image": {
+                    "state": "ok",
+                    "scanner": "grype",
+                    "counts": {
+                      "C": 0,
+                      "H": 3,
+                      "M": 0,
+                      "L": 0,
+                      "U": 0
+                    }
+                  },
+                  "base": {
+                    "state": "unavailable",
+                    "scanner": "grype"
+                  }
+                },
+                "refresh": {
+                  "image": {
+                    "state": "ok",
+                    "scanner": "<img src=x onerror=\"window.hostile=true\">",
+                    "digest": "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+                    "observed_at": "2026-11-12T00:00:00Z",
+                    "counts": {
+                      "C": 0,
+                      "H": 0,
+                      "M": 0,
+                      "L": 0,
+                      "U": 0
+                    },
+                    "freshness": {
+                      "state": "fresh",
+                      "max_age_seconds": 86400
+                    },
+                    "source_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                  },
+                  "base": {
+                    "state": "unsupported",
+                    "scanner": "quay",
+                    "source_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+                  }
+                }
+              },
+              "quay": [
+                {
+                  "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "base-image": [
+                {
+                  "sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+                }
+              ]
+            },
+            {
+              "name": "unavailable",
+              "scan": {
+                "build": {
+                  "image": {
+                    "state": "ok",
+                    "scanner": "grype",
+                    "counts": {
+                      "C": 0,
+                      "H": 3,
+                      "M": 0,
+                      "L": 0,
+                      "U": 0
+                    }
+                  },
+                  "base": {
+                    "state": "unavailable",
+                    "scanner": "grype"
+                  }
+                },
+                "refresh": {
+                  "image": {
+                    "state": "unavailable",
+                    "scanner": "<img src=x onerror=\"window.hostile=true\">",
+                    "digest": "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+                    "observed_at": "2026-11-12T00:00:00Z",
+                    "source_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                  },
+                  "base": {
+                    "state": "unsupported",
+                    "scanner": "quay",
+                    "source_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+                  }
+                }
+              },
+              "quay": [
+                {
+                  "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "base-image": [
+                {
+                  "sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+                }
+              ]
+            },
+            {
+              "name": "queued",
+              "scan": {
+                "build": {
+                  "image": {
+                    "state": "ok",
+                    "scanner": "grype",
+                    "counts": {
+                      "C": 0,
+                      "H": 3,
+                      "M": 0,
+                      "L": 0,
+                      "U": 0
+                    }
+                  },
+                  "base": {
+                    "state": "unavailable",
+                    "scanner": "grype"
+                  }
+                },
+                "refresh": {
+                  "image": {
+                    "state": "queued",
+                    "scanner": "<img src=x onerror=\"window.hostile=true\">",
+                    "digest": "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+                    "observed_at": "2026-11-12T00:00:00Z",
+                    "source_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                  },
+                  "base": {
+                    "state": "unsupported",
+                    "scanner": "quay",
+                    "source_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+                  }
+                }
+              },
+              "quay": [
+                {
+                  "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "base-image": [
+                {
+                  "sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+                }
+              ]
+            },
+            {
+              "name": "unsupported",
+              "scan": {
+                "build": {
+                  "image": {
+                    "state": "ok",
+                    "scanner": "grype",
+                    "counts": {
+                      "C": 0,
+                      "H": 3,
+                      "M": 0,
+                      "L": 0,
+                      "U": 0
+                    }
+                  },
+                  "base": {
+                    "state": "unavailable",
+                    "scanner": "grype"
+                  }
+                },
+                "refresh": {
+                  "image": {
+                    "state": "unsupported",
+                    "scanner": "<img src=x onerror=\"window.hostile=true\">",
+                    "digest": "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+                    "observed_at": "2026-11-12T00:00:00Z",
+                    "source_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                  },
+                  "base": {
+                    "state": "unsupported",
+                    "scanner": "quay",
+                    "source_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+                  }
+                }
+              },
+              "quay": [
+                {
+                  "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "base-image": [
+                {
+                  "sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+                }
+              ]
+            },
+            {
+              "name": "error",
+              "scan": {
+                "build": {
+                  "image": {
+                    "state": "ok",
+                    "scanner": "grype",
+                    "counts": {
+                      "C": 0,
+                      "H": 3,
+                      "M": 0,
+                      "L": 0,
+                      "U": 0
+                    }
+                  },
+                  "base": {
+                    "state": "unavailable",
+                    "scanner": "grype"
+                  }
+                },
+                "refresh": {
+                  "image": {
+                    "state": "error",
+                    "scanner": "<img src=x onerror=\"window.hostile=true\">",
+                    "digest": "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+                    "observed_at": "2026-11-12T00:00:00Z",
+                    "freshness": {
+                      "state": "stale",
+                      "max_age_seconds": 86400
+                    },
+                    "last_success": {
+                      "digest": "sha256:historical",
+                      "observed_at": "2020-01-01T00:00:00Z",
+                      "counts": {
+                        "C": 0,
+                        "H": 7,
+                        "M": 0,
+                        "L": 0,
+                        "U": 0
+                      }
+                    },
+                    "source_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                  },
+                  "base": {
+                    "state": "unsupported",
+                    "scanner": "quay",
+                    "source_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+                  }
+                }
+              },
+              "quay": [
+                {
+                  "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "base-image": [
+                {
+                  "sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

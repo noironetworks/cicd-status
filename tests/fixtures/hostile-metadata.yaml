@@ -1,0 +1,29 @@
+releases:
+  - release_tag: '6.1.1'
+    release_streams:
+      - release_name: '6.1.1.z'
+        container_images:
+          - name: '<img src=x onerror="window.domExecuted=true">'
+            commit:
+              - sha: abcdef1234567890
+                link: 'http://['
+            quay:
+              - sha: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                tag: '<img src=x onerror="window.domExecuted=true">'
+                link: 'javascript:window.domExecuted=true'
+            cve: 'http://['
+            severity_type: '<img src=x onerror="window.domExecuted=true">'
+            severity: [{C: 0, H: 0, M: 0, L: 0, U: 0}]
+            sbom: 'http://['
+            build-logs: 'http://['
+            base-image:
+              - sha: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+                cve: 'http://['
+                severity: [{C: 0, H: 2, M: 0, L: 0, U: 0}]
+          - name: after-bad-link
+            scan:
+              build:
+                image:
+                  state: ok
+                  scanner: grype
+                  counts: {C: 0, H: 1, M: 0, L: 0, U: 0}
